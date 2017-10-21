@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-10-22-rice_greens.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-11-17-welcome-to-jekyll.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-12-20-I-ve-Interviewed-100s-of-Candidates-and-the-Ones-I-Hire-Always-Do-This.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2016-08-27-how-to-use-this-jekyll-theme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2017-06-08-change-the-comment-provider-to-yuntentie.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2017-07-24-abandon-the-comment-feature.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/11/17/welcome-to-jekyll/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/12/20/I-ve-Interviewed-100s-of-Candidates-and-the-Ones-I-Hire-Always-Do-This/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2016/08/27/how-to-use-this-jekyll-theme/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2017/06/08/change-the-comment-provider-to-yuntentie/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2017/07/24/abandon-the-comment-feature/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/categories/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tag/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/categories/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tag/index.html" afterPath="$PROJECT_DIR$/rice/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/docs_header.html" afterPath="$PROJECT_DIR$/_includes/docs_header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/lefttree.html" afterPath="$PROJECT_DIR$/_includes/lefttree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/books/index.html" afterPath="$PROJECT_DIR$/_site/books/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/index.html" afterPath="$PROJECT_DIR$/_site/donate/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/method/index.html" afterPath="$PROJECT_DIR$/_site/donate/method/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="$PROJECT_DIR$/_site/reference/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -89,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -225,13 +202,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16522000" />
+    <option name="totallyTimeSpent" value="17425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="363" y="95" width="1900" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510846" sideWeight="0.49402985" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510846" sideWeight="0.8507463" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -239,7 +216,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510846" sideWeight="0.5059701" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510846" sideWeight="0.14925373" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -685,7 +662,7 @@
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding />
         </state>
       </provider>
