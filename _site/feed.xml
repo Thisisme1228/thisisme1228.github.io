@@ -5,8 +5,8 @@
     <description>向日葵也好，银莲花也好，无论怎么样，路都是自己走的</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Oct 2017 06:56:25 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2017 06:56:25 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Oct 2017 07:06:35 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Oct 2017 07:06:35 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
@@ -25,6 +25,8 @@
 &lt;p&gt;每天睡觉前，不后悔，不沮丧，觉得今天有所成就，对明天有些期许。&lt;/p&gt;
 
 &lt;p&gt;这样的生活，就足够有意义了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/styles/images/logo.png&quot; alt=&quot;&quot; width=&quot;310&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/10/22/rice_greens/</link>

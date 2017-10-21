@@ -21,3 +21,5 @@ greens			{#greens}
 每天睡觉前，不后悔，不沮丧，觉得今天有所成就，对明天有些期许。
 
 这样的生活，就足够有意义了。
+
+<img src="{{ '/styles/images/logo.png' | prepend: site.baseurl }}" alt="" width="310" />
