@@ -1,0 +1,26 @@
+# Site settings
+name: This is me
+email: 878723827@qq.com
+author: 王丹
+url: http://www.thisisme1228.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
+baseurl: ""
+description: my life
+meta_description: 厚积薄发
+motto: 别空有皮囊
+banner: 一日不读书便觉得面目可憎了
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: Thisisme1228
+
+# Build settings
+markdown: kramdown
+
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
