@@ -1,7 +1,7 @@
 # Site settings
-name: This is me
+name: Helene's blog
 email: 878723827@qq.com
-author: 王丹
+author: Helene
 url: http://www.thisisme1228.com
 github: https://github.com/Thisisme1228
 baseurl: ""
@@ -9,6 +9,7 @@ description: 我很激动，以至于不知道写啥好，以至于你看见的�
 meta_description: 厚积薄发
 motto: 别空有皮囊
 banner: 一日不读书便觉得面目可憎了
+better_me: Better me
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
