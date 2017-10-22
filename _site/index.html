@@ -117,8 +117,10 @@
             //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
             if (h5audio_media.paused) {
                 h5audio_media.play();// 这个就是播放
+                clickMe.innerText = '哇哦'
             } else {
                 h5audio_media.pause();// 这个就是暂停
+                clickMe.innerText = 'Click!'
             }
         }
     })
@@ -127,23 +129,22 @@
     #clickMe
     {
         position:relative;
-        animation:myfirst .5s infinite;
+        animation:myfirst .2s infinite;
         animation-direction:alternate;
         /* Safari and Chrome */
-        -webkit-animation:myfirst .5s infinite;
+        -webkit-animation:myfirst .2s infinite;
         -webkit-animation-direction:alternate;
     }
-
     @keyframes myfirst
     {
         0%   {left:-5px; top:0px;}
-        100% { left:5px; top:0px;}
+        100% { left:10px; top:0px;}
     }
 
     @-webkit-keyframes myfirst /* Safari and Chrome */
     {
         0%   {left:-5px; top:0px;}
-        100% {left:5px; top:0px;}
+        100% {left:10px; top:0px;}
     }
 </style>
     
