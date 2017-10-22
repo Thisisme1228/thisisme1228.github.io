@@ -100,8 +100,30 @@
 		    <!--<p>Post on  by <a href="/about">Helene</a></p>-->
 		    <h1>别空有皮囊</h1>
     
+      <audio style="display:none;" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="http://dl.stream.qqmusic.qq.com/C400002tVR7P4G9SFy.m4a?vkey=80CE37021FD9F4D3B9DE2F751F198384E8B13B351831E335923502DA955E803AC9CFFF6736168FDFCE70099E88193529DC3899372EE3005B&amp;guid=3579059169&amp;uin=0&amp;fromtag=66">
+          <source src="http://dl.stream.qqmusic.qq.com/C400002tVR7P4G9SFy.m4a?vkey=80CE37021FD9F4D3B9DE2F751F198384E8B13B351831E335923502DA955E803AC9CFFF6736168FDFCE70099E88193529DC3899372EE3005B&amp;guid=3579059169&amp;uin=0&amp;fromtag=66">
+      </audio>
+      <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
+          <img  src="./../styles/images/radio.png" style="display: block;width: 50px;height: auto;">
+          <span style="color: beige">Click!</span>
+      </div>
   </div>
 </div>
+<script>
+    var radio = document.getElementById('radio');
+    var h5audio_media = document.getElementById('h5audio_media');
+
+    radio.addEventListener('click',function () {
+        if(h5audio_media != ''){
+            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+            if (h5audio_media.paused) {
+                h5audio_media.play();// 这个就是播放
+            } else {
+                h5audio_media.pause();// 这个就是暂停
+            }
+        }
+    })
+</script>
     
       
 <div class="banner">
