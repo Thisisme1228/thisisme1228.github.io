@@ -13,7 +13,7 @@
       </audio>
       <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
           <img  src="./../styles/images/radio.png" style="display: block;width: 50px;height: auto;">
-          <span style="color: beige">Click!</span>
+          <span style="color: beige" id="clickMe">Click!</span>
       </div>
   </div>
 </div>
@@ -32,3 +32,26 @@
         }
     })
 </script>
+<style>
+    #clickMe
+    {
+        position:relative;
+        animation:myfirst .5s infinite;
+        animation-direction:alternate;
+        /* Safari and Chrome */
+        -webkit-animation:myfirst .5s infinite;
+        -webkit-animation-direction:alternate;
+    }
+
+    @keyframes myfirst
+    {
+        0%   {left:-5px; top:0px;}
+        100% { left:5px; top:0px;}
+    }
+
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+        0%   {left:-5px; top:0px;}
+        100% {left:5px; top:0px;}
+    }
+</style>
