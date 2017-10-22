@@ -6115,7 +6115,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #666;
+  color: sienna;
   text-decoration: none;
 }
 a:hover,
@@ -6514,7 +6514,7 @@ hr {
 }
 .docs-nav {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-  background-color: #59aec0;
+  background-color: #041a54;
   border-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
 }
@@ -6533,8 +6533,8 @@ hr {
   height: auto;
 }
 .docs-nav .container .navbar-brand span {
-  background-color: #27ac39;
-  color: white;
+  background-color: #8e5880;
+  color: #dbd782;
   padding: 2px 5px;
   border-radius: 10px;
 }
@@ -6544,7 +6544,7 @@ hr {
 }
 .docs-nav .navbar-nav > li > a:hover,
 .docs-nav .navbar-nav > li > span:hover {
-  color: rgb(78, 86, 114);
+  color: #ccc
 }
 .docs-nav .navbar-nav > .active > a,
 .docs-nav .navbar-nav > .active > span,
@@ -6789,6 +6789,9 @@ td.visible-sm {
   th.visible-sm.visible-xs,
   td.visible-sm.visible-xs {
     display: table-cell !important;
+  }
+  .breadcrumb {
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
