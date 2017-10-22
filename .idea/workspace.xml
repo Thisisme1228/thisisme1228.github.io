@@ -5,30 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/images/banner.jpg" afterPath="$PROJECT_DIR$/_site/styles/images/banner.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/CNAME" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/books/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/donate/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/donate/method/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/LICENSE" afterPath="$PROJECT_DIR$/_site/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/books/index.html" afterPath="$PROJECT_DIR$/_site/books/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/index.html" afterPath="$PROJECT_DIR$/_site/donate/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/method/index.html" afterPath="$PROJECT_DIR$/_site/donate/method/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="$PROJECT_DIR$/_site/reference/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="$PROJECT_DIR$/_site/rice/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/iconfont.css" afterPath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/iconfont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/iconfont.svg" afterPath="$PROJECT_DIR$/_site/styles/css/fontawesome/css/iconfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/fontawesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/_site/styles/css/fontawesome/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/index.css" afterPath="$PROJECT_DIR$/_site/styles/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/syntax.css" afterPath="$PROJECT_DIR$/_site/styles/css/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/js/application.js" afterPath="$PROJECT_DIR$/_site/styles/js/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/_site/styles/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/js/jquery.min.js" afterPath="$PROJECT_DIR$/_site/styles/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/js/lessismore.js" afterPath="$PROJECT_DIR$/_site/styles/js/lessismore.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,7 +36,7 @@
       <file leaf-file-name="head.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/head.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="0">
               <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding />
             </state>
@@ -65,21 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="3635" column="23" lean-forward="false" selection-start-line="3635" selection-start-column="23" selection-end-line="3635" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_site/styles/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="6117" column="15" lean-forward="false" selection-start-line="6117" selection-start-column="15" selection-end-line="6117" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -322,16 +300,15 @@
       <workItem from="1508504881442" duration="4071000" />
       <workItem from="1508510185257" duration="1348000" />
       <workItem from="1508598901264" duration="2021000" />
-      <workItem from="1508665463802" duration="594000" />
+      <workItem from="1508665463802" duration="1049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25777000" />
+    <option name="totallyTimeSpent" value="26232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="131" width="1900" height="870" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19522777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -664,7 +641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="0">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
@@ -680,18 +657,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/css/index.css">
+    <entry file="file://$PROJECT_DIR$/_site/styles/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3635" column="23" lean-forward="false" selection-start-line="3635" selection-start-column="23" selection-end-line="3635" selection-end-column="23" />
+        <state relative-caret-position="915">
+          <caret line="6113" column="21" lean-forward="false" selection-start-line="6113" selection-start-column="21" selection-end-line="6113" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_site/styles/css/index.css">
+    <entry file="file://$PROJECT_DIR$/styles/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="6117" column="15" lean-forward="false" selection-start-line="6117" selection-start-column="15" selection-end-line="6117" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="3635" column="23" lean-forward="false" selection-start-line="3635" selection-start-column="23" selection-end-line="3635" selection-end-column="23" />
           <folding />
         </state>
       </provider>
