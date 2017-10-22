@@ -6317,7 +6317,7 @@ hr {
 .docs-home {
   color: rgb(254, 178, 146);
   background-image: url("./../images/banner.jpg");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
