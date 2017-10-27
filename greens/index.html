@@ -17,12 +17,12 @@ header: Posts By Category
 				    		{{ category | join: "/" }} <span style="color: #999999;" >({{ site.categories[category].size }})</span>
 				    	</a></li>
 			    	{% endfor %}
-			  	{% else %}
+			  	<!--{% else %}
 			    	{% for category in site.categories %} 
 				    	<li><a href="#{{ category[0] }}-ref">
 				    		{{ category[0] | join: "/" }} <span style="color: #999999;" >({{ category[1].size }})</span>
 				    	</a></li>
-			    	{% endfor %}
+			    	{% endfor %}-->
 			  	{% endif %}
           	</ul>
         </div>
