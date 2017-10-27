@@ -7,7 +7,6 @@
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-3-Capabilities.md" afterPath="$PROJECT_DIR$/_posts/2016-5-3-Capabilities.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="2016-5-3-Capabilities.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-5-3-Capabilities.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="315" column="31" lean-forward="true" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+            <state relative-caret-position="473">
+              <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,7 +38,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.footer</find>
       <find>iframe</find>
       <find>ifr</find>
       <find>canvas</find>
@@ -69,6 +67,7 @@
       <find>pos</find>
       <find>posted on</find>
       <find>18</find>
+      <find>何时用单引号，何时用双引号</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,12 +198,12 @@
       <workItem from="1508678418091" duration="5000" />
       <workItem from="1508680311456" duration="52000" />
       <workItem from="1508925977321" duration="1055000" />
-      <workItem from="1509100088524" duration="13171000" />
+      <workItem from="1509100088524" duration="13258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49489000" />
+    <option name="totallyTimeSpent" value="49576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="225" y="0" width="1569" height="1005" extended-state="0" />
@@ -581,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-5-3-Capabilities.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="315" column="31" lean-forward="true" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+        <state relative-caret-position="473">
+          <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -5,8 +5,8 @@
     <description>纵然疾风起，我心飞扬</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Oct 2017 22:08:33 +0800</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2017 22:08:33 +0800</lastBuildDate>
+    <pubDate>Fri, 27 Oct 2017 22:10:00 +0800</pubDate>
+    <lastBuildDate>Fri, 27 Oct 2017 22:10:00 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
@@ -82,7 +82,6 @@
   &lt;li&gt;&lt;a href=&quot;#twenty&quot; id=&quot;markdown-toc-twenty&quot;&gt;20、松散耦合&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#twenty-one&quot; id=&quot;markdown-toc-twenty-one&quot;&gt;21、性能方面的注意事项&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#twenty-two&quot; id=&quot;markdown-toc-twenty-two&quot;&gt;22、==和===的区别&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#twenty-three&quot; id=&quot;markdown-toc-twenty-three&quot;&gt;23、何时用单引号，何时用双引号&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;one&quot;&gt;1、避免全局查找&lt;/h1&gt;
@@ -485,9 +484,6 @@ else {
          &lt;/code&gt;
     &lt;/pre&gt;
 &lt;/div&gt;
-
-&lt;h1 id=&quot;twenty-three&quot;&gt;23、何时用单引号，何时用双引号&lt;/h1&gt;
-&lt;p&gt;虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 03 May 2016 00:00:00 +0800</pubDate>
