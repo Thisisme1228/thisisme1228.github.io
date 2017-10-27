@@ -5,8 +5,8 @@
     <description>纵然疾风起，我心飞扬</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Oct 2017 21:56:50 +0800</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2017 21:56:50 +0800</lastBuildDate>
+    <pubDate>Fri, 27 Oct 2017 22:08:33 +0800</pubDate>
+    <lastBuildDate>Fri, 27 Oct 2017 22:08:33 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
@@ -77,13 +77,12 @@
   &lt;li&gt;&lt;a href=&quot;#fifteen&quot; id=&quot;markdown-toc-fifteen&quot;&gt;15、避免双重解释&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#sixteen&quot; id=&quot;markdown-toc-sixteen&quot;&gt;16、条件分支&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#seventeen&quot; id=&quot;markdown-toc-seventeen&quot;&gt;17、使用常量&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#erighteen&quot; id=&quot;markdown-toc-erighteen&quot;&gt;18、条件分支&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#erighteen&quot; id=&quot;markdown-toc-erighteen&quot;&gt;18、何时用单引号，何时用双引号&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#nineteen&quot; id=&quot;markdown-toc-nineteen&quot;&gt;19、避免全局量&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#twenty&quot; id=&quot;markdown-toc-twenty&quot;&gt;20、松散耦合&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#twenty-one&quot; id=&quot;markdown-toc-twenty-one&quot;&gt;21、性能方面的注意事项&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#twenty-two&quot; id=&quot;markdown-toc-twenty-two&quot;&gt;22、==和===的区别&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#twenty-three&quot; id=&quot;markdown-toc-twenty-three&quot;&gt;23、何时用单引号，何时用双引号&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#twenty-four&quot; id=&quot;markdown-toc-twenty-four&quot;&gt;24、何时用单引号，何时用双引号&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;one&quot;&gt;1、避免全局查找&lt;/h1&gt;
@@ -172,13 +171,6 @@ var all = buf.join(&quot;&quot;);
 
 &lt;h1 id=&quot;five&quot;&gt;5、浮点数转换成整型&lt;/h1&gt;
 &lt;p&gt;很多人喜欢使用parseInt()，其实parseInt()是用于将字符串转换成数字，而不是浮点数和整型之间的转换，我们应该使用Math.floor()或者Math.round()&lt;/p&gt;
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;
-    &lt;pre class=&quot;highlight&quot;&gt;
-        &lt;code&gt;
-(&quot;&quot; +) &amp;gt; String() &amp;gt; .toString() &amp;gt; new String()
-        &lt;/code&gt;
-    &lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h1 id=&quot;six&quot;&gt;6、多个类型声明&lt;/h1&gt;
 &lt;p&gt;JavaScript中所有变量都可以使用单个var语句来声明,但是可以将他们组合在一起进行声明，以减少整个脚本的执行时间&lt;/p&gt;
@@ -197,7 +189,7 @@ var myVar = &quot;3.14159&quot;,
 &lt;/div&gt;
 
 &lt;h1 id=&quot;seven&quot;&gt;7、插入迭代器&lt;/h1&gt;
-&lt;p&gt;如var name=values[i]; i++;前面两条语句可以写成var name=values[i++]&amp;lt;div class=&quot;language-js highlighter-rouge&quot;&amp;gt;&lt;/p&gt;
+&lt;p&gt;如var name=values[i]; i++;前面两条语句可以写成var name=values[i++]&lt;/p&gt;
 
 &lt;h1 id=&quot;eight&quot;&gt;8、使用直接量&lt;/h1&gt;
 &lt;div&gt;
@@ -373,25 +365,8 @@ num = a &amp;gt; b ? a : b;
 &lt;li&gt;任意可能会更改的值:每当你用到字面量值的时候，你都要问一下自己这个值在未来是不是会变化，如果答案是“是”，那么这个值就应该被提取出来作为一个常量。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;erighteen&quot;&gt;18、条件分支&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;将条件分支，按可能性顺序从高到低排列：可以减少解释器对条件的探测次数&lt;/li&gt;
-&lt;li&gt;在同一条件子的多（&amp;gt;2）条件分支时，使用switch优于if：switch分支选择的效率高于if，在IE下尤为明显。4分支的测试，IE下switch的执行时间约为if的一半。&lt;/li&gt;
-&lt;li&gt;使用三元运算符替代条件分支&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;
-    &lt;pre class=&quot;highlight&quot;&gt;
-        &lt;code&gt;
-if (a &amp;gt; b) {
-    num = a;
-} else {
-    num = b;
-}
-//可以替换为：
-num = a &amp;gt; b ? a : b;
-         &lt;/code&gt;
-    &lt;/pre&gt;
-&lt;/div&gt;
+&lt;h1 id=&quot;erighteen&quot;&gt;18、何时用单引号，何时用双引号&lt;/h1&gt;
+&lt;p&gt;虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号&lt;/p&gt;
 
 &lt;h1 id=&quot;nineteen&quot;&gt;19、避免全局量&lt;/h1&gt;
 &lt;p&gt;全局变量应该全部字母大写，各单词之间用_下划线来连接。尽可能避免全局变量和函数, 尽量减少全局变量的使用，因为在一个页面中包含的所有JavaScript都在同一个域中运行。所以如果你的代码中声明了全局变量或者全局函数的话，后面的代码中载入的脚本文件中的同名变量和函数会覆盖掉（overwrite）你的。&lt;/p&gt;
@@ -514,31 +489,6 @@ else {
 &lt;h1 id=&quot;twenty-three&quot;&gt;23、何时用单引号，何时用双引号&lt;/h1&gt;
 &lt;p&gt;虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号&lt;/p&gt;
 
-&lt;h1 id=&quot;twenty-four&quot;&gt;24、何时用单引号，何时用双引号&lt;/h1&gt;
-&lt;p&gt;虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号&lt;/p&gt;
-
-&lt;div&gt;
-    &lt;pre class=&quot;highlight&quot;&gt;
-        &lt;code&gt;
-var valueA = &quot;1&quot;;
-var valueB = 1;
-if (valueA == valueB) {
-    alert(&quot;Equal&quot;);
-}
-else {
-    alert(&quot;Not equal&quot;);
-}
-//output: &quot;Equal&quot;
-if (valueA === valueB) {
-    alert(&quot;Equal&quot;);
-}
-else {
-    alert(&quot;Not equal&quot;);
-}
-//output: &quot;Not equal&quot;
-         &lt;/code&gt;
-    &lt;/pre&gt;
-&lt;/div&gt;
 </description>
         <pubDate>Tue, 03 May 2016 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2016/05/03/Capabilities/</link>

@@ -100,13 +100,6 @@ var all = buf.join("");
 5、浮点数转换成整型			{#five}
 ====================================
 很多人喜欢使用parseInt()，其实parseInt()是用于将字符串转换成数字，而不是浮点数和整型之间的转换，我们应该使用Math.floor()或者Math.round()
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-("" +) > String() > .toString() > new String()
-        </code>
-    </pre>
-</div>
 
 6、多个类型声明			{#six}
 ====================================
@@ -127,7 +120,7 @@ var myVar = "3.14159",
 
 7、插入迭代器			{#seven}
 ====================================
-如var name=values[i]; i++;前面两条语句可以写成var name=values[i++]<div class="language-js highlighter-rouge">
+如var name=values[i]; i++;前面两条语句可以写成var name=values[i++]
 
 
 8、使用直接量			{#eight}
@@ -315,26 +308,10 @@ num = a > b ? a : b;
 <li>任意可能会更改的值:每当你用到字面量值的时候，你都要问一下自己这个值在未来是不是会变化，如果答案是“是”，那么这个值就应该被提取出来作为一个常量。</li>
 </ul>
 
-18、条件分支			{#erighteen}
+18、何时用单引号，何时用双引号			{#erighteen}
 ====================================
-<ul>
-<li>将条件分支，按可能性顺序从高到低排列：可以减少解释器对条件的探测次数</li>
-<li>在同一条件子的多（>2）条件分支时，使用switch优于if：switch分支选择的效率高于if，在IE下尤为明显。4分支的测试，IE下switch的执行时间约为if的一半。</li>
-<li>使用三元运算符替代条件分支</li>
-</ul>
-<div>
-    <pre class="highlight">
-        <code>
-if (a > b) {
-    num = a;
-} else {
-    num = b;
-}
-//可以替换为：
-num = a > b ? a : b;
-         </code>
-    </pre>
-</div>
+虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号
+
 
 19、避免全局量			{#nineteen}
 ====================================
@@ -462,29 +439,3 @@ else {
 ====================================
 虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号
 
-24、何时用单引号，何时用双引号			{#twenty-four}
-====================================
-虽然在JavaScript当中，双引号和单引号都可以表示字符串, 为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号，但为了兼容各个浏览器，也为了解析时不会出错，定义JSON对象时，最好使用双引号
-
-<div>
-    <pre class="highlight">
-        <code>
-var valueA = "1";
-var valueB = 1;
-if (valueA == valueB) {
-    alert("Equal");
-}
-else {
-    alert("Not equal");
-}
-//output: "Equal"
-if (valueA === valueB) {
-    alert("Equal");
-}
-else {
-    alert("Not equal");
-}
-//output: "Not equal"
-         </code>
-    </pre>
-</div>
