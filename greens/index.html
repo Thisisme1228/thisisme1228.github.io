@@ -11,7 +11,15 @@ header: Posts By Category
         <div id="navigation">
         	<h2>==greens分类==</h2>
       		<ul class="nav sidenav">
+				{% if site.categories.first[0] == null %}
 
+			  	{% else %}
+			    	{% for category in site.categories %}
+				    	<li><a href="#{{ category[0] }}-ref">
+				    		{{ category[0] | join: "/" }} <span style="color: #999999;" >({{ category[1].size }})</span>
+				    	</a></li>
+			    	{% endfor %}
+			  	{% endif %}
           	</ul>
         </div>
       </div>
