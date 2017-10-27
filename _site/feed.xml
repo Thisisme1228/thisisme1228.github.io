@@ -5,9 +5,27 @@
     <description>纵然疾风起，我心飞扬</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Oct 2017 23:24:12 +0800</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2017 23:24:12 +0800</lastBuildDate>
+    <pubDate>Sat, 28 Oct 2017 00:02:54 +0800</pubDate>
+    <lastBuildDate>Sat, 28 Oct 2017 00:02:54 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
+    
+      <item>
+        <title>今年读过的书</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#one&quot; id=&quot;markdown-toc-one&quot;&gt;bookList&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;one&quot;&gt;bookList&lt;/h1&gt;
+
+</description>
+        <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/10/22/readBook/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/22/readBook/</guid>
+        
+        
+        <category>今年读过的书单</category>
+        
+      </item>
     
       <item>
         <title>工作是米饭，生活是蔬菜</title>
