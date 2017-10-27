@@ -5,25 +5,157 @@
     <description>纵然疾风起，我心飞扬</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Oct 2017 00:05:04 +0800</pubDate>
-    <lastBuildDate>Sat, 28 Oct 2017 00:05:04 +0800</lastBuildDate>
+    <pubDate>Sat, 28 Oct 2017 02:29:55 +0800</pubDate>
+    <lastBuildDate>Sat, 28 Oct 2017 02:29:55 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
         <title>今年读过的书</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#one&quot; id=&quot;markdown-toc-one&quot;&gt;bookList&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#one&quot; id=&quot;markdown-toc-one&quot;&gt;人性的弱点&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#two&quot; id=&quot;markdown-toc-two&quot;&gt;心若丰盈，优雅天成：做奥黛丽-赫本这样的女人&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#three&quot; id=&quot;markdown-toc-three&quot;&gt;行为心理学&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#four&quot; id=&quot;markdown-toc-four&quot;&gt;聪明爱：别拿男人不当动物&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#five&quot; id=&quot;markdown-toc-five&quot;&gt;厚黑学&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#six&quot; id=&quot;markdown-toc-six&quot;&gt;货币战争中国版&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#seven&quot; id=&quot;markdown-toc-seven&quot;&gt;FBI教你超级读心术&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#eight&quot; id=&quot;markdown-toc-eight&quot;&gt;历史上的十次货币战争&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#nine&quot; id=&quot;markdown-toc-nine&quot;&gt;烟花易冷：三毛与荷西&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ten&quot; id=&quot;markdown-toc-ten&quot;&gt;查令街84号&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#eleven&quot; id=&quot;markdown-toc-eleven&quot;&gt;傲慢与偏见&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#twelve&quot; id=&quot;markdown-toc-twelve&quot;&gt;皮囊&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#thirteen&quot; id=&quot;markdown-toc-thirteen&quot;&gt;丰乳肥臀&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;one&quot;&gt;bookList&lt;/h1&gt;
+&lt;h1 id=&quot;one&quot;&gt;人性的弱点&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt; -- 【美】戴尔-卡耐基 中国华侨出版社&lt;/p&gt;
+
+&lt;h1 id=&quot;two&quot;&gt;心若丰盈，优雅天成：做奥黛丽-赫本这样的女人&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt; -- 马丽 哈尔滨出版社&lt;/p&gt;
+&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+    &lt;p&gt;
+        奥黛丽说过，要有纤细的身材，请与饥饿的人分享你的食物
+        &lt;br /&gt;&lt;br /&gt;
+        突然,她想通了，原来不是她的人生有多坎坷，只是她一直心存依赖，一旦失去那个依赖，她就会感到撕心裂肺、彷徨无助。人类的生命是那么脆弱！自己的内心如此懦弱
+        &lt;br /&gt;&lt;br /&gt;
+        她突然明白了一个道理：当人生有爱时，就好好珍惜爱情；当人生无爱时，也该好好珍惜自己。原来，生活没有过不去的难关，只有过不去的心门。她必须重新站起来，有勇气地去面对生活
+        &lt;br /&gt;&lt;br /&gt;
+        奥黛丽说，守时体现的是一种从容，它也是品味及修养的代名词
+        &lt;br /&gt;&lt;br /&gt;
+        她曾经说过，人的两只手，一只用来帮助自己，另一只用来帮助别人
+        &lt;br /&gt;&lt;br /&gt;
+        好似三月的柳絮，悠扬得飘飘荡荡，美丽得如梦如幻，离别得潇潇洒洒
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;three&quot;&gt;行为心理学&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt; -- 孙科炎；李（女青） 中国电力出版社&lt;/p&gt;
+&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+    &lt;p&gt;
+        如果一个简单的工作，一个人都无法表现出高水平的行动效能，那只能是他们的动机水平不足。动机水平不足，最终会造成个人得过且过、回避、拖拉或者敷衍了事的态度
+        &lt;br /&gt;&lt;br /&gt;
+        动机水平高，会干扰专注力---这是因为高水平动机必然会导致个人对行为结果的过分关注，而削弱过程中的那种专注力
+        &lt;br /&gt;&lt;br /&gt;
+        避免高水平动机，是为了保持一种稳定的态度，而不是被过度的紧张所干扰；而相信自己，则是积极行动的必要信念，是唤醒内在的自信。确切地说，相信自己必然会做到，反而会给你一种平常心态，而不是紧张和焦躁
+        &lt;br /&gt;&lt;br /&gt;
+        归因于自己和归因于外部环境，是两种不同的心里特质，前者让我们审视自己，从而完善自己，后者则滋生抱怨
+        &lt;br /&gt;&lt;br /&gt;
+        自制力就是权力
+        &lt;br /&gt;&lt;br /&gt;
+        内部归因和外部归因之间的差异可以用一个问题来概括：“你认为你的命运是由自己控制，还是认为机会和外部力量决定了你的命运？”当你认为是前者的时候，个人总是会表现出对自己的控制意愿和能力，而当一个人选择后者的时候，他实际就丧失了左右局势的心力，因而也会变得随波逐流、自暴自弃，还有恣意放纵等等
+        &lt;br /&gt;&lt;br /&gt;
+        做的每一件事，每一个行动都完全符合性趣--恰恰是把不符合兴趣的部分做好，是获得全面发展的关键
+        &lt;br /&gt;&lt;br /&gt;
+        意识到某些事是你不感兴趣的，并没有多大坏处。但是，如果某件不感兴趣的工作，你必须去完成它，却很可能是决定你突破自身发展的一个必要内容
+        &lt;br /&gt;&lt;br /&gt;
+        任何意志力的消退，都起源于心理上对行动理由的质疑和行动事物本身的模糊化
+        &lt;br /&gt;&lt;br /&gt;
+        清晰的目的、动机、自制力、兴趣、态度、以及意志等，这些主要的行为及心理因素，将完整地构成一个内部动力系统，决定个人行动上的成效
+        &lt;br /&gt;&lt;br /&gt;
+        话说三遍淡如水--“超限效应”在起作用
+        &lt;br /&gt;&lt;br /&gt;
+        真正能够给人以幸福感的是一种品平和安详的心态，它承认痛苦但不在意，它承认无聊，但欣然接受
+        &lt;br /&gt;&lt;br /&gt;
+        真正能够给人以幸福感的是一种品平和安详的心态。中国古代的圣贤孔子早就明白这个道理了，所以，他教导后人“中庸而行”
+        &lt;br /&gt;&lt;br /&gt;
+        相比那些声色厉茬、狂热冒进的行动，处事冷静可以让你更具力量
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;four&quot;&gt;聪明爱：别拿男人不当动物&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 杨冰阳 北京时代华文书局&lt;/p&gt;
+
+&lt;h1 id=&quot;five&quot;&gt;厚黑学&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 李宗吾 群言出版社&lt;/p&gt;
+
+&lt;h1 id=&quot;six&quot;&gt;货币战争中国版&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 雾满拦江 北方文艺出版社&lt;/p&gt;
+
+&lt;h1 id=&quot;seven&quot;&gt;FBI教你超级读心术&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 冠诚 中国画报出版社&lt;/p&gt;
+
+&lt;h1 id=&quot;eight&quot;&gt;历史上的十次货币战争&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;--郑华伟 上海财经大学出版社 （读了百分之3，其实挺好的书，但是我电子版看的没买，以后还可以看看其他人写的）&lt;/p&gt;
+
+&lt;h1 id=&quot;nine&quot;&gt;烟花易冷：三毛与荷西&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 悠悠路  华中科技大学出版社 （我最爱的作家之一）&lt;/p&gt;
+&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+    &lt;p&gt;
+        莫愁前路无知己，天下谁人不识君
+        &lt;br /&gt;&lt;br /&gt;
+        一日不读书，就感觉面目可憎了
+        &lt;br /&gt;&lt;br /&gt;
+        十年生死两茫茫，不思量，自难忘
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;ten&quot;&gt;查令街84号&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt; -- 【美国】海莲-汉芙  译林出版社&lt;/p&gt;
+&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+    &lt;p&gt;
+        没有人是一座孤岛
+        &lt;br /&gt;&lt;br /&gt;
+        汝等无赖
+        &lt;br /&gt;&lt;br /&gt;
+        君不见沃尔顿尝曰：“若非身临现场、亲眼目睹，何以让看官尽信余言？”
+        &lt;br /&gt;&lt;br /&gt;
+        一样产自英国的了不起小说家格林，在他的《哈瓦那特派员》中这么说：“人口研究报告可以印出各种统计数值、计算城市人口，借以描绘一个城市，但对城里的每个人而言，一个城市不过是几条巷道、几间房子和几个人的组合。没有了这些，一个城市如同陨落，只剩下悲凉的记忆。“
+        &lt;br /&gt;&lt;br /&gt;
+        这本书被称为“爱书人的《圣经》”
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;eleven&quot;&gt;傲慢与偏见&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 简-奥斯汀  百花文艺出版社；天津古籍出版社&lt;/p&gt;
+&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+    &lt;p&gt;
+        我比简更幸福！她只是微微一笑，我却是放声大笑。达西对我的爱中分一些向你问候。欢迎你们到彭伯里过圣诞节。你的...
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;twelve&quot;&gt;皮囊&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;--蔡崇达  天津人民出版社&lt;/p&gt;
+
+&lt;h1 id=&quot;thirteen&quot;&gt;丰乳肥臀&lt;/h1&gt;
+&lt;p class=&quot;book-info&quot;&gt;-- 莫言 工人出版社&lt;/p&gt;
+
+&lt;style&gt;
+h1 {
+    font-size:1.8rem;
+    color:#468847
+}
+.book-info {
+    color:#ddd
+}
+&lt;/style&gt;
 
 </description>
-        <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/10/22/readBook/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/10/22/readBook/</guid>
+        <pubDate>Sat, 28 Oct 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/10/28/readBook/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/28/readBook/</guid>
         
         
-        <category>今年读过的书单</category>
+        <category>书单</category>
         
       </item>
     

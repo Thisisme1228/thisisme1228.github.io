@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2017/10/22/readBook/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-28-readBook.md" afterPath="$PROJECT_DIR$/_posts/2017-10-28-readBook.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +30,8 @@
       <file leaf-file-name="2016-5-5-Capabilities.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2016-5-5-Capabilities.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="378">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -37,8 +40,8 @@
       <file leaf-file-name="2017-10-28-readBook.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2017-10-28-readBook.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="540">
+              <caret line="146" column="34" lean-forward="false" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -58,7 +61,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>iframe</find>
       <find>ifr</find>
       <find>canvas</find>
       <find>height: 200px;width: 200px;</find>
@@ -88,6 +90,7 @@
       <find>posted on</find>
       <find>18</find>
       <find>何时用单引号，何时用双引号</find>
+      <find>如果一个简答的工作</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,11 +169,6 @@
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -219,12 +217,12 @@
       <workItem from="1508678418091" duration="5000" />
       <workItem from="1508680311456" duration="52000" />
       <workItem from="1508925977321" duration="1055000" />
-      <workItem from="1509100088524" duration="18300000" />
+      <workItem from="1509100088524" duration="26983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54618000" />
+    <option name="totallyTimeSpent" value="63301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="225" y="0" width="1569" height="1005" extended-state="0" />
@@ -590,16 +588,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-5-5-Capabilities.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="378">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2017-10-28-readBook.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="540">
+          <caret line="146" column="34" lean-forward="false" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
           <folding />
         </state>
       </provider>
