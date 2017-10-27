@@ -22,4 +22,4 @@ greens			{#greens}
 
 这样的生活，就足够有意义了。
 
-<img src="{{ '/styles/images/logo.png' | prepend: site.baseurl }}" alt="" width="310" />
+<img src="{{ '/styles/images/flower.png' | prepend: site.baseurl }}" alt="" width="310" />

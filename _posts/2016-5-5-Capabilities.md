@@ -8,16 +8,13 @@ tag: 性能
 * content
 {:toc}
 
-<blockquote style="margin-top: 20px">
-    <p></p>
-</blockquote>
 
 1、应用缓存 VS  Service Worker			{#one}
 ====================================
 首先说应用缓存吧，为什么呢，因为它已经废弃了,以下图片来源：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache">https://developer.mozilla.org</a>
 
 
-<img src="{{ '/styles/images/app-cache.jpg' | prepend: site.baseurl }}" alt="" style="width:100%" />
+<img src="{{ '/styles/images/capabilities/app-cache.jpg' | prepend: site.baseurl }}" alt="" style="width:100%" />
 
 <h4>上面图片提到了Service Workers，那么他到底是什么？</h4>
 

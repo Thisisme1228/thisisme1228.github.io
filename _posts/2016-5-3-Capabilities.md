@@ -12,9 +12,7 @@ tag: 性能
 1、避免全局查找			{#one}
 ====================================
 函数中将全局变量赋值给局部变量以减少全局查找次数，因为访问局部变量的速度要比访问全局变量的速度快些
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
+```js
 function search() {
     //当我要使用当前页面地址和主机域名
     alert(window.location.href + window.location.host);
@@ -25,16 +23,12 @@ function search() {
     var location = window.location;
     alert(location.href + location.host);
 }
-        </code>
-    </pre>
-</div>
+```
 
 2、定时器			{#two}
 ====================================
 如果是需要不断运行的代码，则应该使用setInterval而不是setTimeout,因为setTimeout每一次都会初始化一个定时器，而setinterval只会在开始的时候初始化一个定时器
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
+```js
 var timeoutTimes = 0;
 function timeout() {
     timeoutTimes++;
@@ -53,16 +47,12 @@ function interval() {
     }
 }
 var interv = setInterval(interval, 10);
-        </code>
-    </pre>
-</div>
+```
 
 3、字符串连接			{#three}
 ====================================
 如果要连接多个字符串，应该少使用+=，如
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
+```js
 s+=a;
 
 s+=b;
@@ -70,32 +60,22 @@ s+=b;
 s+=c;
 
 应该写成s+=a + b + c；
-        </code>
-    </pre>
-</div>
+```
 而如果是收集字符串，比如多次对同一个字符串进行+=操作的话，最好使用一个缓存，使用JavaScript数组来收集，最后使用join方法连接起来
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
+```js
 var buf = [];
 for (var i = 0; i < 100; i++) {
     buf.push(i.toString());
 }
 var all = buf.join("");
-        </code>
-    </pre>
-</div>
+```
 
 4、数字转换成字符串			{#four}
 ====================================
 最好使用"" + 1来将数字转换成字符串，性能上来说
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
+```js
 ("" +) > String() > .toString() > new String()
-        </code>
-    </pre>
-</div>
+```
 
 5、浮点数转换成整型			{#five}
 ====================================
@@ -104,9 +84,7 @@ var all = buf.join("");
 6、多个类型声明			{#six}
 ====================================
 JavaScript中所有变量都可以使用单个var语句来声明,但是可以将他们组合在一起进行声明，以减少整个脚本的执行时间
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
+```js
 var myVar = "3.14159",
         str = "" + myVar, //  to string
         i_int = ~ ~myVar,  //  to integer
@@ -114,9 +92,7 @@ var myVar = "3.14159",
         b_bool = !!myVar,  /*  to boolean - any string with length
                                 and any number except 0 are true */
         array = [myVar];  //  to array
-        </code>
-    </pre>
-</div>
+```
 
 7、插入迭代器			{#seven}
 ====================================
@@ -125,9 +101,7 @@ var myVar = "3.14159",
 
 8、使用直接量			{#eight}
 ====================================
-<div>
-    <pre class="highlight">
-        <code>
+```js
 var aTest = new Array(); //替换为
 var aTest = [];
 var aTest = new Object; //替换为
@@ -140,17 +114,13 @@ oFruit.color = "red";
 oFruit.name = "apple";
 //前面的代码可用对象字面量来改写成这样：
 var oFruit = { color: "red", name: "apple" };
-        </code>
-    </pre>
-</div>
+```
 
 9、使用DocumentFragment优化多次append			{#nine}
 ====================================
 一旦需要更新DOM,请考虑使用文档碎片来构建DOM结构，然后再将其添加到现存的文档中。
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 for (var i = 0; i < 1000; i++) {
     var el = document.createElement('p');
     el.innerHTML = i;
@@ -165,18 +135,14 @@ for (var i = 0; i < 1000; i++) {
     frag.appendChild(el);
 }
 document.body.appendChild(frag);
-        </code>
-    </pre>
-</div>
+```
 
 
 10、使用一次innerHTML赋值代替构建dom元素			{#ten}
 ====================================
 对于大的DOM更改，使用innerHTML要比使用标准的DOM方法创建同样的DOM结构快得多。
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 var frag = document.createDocumentFragment();
 for (var i = 0; i < 1000; i++) {
     var el = document.createElement('p');
@@ -190,16 +156,12 @@ for (var i = 0; i < 1000; i++) {
     html.push("<p>" + i + "</p>");
 }
 document.body.innerHTML = html.join('');
-        </code>
-    </pre>
-</div>
+```
 
 11、使用firstChild和nextSibling代替childNodes遍历dom元素			{#eleven}
 ====================================
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 var nodes = element.childNodes;
 for (var i = 0, l = nodes.length; i < l; i++) {
     var node = nodes[i];
@@ -210,9 +172,7 @@ var node = element.firstChild;
 while (node) {
     //……
     node = node.nextSibling;
-        </code>
-    </pre>
-</div>
+```
 
 12、删除DOM节点			{#twelve}
 ====================================
@@ -221,9 +181,7 @@ while (node) {
 13、重复使用的调用结果，事先保存到局部变量			{#thirteen}
 ====================================
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 //避免多次取值的调用开销
 var h1 = element1.clientHeight + num1;
 var h4 = element1.clientHeight + num2;
@@ -232,24 +190,18 @@ var h4 = element1.clientHeight + num2;
 var eleHeight = element1.clientHeight;
 var h1 = eleHeight + num1;
 var h4 = eleHeight + num2;
-        </code>
-    </pre>
-</div>
+```
 
 14、注意NodeList			{#fourteen}
 ====================================
 最小化访问NodeList的次数可以极大的改进脚本的性能
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 var images = document.getElementsByTagName('img');
 for (var i = 0, len = images.length; i < len; i++) {
 
 }
-        </code>
-    </pre>
-</div>
+```
 
 编写JavaScript的时候一定要知道何时返回NodeList对象，这样可以最小化对它们的访问
 
@@ -263,9 +215,7 @@ for (var i = 0, len = images.length; i < len; i++) {
 ====================================
 不要给setTimeout或者setInterval传递字符串参数
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 var num = 0;
 setTimeout('num++', 10);
 //可以替换为：
@@ -274,9 +224,7 @@ function addNum() {
     num++;
 }
 setTimeout(addNum, 10);
-        </code>
-    </pre>
-</div>
+```
 
 16、条件分支			{#sixteen}
 ====================================
@@ -285,9 +233,7 @@ setTimeout(addNum, 10);
 <li>在同一条件子的多（>2）条件分支时，使用switch优于if：switch分支选择的效率高于if，在IE下尤为明显。4分支的测试，IE下switch的执行时间约为if的一半。</li>
 <li>使用三元运算符替代条件分支</li>
 </ul>
-<div>
-    <pre class="highlight">
-        <code>
+```js
 if (a > b) {
     num = a;
 } else {
@@ -295,9 +241,7 @@ if (a > b) {
 }
 //可以替换为：
 num = a > b ? a : b;
-         </code>
-    </pre>
-</div>
+```
 
 17、使用常量			{#seventeen}
 ====================================
@@ -317,9 +261,7 @@ num = a > b ? a : b;
 ====================================
 全局变量应该全部字母大写，各单词之间用_下划线来连接。尽可能避免全局变量和函数, 尽量减少全局变量的使用，因为在一个页面中包含的所有JavaScript都在同一个域中运行。所以如果你的代码中声明了全局变量或者全局函数的话，后面的代码中载入的脚本文件中的同名变量和函数会覆盖掉（overwrite）你的。
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 //糟糕的全局变量和全局函数
 var current = null;
 function init(){
@@ -369,9 +311,7 @@ myNameSpace = function() {
         set: change
     };
 };
-         </code>
-    </pre>
-</div>
+```
 
 20、松散耦合			{#twenty}
 ====================================
@@ -388,9 +328,7 @@ myNameSpace = function() {
 通过将case语句按照最可能到最不可能的顺序进行组织
 
 3、巧用||和&&布尔运算符
-<div>
-    <pre class="highlight">
-        <code>
+```js
 function eventHandler(e) {
     if (!e) e = window.event;
 }
@@ -404,17 +342,13 @@ if (myobj) {
 }
 //可以替换为：
 myobj && doSomething(myobj);
-         </code>
-    </pre>
-</div>
+```
 
 22、==和===的区别			{#twenty-two}
 ====================================
 避免在if和while语句的条件部分进行赋值，如if (a = b)，应该写成if (a == b)，但是在比较是否相等的情况下，最好使用全等运行符，也就是使用===和!==操作符会相对于==和!=会好点。==和!=操作符会进行类型强制转换
 
-<div>
-    <pre class="highlight">
-        <code>
+```js
 var valueA = "1";
 var valueB = 1;
 if (valueA == valueB) {
@@ -431,8 +365,6 @@ else {
     alert("Not equal");
 }
 //output: "Not equal"
-         </code>
-    </pre>
-</div>
+```
 
 

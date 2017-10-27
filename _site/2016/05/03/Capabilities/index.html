@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
 	<link rel="canonical" href="/2016/05/03/Capabilities/">
 	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
 	
@@ -71,6 +72,9 @@
             <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
         </li>-->
         <li>
+          <a href="/reference">外域链接</a>
+        </li>
+        <li>
           <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
         </li>
         <li>
@@ -104,7 +108,7 @@
           <source src="./../styles/Demi-Lovato-This-Is-Me.mp3">
       </audio>
       <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
-          <img  src="./../styles/images/radio.png" style="display: block;width: 50px;height: auto;">
+          <img  src="./../styles/images/header/radio.png" style="display: block;width: 50px;height: auto;">
           <span style="color: beige" id="clickMe">Click!</span>
       </div>
   </div>
@@ -216,229 +220,169 @@
 
 <h1 id="one">1、避免全局查找</h1>
 <p>函数中将全局变量赋值给局部变量以减少全局查找次数，因为访问局部变量的速度要比访问全局变量的速度快些</p>
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-function search() {
-    //当我要使用当前页面地址和主机域名
-    alert(window.location.href + window.location.host);
-}
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">search</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//当我要使用当前页面地址和主机域名</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">);</span>
+<span class="p">}</span>
 
-//最好的方式是如下这样  先用一个简单变量保存起来
-function search() {
-    var location = window.location;
-    alert(location.href + location.host);
-}
-        </code>
-    </pre>
-</div>
+<span class="c1">//最好的方式是如下这样  先用一个简单变量保存起来</span>
+<span class="kd">function</span> <span class="nx">search</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">location</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">;</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">+</span> <span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h1 id="two">2、定时器</h1>
 <p>如果是需要不断运行的代码，则应该使用setInterval而不是setTimeout,因为setTimeout每一次都会初始化一个定时器，而setinterval只会在开始的时候初始化一个定时器</p>
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-var timeoutTimes = 0;
-function timeout() {
-    timeoutTimes++;
-    if (timeoutTimes &lt; 10) {
-        setTimeout(timeout, 10);
-    }
-}
-timeout();
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">timeoutTimes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">timeout</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">timeoutTimes</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">timeoutTimes</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">timeout</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">timeout</span><span class="p">();</span>
 
-//可以替换为：
-var intervalTimes = 0;
-function interval() {
-    intervalTimes++;
-    if (intervalTimes &gt;= 10) {
-        clearInterval(interv);
-    }
-}
-var interv = setInterval(interval, 10);
-        </code>
-    </pre>
-</div>
+<span class="c1">//可以替换为：</span>
+<span class="kd">var</span> <span class="nx">intervalTimes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">interval</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">intervalTimes</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">intervalTimes</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">interv</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">interv</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h1 id="three">3、字符串连接</h1>
 <p>如果要连接多个字符串，应该少使用+=，如</p>
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-s+=a;
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">s</span><span class="o">+=</span><span class="nx">a</span><span class="p">;</span>
 
-s+=b;
+<span class="nx">s</span><span class="o">+=</span><span class="nx">b</span><span class="p">;</span>
 
-s+=c;
+<span class="nx">s</span><span class="o">+=</span><span class="nx">c</span><span class="p">;</span>
 
-应该写成s+=a + b + c；
-        </code>
-    </pre>
-</div>
+<span class="err">应该写成</span><span class="nx">s</span><span class="o">+=</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span><span class="err">；</span>
+</code></pre></div></div>
 <p>而如果是收集字符串，比如多次对同一个字符串进行+=操作的话，最好使用一个缓存，使用JavaScript数组来收集，最后使用join方法连接起来</p>
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-var buf = [];
-for (var i = 0; i &lt; 100; i++) {
-    buf.push(i.toString());
-}
-var all = buf.join("");
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">buf</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">buf</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">all</span> <span class="o">=</span> <span class="nx">buf</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h1 id="four">4、数字转换成字符串</h1>
 <p>最好使用”” + 1来将数字转换成字符串，性能上来说</p>
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-("" +) &gt; String() &gt; .toString() &gt; new String()
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="s2">""</span> <span class="o">+</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">String</span><span class="p">()</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">&gt;</span> <span class="k">new</span> <span class="nb">String</span><span class="p">()</span>
+</code></pre></div></div>
 
 <h1 id="five">5、浮点数转换成整型</h1>
 <p>很多人喜欢使用parseInt()，其实parseInt()是用于将字符串转换成数字，而不是浮点数和整型之间的转换，我们应该使用Math.floor()或者Math.round()</p>
 
 <h1 id="six">6、多个类型声明</h1>
 <p>JavaScript中所有变量都可以使用单个var语句来声明,但是可以将他们组合在一起进行声明，以减少整个脚本的执行时间</p>
-<div class="language-js highlighter-rouge">
-    <pre class="highlight">
-        <code>
-var myVar = "3.14159",
-        str = "" + myVar, //  to string
-        i_int = ~ ~myVar,  //  to integer
-        f_float = 1 * myVar,  //  to float
-        b_bool = !!myVar,  /*  to boolean - any string with length
-                                and any number except 0 are true */
-        array = [myVar];  //  to array
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="s2">"3.14159"</span><span class="p">,</span>
+        <span class="nx">str</span> <span class="o">=</span> <span class="s2">""</span> <span class="o">+</span> <span class="nx">myVar</span><span class="p">,</span> <span class="c1">//  to string</span>
+        <span class="nx">i_int</span> <span class="o">=</span> <span class="o">~</span> <span class="o">~</span><span class="nx">myVar</span><span class="p">,</span>  <span class="c1">//  to integer</span>
+        <span class="nx">f_float</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="nx">myVar</span><span class="p">,</span>  <span class="c1">//  to float</span>
+        <span class="nx">b_bool</span> <span class="o">=</span> <span class="o">!!</span><span class="nx">myVar</span><span class="p">,</span>  <span class="cm">/*  to boolean - any string with length
+                                and any number except 0 are true */</span>
+        <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="nx">myVar</span><span class="p">];</span>  <span class="c1">//  to array</span>
+</code></pre></div></div>
 
 <h1 id="seven">7、插入迭代器</h1>
 <p>如var name=values[i]; i++;前面两条语句可以写成var name=values[i++]</p>
 
 <h1 id="eight">8、使用直接量</h1>
-<div>
-    <pre class="highlight">
-        <code>
-var aTest = new Array(); //替换为
-var aTest = [];
-var aTest = new Object; //替换为
-var aTest = {};
-var reg = new RegExp(); //替换为
-var reg = /../;
-//如果要创建具有一些特性的一般对象，也可以使用字面量，如下：
-var oFruit = new O;
-oFruit.color = "red";
-oFruit.name = "apple";
-//前面的代码可用对象字面量来改写成这样：
-var oFruit = { color: "red", name: "apple" };
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">aTest</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span> <span class="c1">//替换为</span>
+<span class="kd">var</span> <span class="nx">aTest</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">var</span> <span class="nx">aTest</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">;</span> <span class="c1">//替换为</span>
+<span class="kd">var</span> <span class="nx">aTest</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">();</span> <span class="c1">//替换为</span>
+<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/../</span><span class="p">;</span>
+<span class="c1">//如果要创建具有一些特性的一般对象，也可以使用字面量，如下：</span>
+<span class="kd">var</span> <span class="nx">oFruit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">O</span><span class="p">;</span>
+<span class="nx">oFruit</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s2">"red"</span><span class="p">;</span>
+<span class="nx">oFruit</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">"apple"</span><span class="p">;</span>
+<span class="c1">//前面的代码可用对象字面量来改写成这样：</span>
+<span class="kd">var</span> <span class="nx">oFruit</span> <span class="o">=</span> <span class="p">{</span> <span class="na">color</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"apple"</span> <span class="p">};</span>
+</code></pre></div></div>
 
 <h1 id="nine">9、使用DocumentFragment优化多次append</h1>
 <p>一旦需要更新DOM,请考虑使用文档碎片来构建DOM结构，然后再将其添加到现存的文档中。</p>
 
-<div>
-    <pre class="highlight">
-        <code>
-for (var i = 0; i &lt; 1000; i++) {
-    var el = document.createElement('p');
-    el.innerHTML = i;
-    document.body.appendChild(el);
-}
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'p'</span><span class="p">);</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+<span class="p">}</span>
 
-//可以替换为：
-var frag = document.createDocumentFragment();
-for (var i = 0; i &lt; 1000; i++) {
-    var el = document.createElement('p');
-    el.innerHTML = i;
-    frag.appendChild(el);
-}
-document.body.appendChild(frag);
-        </code>
-    </pre>
-</div>
+<span class="c1">//可以替换为：</span>
+<span class="kd">var</span> <span class="nx">frag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createDocumentFragment</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'p'</span><span class="p">);</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="nx">frag</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">frag</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h1 id="ten">10、使用一次innerHTML赋值代替构建dom元素</h1>
 <p>对于大的DOM更改，使用innerHTML要比使用标准的DOM方法创建同样的DOM结构快得多。</p>
 
-<div>
-    <pre class="highlight">
-        <code>
-var frag = document.createDocumentFragment();
-for (var i = 0; i &lt; 1000; i++) {
-    var el = document.createElement('p');
-    el.innerHTML = i;
-    frag.appendChild(el);
-}
-document.body.appendChild(frag);
-//可以替换为：
-var html = [];
-for (var i = 0; i &lt; 1000; i++) {
-    html.push("<p>" + i + "</p>");
-}
-document.body.innerHTML = html.join('');
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">frag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createDocumentFragment</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'p'</span><span class="p">);</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="nx">frag</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">frag</span><span class="p">);</span>
+<span class="c1">//可以替换为：</span>
+<span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">html</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">"&lt;p&gt;"</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h1 id="eleven">11、使用firstChild和nextSibling代替childNodes遍历dom元素</h1>
 
-<div>
-    <pre class="highlight">
-        <code>
-var nodes = element.childNodes;
-for (var i = 0, l = nodes.length; i &lt; l; i++) {
-    var node = nodes[i];
-    //……
-}
-//可以替换为：
-var node = element.firstChild;
-while (node) {
-    //……
-    node = node.nextSibling;
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="c1">//……</span>
+<span class="p">}</span>
+<span class="c1">//可以替换为：</span>
+<span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//……</span>
+    <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">nextSibling</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h1 id="twelve">12、删除DOM节点</h1>
 <p>删除dom节点之前,一定要删除注册在该节点上的事件,不管是用observe方式还是用attachEvent方式注册的事件,否则将会产生无法回收的内存。另外，在removeChild和innerHTML=’’二者之间,尽量选择后者. 因为在sIEve(内存泄露监测工具)中监测的结果是用removeChild无法有效地释放dom节点</p>
 
 <h1 id="thirteen">13、重复使用的调用结果，事先保存到局部变量</h1>
 
-<div>
-    <pre class="highlight">
-        <code>
-//避免多次取值的调用开销
-var h1 = element1.clientHeight + num1;
-var h4 = element1.clientHeight + num2;
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//避免多次取值的调用开销</span>
+<span class="kd">var</span> <span class="nx">h1</span> <span class="o">=</span> <span class="nx">element1</span><span class="p">.</span><span class="nx">clientHeight</span> <span class="o">+</span> <span class="nx">num1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">h4</span> <span class="o">=</span> <span class="nx">element1</span><span class="p">.</span><span class="nx">clientHeight</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
 
-//可以替换为：
-var eleHeight = element1.clientHeight;
-var h1 = eleHeight + num1;
-var h4 = eleHeight + num2;
-        </code>
-    </pre>
-</div>
+<span class="c1">//可以替换为：</span>
+<span class="kd">var</span> <span class="nx">eleHeight</span> <span class="o">=</span> <span class="nx">element1</span><span class="p">.</span><span class="nx">clientHeight</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">h1</span> <span class="o">=</span> <span class="nx">eleHeight</span> <span class="o">+</span> <span class="nx">num1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">h4</span> <span class="o">=</span> <span class="nx">eleHeight</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h1 id="fourteen">14、注意NodeList</h1>
 <p>最小化访问NodeList的次数可以极大的改进脚本的性能</p>
 
-<div>
-    <pre class="highlight">
-        <code>
-var images = document.getElementsByTagName('img');
-for (var i = 0, len = images.length; i &lt; len; i++) {
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">images</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'img'</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">images</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 
-}
-        </code>
-    </pre>
-</div>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>编写JavaScript的时候一定要知道何时返回NodeList对象，这样可以最小化对它们的访问</p>
 
@@ -451,20 +395,15 @@ for (var i = 0, len = images.length; i &lt; len; i++) {
 <h1 id="fifteen">15、避免双重解释</h1>
 <p>不要给setTimeout或者setInterval传递字符串参数</p>
 
-<div>
-    <pre class="highlight">
-        <code>
-var num = 0;
-setTimeout('num++', 10);
-//可以替换为：
-var num = 0;
-function addNum() {
-    num++;
-}
-setTimeout(addNum, 10);
-        </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="s1">'num++'</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="c1">//可以替换为：</span>
+<span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">addNum</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">num</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">addNum</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h1 id="sixteen">16、条件分支</h1>
 <ul>
@@ -472,19 +411,14 @@ setTimeout(addNum, 10);
 <li>在同一条件子的多（&gt;2）条件分支时，使用switch优于if：switch分支选择的效率高于if，在IE下尤为明显。4分支的测试，IE下switch的执行时间约为if的一半。</li>
 <li>使用三元运算符替代条件分支</li>
 </ul>
-<div>
-    <pre class="highlight">
-        <code>
-if (a &gt; b) {
-    num = a;
-} else {
-    num = b;
-}
-//可以替换为：
-num = a &gt; b ? a : b;
-         </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">num</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">num</span> <span class="o">=</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//可以替换为：</span>
+<span class="nx">num</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">a</span> <span class="p">:</span> <span class="nx">b</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h1 id="seventeen">17、使用常量</h1>
 <ul>
@@ -500,61 +434,56 @@ num = a &gt; b ? a : b;
 <h1 id="nineteen">19、避免全局量</h1>
 <p>全局变量应该全部字母大写，各单词之间用_下划线来连接。尽可能避免全局变量和函数, 尽量减少全局变量的使用，因为在一个页面中包含的所有JavaScript都在同一个域中运行。所以如果你的代码中声明了全局变量或者全局函数的话，后面的代码中载入的脚本文件中的同名变量和函数会覆盖掉（overwrite）你的。</p>
 
-<div>
-    <pre class="highlight">
-        <code>
-//糟糕的全局变量和全局函数
-var current = null;
-function init(){
-//...
-}
-function change() {
-    //...
-}
-function verify() {
-    //...
-}
-//解决办法有很多，Christian Heilmann建议的方法是：
-//如果变量和函数不需要在“外面”引用，那么就可以使用一个没有名字的方法将他们全都包起来。
-(function(){
-var current = null;
-function init() {
-    //...
-}
-function change() {
-    //...
-}
-function verify() {
-    //...
-}
-})();
-//如果变量和函数需要在“外面”引用，需要把你的变量和函数放在一个“命名空间”中
-//我们这里用一个function做命名空间而不是一个var，因为在前者中声明function更简单，而且能保护隐私数据
-myNameSpace = function() {
-    var current = null;
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//糟糕的全局变量和全局函数</span>
+<span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">init</span><span class="p">(){</span>
+<span class="c1">//...</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">change</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">verify</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+<span class="c1">//解决办法有很多，Christian Heilmann建议的方法是：</span>
+<span class="c1">//如果变量和函数不需要在“外面”引用，那么就可以使用一个没有名字的方法将他们全都包起来。</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">change</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">verify</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+<span class="p">})();</span>
+<span class="c1">//如果变量和函数需要在“外面”引用，需要把你的变量和函数放在一个“命名空间”中</span>
+<span class="c1">//我们这里用一个function做命名空间而不是一个var，因为在前者中声明function更简单，而且能保护隐私数据</span>
+<span class="nx">myNameSpace</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
-    function init() {
-        //...
-    }
+    <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//...</span>
+    <span class="p">}</span>
 
-    function change() {
-        //...
-    }
+    <span class="kd">function</span> <span class="nx">change</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//...</span>
+    <span class="p">}</span>
 
-    function verify() {
-        //...
-    }
+    <span class="kd">function</span> <span class="nx">verify</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//...</span>
+    <span class="p">}</span>
 
-//所有需要在命名空间外调用的函数和属性都要写在return里面
-    return {
-        init: init,
-        //甚至你可以为函数和属性命名一个别名
-        set: change
-    };
-};
-         </code>
-    </pre>
-</div>
+<span class="c1">//所有需要在命名空间外调用的函数和属性都要写在return里面</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">init</span><span class="p">:</span> <span class="nx">init</span><span class="p">,</span>
+        <span class="c1">//甚至你可以为函数和属性命名一个别名</span>
+        <span class="na">set</span><span class="p">:</span> <span class="nx">change</span>
+    <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
 <h1 id="twenty">20、松散耦合</h1>
 <p>解耦CSS/JavaScript</p>
@@ -569,51 +498,41 @@ myNameSpace = function() {
 <p>通过将case语句按照最可能到最不可能的顺序进行组织</p>
 
 <p>3、巧用||和&amp;&amp;布尔运算符</p>
-<div>
-    <pre class="highlight">
-        <code>
-function eventHandler(e) {
-    if (!e) e = window.event;
-}
-//可以替换为：
-function eventHandler(e) {
-    e = e || window.event;
-}
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">eventHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">e</span><span class="p">)</span> <span class="nx">e</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//可以替换为：</span>
+<span class="kd">function</span> <span class="nx">eventHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+<span class="p">}</span>
 
-if (myobj) {
-    doSomething(myobj);
-}
-//可以替换为：
-myobj &amp;&amp; doSomething(myobj);
-         </code>
-    </pre>
-</div>
+<span class="k">if</span> <span class="p">(</span><span class="nx">myobj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">doSomething</span><span class="p">(</span><span class="nx">myobj</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//可以替换为：</span>
+<span class="nx">myobj</span> <span class="o">&amp;&amp;</span> <span class="nx">doSomething</span><span class="p">(</span><span class="nx">myobj</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h1 id="twenty-two">22、==和===的区别</h1>
 <p>避免在if和while语句的条件部分进行赋值，如if (a = b)，应该写成if (a == b)，但是在比较是否相等的情况下，最好使用全等运行符，也就是使用===和!==操作符会相对于==和!=会好点。==和!=操作符会进行类型强制转换</p>
 
-<div>
-    <pre class="highlight">
-        <code>
-var valueA = "1";
-var valueB = 1;
-if (valueA == valueB) {
-    alert("Equal");
-}
-else {
-    alert("Not equal");
-}
-//output: "Equal"
-if (valueA === valueB) {
-    alert("Equal");
-}
-else {
-    alert("Not equal");
-}
-//output: "Not equal"
-         </code>
-    </pre>
-</div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">valueA</span> <span class="o">=</span> <span class="s2">"1"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">valueB</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">valueA</span> <span class="o">==</span> <span class="nx">valueB</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Equal"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Not equal"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//output: "Equal"</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">valueA</span> <span class="o">===</span> <span class="nx">valueB</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Equal"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Not equal"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//output: "Not equal"</span>
+</code></pre></div></div>
 
 
             </article>

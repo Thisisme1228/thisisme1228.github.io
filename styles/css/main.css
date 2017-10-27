@@ -1,0 +1,37 @@
+/* 外域链接start */
+
+
+.rectangle-list li:before, .rounded-list li:before {
+  position: absolute;
+  left:-3rem;
+  top: -.4rem;
+  content: '1';
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  background-color: #e3476d;
+  color: white;
+  border: .4rem solid white;
+  box-sizing: content-box;
+}
+.rounded-list li:before {
+  border-radius: 100%;
+}
+.rectangle-list li,.rounded-list li {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  background-color: #c56861;
+  margin-bottom: 2rem;
+  margin-right: 6rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+.rectangle-list li a,.rounded-list li a {
+  color: bisque;
+}
+
+/* 外域链接end */
