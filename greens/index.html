@@ -20,7 +20,7 @@ header: Posts By Category
 			  	{% else %}
 			    	{% for category in site.categories %}
 				    	<li><a href="#{{ category[0] }}-ref">
-				    		{{ category[0] | join: "/" }} <span style="color: #999999;" >({{ category[1].name }})</span>
+				    		{{ category[0] | join: "/" }} <span style="color: #999999;" >({{ category[1] }})</span>
 				    	</a></li>
 			    	{% endfor %}
 			  	{% endif %}
