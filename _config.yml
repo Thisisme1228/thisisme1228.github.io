@@ -5,11 +5,11 @@ author: Helene
 url: http://www.thisisme1228.com
 github: https://github.com/Thisisme1228
 baseurl: ""
-description: 纵然疾风起，我心飞扬
+description: 纵然疾风起，人生不言弃
 meta_description: 厚积薄发
-motto: 别空有皮囊
-banner: 一日不读书便觉得面目可憎了
-better_me: Better me
+motto: Better me
+banner:  √ 时间这个怪物可以抚平你的伤痕，也可以把我学过的东西统统抹去
+better_me: Helene's Blog
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
