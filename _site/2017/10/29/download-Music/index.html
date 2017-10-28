@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>下载付费音乐(能点开播放页面的，泰勒的除外) - Helene's blog</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.icon">
+	<link rel="icon" href="/styles/images/favicon.ico">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2017/10/29/download-Music/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<meta name="keywords" content="下载付费音乐(能点开播放页面的，泰勒的除外), Helene's blog, 厚积薄发">
+	<meta name="description" content="厚积薄发">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <!--<img src="/styles/images/logo.png" style="width: auto;height: 40px;">-->
+        <span style="font-size: 20px">Helene</span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="/greens/">生活</a>
+        </li>
+        <li>
+          <a href="/rice">工作</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">外域链接</a>
+        </li>
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <li>
+          <a href="/donate/">打赏我</a>
+        </li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+		    <!--<h1>下载付费音乐(能点开播放页面的，泰勒的除外)</h1>-->
+		    <!--<p>Post on Oct 29, 2017 by <a href="/about">Helene</a></p>-->
+		    <h1>Better me</h1>
+    
+      <audio style="display:none;" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="./../styles/bainianguji.mp3">
+          <source src="./../styles/bainianguji.mp3">
+      </audio>
+      <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
+          <img  src="./../styles/images/header/radio.png" style="display: block;width: 50px;height: auto;">
+          <span style="color: beige" id="clickMe">Click!</span>
+      </div>
+  </div>
+</div>
+<script>
+    var radio = document.getElementById('radio');
+    var h5audio_media = document.getElementById('h5audio_media');
+
+    radio.addEventListener('click',function () {
+        if(h5audio_media != ''){
+            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+            if (h5audio_media.paused) {
+                h5audio_media.play();// 这个就是播放
+                clickMe.innerText = '哎呀'
+            } else {
+                h5audio_media.pause();// 这个就是暂停
+                clickMe.innerText = 'Click!'
+            }
+        }
+    })
+</script>
+<style>
+    #clickMe
+    {
+        position:relative;
+        animation:myfirst .2s infinite;
+        animation-direction:alternate;
+        /* Safari and Chrome */
+        -webkit-animation:myfirst .2s infinite;
+        -webkit-animation-direction:alternate;
+    }
+    @keyframes myfirst
+    {
+        0%   {left:-5px; top:0px;}
+        100% { left:10px; top:0px;}
+    }
+
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+        0%   {left:-5px; top:0px;}
+        100% {left:10px; top:0px;}
+    }
+</style>
+
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/greens/#下载付费音乐-ref">下载付费音乐</a>	/
+    	<a href="/rice/#-ref"></a>
+    
+  </div>
+</div>
+
+    
+
+    <!-- 外域链接 && 打赏页面-->
+<div class="container docs-container" style="margin-top: 25px">
+  <div class="row">
+  <div class="col-md-3">
+    <div class="sidebar hidden-print" role="complementary">
+      <!-- 打赏页面 && 外域链接页面 左部分 -->
+<div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+  </ul>
+  <div style="height: 200px;width: 200px;">
+
+  </div>
+</div>
+
+<!--想使用，在/_layouts/post.html里面机上下面那段-->
+
+
+
+    </div>
+  </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">下载付费音乐(能点开播放页面的，泰勒的除外)</h1>
+                <span class="post-meta" style="margin-right: 30px">Date：Oct 29, 2017</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote style="margin-top: 20px"><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <p style="width: 100%;font-size: 1.8rem;color: yellow;background: green;padding: 2rem 1rem;">这里我介绍在网易云音乐中下载，其实以下的方法在其他音乐网站都可以</p>
+
+<h3 id="1打开谷歌浏览器没有先下一个">1.打开谷歌浏览器（没有先下一个）</h3>
+
+<h3 id="2进入网易云音乐官网搜索你要的音乐">2.进入网易云音乐官网，搜索你要的音乐</h3>
+
+<p><img src="/styles/images/download-music/01.jpg" alt="" width="100%" /></p>
+
+<h3 id="3在浏览器上点击右键有个检查点击检查会变成下面这样">3.在浏览器上点击右键，有个检查，点击检查会变成下面这样</h3>
+
+<p><img src="/styles/images/download-music/02.jpg" alt="" width="100%" /></p>
+
+<h3 id="4按照图片上的进行点击点击network">4.按照图片上的进行点击，点击Network</h3>
+
+<p><img src="/styles/images/download-music/03.jpg" alt="" width="100%" /></p>
+
+<h3 id="5这时你可以刷新当前页面按f5或者鼠标右键刷新就会看见很多数据">5.这时你可以刷新当前页面按“F5”或者“鼠标右键刷新”，就会看见很多数据</h3>
+
+<p><img src="/styles/images/download-music/04.jpg" alt="" width="100%" /></p>
+
+<h3 id="6按clear清除数据">6.按clear清除数据</h3>
+
+<p><img src="/styles/images/download-music/05.jpg" alt="" width="100%" /></p>
+
+<h3 id="7点击你要下载的音乐播放">7.点击你要下载的音乐播放</h3>
+
+<p><img src="/styles/images/download-music/06.jpg" alt="" width="100%" /></p>
+
+<h3 id="8这时你会看见刚才清除的地方又出现数据了你要的音乐就在那里">8.这时你会看见刚才清除的地方又出现数据了，你要的音乐就在那里</h3>
+
+<p><img src="/styles/images/download-music/07.jpg" alt="" width="100%" /></p>
+
+<p><img src="/styles/images/download-music/08.jpg" alt="" width="100%" /></p>
+
+<p><img src="/styles/images/download-music/09.jpg" alt="" width="100%" /></p>
+
+<h3 id="9鼠标选择复制那个地址在新窗口中打开快点击下载吧">9.鼠标选择复制那个地址，在新窗口中打开,快点击下载吧</h3>
+
+<p><img src="/styles/images/download-music/10.jpg" alt="" width="100%" /></p>
+
+<h3 id="10想要传到手机里自己百度去吧一点也不费劲">10.想要传到手机里，自己百度去吧，一点也不费劲</h3>
+
+<blockquote style="margin-top: 100px">
+    <p>
+       如果帮助了你，如果你愿意，请点击<a href="/donate/">“打赏我”</a>，然后...
+    </p>
+</blockquote>
+
+<style>
+    h1 {
+        font-size:30px
+    }
+    h3 {
+            font-size:20px
+        }
+</style>
+
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span>
+				我的网站展示：
+			</span>
+			<span>
+				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+			</span>
+			<span>&nbsp;|&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+			</span>
+		</div>
+		<div style="margin-bottom: 12px">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>

@@ -76,3 +76,11 @@ jekyll server
 微信
 ----------------
 <img src="https://github.com/Thisisme1228/thisisme1228.github.io/blob/master/styles/images/zhifubao.jpg" alt="支付宝二维码付款给王丹" width="310" />
+
+
+
+
+
+## 文件讲解
+lefttree.html <!-- 打赏页面 && 外域链接页面 左部分 -->
+/_layouts/post.html <!-- 外域链接 && 打赏页面-->
