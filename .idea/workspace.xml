@@ -6,22 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/docs_header.html" afterPath="$PROJECT_DIR$/_includes/docs_header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" afterPath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/28/readBook/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/28/readBook/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/books/index.html" afterPath="$PROJECT_DIR$/_site/books/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/index.html" afterPath="$PROJECT_DIR$/_site/donate/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="$PROJECT_DIR$/_site/reference/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="$PROJECT_DIR$/_site/rice/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference.md" afterPath="$PROJECT_DIR$/reference.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,12 +26,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="reference.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reference.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reference.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
               <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#2793#2800#0" expanded="true" />
+                <element signature="n#style#0;n#h2#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +119,6 @@
         <option value="$PROJECT_DIR$/rice/index.html" />
         <option value="$PROJECT_DIR$/greens/index.html" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_site/index.html" />
         <option value="$PROJECT_DIR$/_posts/2017-10-28-readBook.md" />
         <option value="$PROJECT_DIR$/_posts/2017-5-6-server.md" />
@@ -132,6 +135,7 @@
         <option value="$PROJECT_DIR$/_includes/docs_header.html" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/reference.md" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -148,7 +152,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="95" />
     <option name="y" value="30" />
     <option name="width" value="1506" />
@@ -185,7 +189,8 @@
             <path>
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="donate" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="LessOrMore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,15 +242,15 @@
       <workItem from="1508925977321" duration="1055000" />
       <workItem from="1509100088524" duration="27490000" />
       <workItem from="1509129769856" duration="15613000" />
-      <workItem from="1509180875650" duration="3236000" />
+      <workItem from="1509180875650" duration="3764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82657000" />
+    <option name="totallyTimeSpent" value="83185000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23966065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -514,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/css/main.js" />
     <entry file="file://$USER_HOME$/Desktop/maoxiaoke.github.io-master/reference.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -607,6 +605,20 @@
         <state relative-caret-position="297">
           <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2793#2800#0" expanded="true" />
+            <element signature="n#style#0;n#h2#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

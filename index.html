@@ -29,7 +29,7 @@ layout: default
                       <li><a href="#year_{{next_year}}">{{next_year}}</a>
                         <ul class="nav">
                           <li><a href="#month_{{next_year}}_{{next_month}}">{{next_month}}</a></li>
-                    {% else %}    
+                    {% else %}
                       {% if this_month != next_month %}
                           <li><a href="#month_{{next_year}}_{{next_month}}">{{next_month}}</a></li>
                       {% endif %}
@@ -52,7 +52,7 @@ layout: default
 
                   {% if forloop.first %}
                     <h1 id="year_{{this_year}}">{{this_year}}</h1>
-                    <h2 id="month_{{this_year}}_{{this_month}}">{{this_month}}</h2>
+                    <h2 style="color: #e48a5e" id="month_{{this_year}}_{{this_month}}">{{this_month}}</h2>
                     <ul>
                   {% endif %}
 
@@ -65,12 +65,12 @@ layout: default
                     {% if this_year != next_year %}
                       </ul>
                       <h1 id="year_{{next_year}}">{{next_year}}</h1>
-                      <h2 id="month_{{next_year}}_{{next_month}}">{{next_month}}</h2>
+                      <h2  style="color: #e48a5e"  id="month_{{next_year}}_{{next_month}}">{{next_month}}</h2>
                       <ul>
-                    {% else %}    
+                    {% else %}
                       {% if this_month != next_month %}
                         </ul>
-                        <h2 id="month_{{next_year}}_{{next_month}}">{{next_month}}</h2>
+                        <h2  style="color: #e48a5e"  id="month_{{next_year}}_{{next_month}}">{{next_month}}</h2>
                         <ul>
                       {% endif %}
                     {% endif %}
