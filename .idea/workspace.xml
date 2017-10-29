@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/docs_header.html" afterPath="$PROJECT_DIR$/_includes/docs_header.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="docs_header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/docs_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="14" column="103" lean-forward="true" selection-start-line="14" selection-start-column="103" selection-end-line="14" selection-end-column="103" />
+            <state relative-caret-position="198">
+              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="70" />
               <folding>
                 <element signature="n#style#0;n#h1#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -147,7 +148,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="1341" />
@@ -242,15 +243,15 @@
       <workItem from="1509129769856" duration="15613000" />
       <workItem from="1509180875650" duration="7056000" />
       <workItem from="1509200521364" duration="16292000" />
-      <workItem from="1509277167416" duration="1211000" />
+      <workItem from="1509277167416" duration="1992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103980000" />
+    <option name="totallyTimeSpent" value="104761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23541887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -607,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/docs_header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="14" column="103" lean-forward="true" selection-start-line="14" selection-start-column="103" selection-end-line="14" selection-end-column="103" />
+        <state relative-caret-position="198">
+          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="70" />
           <folding>
             <element signature="n#style#0;n#h1#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
