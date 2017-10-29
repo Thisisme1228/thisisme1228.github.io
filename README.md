@@ -71,11 +71,11 @@ jekyll server
 支付宝
 ----------------
 
-<img src="https://github.com/Thisisme1228/thisisme1228.github.io/blob/master/styles/images/weixin.jpg" alt="支付宝二维码付款给王丹" width="310" />
+<img src="https://github.com/Thisisme1228/thisisme1228.github.io/blob/master/styles/images/donate/weixin.jpg" alt="支付宝二维码付款给王丹" width="310" />
 
 微信
 ----------------
-<img src="https://github.com/Thisisme1228/thisisme1228.github.io/blob/master/styles/images/zhifubao.jpg" alt="支付宝二维码付款给王丹" width="310" />
+<img src="https://github.com/Thisisme1228/thisisme1228.github.io/blob/master/styles/images/donate/zhifubao.jpg" alt="支付宝二维码付款给王丹" width="310" />
 
 
 

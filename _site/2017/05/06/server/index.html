@@ -51,8 +51,7 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/" class="navbar-brand">
-        <!--<img src="/styles/images/logo.png" style="width: auto;height: 40px;">-->
-        <span style="font-size: 20px">Helene</span>
+        <span>Helene</span>
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -104,54 +103,15 @@
 		    <!--<p>Post on May 06, 2017 by <a href="/about">Helene</a></p>-->
 		    <h1>Better me</h1>
     
-      <audio style="display:none;" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/remember-else.m4a">
-          <source src="/styles/remember-else.m4a">
+      <audio class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/remember-else.m4a">
+          <source src="/styles/music/remember-else.m4a">
       </audio>
-      <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
-          <img  src="/styles/images/header/radio.png" style="display: block;width: 50px;height: auto;">
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
           <!--<span style="color: beige" id="clickMe">Click!</span>-->
       </div>
   </div>
 </div>
-<script>
-    var radio = document.getElementById('radio');
-    var h5audio_media = document.getElementById('h5audio_media');
-
-    radio.addEventListener('click',function () {
-        if(h5audio_media != ''){
-            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
-            if (h5audio_media.paused) {
-                h5audio_media.play();// 这个就是播放
-                clickMe.innerText = '哎呀'
-            } else {
-                h5audio_media.pause();// 这个就是暂停
-                clickMe.innerText = 'Click!'
-            }
-        }
-    })
-</script>
-<style>
-    #clickMe
-    {
-        position:relative;
-        /*animation:myfirst .2s infinite;
-        animation-direction:alternate;
-        !* Safari and Chrome *!
-        -webkit-animation:myfirst .2s infinite;
-        -webkit-animation-direction:alternate;*/
-    }
-    @keyframes myfirst
-    {
-        0%   {left:-5px; top:0px;}
-        100% { left:10px; top:0px;}
-    }
-
-    @-webkit-keyframes myfirst /* Safari and Chrome */
-    {
-        0%   {left:-5px; top:0px;}
-        100% {left:10px; top:0px;}
-    }
-</style>
 
     
       
@@ -166,22 +126,18 @@
 
     
 
-    <!-- 外域链接 && 打赏页面-->
-<div class="container docs-container" style="margin-top: 25px">
+    <!-- 内页-->
+<div class="container docs-container">
   <div class="row">
   <div class="col-md-3">
     <div class="sidebar hidden-print" role="complementary">
-      <!-- 打赏页面 && 外域链接页面 左部分 -->
+      <!-- 供内页使用 -->
 <div id="navigation">
   <h1>目录</h1>
   <ul class="nav sidenav">
   </ul>
-  <div style="height: 200px;width: 200px;">
-
-  </div>
 </div>
 
-<!--想使用，在/_layouts/post.html里面机上下面那段-->
 
 
 
@@ -192,10 +148,10 @@
         <div class="wrapper">
             <header class="post-header">
               <h1 class="post-title">服务器搭建</h1>
-                <span class="post-meta" style="margin-right: 30px">Date：May 6, 2017</span>
+                <span class="post-meta">Date：May 6, 2017</span>
                 <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
               <br />
-              <blockquote style="margin-top: 20px"><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
@@ -239,7 +195,7 @@
 <h1 id="two">开始配置服务器：</h1>
 
 <h3 id="1远程连接阿里云主机服务器linuxcentos系统">1.远程连接阿里云主机服务器(Linux（centos）系统)</h3>
-<blockquote style="margin-top: 20px">
+<blockquote class="margin-top-20">
     <p>1）由于我的电脑是windows系统，用linux的服务器需要在本地安装虚拟机，下载VMware</p>
     <p>Workstation Pro去官网下载就好</p>
     <br />
@@ -250,12 +206,12 @@
     <p><a href="http://www.runoob.com/linux/linux-install.html">http://www.runoob.com/linux/linux-install.html</a></p>
     <br />
     <p>
-        配置好之后进入虚拟机，在桌面鼠标右键，选择打开终端,输入：<span style="color:red">ssh root@123.11.11.1</span> ====== 123.11.11.1是你服务器的共有IP地址，输入链接密码（输入密码的时候不会显示出来，所有的密码都是隐藏的，so不要大惊小怪）
+        配置好之后进入虚拟机，在桌面鼠标右键，选择打开终端,输入：<span class="font-color-red">ssh root@123.11.11.1</span> ====== 123.11.11.1是你服务器的共有IP地址，输入链接密码（输入密码的时候不会显示出来，所有的密码都是隐藏的，so不要大惊小怪）
     </p>
 </blockquote>
 
 <h3 id="2安装nginx服务器">2.安装nginx服务器</h3>
-<blockquote style="margin-top: 20px">
+<blockquote class="margin-top-20">
     <p>
         Nginx能做什么?
         <br />
@@ -286,7 +242,7 @@
 <a href="http://www.imooc.com/qa/295/t/1?page=1">mongoDB入门篇</a><br /><br /><br /></p>
 
 <h3 id="特别强调">特别强调！！！</h3>
-<div style="margin-bottom:20px;" class="server-bg">
+<div class="server-bg margin-bottom-20">
     <p>不管你是安装nginx，还是MongoDB还是新建了其他的端口，如果要访问成功，必须到阿里云服务器创建安全组</p>
 </div>
 <p><img src="/styles/images/server/Security-Group.jpg" alt="" width="100%" />
@@ -324,6 +280,11 @@ h1 {
 
             </article>
         </div>
+        <hr/>
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>
       </div>
     </div>
   </div>
@@ -344,7 +305,7 @@ h1 {
 				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
 			</span>
 		</div>
-		<div style="margin-bottom: 12px">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
 		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
 	</div>
 </footer>
@@ -355,6 +316,8 @@ h1 {
 <script src="/styles/js/lessismore.js"></script>
 <script src="/styles/js/application.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
 
   </body>
 </html>

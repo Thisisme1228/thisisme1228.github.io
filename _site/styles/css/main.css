@@ -1,6 +1,46 @@
+/*  margin start */
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+/*  margin end */
+
+
+/* color start */
+
+.font-color-red {
+  color: red;
+}
+.font-color-999 {
+  color: #999;
+}
+
+/* color end */
+
+
 /* 外域链接start */
 
-
+.rectangle-list li,.rounded-list li {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  background-color: #c56861;
+  margin-bottom: 2rem;
+  margin-right: 6rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+.rectangle-list li a,.rounded-list li a {
+  color: bisque;
+}
 .rectangle-list li:before, .rounded-list li:before {
   position: absolute;
   left:-3rem;
@@ -19,19 +59,80 @@
 .rounded-list li:before {
   border-radius: 100%;
 }
-.rectangle-list li,.rounded-list li {
-  position: relative;
-  display: inline-block;
-  padding-left: 2rem;
-  padding-right: 1rem;
-  background-color: #c56861;
-  margin-bottom: 2rem;
-  margin-right: 6rem;
-  height: 3rem;
-  line-height: 3rem;
-}
-.rectangle-list li a,.rounded-list li a {
-  color: bisque;
-}
 
 /* 外域链接end */
+
+
+/* 定义标题字体大小start */
+
+h1.h1-35 {
+  font-size: 35px
+}
+
+/* 定义标题字体大小end */
+
+
+/* music style start */
+
+.audio-img {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer
+}
+.audio-img img {
+  display: block;
+  width: 50px;
+  height: auto;
+}
+#clickMe
+{
+  position:relative;
+  animation:myfirst .2s infinite;
+  animation-direction:alternate;
+  /* Safari and Chrome */
+  -webkit-animation:myfirst .2s infinite;
+  -webkit-animation-direction:alternate;
+}
+@keyframes myfirst
+{
+  0%   {left:-5px; top:0px;}
+  100% { left:10px; top:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+  0%   {left:-5px; top:0px;}
+  100% {left:10px; top:0px;}
+}
+
+/* music style end */
+
+
+/* footer start */
+
+.copyright-dis {
+  margin-bottom: 12px
+}
+
+/* footer end */
+
+
+/* inner-page code start */
+
+.post-header blockquote {
+  margin-top: 20px;
+}
+.post-meta {
+  margin-right: 30px
+}
+.donate-btn {
+  margin-top: 20px;
+  margin-bottom: -60px
+}
+.donate-btn a {
+  text-decoration: none;
+}
+
+/* inner-page code end */

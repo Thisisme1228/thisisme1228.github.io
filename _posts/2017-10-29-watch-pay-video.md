@@ -44,11 +44,6 @@ categories: 观看付费视频
 <img src="{{ '/styles/images/watch-pay-video/08.jpg' | prepend: site.baseurl }}" alt="" width="100%" />
 
 
-<blockquote style="margin-top: 100px">
-    <p>
-       如果帮助了你，如果你愿意，请点击<a href="{{ '/donate/' | prepend: site.baseurl }}">“打赏我”</a>，然后...
-    </p>
-</blockquote>
 
 <style>
     h1 {

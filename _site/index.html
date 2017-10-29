@@ -51,8 +51,7 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/" class="navbar-brand">
-        <!--<img src="/styles/images/logo.png" style="width: auto;height: 40px;">-->
-        <span style="font-size: 20px">Helene</span>
+        <span>Helene</span>
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -100,57 +99,18 @@
     <div class="docs-header" id="content">
   <div class="container">
   	
-	    <h1 style="font-size: 35px">Helene's Blog</h1>
+	    <h1 class="h1-35">Helene's Blog</h1>
 	    <p>纵然疾风起，人生不言弃</p>
     
-      <audio style="display:none;" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/remember-else.m4a">
-          <source src="/styles/remember-else.m4a">
+      <audio class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/remember-else.m4a">
+          <source src="/styles/music/remember-else.m4a">
       </audio>
-      <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
-          <img  src="/styles/images/header/radio.png" style="display: block;width: 50px;height: auto;">
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
           <!--<span style="color: beige" id="clickMe">Click!</span>-->
       </div>
   </div>
 </div>
-<script>
-    var radio = document.getElementById('radio');
-    var h5audio_media = document.getElementById('h5audio_media');
-
-    radio.addEventListener('click',function () {
-        if(h5audio_media != ''){
-            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
-            if (h5audio_media.paused) {
-                h5audio_media.play();// 这个就是播放
-                clickMe.innerText = '哎呀'
-            } else {
-                h5audio_media.pause();// 这个就是暂停
-                clickMe.innerText = 'Click!'
-            }
-        }
-    })
-</script>
-<style>
-    #clickMe
-    {
-        position:relative;
-        /*animation:myfirst .2s infinite;
-        animation-direction:alternate;
-        !* Safari and Chrome *!
-        -webkit-animation:myfirst .2s infinite;
-        -webkit-animation-direction:alternate;*/
-    }
-    @keyframes myfirst
-    {
-        0%   {left:-5px; top:0px;}
-        100% { left:10px; top:0px;}
-    }
-
-    @-webkit-keyframes myfirst /* Safari and Chrome */
-    {
-        0%   {left:-5px; top:0px;}
-        100% {left:10px; top:0px;}
-    }
-</style>
 
     
 
@@ -208,6 +168,19 @@
                     
                       
                           <li><a href="#month_2017_May">May</a></li>
+                      
+                    
+                  
+                
+                  
+                  
+                  
+                  
+                  
+                  
+                    
+                      
+                          <li><a href="#month_2017_January">January</a></li>
                       
                     
                   
@@ -354,6 +327,26 @@
                   </ol>
                   
                     
+                      
+                        </ul>
+                        <h2 id="month_2017_January">January</h2>
+                        <ul>
+                      
+                    
+                  
+                
+                  
+                  
+                  
+                  
+
+                  
+
+                  <ol class="breadcrumb">
+                   <li><span>January 15, 2017</span> &raquo; <a href="/2017/01/15/code-standards/">前端代码规范</a></li>
+                  </ol>
+                  
+                    
                       </ul>
                       <h1 id="year_2016">2016</h1>
                       <h2 id="month_2016_August">August</h2>
@@ -433,7 +426,7 @@
 				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
 			</span>
 		</div>
-		<div style="margin-bottom: 12px">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
 		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
 	</div>
 </footer>
@@ -444,6 +437,8 @@
 <script src="/styles/js/lessismore.js"></script>
 <script src="/styles/js/application.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
 
   </body>
 </html>

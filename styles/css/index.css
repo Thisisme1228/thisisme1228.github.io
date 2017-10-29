@@ -6417,11 +6417,12 @@ hr {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background-color: #fff;
+  background-color:#fff;
   padding: 1px 60px 80px 60px;
   margin: 0 -15px;
   border: none;
   border-radius: 0 0 4px 4px;
+  margin-top: 25px;
 }
 .docs-content .container-fluid {
   padding: 0;
@@ -6537,6 +6538,7 @@ hr {
   color: #dbd782;
   padding: 2px 5px;
   border-radius: 10px;
+  font-size: 20px
 }
 .docs-nav .navbar-nav > li > a,
 .docs-nav .navbar-nav > li > span {

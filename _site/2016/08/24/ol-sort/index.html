@@ -51,8 +51,7 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/" class="navbar-brand">
-        <!--<img src="/styles/images/logo.png" style="width: auto;height: 40px;">-->
-        <span style="font-size: 20px">Helene</span>
+        <span>Helene</span>
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -104,54 +103,15 @@
 		    <!--<p>Post on Aug 24, 2016 by <a href="/about">Helene</a></p>-->
 		    <h1>Better me</h1>
     
-      <audio style="display:none;" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/remember-else.m4a">
-          <source src="/styles/remember-else.m4a">
+      <audio class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/remember-else.m4a">
+          <source src="/styles/music/remember-else.m4a">
       </audio>
-      <div style="display: inline-block;position: absolute;right: 0;top: 0;cursor: pointer" id="radio">
-          <img  src="/styles/images/header/radio.png" style="display: block;width: 50px;height: auto;">
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
           <!--<span style="color: beige" id="clickMe">Click!</span>-->
       </div>
   </div>
 </div>
-<script>
-    var radio = document.getElementById('radio');
-    var h5audio_media = document.getElementById('h5audio_media');
-
-    radio.addEventListener('click',function () {
-        if(h5audio_media != ''){
-            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
-            if (h5audio_media.paused) {
-                h5audio_media.play();// 这个就是播放
-                clickMe.innerText = '哎呀'
-            } else {
-                h5audio_media.pause();// 这个就是暂停
-                clickMe.innerText = 'Click!'
-            }
-        }
-    })
-</script>
-<style>
-    #clickMe
-    {
-        position:relative;
-        /*animation:myfirst .2s infinite;
-        animation-direction:alternate;
-        !* Safari and Chrome *!
-        -webkit-animation:myfirst .2s infinite;
-        -webkit-animation-direction:alternate;*/
-    }
-    @keyframes myfirst
-    {
-        0%   {left:-5px; top:0px;}
-        100% { left:10px; top:0px;}
-    }
-
-    @-webkit-keyframes myfirst /* Safari and Chrome */
-    {
-        0%   {left:-5px; top:0px;}
-        100% {left:10px; top:0px;}
-    }
-</style>
 
     
       
@@ -166,22 +126,18 @@
 
     
 
-    <!-- 外域链接 && 打赏页面-->
-<div class="container docs-container" style="margin-top: 25px">
+    <!-- 内页-->
+<div class="container docs-container">
   <div class="row">
   <div class="col-md-3">
     <div class="sidebar hidden-print" role="complementary">
-      <!-- 打赏页面 && 外域链接页面 左部分 -->
+      <!-- 供内页使用 -->
 <div id="navigation">
   <h1>目录</h1>
   <ul class="nav sidenav">
   </ul>
-  <div style="height: 200px;width: 200px;">
-
-  </div>
 </div>
 
-<!--想使用，在/_layouts/post.html里面机上下面那段-->
 
 
 
@@ -192,15 +148,83 @@
         <div class="wrapper">
             <header class="post-header">
               <h1 class="post-title">使用ol进行对列表的升序 || 降序样式显示</h1>
-                <span class="post-meta" style="margin-right: 30px">Date：Aug 24, 2016</span>
+                <span class="post-meta">Date：Aug 24, 2016</span>
                 <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
               <br />
-              <blockquote style="margin-top: 20px"><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
             </header>
             <article class="post-content">
-              
+              <ul id="markdown-toc">
+  <li><a href="#一使用css属性" id="markdown-toc-一使用css属性">一、使用css属性：</a>    <ul>
+      <li><a href="#1counter" id="markdown-toc-1counter">1.counter</a></li>
+      <li><a href="#2content-reset" id="markdown-toc-2content-reset">2.content-reset</a></li>
+      <li><a href="#3counter-increment" id="markdown-toc-3counter-increment">3.counter-increment</a></li>
+    </ul>
+  </li>
+  <li><a href="#二使用方法" id="markdown-toc-二使用方法">二、使用方法</a>    <ul>
+      <li><a href="#1使用计数器" id="markdown-toc-1使用计数器">1.使用计数器</a></li>
+      <li><a href="#2计数器嵌套" id="markdown-toc-2计数器嵌套">2.计数器嵌套</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>本质上CSS计数器是由CSS维护的变量，这些变量可能根据CSS规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。 CSS计数器是CSS2.1中自动计数编号部分的实现。
+
+计数器的值通过使用counter-reset 和 counter-increment 操作，在 content 上应用 counter() 或 counters()函数来显示在页面上。
+</code></pre></div></div>
+
+<h2 id="一使用css属性">一、使用css属性：</h2>
+
+<h3 id="1counter">1.counter</h3>
+
+<h3 id="2content-reset">2.content-reset</h3>
+
+<p>counter-reset 属性设置某个选择器出现次数的计数器的值。默认为 0。
+利用这个属性，计数器可以设置或重置为任何值，可以是正值或负值。如果没有提供 number，则默认为 0。
+注释：如果使用 “display: none”，则无法重置计数器。如果使用 “visibility: hidden”，则可以重置计数器。</p>
+
+<h3 id="3counter-increment">3.counter-increment</h3>
+
+<p>counter-increment 属性设置某个选取器每次出现的计数器增量。默认增量是 1。
+利用这个属性，计数器可以递增（或递减）某个值，这可以是正值或负值。如果没有提供 number 值，则默认为 1。
+注释：如果使用了 “display: none”，则无法增加计数。如使用 “visibility: hidden”，则可增加计数。</p>
+
+<h2 id="二使用方法">二、使用方法</h2>
+
+<h3 id="1使用计数器">1.使用计数器</h3>
+
+<p>使用CSS计数器之前，必须重置一个值，默认是0。使用counter()函数来给元素增加计数器。 下面的CSS给每个h3元素的前面增加了 “Section <计算器值>:"。</计算器值></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">body</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">-</span><span class="nx">reset</span><span class="p">:</span> <span class="nx">section</span><span class="p">;</span>           <span class="cm">/* 重置计数器成0 */</span>
+<span class="p">}</span>
+<span class="nl">h3</span><span class="p">:</span><span class="nx">before</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">-</span><span class="nx">increment</span><span class="p">:</span> <span class="nx">section</span><span class="p">;</span>      <span class="cm">/* 增加计数器值 */</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s2">"Section "</span> <span class="nx">counter</span><span class="p">(</span><span class="nx">section</span><span class="p">)</span> <span class="s2">": "</span><span class="p">;</span> <span class="cm">/* 显示计数器 */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="2计数器嵌套">2.计数器嵌套</h3>
+
+<p>CSS计数器对创建有序列表特别有用，因为在子元素中会自动创建一个CSS计数器的实例。使用 counters() 函数，在不同级别的嵌套计数器之间可以插入字符串。比如这个CSS例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ol</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">-</span><span class="nx">reset</span><span class="p">:</span> <span class="nx">section</span><span class="p">;</span>                <span class="cm">/* 为每个ol元素创建新的计数器实例 */</span>
+  <span class="nx">list</span><span class="o">-</span><span class="nx">style</span><span class="o">-</span><span class="nx">type</span><span class="p">:</span> <span class="nx">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nl">li</span><span class="p">:</span><span class="nx">before</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">-</span><span class="nx">increment</span><span class="p">:</span> <span class="nx">section</span><span class="p">;</span>            <span class="cm">/* 只增加计数器的当前实例 */</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="nx">counters</span><span class="p">(</span><span class="nx">section</span><span class="p">,</span> <span class="s2">"."</span><span class="p">)</span> <span class="s2">" "</span><span class="p">;</span>   <span class="cm">/* 为所有计数器实例增加以“.”分隔的值 */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 
             </article>
+        </div>
+        <hr/>
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
         </div>
       </div>
     </div>
@@ -222,7 +246,7 @@
 				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
 			</span>
 		</div>
-		<div style="margin-bottom: 12px">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
 		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
 	</div>
 </footer>
@@ -233,6 +257,8 @@
 <script src="/styles/js/lessismore.js"></script>
 <script src="/styles/js/application.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
 
   </body>
 </html>

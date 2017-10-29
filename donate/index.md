@@ -37,5 +37,3 @@ header: 打赏
 <br>
 <br>
 
-<hr>
-

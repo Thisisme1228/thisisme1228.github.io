@@ -14,11 +14,11 @@ tag: 性能
 首先说应用缓存吧，为什么呢，因为它已经废弃了,以下图片来源：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache">https://developer.mozilla.org</a>
 
 
-<img src="{{ '/styles/images/capabilities/app-cache.jpg' | prepend: site.baseurl }}" alt="" style="width:100%" />
+<img src="{{ '/styles/images/capabilities/app-cache.jpg' | prepend: site.baseurl }}" alt="" class="col-md-12" />
 
 <h4>上面图片提到了Service Workers，那么他到底是什么？</h4>
 
-<blockquote style="margin-top: 20px">
+<blockquote class="margin-top-20">
     <p>
         Service workers 本质上充当Web应用程序与浏览器之间的代理服务器，也可以在网络可用时作为浏览器和网络间的代理。它们旨在（除其他之外）使得能够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否驻留在服务器上来采取适当的动作。他们还允许访问推送通知和后台同步API。
     </p>
@@ -27,7 +27,7 @@ tag: 性能
 
 <h4>背景</h4>
 
-<blockquote style="margin-top: 20px">
+<blockquote class="margin-top-20">
     <p>
         有一个困扰 web 用户多年的难题——丢失网络连接。即使是世界上最好的 web app，如果下载不了它，也是非常糟糕的体验。如今虽然已经有很多种技术去尝试着解决这一问题。而随着离线页面的出现，一些问题已经得到了解决。但是，最重要的问题是，仍然没有一个好的统筹机制对资源缓存和自定义的网络请求进行控制。
         <br/>  <br/>
@@ -44,7 +44,7 @@ tag: 性能
 ====================================
 
 <h4>缓存的作用：</h4>
-<blockquote style="margin-top: 20px">
+<blockquote class="margin-top-20">
     <p>
         重用已获取的资源能够有效的提升网站与应用的性能。Web 缓存能够减少延迟与网络阻塞，进而减少显示某个资源所用的时间。借助 HTTP 缓存，Web 站点变得更具有响应性。
     </p>

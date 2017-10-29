@@ -10,7 +10,6 @@ meta_description: 厚积薄发
 motto: Better me
 banner:  唐僧开场白：“贫僧唐三藏，从东土大唐而来，去往西天取经”《初心易得，始终难守》
 better_me: Helene's Blog
-
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
 paginate: 10

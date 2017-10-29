@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Oct 2017 21:17:30 +0800</pubDate>
-    <lastBuildDate>Sun, 29 Oct 2017 21:17:30 +0800</lastBuildDate>
+    <pubDate>Sun, 29 Oct 2017 23:55:00 +0800</pubDate>
+    <lastBuildDate>Sun, 29 Oct 2017 23:55:00 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
@@ -46,12 +46,6 @@
 &lt;h3 id=&quot;10但是事情是有意外的这时怎么办呢进入这个httpmajiawndd123com网址把你刚才打开付费电影那页的网址复制到这个输入框点击免费看电影就开始看吧&quot;&gt;10.但是事情是有意外的，这时怎么办呢？进入这个&lt;a href=&quot;http://majia.wndd123.com/&quot;&gt;http://majia.wndd123.com/&lt;/a&gt;网址,把你刚才打开付费电影那页的网址复制到这个输入框，点击“免费看电影”就开始看吧&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/watch-pay-video/08.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote style=&quot;margin-top: 100px&quot;&gt;
-    &lt;p&gt;
-       如果帮助了你，如果你愿意，请点击&lt;a href=&quot;/donate/&quot;&gt;“打赏我”&lt;/a&gt;，然后...
-    &lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;style&gt;
     h1 {
@@ -116,12 +110,6 @@
 
 &lt;h3 id=&quot;10想要传到手机里自己百度去吧一点也不费劲&quot;&gt;10.想要传到手机里，自己百度去吧，一点也不费劲&lt;/h3&gt;
 
-&lt;blockquote style=&quot;margin-top: 100px&quot;&gt;
-    &lt;p&gt;
-       如果帮助了你，如果你愿意，请点击&lt;a href=&quot;/donate/&quot;&gt;“打赏我”&lt;/a&gt;，然后...
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;style&gt;
     h1 {
         font-size:30px
@@ -164,7 +152,7 @@
 
 &lt;h1 id=&quot;two&quot;&gt;心若丰盈，优雅天成：做奥黛丽-赫本这样的女人&lt;/h1&gt;
 &lt;p class=&quot;book-info&quot;&gt; -- 马丽 哈尔滨出版社&lt;/p&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         奥黛丽说过，要有纤细的身材，请与饥饿的人分享你的食物
         &lt;br /&gt;&lt;br /&gt;
@@ -182,7 +170,7 @@
 
 &lt;h1 id=&quot;three&quot;&gt;行为心理学&lt;/h1&gt;
 &lt;p class=&quot;book-info&quot;&gt; -- 孙科炎；李（女青） 中国电力出版社&lt;/p&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         如果一个简单的工作，一个人都无法表现出高水平的行动效能，那只能是他们的动机水平不足。动机水平不足，最终会造成个人得过且过、回避、拖拉或者敷衍了事的态度
         &lt;br /&gt;&lt;br /&gt;
@@ -231,7 +219,7 @@
 
 &lt;h1 id=&quot;nine&quot;&gt;烟花易冷：三毛与荷西&lt;/h1&gt;
 &lt;p class=&quot;book-info&quot;&gt;-- 悠悠路  华中科技大学出版社 （我最爱的作家之一）&lt;/p&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         莫愁前路无知己，天下谁人不识君
         &lt;br /&gt;&lt;br /&gt;
@@ -243,7 +231,7 @@
 
 &lt;h1 id=&quot;ten&quot;&gt;查令街84号&lt;/h1&gt;
 &lt;p class=&quot;book-info&quot;&gt; -- 【美国】海莲-汉芙  译林出版社&lt;/p&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         没有人是一座孤岛
         &lt;br /&gt;&lt;br /&gt;
@@ -259,7 +247,7 @@
 
 &lt;h1 id=&quot;eleven&quot;&gt;傲慢与偏见&lt;/h1&gt;
 &lt;p class=&quot;book-info&quot;&gt;-- 简-奥斯汀  百花文艺出版社；天津古籍出版社&lt;/p&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         我比简更幸福！她只是微微一笑，我却是放声大笑。达西对我的爱中分一些向你问候。欢迎你们到彭伯里过圣诞节。你的...
     &lt;/p&gt;
@@ -364,7 +352,7 @@ h1 {
 &lt;h1 id=&quot;two&quot;&gt;开始配置服务器：&lt;/h1&gt;
 
 &lt;h3 id=&quot;1远程连接阿里云主机服务器linuxcentos系统&quot;&gt;1.远程连接阿里云主机服务器(Linux（centos）系统)&lt;/h3&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;1）由于我的电脑是windows系统，用linux的服务器需要在本地安装虚拟机，下载VMware&lt;/p&gt;
     &lt;p&gt;Workstation Pro去官网下载就好&lt;/p&gt;
     &lt;br /&gt;
@@ -375,12 +363,12 @@ h1 {
     &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/linux/linux-install.html&quot;&gt;http://www.runoob.com/linux/linux-install.html&lt;/a&gt;&lt;/p&gt;
     &lt;br /&gt;
     &lt;p&gt;
-        配置好之后进入虚拟机，在桌面鼠标右键，选择打开终端,输入：&lt;span style=&quot;color:red&quot;&gt;ssh root@123.11.11.1&lt;/span&gt; ====== 123.11.11.1是你服务器的共有IP地址，输入链接密码（输入密码的时候不会显示出来，所有的密码都是隐藏的，so不要大惊小怪）
+        配置好之后进入虚拟机，在桌面鼠标右键，选择打开终端,输入：&lt;span class=&quot;font-color-red&quot;&gt;ssh root@123.11.11.1&lt;/span&gt; ====== 123.11.11.1是你服务器的共有IP地址，输入链接密码（输入密码的时候不会显示出来，所有的密码都是隐藏的，so不要大惊小怪）
     &lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;2安装nginx服务器&quot;&gt;2.安装nginx服务器&lt;/h3&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         Nginx能做什么?
         &lt;br /&gt;
@@ -411,7 +399,7 @@ h1 {
 &lt;a href=&quot;http://www.imooc.com/qa/295/t/1?page=1&quot;&gt;mongoDB入门篇&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;特别强调&quot;&gt;特别强调！！！&lt;/h3&gt;
-&lt;div style=&quot;margin-bottom:20px;&quot; class=&quot;server-bg&quot;&gt;
+&lt;div class=&quot;server-bg margin-bottom-20&quot;&gt;
     &lt;p&gt;不管你是安装nginx，还是MongoDB还是新建了其他的端口，如果要访问成功，必须到阿里云服务器创建安全组&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/styles/images/server/Security-Group.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
@@ -457,8 +445,425 @@ h1 {
       </item>
     
       <item>
+        <title>前端代码规范</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#一代码格式&quot; id=&quot;markdown-toc-一代码格式&quot;&gt;一、代码格式&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#1规则htmlcssjson等缩进2个字符&quot; id=&quot;markdown-toc-1规则htmlcssjson等缩进2个字符&quot;&gt;1、[规则]HTML、CSS、JSON等缩进2个字符&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2规则js等缩进4个字符&quot; id=&quot;markdown-toc-2规则js等缩进4个字符&quot;&gt;2、[规则]JS等缩进4个字符&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#3建议每行代码不超过120个字符&quot; id=&quot;markdown-toc-3建议每行代码不超过120个字符&quot;&gt;3、[建议]每行代码不超过120个字符&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#二文件命名规范&quot; id=&quot;markdown-toc-二文件命名规范&quot;&gt;二、文件命名规范&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议文件名使用英文单词命名对于过长的单词或有习惯性缩写的使用缩写&quot; id=&quot;markdown-toc-建议文件名使用英文单词命名对于过长的单词或有习惯性缩写的使用缩写&quot;&gt;[建议]文件名使用英文单词命名，对于过长的单词或有习惯性缩写的使用缩写&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#变量函数命名&quot; id=&quot;markdown-toc-变量函数命名&quot;&gt;变量函数命名&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议常量使用全大写下划线分割&quot; id=&quot;markdown-toc-建议常量使用全大写下划线分割&quot;&gt;[建议]常量使用全大写、下划线分割&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议jquery对象名以开头&quot; id=&quot;markdown-toc-建议jquery对象名以开头&quot;&gt;[建议]jQuery对象名以“$”开头&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则普通函数名使用小驼峰格式&quot; id=&quot;markdown-toc-规则普通函数名使用小驼峰格式&quot;&gt;[规则]普通函数名使用小驼峰格式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则类对象使用大驼峰格式&quot; id=&quot;markdown-toc-规则类对象使用大驼峰格式&quot;&gt;[规则]类对象使用大驼峰格式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则css类名使用小写字母-分割&quot; id=&quot;markdown-toc-规则css类名使用小写字母-分割&quot;&gt;[规则]CSS类名使用小写字母、“-”分割&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则html的id属性使用小驼峰格式&quot; id=&quot;markdown-toc-规则html的id属性使用小驼峰格式&quot;&gt;[规则]HTML的id属性使用小驼峰格式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则所有变量必须声明&quot; id=&quot;markdown-toc-规则所有变量必须声明&quot;&gt;[规则]所有变量必须声明&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则局部变量不允许与全局变量重名&quot; id=&quot;markdown-toc-规则局部变量不允许与全局变量重名&quot;&gt;[规则]局部变量不允许与全局变量重名&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#三html规范&quot; id=&quot;markdown-toc-三html规范&quot;&gt;三、HTML规范&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议使用meta标签定义优先使用高版本浏览器&quot; id=&quot;markdown-toc-建议使用meta标签定义优先使用高版本浏览器&quot;&gt;[建议]使用meta标签定义优先使用高版本浏览器&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则使用html5格式的文档类型&quot; id=&quot;markdown-toc-规则使用html5格式的文档类型&quot;&gt;[规则]使用HTML5格式的文档类型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议原则上css文件引用在head中js引用在body末尾&quot; id=&quot;markdown-toc-建议原则上css文件引用在head中js引用在body末尾&quot;&gt;[建议]原则上CSS文件引用在&amp;lt;head&amp;gt;中，JS引用在&amp;lt;body&amp;gt;末尾&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#四css规范&quot; id=&quot;markdown-toc-四css规范&quot;&gt;四、CSS规范&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议不要将样式写到一行应该每行一个样式&quot; id=&quot;markdown-toc-建议不要将样式写到一行应该每行一个样式&quot;&gt;[建议]不要将样式写到一行，应该每行一个样式&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#如果考虑性能原因可以在打包时对css进行压缩但不要在编写源码时将样式写成一行导致不利于维护&quot; id=&quot;markdown-toc-如果考虑性能原因可以在打包时对css进行压缩但不要在编写源码时将样式写成一行导致不利于维护&quot;&gt;如果考虑性能原因可以在打包时对CSS进行压缩，但不要在编写源码时将样式写成一行，导致不利于维护。&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#五javascript规范&quot; id=&quot;markdown-toc-五javascript规范&quot;&gt;五、JavaScript规范&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#建议函数代码行数不超过100行&quot; id=&quot;markdown-toc-建议函数代码行数不超过100行&quot;&gt;[建议]函数代码行数不超过100行&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则语句结束必须添加分号&quot; id=&quot;markdown-toc-规则语句结束必须添加分号&quot;&gt;[规则]语句结束必须添加分号&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#虽然js解析器一般都允许在语句结束省略分号但是不排除个别解析器出现错误而且在使用一些代码压缩工具时很可能造成压缩后的代码逻辑出现错误&quot; id=&quot;markdown-toc-虽然js解析器一般都允许在语句结束省略分号但是不排除个别解析器出现错误而且在使用一些代码压缩工具时很可能造成压缩后的代码逻辑出现错误&quot;&gt;虽然JS解析器一般都允许在语句结束省略分号，但是不排除个别解析器出现错误，而且在使用一些代码压缩工具时很可能造成压缩后的代码逻辑出现错误。&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议推荐使用use-strict&quot; id=&quot;markdown-toc-建议推荐使用use-strict&quot;&gt;[建议]推荐使用”use strict”&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-strict已经被众多浏览器支持这样可以避免一些不规范的写法use-strict可以加载文件头或者模块定义的头部&quot; id=&quot;markdown-toc-use-strict已经被众多浏览器支持这样可以避免一些不规范的写法use-strict可以加载文件头或者模块定义的头部&quot;&gt;“use strict”已经被众多浏览器支持，这样可以避免一些不规范的写法，”use strict”可以加载文件头、或者模块定义的头部。&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议尽量在作用域顶部声明变量&quot; id=&quot;markdown-toc-建议尽量在作用域顶部声明变量&quot;&gt;[建议]尽量在作用域顶部声明变量&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#规则禁止在逻辑运算语句内进行赋值&quot; id=&quot;markdown-toc-规则禁止在逻辑运算语句内进行赋值&quot;&gt;[规则]禁止在逻辑运算语句内进行赋值&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#规则数字类型转换必须添加进制参数&quot; id=&quot;markdown-toc-规则数字类型转换必须添加进制参数&quot;&gt;[规则]数字类型转换必须添加进制参数&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议字符串变量使用单引号&quot; id=&quot;markdown-toc-建议字符串变量使用单引号&quot;&gt;[建议]字符串变量使用单引号&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议数组和对象声明尽量使用和&quot; id=&quot;markdown-toc-建议数组和对象声明尽量使用和&quot;&gt;[建议]数组和对象声明尽量使用“{}”和“[]”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议for-in循环只能用于object&quot; id=&quot;markdown-toc-建议for-in循环只能用于object&quot;&gt;[建议]for-in循环只能用于object&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议不要将自增和自减运算符与其它运算符混用&quot; id=&quot;markdown-toc-建议不要将自增和自减运算符与其它运算符混用&quot;&gt;[建议]不要将自增和自减运算符与其它运算符混用&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议不要使用两层或两层以上的三目运算符&quot; id=&quot;markdown-toc-建议不要使用两层或两层以上的三目运算符&quot;&gt;[建议]不要使用两层或两层以上的三目运算符&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议拼接长字符串时最好不要使用而用join&quot; id=&quot;markdown-toc-建议拼接长字符串时最好不要使用而用join&quot;&gt;[建议]拼接长字符串时最好不要使用”+”而用”join()”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#建议对频繁使用的dom查询结果要进行缓存&quot; id=&quot;markdown-toc-建议对频繁使用的dom查询结果要进行缓存&quot;&gt;[建议]对频繁使用的DOM查询结果要进行缓存&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;时至今日，我已经深刻意识到整理好代码对程序员来说是一件多重要的事情，它不仅关系到方便维护、别人容易看的明白，更深层的表明了你对你工作的认真甚至负责的程度，所以只知道写不动脑思考怎么去让你的代码看起来更整洁更直观，那写出来的东西只会让所有人感到头疼包括你自己。养成好习惯，从学会整理代码开始
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;一代码格式&quot;&gt;一、代码格式&lt;/h2&gt;
+&lt;h3 id=&quot;1规则htmlcssjson等缩进2个字符&quot;&gt;1、[规则]HTML、CSS、JSON等缩进2个字符&lt;/h3&gt;
+
+&lt;p&gt;举例：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fcontainer&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;footer&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;copy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Copyright&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2004&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JetBrains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;All&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rights&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reserved&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2规则js等缩进4个字符&quot;&gt;2、[规则]JS等缩进4个字符&lt;/h3&gt;
+
+&lt;p&gt;举例：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;backgroundMusic&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;backgroundMusic&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3建议每行代码不超过120个字符&quot;&gt;3、[建议]每行代码不超过120个字符&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;每行代码的字符数过多不利于阅读，可能需要横向滚动，因此建议控制每行代码的字符数。以往由于DOS系统限制或显示器分辨率等原因，一般认为控制在80个字符以内，但现在可以考虑放宽这个限制。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;二文件命名规范&quot;&gt;二、文件命名规范&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[规则]JS、HTML、CSS等使用小写字母、数字命名，第一个字符为字母，多个单词间“-”分割
+该规则适用于项目内自建的文件名，引用的第三方组件文件可以保留原名字。
+举例： common.js、common-ui.js、admin-panel.html、my-style.css
+反例：Common.js、adminPanel.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议文件名使用英文单词命名对于过长的单词或有习惯性缩写的使用缩写&quot;&gt;[建议]文件名使用英文单词命名，对于过长的单词或有习惯性缩写的使用缩写&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：my-style.css、admin.js
+反例：guanlimuban.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[建议]文件名避免使用广告、有歧义的单词
+反例：ad.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;变量函数命名&quot;&gt;变量函数命名&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[规则]普通变量名使用小驼峰格式
+举例：isFunction、myStyle
+反例：IsFunction、my_style
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议常量使用全大写下划线分割&quot;&gt;[建议]常量使用全大写、下划线分割&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：COLOR_RED、STATUS_ACTIVE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议jquery对象名以开头&quot;&gt;[建议]jQuery对象名以“$”开头&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：$el、$container
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则普通函数名使用小驼峰格式&quot;&gt;[规则]普通函数名使用小驼峰格式&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：myFunction、doSomething
+反例：MyFunction、do_someting
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则类对象使用大驼峰格式&quot;&gt;[规则]类对象使用大驼峰格式&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：Product、ProductList
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则css类名使用小写字母-分割&quot;&gt;[规则]CSS类名使用小写字母、“-”分割&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：.product-list、.page-container
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则html的id属性使用小驼峰格式&quot;&gt;[规则]HTML的id属性使用小驼峰格式&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：someContainer、someList
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则所有变量必须声明&quot;&gt;[规则]所有变量必须声明&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JavaScript变量在使用前并非必须声明，如果在未声明的情况下直接使用变量名，会默认为全局变量，这样会导致变量意外的扩大了有效范围。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则局部变量不允许与全局变量重名&quot;&gt;[规则]局部变量不允许与全局变量重名&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;重名的局部变量和全局变量会让人产生困扰，很容易引起错误的使用。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;反例：
+var count = 1;
+
+function() {
+    var count = 2;
+    …
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;三html规范&quot;&gt;三、HTML规范&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[规则]如无特殊情况，文件内容字符集一律使用无BOM的UTF-8、并在HTML头声明
+&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议使用meta标签定义优先使用高版本浏览器&quot;&gt;[建议]使用meta标签定义优先使用高版本浏览器&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&amp;gt;
+&amp;lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则使用html5格式的文档类型&quot;&gt;[规则]使用HTML5格式的文档类型&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[规则]DOM的自定义属性增加固定前缀，如“data-”
+&amp;lt;li data-type=&quot;1&quot; data-name=&quot;XX商品&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[规则]一个HTML页面内不允许出现相同ID的DOM
+一些浏览器不支持带有相同ID的DOM，会出现HTML解析错误，而且相同ID的DOM在获取时很容易取到错误的DOM。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议原则上css文件引用在head中js引用在body末尾&quot;&gt;[建议]原则上CSS文件引用在&amp;lt;head&amp;gt;中，JS引用在&amp;lt;body&amp;gt;末尾&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;考虑到页面展示性能，一般不建议在&amp;lt;head&amp;gt;中引用脚本，除非特殊需求的必要。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;四css规范&quot;&gt;四、CSS规范&lt;/h2&gt;
+&lt;h1 id=&quot;建议不要将样式写到一行应该每行一个样式&quot;&gt;[建议]不要将样式写到一行，应该每行一个样式&lt;/h1&gt;
+&lt;h4 id=&quot;如果考虑性能原因可以在打包时对css进行压缩但不要在编写源码时将样式写成一行导致不利于维护&quot;&gt;如果考虑性能原因可以在打包时对CSS进行压缩，但不要在编写源码时将样式写成一行，导致不利于维护。&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;示例：
+.hotel-content {margin: 10px; background-color: #efefef;}
+反例：
+.hotel-content {margin: 10px; background-color: #efefef;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;五javascript规范&quot;&gt;五、JavaScript规范&lt;/h2&gt;
+&lt;h4 id=&quot;建议函数代码行数不超过100行&quot;&gt;[建议]函数代码行数不超过100行&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;为了便于理解，清晰地划分函数功能，推荐代码行数不超过100行，最高上限也不要超过200行。
+无论是减少函数代码行数、还是降低圈复杂度的角度，都应该对函数功能进行合理的划分，一个函数只实现单一的功能，不要将很多功能都放到一个函数内实现。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则语句结束必须添加分号&quot;&gt;[规则]语句结束必须添加分号&lt;/h1&gt;
+&lt;h4 id=&quot;虽然js解析器一般都允许在语句结束省略分号但是不排除个别解析器出现错误而且在使用一些代码压缩工具时很可能造成压缩后的代码逻辑出现错误&quot;&gt;虽然JS解析器一般都允许在语句结束省略分号，但是不排除个别解析器出现错误，而且在使用一些代码压缩工具时很可能造成压缩后的代码逻辑出现错误。&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;反例：
+var index = 1
+var getIndex = function() {
+    ……
+}
+示例：
+var index = 1;
+var getIndex = function() {
+    ……
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议推荐使用use-strict&quot;&gt;[建议]推荐使用”use strict”&lt;/h1&gt;
+&lt;h4 id=&quot;use-strict已经被众多浏览器支持这样可以避免一些不规范的写法use-strict可以加载文件头或者模块定义的头部&quot;&gt;“use strict”已经被众多浏览器支持，这样可以避免一些不规范的写法，”use strict”可以加载文件头、或者模块定义的头部。&lt;/h4&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(function (require, exports, module) {
+    &quot;use strict&quot;;
+
+    ……
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议尽量在作用域顶部声明变量&quot;&gt;[建议]尽量在作用域顶部声明变量&lt;/h1&gt;
+
+&lt;h4 id=&quot;规则禁止在逻辑运算语句内进行赋值&quot;&gt;[规则]禁止在逻辑运算语句内进行赋值&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;虽然在逻辑运算语句是可以进行赋值操作的，但这样的代码会很容易让人产生迷惑，对代码产生错误的理解。
+反例：
+if(index = someIndex) {
+    …
+}
+示例：
+index = someIndex;
+if(index) {
+    …
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;规则数字类型转换必须添加进制参数&quot;&gt;[规则]数字类型转换必须添加进制参数&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;使用parseInt()函数将字符串转换为数字时，必须添加进制参数，否则在某些 浏览器上可能进行错误的转换。某些浏览器会将“0”开头的字符串按照八进制转换，所以很可能将“010”转换为8，而非10。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议字符串变量使用单引号&quot;&gt;[建议]字符串变量使用单引号&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JS中字符串变量的标识既可以使用单引号又可以使用双引号，但建议使用单引号而不是双引号作为字符串变量的标识。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议数组和对象声明尽量使用和&quot;&gt;[建议]数组和对象声明尽量使用“{}”和“[]”&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;使用“new Object()”和“new Array()”创建对象和数组性能较低，不建议使用。
+例如：
+var userInfo = {}; // 建议写法
+var userInfo = new Object(); // 不建议写法
+var userList = []; // 建议写法
+var userList = new Array(); // 不建议写法
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议for-in循环只能用于object&quot;&gt;[建议]for-in循环只能用于object&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;不要将for-in循环用于array，这可能会导致遍历array成员之外的prototype属性，除非增加hasOwnProperty判断。
+反例：
+var list = [1, 2, 3];
+for(var i in list) {
+    console.log(list[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议不要将自增和自减运算符与其它运算符混用&quot;&gt;[建议]不要将自增和自减运算符与其它运算符混用&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;程序代码并非用于考试，必须要易于理解，不要将一些考试题的写法用于实际开发中，有必要混合使用时必须增加小括号。
+反例：
+var index = 1;
+var base = 1;
+var subIndex1 = base + ++index;
+var subIndex2 = base + index++;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议不要使用两层或两层以上的三目运算符&quot;&gt;[建议]不要使用两层或两层以上的三目运算符&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;还是本着利于理解的原则，过多的三目运算符嵌套会大大降低代码的可读性，即使使用括号明示了运算符优先级也不推荐嵌套三目运算符。
+反例：
+index = index &amp;gt; 9 ? (index &amp;lt; 100 ? 10 : 100) : 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议拼接长字符串时最好不要使用而用join&quot;&gt;[建议]拼接长字符串时最好不要使用”+”而用”join()”&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这条建议一般都是针对老版本IE的，因为IE浏览器对字符串处理的性能实在太低。虽然现在IE的市场占有率降低了很多，而且IE自身也有了极大的改进，但实际工作中遇到这种场景还是尽量用&quot;join()&quot;吧。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;举例：
+var strList = [];
+strList.push('一大串字符串…');
+strList.push('又一大串字符串…');
+strList.push('还是一大串字符串…');
+var strResult = strList.join('');
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;建议对频繁使用的dom查询结果要进行缓存&quot;&gt;[建议]对频繁使用的DOM查询结果要进行缓存&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DOM查询是很好性能的操作，频繁对同一DOM进行查询无疑是对性能的浪费。
+反例：
+var name = $('#someContainer').attr('name');
+var value = $('#someContainer').val();
+$('#someContainer').hide();
+示例：
+var container = $('#someContainer');
+var name = container.attr('name');
+var value= container.val();
+container.hide();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;注释规范
+[建议]比较复杂的HTML结构增加内容或结构注释
+
+[建议]CSS文件头或特定内容区域增加注释
+举例：
+/* 详情页 */
+[规则]JS模块或文件头增加注释，详细写明该文件或模块的功能
+
+[规则]所有函数头必须增加必要的注释说明
+
+[建议]关键代码逻辑，重要的模块级或全局变量增加必要的注释说明
+
+[建议]注释符号与注释内容之间增加一个空格
+这个“习俗”也许起源于C语言，但不必去刨根问底，建议都这么做就是了，尤其是使用中文注释时。
+例如：
+// 这是一个单行注释
+/* 这是一个块注释 */
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 15 Jan 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/01/15/code-standards/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/15/code-standards/</guid>
+        
+        <category>前端维护</category>
+        
+        
+      </item>
+    
+      <item>
         <title>使用ol进行对列表的升序 || 降序样式显示</title>
-        <description>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#一使用css属性&quot; id=&quot;markdown-toc-一使用css属性&quot;&gt;一、使用css属性：&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#1counter&quot; id=&quot;markdown-toc-1counter&quot;&gt;1.counter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2content-reset&quot; id=&quot;markdown-toc-2content-reset&quot;&gt;2.content-reset&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#3counter-increment&quot; id=&quot;markdown-toc-3counter-increment&quot;&gt;3.counter-increment&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#二使用方法&quot; id=&quot;markdown-toc-二使用方法&quot;&gt;二、使用方法&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#1使用计数器&quot; id=&quot;markdown-toc-1使用计数器&quot;&gt;1.使用计数器&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2计数器嵌套&quot; id=&quot;markdown-toc-2计数器嵌套&quot;&gt;2.计数器嵌套&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;本质上CSS计数器是由CSS维护的变量，这些变量可能根据CSS规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。 CSS计数器是CSS2.1中自动计数编号部分的实现。
+
+计数器的值通过使用counter-reset 和 counter-increment 操作，在 content 上应用 counter() 或 counters()函数来显示在页面上。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;一使用css属性&quot;&gt;一、使用css属性：&lt;/h2&gt;
+
+&lt;h3 id=&quot;1counter&quot;&gt;1.counter&lt;/h3&gt;
+
+&lt;h3 id=&quot;2content-reset&quot;&gt;2.content-reset&lt;/h3&gt;
+
+&lt;p&gt;counter-reset 属性设置某个选择器出现次数的计数器的值。默认为 0。
+利用这个属性，计数器可以设置或重置为任何值，可以是正值或负值。如果没有提供 number，则默认为 0。
+注释：如果使用 “display: none”，则无法重置计数器。如果使用 “visibility: hidden”，则可以重置计数器。&lt;/p&gt;
+
+&lt;h3 id=&quot;3counter-increment&quot;&gt;3.counter-increment&lt;/h3&gt;
+
+&lt;p&gt;counter-increment 属性设置某个选取器每次出现的计数器增量。默认增量是 1。
+利用这个属性，计数器可以递增（或递减）某个值，这可以是正值或负值。如果没有提供 number 值，则默认为 1。
+注释：如果使用了 “display: none”，则无法增加计数。如使用 “visibility: hidden”，则可增加计数。&lt;/p&gt;
+
+&lt;h2 id=&quot;二使用方法&quot;&gt;二、使用方法&lt;/h2&gt;
+
+&lt;h3 id=&quot;1使用计数器&quot;&gt;1.使用计数器&lt;/h3&gt;
+
+&lt;p&gt;使用CSS计数器之前，必须重置一个值，默认是0。使用counter()函数来给元素增加计数器。 下面的CSS给每个h3元素的前面增加了 “Section &lt;计算器值&gt;:&quot;。&lt;/计算器值&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;           &lt;span class=&quot;cm&quot;&gt;/* 重置计数器成0 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;cm&quot;&gt;/* 增加计数器值 */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Section &quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* 显示计数器 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2计数器嵌套&quot;&gt;2.计数器嵌套&lt;/h3&gt;
+
+&lt;p&gt;CSS计数器对创建有序列表特别有用，因为在子元素中会自动创建一个CSS计数器的实例。使用 counters() 函数，在不同级别的嵌套计数器之间可以插入字符串。比如这个CSS例子：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;ol&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                &lt;span class=&quot;cm&quot;&gt;/* 为每个ol元素创建新的计数器实例 */&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;            &lt;span class=&quot;cm&quot;&gt;/* 只增加计数器的当前实例 */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;counters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;cm&quot;&gt;/* 为所有计数器实例增加以“.”分隔的值 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
         <pubDate>Wed, 24 Aug 2016 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2016/08/24/ol-sort/</link>
@@ -479,11 +884,11 @@ h1 {
 &lt;h1 id=&quot;one&quot;&gt;1、应用缓存 VS  Service Worker&lt;/h1&gt;
 &lt;p&gt;首先说应用缓存吧，为什么呢，因为它已经废弃了,以下图片来源：&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache&quot;&gt;https://developer.mozilla.org&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/styles/images/capabilities/app-cache.jpg&quot; alt=&quot;&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/styles/images/capabilities/app-cache.jpg&quot; alt=&quot;&quot; class=&quot;col-md-12&quot; /&gt;&lt;/p&gt;
 
 &lt;h4&gt;上面图片提到了Service Workers，那么他到底是什么？&lt;/h4&gt;
 
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         Service workers 本质上充当Web应用程序与浏览器之间的代理服务器，也可以在网络可用时作为浏览器和网络间的代理。它们旨在（除其他之外）使得能够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否驻留在服务器上来采取适当的动作。他们还允许访问推送通知和后台同步API。
     &lt;/p&gt;
@@ -491,7 +896,7 @@ h1 {
 
 &lt;h4&gt;背景&lt;/h4&gt;
 
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         有一个困扰 web 用户多年的难题——丢失网络连接。即使是世界上最好的 web app，如果下载不了它，也是非常糟糕的体验。如今虽然已经有很多种技术去尝试着解决这一问题。而随着离线页面的出现，一些问题已经得到了解决。但是，最重要的问题是，仍然没有一个好的统筹机制对资源缓存和自定义的网络请求进行控制。
         &lt;br /&gt;  &lt;br /&gt;
@@ -505,7 +910,7 @@ h1 {
 &lt;h1 id=&quot;two&quot;&gt;2、http缓存&lt;/h1&gt;
 
 &lt;h4&gt;缓存的作用：&lt;/h4&gt;
-&lt;blockquote style=&quot;margin-top: 20px&quot;&gt;
+&lt;blockquote class=&quot;margin-top-20&quot;&gt;
     &lt;p&gt;
         重用已获取的资源能够有效的提升网站与应用的性能。Web 缓存能够减少延迟与网络阻塞，进而减少显示某个资源所用的时间。借助 HTTP 缓存，Web 站点变得更具有响应性。
     &lt;/p&gt;

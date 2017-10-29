@@ -48,11 +48,6 @@ categories: 下载付费音乐
 ### 10.想要传到手机里，自己百度去吧，一点也不费劲
 
 
-<blockquote style="margin-top: 100px">
-    <p>
-       如果帮助了你，如果你愿意，请点击<a href="{{ '/donate/' | prepend: site.baseurl }}">“打赏我”</a>，然后...
-    </p>
-</blockquote>
 
 <style>
     h1 {

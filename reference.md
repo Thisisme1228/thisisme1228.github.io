@@ -4,9 +4,6 @@ title: 哎呀呀！！！
 permalink: /reference/
 ---
 
-<style>
-abbr {text-decoration: none;}
-</style>
 <hr><h4 class="btn btn-lg">各大公司的前端站点</h4><hr>
 <ol class="rectangle-list">
 <li><a href="http://fex.baidu.com/" target="_blank">百度 FEX</a></li>
