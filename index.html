@@ -2,42 +2,28 @@
 layout: default
 ---
 
- <div class="container docs-container" style="margin-top: 25px">
+ <div class="container docs-container">
       <div class="row">
         <div class="col-md-3">
           <div class="sidebar hidden-print" role="complementary">
             <div id="navigation">
-              <h3>==路漫漫其修远兮==</h3>
-              <ul class="nav sidenav">
-                {% for post in site.posts  %}
-                  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-                  {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
-                  {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-                  {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
-                  {% if forloop.first %}
-                    <li><a href="#year_{{this_year}}">{{this_year}}</a>
-                      <ul class="nav">
-                        <li><a href="#month_{{this_year}}_{{this_month}}">{{this_month}}</a></li>
-                  {% endif %}
-                  {% if forloop.last %}
-                        </ul>
-                      </li>
+              <h3 class="text-center">==路漫漫其修远兮==</h3>
+              <ul class="about-me text-center ul-padding-start">
+                <!-- 云标签 -->
+                <li id="tagsCloud" class="tags-cloud">
+                  {% if site.tags.first[0] == null %}
+                  {% for tag in site.tags %}
+                  <a href="/rice/{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}</a>
+                  {% endfor %}
                   {% else %}
-                    {% if this_year != next_year %}
-                        </ul>
-                      </li>
-                      <li><a href="#year_{{next_year}}">{{next_year}}</a>
-                        <ul class="nav">
-                          <li><a href="#month_{{next_year}}_{{next_month}}">{{next_month}}</a></li>
-                    {% else %}
-                      {% if this_month != next_month %}
-                          <li><a href="#month_{{next_year}}_{{next_month}}">{{next_month}}</a></li>
-                      {% endif %}
-                    {% endif %}
+                  {% for tag in site.tags %}
+                  <a href="/rice/{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}</a>
+                  {% endfor %}
                   {% endif %}
-                {% endfor %}
+                </li>
               </ul>
             </div>
+
           </div>
         </div>
         <div class="col-md-9" role="main">
@@ -82,3 +68,46 @@ layout: default
         </div>
       </div>
     </div>
+
+<!-- 云标签 -->
+<script src="{{ '/styles/js/tag.min.js' | prepend: site.baseurl }}"></script>
+<script>
+    var i=0;
+    var oTag=null;
+    oDiv=document.getElementById('tagsCloud');
+    aA=oDiv.getElementsByTagName('a');
+    for(i=0;i<aA.length;i++)
+    {
+        oTag={};
+        aA[i].onmouseover = (function (obj) {
+            return function () {
+                obj.on = true;
+                this.style.zIndex = 9999;
+                this.style.color = '#fff';
+                this.style.padding = '5px 5px';
+                this.style.filter = "alpha(opacity=100)";
+                this.style.opacity = 1;
+            }
+        })(oTag);
+        aA[i].onmouseout = (function (obj) {
+            return function () {
+                obj.on = false;
+                this.style.zIndex = obj.zIndex;
+                this.style.color = '#fff';
+                this.style.padding = '0 5px';
+                this.style.filter = "alpha(opacity=" + 100 * obj.alpha + ")";
+                this.style.opacity = obj.alpha;
+                this.style.zIndex = obj.zIndex;
+            }
+        })(oTag);
+        oTag.offsetWidth = aA[i].offsetWidth;
+        oTag.offsetHeight = aA[i].offsetHeight;
+        mcList.push(oTag);
+    }
+    sineCosine( 0,0,0 );
+    positionAll();
+    (function () {
+        update();
+        setTimeout(arguments.callee, 40);
+    })();
+</script>

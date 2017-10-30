@@ -22,6 +22,7 @@ var heleneSpace = function () {
         })
     }
 
+
     //供外面调用函数
     return {
         backgroundMusic : backgroundMusic,

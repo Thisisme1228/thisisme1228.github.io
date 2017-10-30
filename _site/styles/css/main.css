@@ -1,4 +1,4 @@
-/*  margin start */
+/*  margin/padding start */
 
 .margin-top-25 {
   margin-top: 25px;
@@ -8,6 +8,10 @@
 }
 .margin-bottom-20 {
   margin-bottom: 20px;
+}
+.ul-padding-start {
+  -moz-padding-start: 0;
+  -webkit-padding-start: 0;
 }
 
 /*  margin end */
@@ -158,3 +162,34 @@ h1.h1-35 {
 }
 
 /* inner-page code end */
+
+
+/* 云标签start */
+
+.tags-cloud{
+  list-style: none;
+  text-align: center;
+  height:200px;
+  position:relative;
+  font-size:12px;
+  margin-top: 100px;
+}
+.tags-cloud a{
+  position:absolute;
+  top:0;
+  left:0;
+  color:#fff;
+  background-color:#2a485d;
+  text-decoration:none;
+  margin:0 10px 15px 0;
+  line-height:18px;
+  padding:1px 5px;
+  display:inline-block;
+  border-radius:3px
+}
+.tags-cloud a:hover{
+  color:#fff;
+  background:#09f
+}
+
+/* 云标签end */

@@ -6358,7 +6358,7 @@ hr {
 .footer {
   padding-top: 40px;
   padding-bottom: 30px;
-  margin-top: 20px;
+  margin-top: 50px;
   color: #777;
   background: #fff;
   text-align: center;
@@ -6422,7 +6422,6 @@ hr {
   margin: 0 -15px;
   border: none;
   border-radius: 0 0 4px 4px;
-  margin-top: 25px;
 }
 .docs-content .container-fluid {
   padding: 0;
