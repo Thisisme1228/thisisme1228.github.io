@@ -45,7 +45,7 @@ layout: default
                   <ol class="right-list-style">
                    <li>
                      <h3><a class="font-weight-600" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-                     <div class="excerpt">{{ post.excerpt }}</div>
+                     <div class="excerpt-content">{{ post.excerpt }}</div>
                      <div>
                        <span class="font-color-999">{{ post.date | date: "%B %e, %Y" }}</span>
                        {% for tag in post.tags %}
@@ -55,7 +55,7 @@ layout: default
                        {% for category in post.categories %}
                        <a class="tags-title" href="/greens/#{{ category }}-ref">{{ category }}</a>&nbsp;
                        {% endfor %}
-                       </span><a class="btn btn-primary pull-right" rel="nofollow" href='{{post.url}}'>阅读全文</a></p>
+                       </span><a class="btn btn-danger pull-right" rel="nofollow" href='{{post.url}}'>阅读全文</a></p>
                      </div>
                    </li>
                    <hr>
