@@ -13,8 +13,16 @@
   -moz-padding-start: 0;
   -webkit-padding-start: 0;
 }
+.padding-top-bottom-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.padding-top-bottom-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
-/*  margin end */
+/*  margin/padding end */
 
 
 /* color start */
@@ -229,6 +237,7 @@ h1.h1-35 {
   width: 5px;
   height:100%;
   background-color: #dbd782;
+  opacity: .8;
 }
 .right-list-style li h3 a:hover {
   color: #888;
@@ -246,10 +255,11 @@ h1.h1-35 {
   color: #5cb85c;
 }
 .excerpt-content {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .excerpt-content * {
   font-size: 16px;
 }
 
 /* index page right document end */
+
