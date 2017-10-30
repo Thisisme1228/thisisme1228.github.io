@@ -48,12 +48,16 @@
 
 /* 外域链接start */
 
+.rectangle-list,.rounded-list {
+  counter-reset: section;                /* 为每个ol元素创建新的计数器实例 */
+  list-style-type: none;
+}
 .rectangle-list li,.rounded-list li {
   position: relative;
   display: inline-block;
   padding-left: 2rem;
   padding-right: 1rem;
-  background-color: #c56861;
+  background-color: #a59392;
   margin-bottom: 2rem;
   margin-right: 6rem;
   height: 3rem;
@@ -66,7 +70,6 @@
   position: absolute;
   left:-3rem;
   top: -.4rem;
-  content: '1';
   display: block;
   width: 3rem;
   height: 3rem;
@@ -76,6 +79,8 @@
   color: white;
   border: .4rem solid white;
   box-sizing: content-box;
+  counter-increment: section;            /* 只增加计数器的当前实例 */
+  content: counters(section, ".") " ";   /* 为所有计数器实例增加以“.”分隔的值 */
 }
 .rounded-list li:before {
   border-radius: 100%;
