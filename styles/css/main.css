@@ -116,6 +116,28 @@ h1.h1-35 {
   margin-bottom: 12px
 }
 
+/* 返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+  right: 1.6%;
+  bottom: 2%;
+  z-index: 1001;
+  list-style: none;
+  display: none;
+}
+.back-to-top li {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 8px;
+  color: #ccc;
+  background-color: #929292;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
 /* footer end */
 
 
