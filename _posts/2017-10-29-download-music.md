@@ -5,7 +5,7 @@ date:   2017-10-29 00:00:00 +0800
 categories: 下载付费音乐
 ---
 
-<p style='width: 100%;font-size: 1.8rem;color: yellow;background: green;padding: 2rem 1rem;'>这里我介绍在网易云音乐中下载，其实以下的方法在其他音乐网站都可以</p>
+<p>这里我介绍在网易云音乐中载，其实以下的方法在其他音乐网站都可以</p>
 
 ### 1.打开谷歌浏览器（没有先下一个）
 

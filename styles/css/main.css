@@ -29,6 +29,15 @@
 /* color end */
 
 
+/* font-weight start */
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+/* font-weight end */
+
+
 /* 外域链接start */
 
 .rectangle-list li,.rounded-list li {
@@ -193,3 +202,48 @@ h1.h1-35 {
 }
 
 /* 云标签end */
+
+
+/* index page right document start */
+
+.right-ul-style  ol,.right-list-style{
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+}
+.right-list-style li {
+  background-color: transparent;
+  list-style: none;
+}
+.right-list-style li h3 a {
+  position: relative;
+  color: #333;
+  margin-left: 30px;
+  text-decoration: none;
+  transition:all .5s
+}
+.right-list-style li h3 a:before {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  content: '';
+  width: 5px;
+  height:100%;
+  background-color: #666;
+}
+.right-list-style li h3 a:hover {
+  color: #888;
+  transition:all .5s
+}
+.tags-title {
+  padding: 2px 4px;
+  background: #b9c8e0;
+  border-radius: 5px;
+  margin-left: 18px;
+  color: #2c4d68;
+  text-decoration: none !important;
+}
+.tags-title:hover {
+  color: black;
+}
+
+/* index page right document end */
