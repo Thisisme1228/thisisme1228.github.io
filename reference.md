@@ -1,10 +1,11 @@
 ---
-layout: post
-title: 哎呀呀！！！
+layout: nothing
+title:
 permalink: /reference/
+date:   2016-12-2 00:00:00 +0800
 ---
 
-<hr><h4 class="btn btn-lg">各大公司的前端站点</h4><hr>
+<h4 class="btn btn-lg">各大公司的前端站点</h4><hr>
 <ol class="rectangle-list">
 <li><a href="http://fex.baidu.com/" target="_blank">百度 FEX</a></li>
 <li><a href="http://taobaofed.org/" target="_blank">淘宝 FED</a></li>
