@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: left-none
 title:  观看各大网站付费视频
 date:   2017-10-29 00:00:00 +0800
 categories: 观看付费视频
 ---
+
 
 ### 1.打开谷歌浏览器（没有先下一个）
 

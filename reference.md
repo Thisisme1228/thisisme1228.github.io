@@ -102,6 +102,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://baconipsum.com/" target="_blank"><abbr title="提供文本填充器的网站">Bacon IPsum</abbr></a></li>
 <li><a href="https://placeholder.com/" target="_blank"><abbr title="提供占位符图片的网站">PLACEHOLDER.COM</abbr></a></li>
 <li><a href="https://dummyimage.com/" target="_blank"><abbr title="提供多类型占位符图片的网站">Dummy Image Generator</abbr></a></li>
+<li><a href="https://loading.io" target="_blank"><abbr title="">GIF</abbr></a></li>
 </ol>
 <hr><h4 class="btn btn-danger btn-lg">前端插件</h4><hr>
 <ol class="rounded-list">

@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Oct 2017 22:40:43 +0800</pubDate>
-    <lastBuildDate>Mon, 30 Oct 2017 22:40:43 +0800</lastBuildDate>
+    <pubDate>Mon, 30 Oct 2017 23:05:24 +0800</pubDate>
+    <lastBuildDate>Mon, 30 Oct 2017 23:05:24 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
@@ -319,6 +319,45 @@ h1 {
       </item>
     
       <item>
+        <title>webpack打包单页面</title>
+        <description>
+</description>
+        <pubDate>Tue, 20 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/20/webpack-single-page-packaging/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/20/webpack-single-page-packaging/</guid>
+        
+        <category>Webpack</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>webpack打包多页面</title>
+        <description>
+</description>
+        <pubDate>Tue, 20 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/20/webpack-multiple-page-packaging/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/20/webpack-multiple-page-packaging/</guid>
+        
+        <category>Webpack</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>npm 插件发布</title>
+        <description>
+</description>
+        <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/10/npm-plugins-posted/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/10/npm-plugins-posted/</guid>
+        
+        <category>Node.js</category>
+        
+        
+      </item>
+    
+      <item>
         <title>Node.js</title>
         <description>
 </description>
@@ -340,167 +379,6 @@ h1 {
         <guid isPermaLink="true">http://localhost:4000/2017/06/02/webpack/</guid>
         
         <category>Webpack</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Vue.js</title>
-        <description>
-</description>
-        <pubDate>Fri, 19 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/19/vue/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/19/vue/</guid>
-        
-        <category>Vue.js</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>服务器搭建</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#one&quot; id=&quot;markdown-toc-one&quot;&gt;前期准备：&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#1买服务器&quot; id=&quot;markdown-toc-1买服务器&quot;&gt;1.买服务器&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#2买域名还是阿里的域名&quot; id=&quot;markdown-toc-2买域名还是阿里的域名&quot;&gt;2.买域名，还是阿里的域名&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#two&quot; id=&quot;markdown-toc-two&quot;&gt;开始配置服务器：&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#1远程连接阿里云主机服务器linuxcentos系统&quot; id=&quot;markdown-toc-1远程连接阿里云主机服务器linuxcentos系统&quot;&gt;1.远程连接阿里云主机服务器(Linux（centos）系统)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#2安装nginx服务器&quot; id=&quot;markdown-toc-2安装nginx服务器&quot;&gt;2.安装nginx服务器&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#3安装mongondb&quot; id=&quot;markdown-toc-3安装mongondb&quot;&gt;3.安装MongonDB&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#特别强调&quot; id=&quot;markdown-toc-特别强调&quot;&gt;特别强调！！！&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#three&quot; id=&quot;markdown-toc-three&quot;&gt;sucess&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;server-bg&quot;&gt;
-    现在啥都要有个背景，那我就简短介绍一下我买这个服务器的原由吧：
-    &lt;p&gt;
-        现在vue比较火，但是公司的项目不是使用vue做的，我只能自己做练习咯，那没人给我写后台怎么办，我就自己学着写咯，那我想发布到网上怎么办，买服务器咯，然后给自己科普了一下
-    &lt;/p&gt;
-    &lt;p&gt;
-        1.要学习的新技术：Vue.js + Node.js + MongoDB + webpack
-    &lt;/p&gt;
-    &lt;p&gt;
-        2.搭建服务器（购买服务器，购买域名，买了之后电脑上装虚拟机连接的服务器，然后给服务器安装配制Nginx,配制数据库等等）
-    &lt;/p&gt;
-    上面提到的技术我以后会在博客里呈现出来
-&lt;/div&gt;
-
-&lt;h1 id=&quot;one&quot;&gt;前期准备：&lt;/h1&gt;
-
-&lt;h3 id=&quot;1买服务器&quot;&gt;1.买服务器&lt;/h3&gt;
-&lt;p&gt;我买的阿里云的服务器，我就是没事敲敲代码，写个博客啥的,要求没那么高，我为啥买centos的呢，因为我要在里面安装nginx，直接上图
-&lt;img src=&quot;/styles/images/server/ESC-Configuration.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2买域名还是阿里的域名&quot;&gt;2.买域名，还是阿里的域名&lt;/h3&gt;
-
-&lt;h1 id=&quot;two&quot;&gt;开始配置服务器：&lt;/h1&gt;
-
-&lt;h3 id=&quot;1远程连接阿里云主机服务器linuxcentos系统&quot;&gt;1.远程连接阿里云主机服务器(Linux（centos）系统)&lt;/h3&gt;
-&lt;blockquote class=&quot;margin-top-20&quot;&gt;
-    &lt;p&gt;1）由于我的电脑是windows系统，用linux的服务器需要在本地安装虚拟机，下载VMware&lt;/p&gt;
-    &lt;p&gt;Workstation Pro去官网下载就好&lt;/p&gt;
-    &lt;br /&gt;
-    &lt;p&gt;2)下载centos镜像&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1611.iso&quot;&gt;http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1611.iso&lt;/a&gt;（下载这个网址中的）&lt;/p&gt;
-    &lt;br /&gt;
-    &lt;p&gt;按照下面的地址进行配置虚拟机&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/linux/linux-install.html&quot;&gt;http://www.runoob.com/linux/linux-install.html&lt;/a&gt;&lt;/p&gt;
-    &lt;br /&gt;
-    &lt;p&gt;
-        配置好之后进入虚拟机，在桌面鼠标右键，选择打开终端,输入：&lt;span class=&quot;font-color-red&quot;&gt;ssh root@123.11.11.1&lt;/span&gt; ====== 123.11.11.1是你服务器的共有IP地址，输入链接密码（输入密码的时候不会显示出来，所有的密码都是隐藏的，so不要大惊小怪）
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;2安装nginx服务器&quot;&gt;2.安装nginx服务器&lt;/h3&gt;
-&lt;blockquote class=&quot;margin-top-20&quot;&gt;
-    &lt;p&gt;
-        Nginx能做什么?
-        &lt;br /&gt;
-        &lt;br /&gt;
-        1.反向代理
-        反向代理应该是Nginx做的最多的一件事了，什么是反向代理呢
-        &lt;br /&gt;&lt;br /&gt;
-        以下是百度百科的说法：反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。简单来说就是真实的服务器不能直接被外部网络访问，所以需要一台代理服务器，而代理服务器能被外部网络访问的同时又跟真实服务器在同一个网络环境，当然也可能是同一台服务器，端口不同而已。因为这里我们就是用反向代理我就介绍反向代理其他的自行脑补
-        &lt;br /&gt;
-        &lt;br /&gt;
-        2.负载均衡
-         &lt;br /&gt;
-         &lt;br /&gt;
-        3.HTTP服务器（包含动静分离）
-         &lt;br /&gt;
-         &lt;br /&gt;
-        4.正向代理
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;以下是我安装nginx以及配置nodejs和nginx反向代理的找到的网址，挺好用的，配置成功了&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/nginx/2017/0119/8422.html&quot;&gt;centos7安装nginx的两种方法&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://rockjins.js.org/2017/06/14/2017-06-15-aliyun-node-nginx/&quot;&gt;阿里云配置 node.js + Nginx 反向代理&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.linode.com/docs/development/nodejs/how-to-install-nodejs-and-nginx-on-debian&quot;&gt;如何在Debian上安装Node.js和Nginx&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3安装mongondb&quot;&gt;3.安装MongonDB&lt;/h3&gt;
-&lt;p&gt;还是自己找的网址&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/gossgao/p/6974040.html&quot;&gt;【数据库】Mean web开发 02-Windows下Mongodb安装配置及常用客户端管理工具&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://www.imooc.com/qa/295/t/1?page=1&quot;&gt;mongoDB入门篇&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;特别强调&quot;&gt;特别强调！！！&lt;/h3&gt;
-&lt;div class=&quot;server-bg margin-bottom-20&quot;&gt;
-    &lt;p&gt;不管你是安装nginx，还是MongoDB还是新建了其他的端口，如果要访问成功，必须到阿里云服务器创建安全组&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/styles/images/server/Security-Group.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
-&lt;img src=&quot;/styles/images/server/Create-Security-Group.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;three&quot;&gt;sucess&lt;/h1&gt;
-&lt;div class=&quot;configuration-end&quot;&gt;
-    &lt;p&gt;以上完成就大功告成了，我可以你就可以，除非你真的一点没用心&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;style&gt;
-h1 {
-    font-size:1.8rem;
-    color:#468847
-}
-.server-bg {
-    width:100%;
-    font-size:1.8rem;
-    color:yellow;
-    background:green;
-    padding:2rem 1rem;
-}
-.configuration-end {
-    background:#fbfaf8;
-    color:#333;
-    font-size:2rem;
-    width:100%;
-    padding:3rem 0;
-    text-align:center;
-    border:1px solid #ddd;
-    border-radius:5px;
-}
-&lt;/style&gt;
-
-</description>
-        <pubDate>Sat, 06 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/06/server/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/06/server/</guid>
-        
-        <category>服务器</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>网络安全</title>
-        <description>
-</description>
-        <pubDate>Mon, 03 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/03/network-security/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/03/network-security/</guid>
-        
-        <category>网络安全</category>
         
         
       </item>
