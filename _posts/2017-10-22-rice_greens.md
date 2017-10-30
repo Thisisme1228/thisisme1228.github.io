@@ -2,8 +2,6 @@
 layout: post
 title:  工作是米饭，生活是蔬菜
 date:   2017-10-22 00:00:00 +0800
-tag: rice
-categories: greens
 ---
 
 * content
