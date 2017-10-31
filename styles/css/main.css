@@ -344,9 +344,9 @@ h1.h1-35 {
 .excerpt-content {
   margin-bottom: 25px;
 }
-.excerpt-content * {
-  font-size: 16px;
-}
+/*.excerpt-content * {
+  font-size: 14px;
+}*/
 
 /* index page right document end */
 

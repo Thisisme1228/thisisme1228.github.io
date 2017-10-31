@@ -5,13 +5,41 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Oct 2017 15:36:14 +0800</pubDate>
-    <lastBuildDate>Tue, 31 Oct 2017 15:36:14 +0800</lastBuildDate>
+    <pubDate>Tue, 31 Oct 2017 17:55:47 +0800</pubDate>
+    <lastBuildDate>Tue, 31 Oct 2017 17:55:47 +0800</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
+        <title>经济学原理</title>
+        <description>
+</description>
+        <pubDate>Tue, 31 Oct 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/10/31/principles-of-economics/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/31/principles-of-economics/</guid>
+        
+        
+        <category>经济学原理</category>
+        
+      </item>
+    
+      <item>
         <title>观看各大网站付费视频</title>
-        <description>&lt;h3 id=&quot;1打开谷歌浏览器没有先下一个&quot;&gt;1.打开谷歌浏览器（没有先下一个）&lt;/h3&gt;
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1打开谷歌浏览器没有先下一个&quot; id=&quot;markdown-toc-1打开谷歌浏览器没有先下一个&quot;&gt;1.打开谷歌浏览器（没有先下一个）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2搜索万能马甲点击进入&quot; id=&quot;markdown-toc-2搜索万能马甲点击进入&quot;&gt;2.搜索万能马甲，点击进入&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3点击安装或更新&quot; id=&quot;markdown-toc-3点击安装或更新&quot;&gt;3.点击“安装或更新”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4点击安装万能马甲然后会下载一个压缩包解压压缩包到新建的文件夹里面&quot; id=&quot;markdown-toc-4点击安装万能马甲然后会下载一个压缩包解压压缩包到新建的文件夹里面&quot;&gt;4.点击“安装万能马甲”，然后会下载一个压缩包，解压压缩包到新建的文件夹里面&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5打开安装方法文档复制划线地址粘贴到谷歌浏览器地址栏打开页面&quot; id=&quot;markdown-toc-5打开安装方法文档复制划线地址粘贴到谷歌浏览器地址栏打开页面&quot;&gt;5.打开“安装方法”文档，复制划线地址，粘贴到谷歌浏览器地址栏，打开页面&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6把下载的majiacrx拖放到扩展中心页面点击确认按钮所有浏览器插件都会有提示是否安装选项不必紧张&quot; id=&quot;markdown-toc-6把下载的majiacrx拖放到扩展中心页面点击确认按钮所有浏览器插件都会有提示是否安装选项不必紧张&quot;&gt;6.把下载的majia.crx拖放到扩展中心页面，点击“确认”按钮（所有浏览器插件都会有提示是否安装选项，不必紧张）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#7复制chromesettings网址进入谷歌浏览器设置页面找到添加新网站这里点击添加新网址将这个http123wndd123com网址进行添加即可&quot; id=&quot;markdown-toc-7复制chromesettings网址进入谷歌浏览器设置页面找到添加新网站这里点击添加新网址将这个http123wndd123com网址进行添加即可&quot;&gt;7.复制“chrome://settings/”网址，进入谷歌浏览器设置页面，找到添加新网站这里，点击“添加新网址”，将这个“http://123.wndd123.com/”网址进行添加即可&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#8关闭谷歌浏览器再次启动在爱奇艺等网站观看你想要的付费视频&quot; id=&quot;markdown-toc-8关闭谷歌浏览器再次启动在爱奇艺等网站观看你想要的付费视频&quot;&gt;8.关闭谷歌浏览器，再次启动在爱奇艺等网站观看你想要的付费视频&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#9观看方法我打开了爱奇艺官网然后搜的是我喜欢的但是付费的电影点进去之后单击右上角的绿帽子会出现让你选择穿马甲你点击就可以看了&quot; id=&quot;markdown-toc-9观看方法我打开了爱奇艺官网然后搜的是我喜欢的但是付费的电影点进去之后单击右上角的绿帽子会出现让你选择穿马甲你点击就可以看了&quot;&gt;9.观看方法，我打开了爱奇艺官网，然后搜的是我喜欢的但是付费的电影，点进去之后，单击右上角的绿帽子，会出现让你选择穿马甲，你点击就可以看了&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#10但是事情是有意外的这时怎么办呢进入这个httpmajiawndd123com网址把你刚才打开付费电影那页的网址复制到这个输入框点击免费看电影就开始看吧&quot; id=&quot;markdown-toc-10但是事情是有意外的这时怎么办呢进入这个httpmajiawndd123com网址把你刚才打开付费电影那页的网址复制到这个输入框点击免费看电影就开始看吧&quot;&gt;10.但是事情是有意外的，这时怎么办呢？进入这个&lt;a href=&quot;http://majia.wndd123.com/&quot;&gt;http://majia.wndd123.com/&lt;/a&gt;网址,把你刚才打开付费电影那页的网址复制到这个输入框，点击“免费看电影”就开始看吧&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本来没想写这篇文章，但由于上一篇文章是教大家下载付费音乐，那现在看电影问题也一并解决了吧，谁让我有强迫症- 0 -&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;1打开谷歌浏览器没有先下一个&quot;&gt;1.打开谷歌浏览器（没有先下一个）&lt;/h3&gt;
 
 &lt;h3 id=&quot;2搜索万能马甲点击进入&quot;&gt;2.搜索万能马甲，点击进入&lt;/h3&gt;
 
@@ -68,7 +96,20 @@
     
       <item>
         <title>下载付费音乐(能点开播放页面的，泰勒的除外)</title>
-        <description>&lt;p&gt;这里我介绍在网易云音乐中载，其实以下的方法在其他音乐网站都可以&lt;/p&gt;
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1打开谷歌浏览器没有先下一个&quot; id=&quot;markdown-toc-1打开谷歌浏览器没有先下一个&quot;&gt;1.打开谷歌浏览器（没有先下一个）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2进入网易云音乐官网搜索你要的音乐&quot; id=&quot;markdown-toc-2进入网易云音乐官网搜索你要的音乐&quot;&gt;2.进入网易云音乐官网，搜索你要的音乐&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3在浏览器上点击右键有个检查点击检查会变成下面这样&quot; id=&quot;markdown-toc-3在浏览器上点击右键有个检查点击检查会变成下面这样&quot;&gt;3.在浏览器上点击右键，有个检查，点击检查会变成下面这样&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4按照图片上的进行点击点击network&quot; id=&quot;markdown-toc-4按照图片上的进行点击点击network&quot;&gt;4.按照图片上的进行点击，点击Network&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5这时你可以刷新当前页面按f5或者鼠标右键刷新就会看见很多数据&quot; id=&quot;markdown-toc-5这时你可以刷新当前页面按f5或者鼠标右键刷新就会看见很多数据&quot;&gt;5.这时你可以刷新当前页面按“F5”或者“鼠标右键刷新”，就会看见很多数据&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6按clear清除数据&quot; id=&quot;markdown-toc-6按clear清除数据&quot;&gt;6.按clear清除数据&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#7点击你要下载的音乐播放&quot; id=&quot;markdown-toc-7点击你要下载的音乐播放&quot;&gt;7.点击你要下载的音乐播放&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#8这时你会看见刚才清除的地方又出现数据了你要的音乐就在那里&quot; id=&quot;markdown-toc-8这时你会看见刚才清除的地方又出现数据了你要的音乐就在那里&quot;&gt;8.这时你会看见刚才清除的地方又出现数据了，你要的音乐就在那里&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#9鼠标选择复制那个地址在新窗口中打开快点击下载吧&quot; id=&quot;markdown-toc-9鼠标选择复制那个地址在新窗口中打开快点击下载吧&quot;&gt;9.鼠标选择复制那个地址，在新窗口中打开,快点击下载吧&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#10想要传到手机里自己百度去吧一点也不费劲&quot; id=&quot;markdown-toc-10想要传到手机里自己百度去吧一点也不费劲&quot;&gt;10.想要传到手机里，自己百度去吧，一点也不费劲&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里我介绍怎么像个程序员一样下载各大网站的付费音乐，其实以下的方法在其他音乐网站都可以&lt;/p&gt;
+&lt;!-- more --&gt;
 
 &lt;h3 id=&quot;1打开谷歌浏览器没有先下一个&quot;&gt;1.打开谷歌浏览器（没有先下一个）&lt;/h3&gt;
 
@@ -146,6 +187,13 @@
   &lt;li&gt;&lt;a href=&quot;#twelve&quot; id=&quot;markdown-toc-twelve&quot;&gt;皮囊&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#thirteen&quot; id=&quot;markdown-toc-thirteen&quot;&gt;丰乳肥臀&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;其实闲暇时间还挺多的，上下班坐公交的时候，晚上泡脚的时候…
+&lt;br /&gt;
+&lt;br /&gt;
+最近想自学经济学和中国历史，志同道合的朋友们欢迎加我微信或QQ一起学习讨论哦（在&lt;a href=&quot;http://life.thisisme1228.com/&quot;&gt;首页&lt;/a&gt;左侧栏里面有联系方式，电脑查看）
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h1 id=&quot;one&quot;&gt;人性的弱点&lt;/h1&gt;
 &lt;p class=&quot;book-info&quot;&gt; -- 【美】戴尔-卡耐基 中国华侨出版社&lt;/p&gt;
@@ -285,6 +333,8 @@ h1 {
   &lt;li&gt;&lt;a href=&quot;#rice&quot; id=&quot;markdown-toc-rice&quot;&gt;rice&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#greens&quot; id=&quot;markdown-toc-greens&quot;&gt;greens&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;忙忙碌碌，图个啥？
+&lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;rice&quot;&gt;rice&lt;/h1&gt;
 
@@ -366,19 +416,6 @@ h1 {
         <guid isPermaLink="true">http://localhost:4000/2017/06/02/node/</guid>
         
         <category>Node.js</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>webpack</title>
-        <description>
-</description>
-        <pubDate>Fri, 02 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/06/02/webpack/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/02/webpack/</guid>
-        
-        <category>Webpack</category>
         
         
       </item>

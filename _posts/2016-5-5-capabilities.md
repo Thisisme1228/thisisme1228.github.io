@@ -4,9 +4,9 @@ title:  http缓存、应用缓存、Service Worker
 date:   2016-5-5 00:00:00 +0800
 tag: 性能
 ---
-
 * content
 {:toc}
+<!-- more -->
 
 
 1、应用缓存 VS  Service Worker			{#one}
