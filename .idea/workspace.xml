@@ -5,45 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/images/header/banner.jpg" afterPath="$PROJECT_DIR$/_site/styles/images/header/banner.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/docs_header.html" afterPath="$PROJECT_DIR$/_includes/docs_header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/anonymous-function/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/anonymous-function/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/use-strict/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/use-strict/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/07/jquery-scroll/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/07/jquery-scroll/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/21/json/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/21/json/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/13/Github/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/13/Github/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/10/lazy-load/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/10/lazy-load/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/03/ES6/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/03/ES6/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/08/24/ol-sort/index.html" afterPath="$PROJECT_DIR$/_site/2016/08/24/ol-sort/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/10/net-knowledge/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/10/net-knowledge/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/10/sass/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/10/sass/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/11/flexible/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/11/flexible/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/10/05/interview/index.html" afterPath="$PROJECT_DIR$/_site/2016/10/05/interview/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/01/15/code-standards/index.html" afterPath="$PROJECT_DIR$/_site/2017/01/15/code-standards/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/03/17/browser/index.html" afterPath="$PROJECT_DIR$/_site/2017/03/17/browser/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/04/03/network-security/index.html" afterPath="$PROJECT_DIR$/_site/2017/04/03/network-security/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" afterPath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/05/19/vue/index.html" afterPath="$PROJECT_DIR$/_site/2017/05/19/vue/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/02/node/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/02/node/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/02/webpack/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/02/webpack/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/10/npm-plugins-posted/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/10/npm-plugins-posted/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/20/webpack-multiple-page-packaging/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/20/webpack-multiple-page-packaging/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/20/webpack-single-page-packaging/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/20/webpack-single-page-packaging/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/07/15/mongodb/index.html" afterPath="$PROJECT_DIR$/_site/2017/07/15/mongodb/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/28/read-book/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/28/read-book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/29/download-Music/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/29/download-Music/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/29/watch-pay-video/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/29/watch-pay-video/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/index.html" afterPath="$PROJECT_DIR$/_site/donate/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="$PROJECT_DIR$/_site/reference/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="$PROJECT_DIR$/_site/rice/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/main.css" afterPath="$PROJECT_DIR$/styles/css/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,8 +28,8 @@
       <file leaf-file-name="docs_header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/docs_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state relative-caret-position="378">
+              <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -325,12 +289,12 @@
       <workItem from="1509365996020" duration="9922000" />
       <workItem from="1509376041156" duration="6000" />
       <workItem from="1509419542345" duration="3649000" />
-      <workItem from="1509424676776" duration="1171000" />
+      <workItem from="1509424676776" duration="1904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159419000" />
+    <option name="totallyTimeSpent" value="160152000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/docs_header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        <state relative-caret-position="378">
+          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding />
         </state>
       </provider>
