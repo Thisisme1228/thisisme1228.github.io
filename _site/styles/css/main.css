@@ -194,7 +194,7 @@ h1.h1-35 {
   height:200px;
   position:relative;
   font-size:12px;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .tags-cloud a{
   position:absolute;
@@ -216,6 +216,85 @@ h1.h1-35 {
 
 /* 云标签end */
 
+
+/* about me start */
+
+.about-me {
+  list-style: none;
+  padding-top: 10px;
+}
+.sidebar-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.me-header {
+  margin: 30px 0 20px;
+}
+.me-header img {
+  display: inline-block;
+  width: 35%;
+}
+.we-chat {
+  position: relative;
+  margin-bottom:30px;
+}
+.we-chat span {
+  padding:0 6px;
+  opacity:.7;
+  cursor:pointer
+}
+.we-chat span:hover{
+  opacity:1
+}
+.we-chat img{
+  position:absolute;
+  top:-80px
+}
+.we-chat .contact-list_1 img {
+  width:0;
+  height:0;
+  left:25%
+}
+.we-chat .contact-list_2 img {
+  width:80px;
+  height:80px;
+  left:33%;
+  -webkit-transform:scale(0);
+  -moz-transform:scale(0);
+  -ms-transform:scale(0)
+}
+.we-chat .contact-list_3 img {
+  width:0;
+  height:0;
+  right:25%
+}
+.we-chat .contact-list_1:hover .contact-chat {
+  width:80px;
+  height:80px;
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -ms-transform:rotate(360deg)
+}
+.we-chat .contact-list_2:hover .contact-qq {
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1)
+}
+.we-chat .contact-list_3:hover .contact-weibo {
+  width:80px;
+  height:80px;
+  -webkit-transform:rotate(-360deg);
+  -moz-transform:rotate(-360deg);
+  -ms-transform:rotate(-360deg)
+}
+.we-chat img,.we-chat span {
+  -webkit-transition:all .3s;
+  -moz-transition:all .3s;
+  -ms-transition:all .3s;
+  -o-transition:all .3s
+}
+
+/* about me end */
 
 /* index page right document start */
 
