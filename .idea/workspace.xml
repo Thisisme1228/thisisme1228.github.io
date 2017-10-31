@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/banner.html" afterPath="$PROJECT_DIR$/_includes/banner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/docs_header.html" afterPath="$PROJECT_DIR$/_includes/docs_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/anonymous-function/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/anonymous-function/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/use-strict/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/use-strict/index.html" />
@@ -43,6 +42,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="$PROJECT_DIR$/_site/reference/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="$PROJECT_DIR$/_site/rice/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/main.css" afterPath="$PROJECT_DIR$/_site/styles/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/main.css" afterPath="$PROJECT_DIR$/styles/css/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,11 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docs_header.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docs_header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/docs_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="135">
+              <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -83,7 +93,7 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-945">
+            <state relative-caret-position="-405">
               <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
               <folding />
             </state>
@@ -180,7 +190,6 @@
         <option value="$PROJECT_DIR$/_posts/2017-6-10-npm-plugins-posted.md" />
         <option value="$PROJECT_DIR$/_posts/2017-6-20-webpack-single-page-packaging.md" />
         <option value="$PROJECT_DIR$/_posts/2017-6-20-webpack-multiple-page-packaging.md" />
-        <option value="$PROJECT_DIR$/styles/css/main.css" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/styles/css/index.css" />
@@ -191,6 +200,7 @@
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_includes/banner.html" />
         <option value="$PROJECT_DIR$/_includes/docs_header.html" />
+        <option value="$PROJECT_DIR$/styles/css/main.css" />
       </list>
     </option>
   </component>
@@ -207,7 +217,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="44" />
     <option name="width" value="1885" />
     <option name="height" value="1023" />
@@ -239,6 +249,17 @@
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,12 +334,12 @@
       <workItem from="1509365996020" duration="9922000" />
       <workItem from="1509376041156" duration="6000" />
       <workItem from="1509419542345" duration="3649000" />
-      <workItem from="1509424676776" duration="5062000" />
+      <workItem from="1509424676776" duration="5341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163310000" />
+    <option name="totallyTimeSpent" value="163589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,7 +351,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="0" width="1885" height="1023" extended-state="1" />
+    <frame x="44" y="0" width="1885" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18206671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -636,14 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="222" column="19" lean-forward="false" selection-start-line="222" selection-start-column="19" selection-end-line="222" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -740,14 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/banner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -758,8 +763,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/docs_header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="135">
+          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
