@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>函数、匿名函数、自执行函数</title>
+	<title>函数、匿名函数、自执行函数、闭包</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.png">
 	<link rel="icon" href="/styles/images/favicon.png">
@@ -16,7 +16,7 @@
 	<link rel="canonical" href="/2016/03/20/function/">
 	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
 	
-	<meta name="keywords" content="函数、匿名函数、自执行函数, Helene's blog, 厚积薄发">
+	<meta name="keywords" content="函数、匿名函数、自执行函数、闭包, Helene's blog, 厚积薄发">
 	<meta name="description" content="厚积薄发">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -98,7 +98,7 @@
     <div class="docs-header" id="content">
   <div class="container">
   	
-		    <!--<h1>函数、匿名函数、自执行函数</h1>-->
+		    <!--<h1>函数、匿名函数、自执行函数、闭包</h1>-->
 		    <!--<p>Post on Mar 20, 2016 by <a href="/about">Helene</a></p>-->
 		    <h1 class="margin-top-45">Better me</h1>
     
@@ -145,7 +145,7 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">函数、匿名函数、自执行函数</h1>
+              <h1 class="post-title">函数、匿名函数、自执行函数、闭包</h1>
                 <span class="post-meta">Date：Mar 20, 2016</span>
                 <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
               <br />
@@ -159,6 +159,8 @@
     </ul>
   </li>
   <li><a href="#匿名函数调用方式" id="markdown-toc-匿名函数调用方式">匿名函数调用方式</a></li>
+  <li><a href="#自执行函数" id="markdown-toc-自执行函数">自执行函数</a></li>
+  <li><a href="#闭包" id="markdown-toc-闭包">闭包</a></li>
 </ul>
 <p><code class="highlighter-rouge">函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。</code>
 <!-- more --></p>
@@ -205,9 +207,196 @@
 
 <p><code class="highlighter-rouge">函数表达式中，创建的函数叫做匿名函数</code>，因为function关键字后面没有标识符。</p>
 
+<hr />
+
 <h3 id="匿名函数调用方式">匿名函数调用方式</h3>
 
 <p>匿名函数，顾名思义就是没有名字的函数。上面的函数表达式中的创建，即创建一个匿名函数，并将匿名函数赋值给变量ss，用ss来进行函数的调用，调用的方式就是在变量ss后面加上一对括号()，如果有参数传入的话就是ss(1,2)，这就是匿名函数的一种调用方式。</p>
+
+<p>还有一种匿名函数的调用方式是：使用()将匿名函数括起来，然后后面再加一对小括号（包含参数列表）。我们再看一下以下一个例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">((</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">){</span><span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span><span class="p">;})(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span><span class="c1">//5  </span>
+<span class="nx">alert</span><span class="p">((</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="s2">"y"</span><span class="p">,</span><span class="s2">"return x+y;"</span><span class="p">))(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span><span class="c1">//5  </span>
+</code></pre></div></div>
+
+<p>在javascript中，是没有块级作用域这种说法的，以上代码的这种方式就是模仿了块级作用域(通常成为私有作用域)，语法如下所示：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>  
+    <span class="c1">//这里是块级作用域  </span>
+<span class="p">})();</span>  
+</code></pre></div></div>
+
+<p>以上代码定义并立即调用了一个匿名函数。经函数声明包含在一对圆括号中，表示它实际上是一个函数表达式。而紧随其后的另一对圆括号会立即调用这个函数。</p>
+
+<p>然而要注意一点：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span><span class="p">(){</span>  
+      
+<span class="p">}();</span>  
+</code></pre></div></div>
+
+<p>上面的代码是错误的，因为Javascript将function关键字当作一个函数声明的开始，而函数声明后面不能加圆括号，如果你不显示告诉编译器，它会默认生成一个缺少名字的function，并且抛出一个语法错误，因为function声明需要一个名字。有趣的是，即便你为上面那个错误的代码加上一个名字，他也会提示语法错误，只不过和上面的原因不一样。在一个表达式后面加上括号()，该表达式会立即执行，但是在一个语句后面加上括号()，是完全不一样的意思，他的只是分组操作符</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 下面这个function在语法上是没问题的，但是依然只是一个语句  </span>
+<span class="c1">// 加上括号()以后依然会报错，因为分组操作符需要包含表达式  </span>
+   
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span> <span class="cm">/* code */</span> <span class="p">}();</span> <span class="c1">// SyntaxError: Unexpected token )  </span>
+   
+<span class="c1">// 但是如果你在括弧()里传入一个表达式，将不会有异常抛出  </span>
+<span class="c1">// 但是foo函数依然不会执行  </span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span> <span class="cm">/* code */</span> <span class="p">}(</span> <span class="mi">1</span> <span class="p">);</span>  
+   
+<span class="c1">// 因为它完全等价于下面这个代码，一个function声明后面，又声明了一个毫无关系的表达式：   </span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span> <span class="cm">/* code */</span> <span class="p">}</span>  
+   
+<span class="p">(</span> <span class="mi">1</span> <span class="p">);</span> 
+</code></pre></div></div>
+
+<p>所以上面代码要是想要实现，就必须要实现赋值，如a = function(){}()，”a=”这个告诉了编译器这个是一个函数表达式，而不是函数的声明。因为函数表达式后面可以跟圆括号。所以下面两段代码是等价的。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">aa</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">5</span><span class="p">);</span><span class="c1">//5  </span>
+
+
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);})(</span><span class="mi">5</span><span class="p">);</span><span class="c1">//5  </span>
+</code></pre></div></div>
+
+<p>有上面对于函数和匿名函数的了解，我们引申出来了一个概念，即自执行函数，让我们更加深入的了解为什么。a = function(){}()这个表示可以让编译器认为这个是一个函数表达式而不是一个函数的声明。</p>
+
+<hr />
+
+<h3 id="自执行函数">自执行函数</h3>
+
+<blockquote>
+  <p>我们创建了一个匿名的函数，并立即执行它，由于外部无法引用它内部的变量，因此在执行完后很快就会被释放，关键是这种机制不会污染全局对象。</p>
+</blockquote>
+
+<p>自执行函数，即定义和调用合为一体。下面我们来看下一下自执行函数的一些表达方式</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 下面2个括弧()都会立即执行  </span>
+  
+<span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">());</span> <span class="c1">// 推荐使用这个  </span>
+<span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">})();</span> <span class="c1">// 但是这个也是可以用的  </span>
+  
+<span class="c1">// 由于括弧()和JS的&amp;&amp;，异或，逗号等操作符是在函数表达式和函数声明上消除歧义的  </span>
+<span class="c1">// 所以一旦解析器知道其中一个已经是表达式了，其它的也都默认为表达式了  </span>
+<span class="c1">// 不过，请注意下一章节的内容解释  </span>
+  
+<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">10</span><span class="p">;</span> <span class="p">}</span> <span class="p">();</span>  
+<span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">();</span>  
+<span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">();</span>  
+  
+<span class="c1">// 如果你不在意返回值，或者不怕难以阅读  </span>
+<span class="c1">// 你甚至可以在function前面加一元操作符号  </span>
+  
+<span class="o">!</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">();</span>  
+<span class="o">~</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">();</span>  
+<span class="o">-</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">();</span>  
+<span class="o">+</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">();</span>  
+  
+<span class="c1">// 还有一个情况，使用new关键字,也可以用，但我不确定它的效率  </span>
+<span class="c1">// http://twitter.com/kuvos/status/18209252090847232  </span>
+  
+<span class="k">new</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span>  
+<span class="k">new</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/* code */</span> <span class="p">}</span> <span class="p">()</span> <span class="c1">// 如果需要传递参数，只需要加上括弧()  </span>
+</code></pre></div></div>
+
+<p>上面所说的括弧是消除歧义的，其实压根就没必要，因为括弧本来内部本来期望的就是函数表达式，但是我们依然用它，主要是为了方便开发人员阅读，当你让这些已经自动执行的表达式赋值给一个变量的时候，我们看到开头有括弧(，很快就能明白，而不需要将代码拉到最后看看到底有没有加括弧。</p>
+
+<p>即要是想要这样function(){}()来实现自执行，可以用一些操作符在function的前面来消除歧义。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">5</span><span class="p">);</span><span class="c1">//报错，function name expected  </span>
+  
+<span class="kd">var</span> <span class="nx">aa</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">1</span><span class="p">);</span><span class="c1">//1  </span>
+  
+<span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">2</span><span class="p">);</span><span class="c1">//2  </span>
+  
+<span class="mi">0</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">3</span><span class="p">);</span><span class="c1">//3  </span>
+  
+<span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">4</span><span class="p">);</span><span class="c1">//4  </span>
+  
+<span class="o">~</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">5</span><span class="p">);</span><span class="c1">//5  </span>
+  
+<span class="o">-</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">6</span><span class="p">);</span><span class="c1">//6  </span>
+  
+<span class="o">+</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">7</span><span class="p">);</span><span class="c1">//7  </span>
+  
+ <span class="k">new</span> <span class="kd">function</span> <span class="p">(){</span>  
+     <span class="nx">alert</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span><span class="c1">//8  </span>
+ <span class="p">}</span>  
+  
+  <span class="k">new</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">){</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  
+<span class="p">}(</span><span class="mi">9</span><span class="p">);</span><span class="c1">//9  </span>
+</code></pre></div></div>
+
+<p>很多情况下，可以利用自执行函数和闭包来保存某个特殊状态中的值，具体想看下方讲解。</p>
+
+<hr />
+
+<h3 id="闭包">闭包</h3>
+
+<p>由于作用域链的配置机制，使得闭包只能取得包含函数中任何变量的最后一个值。即说明了闭包中所保存的是整个变量对象，而不是某一个特殊的变量。我们 用下面这个例子来说明这个问题。</p>
+
+<p>例子一：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createFunction</span><span class="p">(){</span>  
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>  
+    <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>  
+        <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>  
+            <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>  
+        <span class="p">};</span>  
+    <span class="p">}</span>  
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>  
+<span class="p">}</span>  
+<span class="kd">var</span> <span class="nx">aa</span> <span class="o">=</span> <span class="nx">createFunction</span><span class="p">();</span>  
+<span class="nx">alert</span><span class="p">(</span><span class="nx">aa</span><span class="p">[</span><span class="mi">0</span><span class="p">]());</span><span class="c1">//10  </span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">aa</span><span class="p">[</span><span class="mi">1</span><span class="p">]());</span><span class="c1">//10  </span>
+</code></pre></div></div>
+
+<p>在这个函数中，我们直接将闭包赋值给数组。这个函数会返回一个函数数组。表面上来看，似乎每个函数都应该返回自己的索引，即位置0的函数返回0，位置1的函数返回1一次类推。但实际上，如同上面例子，每个函数都返回了10。因为每个函数的作用域链中都保存createFunctions()函数的活动对象，所以它们引用的都是同一个变量i。当createFunctions()函数返回后，变量i的值死10，此时每个函数都引用着保存变量i的同一个变量对象。所以在每个函数内部i的值都是10。‘</p>
+
+<p>所以，我们可以通过如下例子，创建一个自执行函数（匿名函数）强制让闭包的行为符合预期。</p>
+
+<p>例子二：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createFunction1</span><span class="p">(){</span>  
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>  
+    <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>  
+        <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>  
+            <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>  
+                <span class="k">return</span> <span class="nx">num</span><span class="p">;</span>  
+            <span class="p">};</span>  
+        <span class="p">}(</span><span class="nx">i</span><span class="p">);</span>  
+    <span class="p">}</span>  
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>  
+<span class="p">}</span>  
+  
+<span class="kd">var</span> <span class="nx">bb</span> <span class="o">=</span> <span class="nx">createFunction1</span><span class="p">();</span>  
+<span class="nx">alert</span><span class="p">(</span><span class="nx">bb</span><span class="p">[</span><span class="mi">0</span><span class="p">]());</span><span class="c1">//0  </span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">bb</span><span class="p">[</span><span class="mi">1</span><span class="p">]());</span><span class="c1">//1  </span>
+</code></pre></div></div>
+
+<p>从createFunctions1()这个函数的执行结果来看，每个函数都返回各自不同的索引值了，是什么原因呢？</p>
+
+<p>在createFunctions1()这个函数中，我们没有直接将闭包赋值给数组，而是定义了一个匿名函数，并将立即执行该匿名函数的结果赋值给数组。对于立即执行的匿名函数来说，由于外部无法引用它内部的变量，因此在执行完后很快就会被释放。所以这里的匿名函数有一个参数num，也就是最终的函数要返回的值。在调用每个匿名函数时，我们传入了变量i。由于函数是按值传递的，所以会将变量i的当前值赋值给参数num，而这个匿名函数内部，又创建并返回了一个返回num的闭包。这样一来，result数组中的每个函数都有自己num的一个副本，因此就可以返回各自不同的数值了。</p>
 
 
             </article>
