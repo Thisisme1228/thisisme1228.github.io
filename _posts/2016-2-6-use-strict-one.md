@@ -127,4 +127,65 @@ function f(){
 f();// 报错，this未定义
 ```
 
+<hr>
+### arguments对象和函数属性
 
+在严格模式下,访问arguments.callee, arguments.caller, anyFunction.caller以及anyFunction.arguments都会抛出异常.唯一合法的使用应该是在其中命名一个函数并且重用之
+
+```js
+// example taken from vanillajs: http://vanilla-js.com/
+var s = document.getElementById('thing').style;
+s.opacity = 1;
+(function(){ 
+  if((s.opacity-=.1) < 0)
+    s.display="none";
+  else
+    setTimeout(arguments.callee, 40);
+})();
+```
+
+可以重新写成:
+
+```js
+"use strict";
+var s = document.getElementById('thing').style;
+s.opacity = 1;
+(function fadeOut(){ // name the function
+  if((s.opacity-=.1) < 0)
+    s.display="none";
+  else
+    setTimeout(fadeOut, 40); // use the name of the function
+})();
+```
+<hr>
+### 严格中立的代码
+
+迁移严格代码至严格模式的一个潜在消极面是，在遗留的老版本浏览器上，由于没有实现严格模式，javascript语义可能会有所不同。在一些罕见的机会下（比如差劲的关联关系或者代码最小化），你的代码可能不能按照你书写或者测试里的模式那样运行。这里有一些让你的代码保持中立的规范：
+
+1.按照严格模式书写你的代码，并且确保你的代码不会发生仅仅在严格模式下发生的错误（比如上文所说的运行时错误）
+
+2.远离语义差异
+
++ eval: 仅仅在你知道你在干什么的情况下使用它
+
++ arguments: 总是通过形参的名字获取函数参数，或者在函数的第一行拷贝arguments 
+
+    var args = Array.prototype.slice.call(arguments)
+
++ this: 仅在this指向你自己创建的对象时使用它 
+
+<hr>
+### 开启严格模式
+
+> 合并均为严格模式的脚本或均为非严格模式的都没问题，只有在合并严格模式与非严格模式有可能有问题。建议按一个个函数去开启严格模式（至少在学习的过渡期要这样做）.
+ 
+> 您也可以将整个脚本的内容用一个函数包括起来，然后在这个外部函数中使用严格模式。这样做就可以消除合并的问题，但是这就意味着您必须要在函数作用域外声明一个全局变量。
+
+如果你想改变你的代码，让其工作在JavaScript的限制变体, 请参阅[转换成严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
+<hr>
+
+阅读了本文的小伙伴还读了以下文章：
+
++ [严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+
++ [转换成严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。

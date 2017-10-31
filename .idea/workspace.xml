@@ -2,34 +2,20 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/_site/styles/css/index.css" line="6114" />
+    <bookmark url="file://$PROJECT_DIR$/_posts/2017-10-31-life.md" line="79" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-5-16-use-strict-two.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2016-2-6-use-strict.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2016/02/06/use-strict/index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-10-31-life.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2017-5-16-use-strict-two.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2016/02/06/anonymous-function/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2017/05/16/use-strict-two/index.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2016-2-6-anonymous-function.md" afterPath="$PROJECT_DIR$/_posts/2016-3-10-function.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-3-capabilities.md" afterPath="$PROJECT_DIR$/_posts/2016-5-3-capabilities.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-5-capabilities.md" afterPath="$PROJECT_DIR$/_posts/2016-5-5-capabilities.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-7-3-ES6.md" afterPath="$PROJECT_DIR$/_posts/2016-7-3-ES6.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-8-24-ol-sort.md" afterPath="$PROJECT_DIR$/_posts/2016-8-24-ol-sort.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-1-15-code-standards.md" afterPath="$PROJECT_DIR$/_posts/2017-1-15-code-standards.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-22-rice_greens.md" afterPath="$PROJECT_DIR$/_posts/2017-10-22-rice_greens.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-28-read-book.md" afterPath="$PROJECT_DIR$/_posts/2017-10-28-read-book.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-29-download-music.md" afterPath="$PROJECT_DIR$/_posts/2017-10-29-download-music.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-29-watch-pay-video.md" afterPath="$PROJECT_DIR$/_posts/2017-10-29-watch-pay-video.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-5-6-server.md" afterPath="$PROJECT_DIR$/_posts/2017-5-6-server.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/03/ES6/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/03/ES6/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/01/15/code-standards/index.html" afterPath="$PROJECT_DIR$/_site/2017/01/15/code-standards/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" afterPath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/22/rice_greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/28/read-book/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/28/read-book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/29/download-Music/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/29/download-Music/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/29/watch-pay-video/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/29/watch-pay-video/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md" afterPath="$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md" afterPath="$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/use-strict-one/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/use-strict-one/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/31/principles-of-economics/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/31/principles-of-economics/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
@@ -53,12 +39,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="2017-5-16-use-strict-two.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2017-5-16-use-strict-two.md">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016-3-10-function.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2016-3-10-function.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="567">
-                <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <first_editor relative-caret-position="515">
+                <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+                <folding>
+                  <marker date="1509458869019" expanded="true" signature="224:247" ph="{...}" />
+                  <marker date="1509458869019" expanded="true" signature="387:410" ph="{...}" />
+                  <marker date="1509458869019" expanded="true" signature="495:518" ph="{...}" />
+                  <marker date="1509458869019" expanded="true" signature="681:704" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-10-31-life.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-10-31-life.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="102">
+                <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -71,8 +95,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -116,11 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/2017-7-15-mongodb.md" />
-        <option value="$PROJECT_DIR$/_posts/2016-10-5-interview.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-3-17-browser.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-4-3-network-security.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-3-20-net-knowledge.md" />
         <option value="$PROJECT_DIR$/_posts/2017-6-2-node.md" />
         <option value="$PROJECT_DIR$/_posts/2017-4-26-webpack.md" />
         <option value="$USER_HOME$/Desktop/tag/index.html" />
@@ -148,13 +167,9 @@
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_includes/banner.html" />
         <option value="$PROJECT_DIR$/_includes/docs_header.html" />
-        <option value="$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md" />
         <option value="$PROJECT_DIR$/_posts/2016-2-6-use-strict.md" />
         <option value="$PROJECT_DIR$/_posts/2016-2-6-use-strict-two.md" />
         <option value="$PROJECT_DIR$/_posts/2016-5-16-use-strict-two.md" />
-        <option value="$PROJECT_DIR$/styles/css/main.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md" />
         <option value="$PROJECT_DIR$/_posts/2016-5-3-capabilities.md" />
         <option value="$PROJECT_DIR$/_posts/2016-5-5-capabilities.md" />
         <option value="$PROJECT_DIR$/_posts/2016-5-13-Github.md" />
@@ -166,7 +181,16 @@
         <option value="$PROJECT_DIR$/_posts/2017-10-28-read-book.md" />
         <option value="$PROJECT_DIR$/_posts/2017-10-29-download-music.md" />
         <option value="$PROJECT_DIR$/_posts/2017-10-29-watch-pay-video.md" />
+        <option value="$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md" />
         <option value="$PROJECT_DIR$/_posts/2017-5-16-use-strict-two.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-2-6-anonymous-function.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-3-10-function.md" />
+        <option value="D:/software/sun.svg" />
+        <option value="$PROJECT_DIR$/_posts/test.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/styles/css/main.css" />
+        <option value="$PROJECT_DIR$/_posts/2017-10-31-life.md" />
       </list>
     </option>
   </component>
@@ -183,10 +207,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="108" />
-    <option name="y" value="38" />
-    <option name="width" value="1688" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="635" />
+    <option name="y" value="1" />
+    <option name="width" value="1266" />
     <option name="height" value="1023" />
   </component>
   <component name="ProjectView">
@@ -221,6 +245,17 @@
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_sass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,12 +330,12 @@
       <workItem from="1509365996020" duration="9922000" />
       <workItem from="1509376041156" duration="6000" />
       <workItem from="1509419542345" duration="3649000" />
-      <workItem from="1509424676776" duration="13096000" />
+      <workItem from="1509424676776" duration="29258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171344000" />
+    <option name="totallyTimeSpent" value="187506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,10 +347,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="108" y="38" width="1688" height="1023" extended-state="1" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29963234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48250264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -365,42 +400,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/LessOrMore/pages_list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/maoxiaoke.github.io-master/donate/index.md" />
-    <entry file="file://$PROJECT_DIR$/_site/donate/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="130" column="13" lean-forward="false" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/nothing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/installedTo/xampp/htdocs/maoxiaoke.github.io-master/reference.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -627,48 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="343" column="18" lean-forward="false" selection-start-line="343" selection-start-column="18" selection-end-line="343" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-2-6-anonymous-function.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="509">
-            <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="13" />
-            <folding>
-              <marker date="1509441816464" expanded="true" signature="1501:1522" ph="{...}" />
-              <marker date="1509441816464" expanded="true" signature="1578:1618" ph="{...}" />
-              <marker date="1509441816464" expanded="true" signature="1734:1771" ph="{...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-5-5-capabilities.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -852,17 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2017-10-29-download-music.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -949,11 +895,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/installedTo/xampp/htdocs/maoxiaoke.github.io-master/_posts/postgraduate/Python/2017-06-04-Python-Base.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-11738">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/installedTo/xampp/htdocs/maoxiaoke.github.io-master/_posts/postgraduate/Algorithms/2017-06-26-Set-Map-Hash.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="534">
+            <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="194" selection-end-column="56" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2017-5-16-use-strict-two.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="567">
-            <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <first_editor relative-caret-position="378">
+            <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-2-6-use-strict-one.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="507">
+            <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+            <folding>
+              <marker date="1509447591125" expanded="true" signature="1501:1522" ph="{...}" />
+              <marker date="1509447591125" expanded="true" signature="1578:1618" ph="{...}" />
+              <marker date="1509447591125" expanded="true" signature="1734:1771" ph="{...}" />
+              <marker date="1509447591125" expanded="true" signature="2078:2175" ph="{...}" />
+              <marker date="1509447591125" expanded="true" signature="2296:2436" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-3-10-function.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="515">
+            <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <folding>
+              <marker date="1509458869019" expanded="true" signature="224:247" ph="{...}" />
+              <marker date="1509458869019" expanded="true" signature="387:410" ph="{...}" />
+              <marker date="1509458869019" expanded="true" signature="495:518" ph="{...}" />
+              <marker date="1509458869019" expanded="true" signature="681:704" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/software/sun.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="801" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="895" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-10-31-life.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="102">
+            <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

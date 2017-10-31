@@ -1,3 +1,7 @@
+* {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
 /*  margin/padding start */
 
 .margin-top-20 {
@@ -12,6 +16,9 @@
 .margin-bottom-20 {
   margin-bottom: 20px;
 }
+.margin-right-5 {
+  margin-right: 5px;
+}
 .ul-padding-start {
   -moz-padding-start: 0;
   -webkit-padding-start: 0;
@@ -20,6 +27,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.padding-top-bottom-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .padding-top-bottom-20 {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -27,8 +38,26 @@
 
 /*  margin/padding end */
 
+/* border start */
+
+/* 居中start */
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+/* 居中end */
+
+/* border end */
+
+.border-1-ccc {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
 
 /* color start */
+
 
 .font-color-red {
   color: red;
@@ -47,6 +76,15 @@
 }
 
 /* font-weight end */
+
+
+/* font-size start */
+
+.font-size-34 {
+  font-size: 34px;
+}
+
+/* font-size end */
 
 
 /* 外域链接start */
