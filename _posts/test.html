@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+"use strict"
+
+function createFunction() {
+    var arr = [];
+    for(var i = 0;i < 10;i++){
+        
+        arr[i] = function (num) {
+            return function () {
+                return num;
+            }
+        }(i);
+    }
+    return arr
+}
+var aa = createFunction();
+alert(aa[0]());
+alert(aa[1]());
+</script>
+</body>
+</html>
