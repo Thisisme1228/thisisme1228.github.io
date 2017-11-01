@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>8种办法解决 JS 闭包经典面试题之 for 循环取 i</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2017/03/02/closure/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<meta name="keywords" content="8种办法解决 JS 闭包经典面试题之 for 循环取 i, Helene's blog, 厚积薄发">
+	<meta name="description" content="厚积薄发">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          <img src="./../styles/images/logo.png" class="logo">
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="/greens/">生活</a>
+        </li>
+        <li>
+          <a href="/rice">工作</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">外域链接</a>
+        </li>
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <li>
+          <a href="/donate/">打赏我</a>
+        </li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+		    <!--<h1>8种办法解决 JS 闭包经典面试题之 for 循环取 i</h1>-->
+		    <!--<p>Post on Mar 02, 2017 by <a href="/about">Helene</a></p>-->
+		    <h1 class="margin-top-45">Better me</h1>
+    
+      <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+          <source src="/styles/music/I-will-love-you.mp3">
+      </audio>
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
+          <!--<span style="color: beige" id="clickMe">Click!</span>-->
+      </div>
+  </div>
+</div>
+
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/greens/#-ref"></a>	/
+    	<a href="/rice/#JavaScript-ref">JavaScript</a>
+    
+  </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+  <div class="col-md-3">
+    <div class="sidebar hidden-print" role="complementary">
+      <!-- 供内页使用 -->
+<div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav btn-primary">
+  </ul>
+</div>
+
+
+
+
+    </div>
+  </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">8种办法解决 JS 闭包经典面试题之 for 循环取 i</h1>
+                <span class="post-meta">Date：Mar 2, 2017</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#回到主题-面试经典问题" id="markdown-toc-回到主题-面试经典问题">回到主题 面试经典问题</a>    <ul>
+      <li><a href="#1解决办法一" id="markdown-toc-1解决办法一">1.解决办法一</a></li>
+      <li><a href="#2解决办法二" id="markdown-toc-2解决办法二">2.解决办法二</a></li>
+      <li><a href="#3解决办法三" id="markdown-toc-3解决办法三">3.解决办法三</a></li>
+      <li><a href="#4解决办法四" id="markdown-toc-4解决办法四">4.解决办法四</a></li>
+      <li><a href="#5解决办法五" id="markdown-toc-5解决办法五">5.解决办法五</a></li>
+      <li><a href="#6解决办法六" id="markdown-toc-6解决办法六">6.解决办法六</a></li>
+      <li><a href="#7解决办法七" id="markdown-toc-7解决办法七">7.解决办法七</a></li>
+      <li><a href="#8解决办法八" id="markdown-toc-8解决办法八">8.解决办法八</a></li>
+    </ul>
+  </li>
+</ul>
+<p><strong>闭包</strong>
+<br />
+<br />
+1.正确的说,应该是指一个闭包域,每当声明了一个函数,它就产生了一个闭包域(可以解释为每个函数都有自己的函数栈),每个闭包域(Function 对象)都有一个 function scope(不是属性),function scope内默认有个名为Global的全局引用(有了这个引用,就可以直接调用 Global 的属性或方法)
+<br />
+<br />
+2.凡是在闭包域内声明的变量或方法,外部无法直接访问
+<br />
+<br />
+3.闭包域可以访问外部的变量或方法
+<br />
+<br />
+当在一个闭包域内包含另一个闭包域时(简单的说就是在一个函数内有另一个函数,当然这个内部函数的生命周期是依附于外部函数的), 此时,若子闭包域(内部的闭包域,内部函数)使用了父闭包域(外部闭包域,外部函数)的私有变量(在父闭包域中声明的变量,父闭包域的外部空间无法直接访问,但子闭包域可以访问),子闭包域即当前的子函数的 function scope 会产生一个 closure 对象属性,这个对象属性内包含的是子闭包域对父闭包域的所有引用(只要子闭包域(内部函数)还存活,其父闭包域(外部函数)就依旧存活),倘若在父闭包域存活期间对其私有变量内容进行修改,则对这些父闭包域的私有变量进行引用的子闭包域中 function scope 的 closure 对象属性的内容也会发生变化,因为这只是引用.
+<!-- more --></p>
+
+<p>举例:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+        <span class="c1">//函数 a 有一个私有变量 p 和一个内部函数 innerA</span>
+        <span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>                      <span class="c1">//外部闭包域 ,一个名为 a 的 Function 对象</span>
+            <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                      <span class="c1">//私有变量 p</span>
+            <span class="kd">var</span> <span class="nx">innerA</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>      <span class="c1">//内部闭包域 ,一个名为 innerA 的 Function 对象</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>             <span class="c1">//对外部闭包域的私有变量进行了引用,故 innerA 对象的 function scope 会产生一个名为 closure 的对象属性,closure 对象内含有一个名为 p 的引用</span>
+            <span class="p">}</span>
+ 
+            <span class="nx">innerA</span><span class="p">();</span><span class="c1">//输出0</span>
+            <span class="nx">p</span><span class="o">++</span><span class="p">;</span>
+            <span class="nx">innerA</span><span class="p">();</span><span class="c1">//输出1</span>
+        <span class="p">}</span>
+        <span class="nx">a</span><span class="p">();</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>结果如下:</p>
+
+<p>第一次调用innerA</p>
+
+<p><img src="/styles/images/closure/01.png" alt="" width="50%" /></p>
+
+<p>第二次调用 innerA</p>
+
+<p><img src="/styles/images/closure/02.png" alt="" width="50%" /></p>
+
+<p>控制台输出</p>
+
+<p><img src="/styles/images/closure/03.png" alt="" width="50%" /></p>
+
+<h2 id="回到主题-面试经典问题">回到主题 面试经典问题</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="c1">//面试经典问题:</span>
+ 
+        <span class="kd">function</span> <span class="nx">onMyLoad</span><span class="p">(){</span>
+            <span class="cm">/*
+            抛出问题:
+                此题的目的是想每次点击对应目标时弹出对应的数字下标 0~4,但实际是无论点击哪个目标都会弹出数字5
+            问题所在:
+                arr 中的每一项的 onclick 均为一个函数实例(Function 对象),这个函数实例也产生了一个闭包域,
+                这个闭包域引用了外部闭包域的变量,其 function scope 的 closure 对象有个名为 i 的引用,
+                外部闭包域的私有变量内容发生变化,内部闭包域得到的值自然会发生改变
+            */</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"p"</span><span class="p">);</span>
+            <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+                <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">"onMyLoad()"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>产品一<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>产品二<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>产品三<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>产品四<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>产品五<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>解决办法:</p>
+
+<h3 id="1解决办法一">1.解决办法一</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路:
+    增加若干个对应的闭包域空间(这里采用的是匿名函数),专门用来存储原先需要引用的内容(下标),不过只限于基本类型(基本类型值传递,对象类型引用传递)
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+ 
+    <span class="c1">//声明一个匿名函数,若传进来的是基本类型则为值传递,故不会对实参产生影响,</span>
+    <span class="c1">//该函数对象有一个本地私有变量arg(形参) ,该函数的 function scope 的 closure 对象属性有两个引用,一个是 arr,一个是 i</span>
+    <span class="c1">//尽管引用 i 的值随外部改变 ,但本地私有变量(形参) arg 不会受影响,其值在一开始被调用的时候就决定了.</span>
+    <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">//onclick函数实例的 function scope 的 closure 对象属性有一个引用 arg,</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>                 <span class="c1">//只要 外部空间的 arg 不变,这里的引用值当然不会改变</span>
+        <span class="p">}</span>
+    <span class="p">})(</span><span class="nx">i</span><span class="p">);</span>                              <span class="c1">//立刻执行该匿名函数,传递下标 i(实参)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="2解决办法二">2.解决办法二</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路:
+    将下标作为对象属性(name:"i",value:i的值)添加到每个数组项(p对象)中
+*/</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="c1">//为当前数组项即当前 p 对象添加一个名为 i 的属性,值为循环体的 i 变量的值,</span>
+    <span class="c1">//此时当前 p 对象的 i 属性并不是对循环体的 i 变量的引用,而是一个独立p 对象的属性,属性值在声明的时候就确定了</span>
+    <span class="c1">//(基本类型的值都是存在栈中的,当有一个基本类型变量声明其等于另一个基本变量时,此时并不是两个基本类型变量都指向一个值,而是各自有各自的值,但值是相等的)</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="3解决办法三">3.解决办法三</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路:
+    与解决办法一有点相似但却有点不太相似.
+    相似点:同样是增加若干个对应的闭包域空间用来存储下标
+    不同点:解决办法一是在新增的匿名闭包空间内完成事件的绑定,而此例是将事件绑定在新增的匿名函数返回的函数上
+ 
+    此时绑定的函数中的 function scope 中的 closure 对象的 引用 arg 是指向将其返回的匿名函数的私有变量 arg
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">arg</span><span class="p">){</span>
+        <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">})(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="4解决办法四">4.解决办法四</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路与解决办法一相同
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+       <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">temp</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">})();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="5解决办法五">5.解决办法五</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路与解决办法三及四相同
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">temp</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">})();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="6解决办法六">6.解决办法六</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路:
+    将下标添加为绑定函数的属性
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="kr">arguments</span><span class="p">.</span><span class="nx">callee</span><span class="p">.</span><span class="nx">i</span><span class="p">);</span>      <span class="c1">//arguments 参数对象  arguments.callee 参数对象所属函数</span>
+    <span class="p">}).</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="7解决办法七">7.解决办法七</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路:
+    通过 new 使用 Function 的构造函数 创建 Function 实例实现,由于传入的函数体的内容是字符串,故 Function 得到的是一个字符串拷贝,而没有得到 i 的引用(这里是先获取 i.toString()然后与前后字符串拼接成一个新的字符串,Function 对其进行反向解析成 JS 代码)
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"alert("</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s2">");"</span><span class="p">);</span><span class="c1">//每 new 一个 Function 得到一个 Function 对象(一个函数),有自己的闭包域</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="8解决办法八">8.解决办法八</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+解决思路:
+    直接通过 Function 返回一个函数
+    与解决办法七的不同之处在于:
+        解决办法七使用 new,使用了 new,此时 Function 函数就被当成构造器可以用来构造一个 Function 实例返回
+        当前解决办法没有使用 new ,即将 Function 函数当成一个函数,传入参数返回一个新函数;
+        其实此处 new 与不 new 只是的区别在于:
+            使用了 new 即 Function 函数充当构造器,由 JS 解析器生产一个新的对象,构造器内的 this 指向该新对象;
+            不实用 new 即 Function 函数依旧是函数,由函数内部自己生产一个实例返回.
+ */</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"alert("</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s2">");"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>解决办法大同小异,只要理解其中的实质,可以写出多多的解决办法</p>
+
+            </article>
+        </div>
+        <hr/>
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span>
+				我的网站展示：
+			</span>
+			<span>
+				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+			</span>
+			<span>&nbsp;|&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+	</div>
+	<ul id="backToTop" class="back-to-top">
+		<li>
+			<span>TOP</span>
+		</li>
+	</ul>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>

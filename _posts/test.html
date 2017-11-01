@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>test1</title>
-    <script>
-        var btn = document.getElementById("button");
-        btn.onclick =function(){
-            alert("你点击了按钮哦！");
+    <title></title>
+    <script type="text/javascript">
+        //面试经典问题:
+
+        function onMyLoad(){
+            var arr = document.getElementsByTagName("p");
+
+            /*
+解决思路:
+    将下标作为对象属性(name:"i",value:i的值)添加到每个数组项(p对象)中
+*/
+            for(var i = 0;i<arr.length;i++){
+                //为当前数组项即当前 p 对象添加一个名为 i 的属性,值为循环体的 i 变量的值,
+                //此时当前 p 对象的 i 属性并不是对循环体的 i 变量的引用,而是一个独立p 对象的属性,属性值在声明的时候就确定了
+                //(基本类型的值都是存在栈中的,当有一个基本类型变量声明其等于另一个基本变量时,此时并不是两个基本类型变量都指向一个值,而是各自有各自的值,但值是相等的)
+                arr[i].i = i;
+                arr[i].onclick = function () {
+                    alert(this.i);
+                }
+            }
         }
     </script>
 </head>
-<body>
-<input  id="button" type="button" value="点击" >
-
+<body onload="onMyLoad()">
+<p>产品一</p>
+<p>产品二</p>
+<p>产品三</p>
+<p>产品四</p>
+<p>产品五</p>
 </body>
 </html>

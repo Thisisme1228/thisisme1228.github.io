@@ -461,6 +461,61 @@
 
                   <ol class="right-list-style">
                    <li>
+                     <h3><a class="font-weight-600" href="/2017/06/15/closure/">JavaScript高级程序设计——闭包</a></h3>
+                     <div class="excerpt-content"><ul id="markdown-toc">
+  <li><a href="#前言" id="markdown-toc-前言">前言</a></li>
+  <li><a href="#闭包" id="markdown-toc-闭包">闭包</a>    <ul>
+      <li><a href="#1概念" id="markdown-toc-1概念">1.概念</a></li>
+      <li><a href="#2条件" id="markdown-toc-2条件">2.条件</a></li>
+    </ul>
+  </li>
+</ul>
+<h3 id="前言">前言</h3>
+<p>有很多人搞不清匿名函数和闭包这两个概念，经常混用。闭包是指有权访问另一个函数作用域中的变量的函数。匿名函数就是没有实际名字的函数。</p>
+<hr />
+
+<h3 id="闭包">闭包</h3>
+<h4 id="1概念">1.概念</h4>
+<p>闭包，其实是一种语言特性，它是指的是程序设计语言中，允许将函数看作对象，然后能像在对象中的操作搬在函数中定义实例（局部）变量，而这些变量能在函数中保存到函数的实例对象销毁为止，其它代码块能通过某种方式获取这些实例（局部）变量的值并进行应用扩展。</p>
+<h4 id="2条件">2.条件</h4>
+<p>闭包是允许函数访问局部作用域之外的数据。即使外部函数已经退出，外部函数的变量仍可以被内部函数访问到。
+<br />
+因此闭包的实现需要三个条件：</p>
+<ul>
+  <li>内部函数实用了外部函数的变量</li>
+  <li>外部函数已经退出</li>
+  <li>内部函数可以访问
+<!-- more --></li>
+</ul>
+
+</div>
+                     <div>
+                       <span class="font-color-999">June 15, 2017</span>
+                       
+                       <a class="tags-title" href="/rice/#JavaScript-ref">JavaScript</a>&nbsp;
+                       
+
+                       
+                       </span><a class="btn btn-danger pull-right" rel="nofollow" href='/2017/06/15/closure/'>阅读全文</a></p>
+                     </div>
+                   </li>
+                   <hr>
+                  </ol>
+                  
+                    
+                      
+                    
+                  
+                
+                  
+                  
+                  
+                  
+
+                  
+
+                  <ol class="right-list-style">
+                   <li>
                      <h3><a class="font-weight-600" href="/2017/06/10/npm-plugins-posted/">npm 插件发布</a></h3>
                      <div class="excerpt-content"></div>
                      <div>
@@ -671,6 +726,50 @@
 
                        
                        </span><a class="btn btn-danger pull-right" rel="nofollow" href='/2017/03/17/browser/'>阅读全文</a></p>
+                     </div>
+                   </li>
+                   <hr>
+                  </ol>
+                  
+                    
+                      
+                    
+                  
+                
+                  
+                  
+                  
+                  
+
+                  
+
+                  <ol class="right-list-style">
+                   <li>
+                     <h3><a class="font-weight-600" href="/2017/03/02/closure/">8种办法解决 JS 闭包经典面试题之 for 循环取 i</a></h3>
+                     <div class="excerpt-content"><p><strong>闭包</strong>
+<br />
+<br />
+1.正确的说,应该是指一个闭包域,每当声明了一个函数,它就产生了一个闭包域(可以解释为每个函数都有自己的函数栈),每个闭包域(Function 对象)都有一个 function scope(不是属性),function scope内默认有个名为Global的全局引用(有了这个引用,就可以直接调用 Global 的属性或方法)
+<br />
+<br />
+2.凡是在闭包域内声明的变量或方法,外部无法直接访问
+<br />
+<br />
+3.闭包域可以访问外部的变量或方法
+<br />
+<br />
+当在一个闭包域内包含另一个闭包域时(简单的说就是在一个函数内有另一个函数,当然这个内部函数的生命周期是依附于外部函数的), 此时,若子闭包域(内部的闭包域,内部函数)使用了父闭包域(外部闭包域,外部函数)的私有变量(在父闭包域中声明的变量,父闭包域的外部空间无法直接访问,但子闭包域可以访问),子闭包域即当前的子函数的 function scope 会产生一个 closure 对象属性,这个对象属性内包含的是子闭包域对父闭包域的所有引用(只要子闭包域(内部函数)还存活,其父闭包域(外部函数)就依旧存活),倘若在父闭包域存活期间对其私有变量内容进行修改,则对这些父闭包域的私有变量进行引用的子闭包域中 function scope 的 closure 对象属性的内容也会发生变化,因为这只是引用.
+<!-- more --></p>
+
+</div>
+                     <div>
+                       <span class="font-color-999">March  2, 2017</span>
+                       
+                       <a class="tags-title" href="/rice/#JavaScript-ref">JavaScript</a>&nbsp;
+                       
+
+                       
+                       </span><a class="btn btn-danger pull-right" rel="nofollow" href='/2017/03/02/closure/'>阅读全文</a></p>
                      </div>
                    </li>
                    <hr>
@@ -951,6 +1050,85 @@ http://www.jianshu.com/p/e848fcc7e205</p>
                         </ul>
                         <h2 id="month_2016_July">July</h2>
                         <ul>
+                      
+                    
+                  
+                
+                  
+                  
+                  
+                  
+
+                  
+
+                  <ol class="right-list-style">
+                   <li>
+                     <h3><a class="font-weight-600" href="/2016/07/18/js-area/">五句话搞定JavaScript作用域</a></h3>
+                     <div class="excerpt-content"><p>此文针对ES5，不涉及ES2015（又称ES6）
+<br />
+<br />
+JavaScript的作用域一直以来是前端开发中比较难以理解的知识点，对于JavaScript的作用域主要记住几句话，走遍天下都不怕。
+<!-- more --></p>
+
+</div>
+                     <div>
+                       <span class="font-color-999">July 18, 2016</span>
+                       
+                       <a class="tags-title" href="/rice/#JavaScript-ref">JavaScript</a>&nbsp;
+                       
+
+                       
+                       </span><a class="btn btn-danger pull-right" rel="nofollow" href='/2016/07/18/js-area/'>阅读全文</a></p>
+                     </div>
+                   </li>
+                   <hr>
+                  </ol>
+                  
+                    
+                      
+                    
+                  
+                
+                  
+                  
+                  
+                  
+
+                  
+
+                  <ol class="right-list-style">
+                   <li>
+                     <h3><a class="font-weight-600" href="/2016/07/10/scope/">你想知道的关于JavaScript作用域的一切</a></h3>
+                     <div class="excerpt-content"><p>这篇文章的目的就是为了帮助那些想更深一步学习了解JavaScript作用域的开发者,尤其是当他们听到一些关于作用域的单词的时候, 好比:作用域(scope),闭包(closure),this,命名空间(namespace),函数作用域(function scope),全局作用域(global scope),词法作用域(lexical),公有变量(public scope),私有变量(private scope). 
+希望通过这篇文章你可以知道下面这些问题的答案:
+<br /></p>
+<ul>
+  <li>什么是作用域?</li>
+  <li>什么是全局(局部)作用域?</li>
+  <li>什么是命名空间,它和作用域有什么不同?</li>
+  <li>this关键字是什么,作用于又是怎么影响它的?</li>
+  <li>什么是函数/词法作用域?</li>
+  <li>什么是闭包?</li>
+  <li>什么是共有/私有作用域?</li>
+  <li>我怎么样才能够理解/创建/实践上面所有的情况
+<!-- more --></li>
+</ul>
+
+</div>
+                     <div>
+                       <span class="font-color-999">July 10, 2016</span>
+                       
+                       <a class="tags-title" href="/rice/#JavaScript-ref">JavaScript</a>&nbsp;
+                       
+
+                       
+                       </span><a class="btn btn-danger pull-right" rel="nofollow" href='/2016/07/10/scope/'>阅读全文</a></p>
+                     </div>
+                   </li>
+                   <hr>
+                  </ol>
+                  
+                    
                       
                     
                   
