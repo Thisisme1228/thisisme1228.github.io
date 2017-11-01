@@ -2,7 +2,7 @@
 layout: left-none
 title:  下载付费音乐(能点开播放页面的，泰勒的除外)
 date:   2017-10-29 00:00:00 +0800
-categories: 下载付费音乐
+categories: 音乐
 ---
 * content
 {:toc}
