@@ -154,6 +154,7 @@
             <article class="post-content">
               <ul id="markdown-toc">
   <li><a href="#基础概念" id="markdown-toc-基础概念">基础概念</a></li>
+  <li><a href="#变量的一生" id="markdown-toc-变量的一生">变量的一生：</a></li>
   <li><a href="#闭包的作用" id="markdown-toc-闭包的作用">闭包的作用</a>    <ul>
       <li><a href="#1读取函数内部的变量" id="markdown-toc-1读取函数内部的变量">1、读取函数内部的变量</a></li>
       <li><a href="#2将变量的值始终保存在内存中" id="markdown-toc-2将变量的值始终保存在内存中">2、将变量的值始终保存在内存中</a></li>
@@ -162,10 +163,8 @@
   <li><a href="#注意事项" id="markdown-toc-注意事项">注意事项</a></li>
 </ul>
 <h3 id="基础概念">基础概念</h3>
-<p>闭包是指有权访问另一个函数作用域的变量的函数。创建闭包的的常用方式，就是一个函数内部创建另一个函数。
+<p>闭包是指有权访问另一个函数作用域中的变量的函数。
 <br />
-<br />
-闭包主要涉及到js的几个其他的特性:作用域链,垃圾(内存)回收机制,函数嵌套,等等。
 <!-- more --></p>
 
 <hr />
@@ -205,6 +204,35 @@
     <span class="p">}</span>  
 <span class="nx">result</span> <span class="o">=</span> <span class="nx">f1</span><span class="p">();</span> <span class="nx">result</span><span class="p">();</span><span class="c1">//1  </span>
 </code></pre></div></div>
+
+<hr />
+
+<h3 id="变量的一生">变量的一生：</h3>
+
+<p>JS里面有两种变量，一种是全局变量，一种是局部变量。局部变量是个依附着所属空间的东西，一旦所属空间没有，它也就消失了。而全局变量，它的生命周期就是js文件使用的周期。</p>
+
+<p>所以如果你要销毁变量，如果是全局变量，那么你需要覆盖它，如果是局部变量你只要等待它所在的方法结束，它就自动销毁了。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;}</span>
+ <span class="nx">alert</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>   <span class="c1">//error，a 已经被销毁了</span>
+ 
+ 
+ <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="nx">a</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="nx">a</span><span class="o">++</span><span class="p">){}</span>
+ <span class="nx">alert</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>  <span class="c1">// 输出10，因为a在全局中定义，还没有被销毁</span>
+</code></pre></div></div>
+
+<p>但闭包是一种特殊的情况。闭包中的变量，这个函数的空间将会一直在内存中保留。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">function</span> <span class="nx">test</span><span class="p">(){</span>
+      <span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+      <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="nx">a</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+      <span class="nx">b</span><span class="o">=</span><span class="nx">test</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>外部没法输出a，这是因为没法访问，但a还是存在于内存之中。因为内部的函数引用了外部的变量a</p>
 
 <h3 id="闭包的作用">闭包的作用</h3>
 

@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>test1</title>
+    <script>
+        var btn = document.getElementById("button");
+        btn.onclick =function(){
+            alert("你点击了按钮哦！");
+        }
+    </script>
 </head>
 <body>
-<script>
-"use strict"
+<input  id="button" type="button" value="点击" >
 
-function createFunction() {
-    var arr = [];
-    for(var i = 0;i < 10;i++){
-        
-        arr[i] = function (num) {
-            return function () {
-                return num;
-            }
-        }(i);
-    }
-    return arr
-}
-var aa = createFunction();
-alert(aa[0]());
-alert(aa[1]());
-</script>
 </body>
 </html>
