@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-29-download-music.md" afterPath="$PROJECT_DIR$/_posts/2017-10-29-download-music.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-10-29-watch-pay-video.md" afterPath="$PROJECT_DIR$/_posts/2017-10-29-watch-pay-video.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2017/10/31/life/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" afterPath="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/06/interesting/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/06/interesting/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/28/read-book/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/28/read-book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/29/download-Music/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/29/download-Music/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/10/29/watch-pay-video/index.html" afterPath="$PROJECT_DIR$/_site/2017/10/29/watch-pay-video/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +36,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="81">
-                <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <first_editor relative-caret-position="135">
+                <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -130,7 +138,6 @@
         <option value="$PROJECT_DIR$/_posts/test.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles/css/main.css" />
-        <option value="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
         <option value="$PROJECT_DIR$/reference.md" />
         <option value="$PROJECT_DIR$/_posts/2016-3-10-function.md" />
         <option value="$PROJECT_DIR$/_posts/2017-2-3-closure.md" />
@@ -138,6 +145,7 @@
         <option value="$PROJECT_DIR$/_posts/2017-10-28-read-book.md" />
         <option value="$PROJECT_DIR$/_posts/2017-10-29-watch-pay-video.md" />
         <option value="$PROJECT_DIR$/_posts/2017-10-29-download-music.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
       </list>
     </option>
   </component>
@@ -154,7 +162,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="881" />
     <option name="y" value="2" />
     <option name="width" value="1048" />
@@ -278,12 +286,12 @@
       <workItem from="1509376041156" duration="6000" />
       <workItem from="1509419542345" duration="3649000" />
       <workItem from="1509424676776" duration="36518000" />
-      <workItem from="1509511315303" duration="211000" />
+      <workItem from="1509511315303" duration="551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194977000" />
+    <option name="totallyTimeSpent" value="195317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,7 +303,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2566278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -306,7 +314,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.417983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4168646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -348,13 +356,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_layouts/left-none.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-6-10-lazy-load.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -711,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-7-6-interesting.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="408">
-            <caret line="63" column="857" lean-forward="false" selection-start-line="63" selection-start-column="857" selection-end-line="63" selection-end-column="857" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reference.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -810,11 +801,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-7-6-interesting.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-10-5-interview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2017-10-31-principles-of-economics.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="81">
-            <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <first_editor relative-caret-position="135">
+            <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
