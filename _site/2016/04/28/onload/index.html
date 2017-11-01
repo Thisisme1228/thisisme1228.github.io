@@ -138,7 +138,10 @@
               <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
             </header>
             <article class="post-content">
-              <!-- more -->
+              <ul id="markdown-toc">
+  <li><a href="#事件处理函数的绑定有几个方法" id="markdown-toc-事件处理函数的绑定有几个方法">事件处理函数的绑定有几个方法：</a></li>
+</ul>
+<!-- more -->
 
 <p>在说我们的主题之前，我们首先来看几段代码：</p>
 
@@ -161,6 +164,162 @@
   
 <span class="nt">&lt;/body&gt;</span>  
 <span class="nt">&lt;/html&gt;</span>  
+</code></pre></div></div>
+
+<p>例子二、将代码块放在body标签的尾部，点击按钮有响应，有弹出框提示“你点击了按钮哦！”</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  
+<span class="nt">&lt;html&gt;</span>  
+<span class="nt">&lt;head</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;title&gt;</span>test1<span class="nt">&lt;/title&gt;</span>  
+  
+<span class="nt">&lt;/head&gt;</span>  
+<span class="nt">&lt;body&gt;</span>  
+<span class="nt">&lt;input</span>  <span class="na">id=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"点击"</span> <span class="nt">&gt;</span>  
+<span class="nt">&lt;script&gt;</span>  
+    <span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"button"</span><span class="p">);</span>  
+    <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span><span class="kd">function</span><span class="p">(){</span>  
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">"你点击了按钮哦！"</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="nt">&lt;/script&gt;</span>  
+<span class="nt">&lt;/body&gt;</span>  
+<span class="nt">&lt;/html&gt;</span>  
+</code></pre></div></div>
+
+<p>例子三、将script代码块放在head标签内，用window.onload来触发事件，点击按钮有响应，有弹出框提示“你点击了按钮哦！”。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  
+<span class="nt">&lt;html&gt;</span>  
+<span class="nt">&lt;head</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;title&gt;</span>test1<span class="nt">&lt;/title&gt;</span>  
+    <span class="nt">&lt;script&gt;</span>  
+        <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>  
+            <span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"button"</span><span class="p">);</span>  
+            <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span><span class="kd">function</span><span class="p">(){</span>  
+                <span class="nx">alert</span><span class="p">(</span><span class="s2">"你点击了按钮哦！"</span><span class="p">);</span>  
+            <span class="p">}</span>  
+        <span class="p">}</span>  
+  
+    <span class="nt">&lt;/script&gt;</span>  
+<span class="nt">&lt;/head&gt;</span>  
+<span class="nt">&lt;body&gt;</span>  
+<span class="nt">&lt;input</span>  <span class="na">id=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"点击"</span> <span class="nt">&gt;</span>  
+  
+<span class="nt">&lt;/body&gt;</span>  
+<span class="nt">&lt;/html&gt;</span>  
+</code></pre></div></div>
+
+<p>造成上面的这三种情况是什么原因呢？现在进入我们研究的主题：页面加载的顺序和window.onload的作用。</p>
+
+<p>当javascript脚本引入的是js文件的时候，是如何执行的呢？</p>
+
+<p>当javascript脚本里面是代码的时候，往往需要在文档加载完成后才能够去能够去执行，否则导致无法获取到对象的情况，就像上面的例子一 一样。</p>
+
+<p>如果想要解决这个问题，有两个方法，分别是上面代码中的例子二和例子三。</p>
+
+<p>对于例子三的window.onload，它是一个事件，当文档加载完成之后会触发该事件，可以为此事件注册事件处理函数，并将要执行的脚本代码放在事件处理函数中，于是就可以避免事件获取不到的情况。</p>
+
+<h3 id="事件处理函数的绑定有几个方法">事件处理函数的绑定有几个方法：</h3>
+
+<p>1、就像上面的例子三一样，window.onload = function(){}来绑定匿名函数来进行事件处理；</p>
+
+<p>2、window.onload来绑定非匿名函数来进行事件处理；</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  
+<span class="nt">&lt;html&gt;</span>  
+<span class="nt">&lt;head</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;title&gt;</span>test1<span class="nt">&lt;/title&gt;</span>  
+    <span class="nt">&lt;script&gt;</span>  
+        <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">MyLoad</span><span class="p">(){</span>  
+            <span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"button"</span><span class="p">);</span>  
+            <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span><span class="kd">function</span><span class="p">(){</span>  
+                <span class="nx">alert</span><span class="p">(</span><span class="s2">"你点击了按钮哦！"</span><span class="p">);</span>  
+            <span class="p">}</span>  
+        <span class="p">}</span>  
+          
+    <span class="nt">&lt;/script&gt;</span>  
+<span class="nt">&lt;/head&gt;</span>  
+<span class="nt">&lt;body&gt;</span>  
+<span class="nt">&lt;input</span>  <span class="na">id=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"点击"</span> <span class="nt">&gt;</span>  
+  
+<span class="nt">&lt;/body&gt;</span>  
+<span class="nt">&lt;/html&gt;</span>  
+
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">注意：window.onload不能绑定多个事件处理函数</code></p>
+
+<p>3、要想同时绑定多个事件，可以使用addEventListener和attachEvent方法。</p>
+
+<p>window.addEventListener(“type”,函数名,false);</p>
+
+<p>window.attachEvent(“type”,函数名)；</p>
+
+<p>具体使用代码：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  
+<span class="nt">&lt;html&gt;</span>  
+<span class="nt">&lt;head</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;title&gt;</span>测试<span class="nt">&lt;/title&gt;</span>  
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>  
+         <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"load"</span><span class="p">,</span><span class="nx">changeColor</span><span class="p">,</span><span class="kc">false</span><span class="p">);</span>  
+         <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"load"</span><span class="p">,</span><span class="nx">changeWidth</span><span class="p">,</span><span class="kc">false</span><span class="p">);</span>  
+        <span class="kd">function</span> <span class="nx">changeColor</span><span class="p">(){</span>  
+            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"divTest"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span><span class="s2">"red"</span><span class="p">;</span>  
+        <span class="p">}</span>  
+         <span class="kd">function</span> <span class="nx">changeWidth</span><span class="p">(){</span>  
+             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"divTest"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span><span class="s2">"100px"</span><span class="p">;</span>  
+         <span class="p">}</span>  
+    <span class="nt">&lt;/script&gt;</span>  
+<span class="nt">&lt;/head&gt;</span>  
+<span class="nt">&lt;body&gt;</span>  
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"divTest"</span> <span class="na">style=</span><span class="s">"height: 50px;width: 50px; background-color: blue"</span><span class="nt">&gt;&lt;/div&gt;</span>  
+<span class="nt">&lt;/body&gt;</span>  
+<span class="nt">&lt;/html&gt;</span>  
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  
+<span class="nt">&lt;html&gt;</span>  
+<span class="nt">&lt;head</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;title&gt;</span>测试<span class="nt">&lt;/title&gt;</span>  
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>  
+         <span class="nb">window</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s2">"onload"</span><span class="p">,</span><span class="nx">changeColor</span><span class="p">);</span>  
+         <span class="nb">window</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s2">"onload"</span><span class="p">,</span><span class="nx">changeWidth</span><span class="p">);</span>  
+        <span class="kd">function</span> <span class="nx">changeColor</span><span class="p">(){</span>  
+            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"divTest"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span><span class="s2">"red"</span><span class="p">;</span>  
+        <span class="p">}</span>  
+         <span class="kd">function</span> <span class="nx">changeWidth</span><span class="p">(){</span>  
+             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"divTest"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span><span class="s2">"100px"</span><span class="p">;</span>  
+         <span class="p">}</span>  
+    <span class="nt">&lt;/script&gt;</span>  
+<span class="nt">&lt;/head&gt;</span>  
+<span class="nt">&lt;body&gt;</span>  
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"divTest"</span> <span class="na">style=</span><span class="s">"height: 50px;width: 50px; background-color: blue"</span><span class="nt">&gt;&lt;/div&gt;</span>  
+<span class="nt">&lt;/body&gt;</span>  
+<span class="nt">&lt;/html&gt;</span>  
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge"> 注意：</code></p>
+
+<p>1、addEventListener 不适用于IE 8和IE 8以下的的浏览器，适用于其他主流浏览器。
+而attachEvent适用于IE 8和IE 8以下的的浏览器</p>
+
+<p>2、addEventListener方法的type参数，不要使用 “on” 前缀。 例如，使用 “click” ,而不是使用 “onclick”。
+而attachEvent方法的type参数是要使用“on” 前缀的，例如，使用“onload”，而不是使用“load”。</p>
+
+<p>所以一般可以将addEventListener 方法和attachEvent方法共同使用，来判断浏览器版本，再确定是使用哪种方法来绑定事件。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myBtn"</span><span class="p">);</span>  
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">)</span> <span class="p">{</span>                    <span class="c1">//所有主流浏览器，除了 IE 8 及更早 IE版本  </span>
+    <span class="nx">x</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="nx">myFunction</span><span class="p">);</span>  
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>                  <span class="c1">// IE 8 及更早 IE 版本  </span>
+    <span class="nx">x</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s2">"onclick"</span><span class="p">,</span> <span class="nx">myFunction</span><span class="p">);</span>  
+<span class="p">}</span>  
 </code></pre></div></div>
 
 

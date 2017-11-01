@@ -124,6 +124,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://www.zhangxinxu.com/wordpress/">张鑫旭</a></li>
 <li><a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>\
 <li><a href="http://blog.csdn.net/xixiruyiruyi">xixiruyiruyi的博客</a></li>\
+<li><a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzAwNjI5MTYyMw==&hid=10&sn=6b9dc2fb9720f6bbe2a587c31be041ee&scene=18&uin=&key=&devicetype=Windows+10&version=62060028&lang=zh_CN&ascene=7&winzoom=1">前端干货</a></li>\
 <li><a href="http://yunkus.com/front-end-web-develop-plugins-cellection/">WEB 前端开发插件整理</a></li>
 <li><a href="https://github.com/snailTJ/Blog/issues/4">前端大神总结资源大全</a></li>
 <li><a href="https://github.com/RedrockTeam/article/issues/3">前端大神总结资源大全</a></li>
