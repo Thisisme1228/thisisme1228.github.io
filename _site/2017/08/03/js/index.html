@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>12个常用的JavaScript简写技巧</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2017/08/03/js/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<meta name="keywords" content="12个常用的JavaScript简写技巧, Helene's blog, 厚积薄发">
+	<meta name="description" content="厚积薄发">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          <img src="./../styles/images/logo.png" class="logo">
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="/greens/">生活</a>
+        </li>
+        <li>
+          <a href="/rice">工作</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">外域链接</a>
+        </li>
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <li>
+          <a href="/donate/">打赏我</a>
+        </li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+		    <!--<h1>12个常用的JavaScript简写技巧</h1>-->
+		    <!--<p>Post on Aug 03, 2017 by <a href="/about">Helene</a></p>-->
+		    <h1 class="margin-top-45">Better me</h1>
+    
+      <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+          <source src="/styles/music/I-will-love-you.mp3">
+      </audio>
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
+          <!--<span style="color: beige" id="clickMe">Click!</span>-->
+      </div>
+  </div>
+</div>
+
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/greens/#-ref"></a>	/
+    	<a href="/rice/#JavaScript-ref">JavaScript</a>
+    
+  </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+  <div class="col-md-3">
+    <div class="sidebar hidden-print" role="complementary">
+      <!-- 供内页使用 -->
+<div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav btn-primary">
+  </ul>
+</div>
+
+
+
+
+    </div>
+  </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">12个常用的JavaScript简写技巧</h1>
+                <span class="post-meta">Date：Aug 3, 2017</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#1-空null-undefined验证" id="markdown-toc-1-空null-undefined验证">1. 空(null, undefined)验证</a></li>
+  <li><a href="#2-数组" id="markdown-toc-2-数组">2. 数组</a></li>
+  <li><a href="#3-if-true--else-的优化" id="markdown-toc-3-if-true--else-的优化">3. if true .. else 的优化</a></li>
+  <li><a href="#4-变量声明" id="markdown-toc-4-变量声明">4. 变量声明</a></li>
+  <li><a href="#5-赋值语句的简化" id="markdown-toc-5-赋值语句的简化">5. 赋值语句的简化</a></li>
+  <li><a href="#6-避免使用regexp对象" id="markdown-toc-6-避免使用regexp对象">6. 避免使用RegExp对象</a></li>
+  <li><a href="#7-if-条件优化" id="markdown-toc-7-if-条件优化">7. If 条件优化</a></li>
+  <li><a href="#9-函数参数优化" id="markdown-toc-9-函数参数优化">9. 函数参数优化</a></li>
+  <li><a href="#10-charat的替代品" id="markdown-toc-10-charat的替代品">10. charAt()的替代品</a></li>
+  <li><a href="#11-函数调用还可以更短" id="markdown-toc-11-函数调用还可以更短">11. 函数调用还可以更短</a></li>
+  <li><a href="#12-如何优雅的表示大数字" id="markdown-toc-12-如何优雅的表示大数字">12. 如何优雅的表示大数字</a></li>
+</ul>
+<p>在这里我把使用js的技巧给大家分享出来，教大家写出更加简洁的代码。
+<!-- more --></p>
+
+<h3 id="1-空null-undefined验证">1. 空(null, undefined)验证</h3>
+
+<p>当我们创建了一个新的变量，我们通常会去验证该变量的值是否为空(null)或则未定义(undefined)。这对于JavaScript编程来说，是一个经常要考虑到的验证。</p>
+
+<p>如果直接写，那么像下面这样：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">variable1</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">variable1</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="o">||</span> <span class="nx">variable1</span> <span class="o">!==</span> <span class="s1">''</span><span class="p">)</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="nx">variable1</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>我们可以使用一个更加简洁的版本：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="nx">variable1</span> <span class="o">||</span> <span class="s1">''</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>如果你不信，在谷歌浏览器开发者面板的控制台下试试！</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//值为null的例子</span>
+<span class="kd">let</span> <span class="nx">variable1</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="nx">variable1</span> <span class="o">||</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variable2</span><span class="p">);</span>
+<span class="c1">//输出: ''</span>
+<span class="c1">//值为undefined的例子</span>
+<span class="kd">let</span> <span class="nx">variable1</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="nx">variable1</span> <span class="o">||</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variable2</span><span class="p">);</span>
+<span class="c1">//输出: ''</span>
+<span class="c1">//正常情况</span>
+<span class="kd">let</span> <span class="nx">variable1</span> <span class="o">=</span> <span class="s1">'hi there'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="nx">variable1</span> <span class="o">||</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variable2</span><span class="p">);</span>
+<span class="c1">//输出: 'hi there'</span>
+</code></pre></div></div>
+
+<h3 id="2-数组">2. 数组</h3>
+
+<p>这个好像比较简单！</p>
+
+<p>非优化代码：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span> <span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"myString1"</span><span class="p">;</span> <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"myString2"</span><span class="p">;</span> <span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"myString3"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>优化代码：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"myString1"</span><span class="p">,</span> <span class="s2">"myString2"</span><span class="p">,</span> <span class="s2">"myString3"</span><span class="p">];</span>
+</code></pre></div></div>
+
+<h3 id="3-if-true--else-的优化">3. if true .. else 的优化</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">big</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">big</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+<span class="nx">big</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">big</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">?</span> <span class="kc">true</span> <span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>极大简化了代码量！</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">big</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+<span class="nx">big</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">?</span> <span class="s2">"greater 10"</span> <span class="p">:</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">?</span> <span class="s2">"less 5"</span> <span class="p">:</span> <span class="s2">"between 5 and 10"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">big</span><span class="p">);</span> <span class="c1">//"less 5"</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+<span class="nx">big</span> <span class="o">=</span> <span class="p">{</span><span class="na">true</span><span class="p">:</span> <span class="nx">x</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="na">false</span> <span class="p">:</span> <span class="nx">x</span><span class="o">&lt;</span> <span class="o">=</span><span class="mi">10</span><span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">big</span><span class="p">);</span> <span class="c1">//"Object {true=true, false=false}"</span>
+</code></pre></div></div>
+
+<h3 id="4-变量声明">4. 变量声明</h3>
+
+<p>尽管JavaScript会自动将变量上提(hoist)，使用该方法可以将所有的变量都在函数的头部用一行搞定。</p>
+
+<p>优化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">x</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">y</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>优化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="5-赋值语句的简化">5. 赋值语句的简化</h3>
+
+<p>简化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">x</span><span class="o">=</span><span class="nx">x</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="nx">minusCount</span> <span class="o">=</span> <span class="nx">minusCount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">y</span><span class="o">=</span><span class="nx">y</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+<span class="nx">minusCount</span> <span class="o">--</span><span class="p">;</span>
+<span class="nx">y</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>假设 x=10，y=5，那么基本的算术操作可以使用如下的简写方式：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">x</span> <span class="o">+=</span> <span class="nx">y</span> <span class="c1">// x=15</span>
+<span class="nx">x</span> <span class="o">-=</span> <span class="nx">y</span> <span class="c1">// x=5</span>
+<span class="nx">x</span> <span class="o">*=</span> <span class="nx">y</span> <span class="c1">// x=50</span>
+<span class="nx">x</span> <span class="o">/=</span> <span class="nx">y</span> <span class="c1">// x=2</span>
+<span class="nx">x</span> <span class="o">%=</span> <span class="nx">y</span> <span class="c1">// x=0</span>
+</code></pre></div></div>
+
+<h3 id="6-避免使用regexp对象">6. 避免使用RegExp对象</h3>
+
+<p>简化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"</span><span class="err">\</span><span class="s2">d+(.)+</span><span class="err">\</span><span class="s2">d+"</span><span class="p">,</span><span class="s2">"igm"</span><span class="p">),</span>
+<span class="nx">result</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">"padding 01234 text text 56789 padding"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">//"01234 text text 56789"</span>
+</code></pre></div></div>
+
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="sr">/d+</span><span class="se">(</span><span class="sr">.</span><span class="se">)</span><span class="sr">+d+/igm</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">"padding 01234 text text 56789 padding"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">//"01234 text text 56789"</span>
+</code></pre></div></div>
+
+<h3 id="7-if-条件优化">7. If 条件优化</h3>
+
+<p>虽然很简单，但还是值得提一下。</p>
+
+<p>简化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">likeJavaScript</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">likeJavaScript</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>我们再来句一个判断非真的例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">c</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">c</span><span class="o">!=</span> <span class="kc">true</span> <span class="p">)</span> <span class="p">{</span>
+<span class="c1">// do something...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">c</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">c</span> <span class="p">)</span> <span class="p">{</span>
+<span class="c1">// do something...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="9-函数参数优化">9. 函数参数优化</h3>
+
+<p>我个人倾向于使用获取对象元素的方式来访问函数参数，当然这个见仁见智啦！</p>
+
+<p>通常使用的版本：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span> <span class="nx">myString</span><span class="p">,</span> <span class="nx">myNumber</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">,</span> <span class="nx">myArray</span><span class="p">,</span> <span class="nx">myBoolean</span> <span class="p">)</span> <span class="p">{</span>
+<span class="c1">// do something...</span>
+<span class="p">}</span>
+<span class="nx">myFunction</span><span class="p">(</span> <span class="s2">"String"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[],</span> <span class="p">{},</span> <span class="kc">true</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>我喜欢的版本：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+<span class="cm">/* 注释部分
+console.log( arguments.length ); // 返回 5
+for ( i = 0; i &lt; arguments.length; i++ ) {
+console.log( typeof arguments[i] ); // 返回 string, number, object, object, boolean
+}
+*/</span>
+<span class="p">}</span>
+<span class="nx">myFunction</span><span class="p">(</span> <span class="s2">"String"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[],</span> <span class="p">{},</span> <span class="kc">true</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>译者注：原文下方有评论表示不建议用楼主的方法，使用第一种方法函数参数的顺序是可以变动的，第二种你就要小心了。</p>
+
+<h3 id="10-charat的替代品">10. charAt()的替代品</h3>
+
+<p>简化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"myString"</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"myString"</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// 返回 'm'</span>
+</code></pre></div></div>
+
+<p>译者注：我相信用第一种方法的人已经不多了吧！</p>
+
+<h3 id="11-函数调用还可以更短">11. 函数调用还可以更短</h3>
+
+<p>简化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">x</span><span class="p">()</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)};</span><span class="kd">function</span> <span class="nx">y</span><span class="p">()</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)};</span>
+<span class="kd">let</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">z</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nx">x</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">else</span>
+<span class="p">{</span>
+<span class="nx">y</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">x</span><span class="p">()</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)};</span><span class="kd">function</span> <span class="nx">y</span><span class="p">()</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)};</span><span class="kd">let</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">(</span><span class="nx">z</span><span class="o">==</span><span class="mi">3</span><span class="p">?</span><span class="nx">x</span><span class="p">:</span><span class="nx">y</span><span class="p">)();</span>
+</code></pre></div></div>
+
+<p>你说四不四很短？</p>
+
+<h3 id="12-如何优雅的表示大数字">12. 如何优雅的表示大数字</h3>
+
+<p>在JavaScript中，有一个简写数字的方法，也许你忽略了。1e7表示10000000。</p>
+
+<p>简化前：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div></div>
+
+<p>简化后：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="nx">e7</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div></div>
+
+<p>原文：https://hackernoon.com/12-amazing-javascript-shorthand-techniques-fef16cdbc7fe</p>
+
+            </article>
+        </div>
+        <hr/>
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span>
+				我的网站展示：
+			</span>
+			<span>
+				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+			</span>
+			<span>&nbsp;|&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+	</div>
+	<ul id="backToTop" class="back-to-top">
+		<li>
+			<span>TOP</span>
+		</li>
+	</ul>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>

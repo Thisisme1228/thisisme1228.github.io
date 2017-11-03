@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery源码解析</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2016/06/05/jquery-code-parsing/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<meta name="keywords" content="jQuery源码解析, Helene's blog, 厚积薄发">
+	<meta name="description" content="厚积薄发">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          <img src="./../styles/images/logo.png" class="logo">
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="/greens/">生活</a>
+        </li>
+        <li>
+          <a href="/rice">工作</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">外域链接</a>
+        </li>
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <li>
+          <a href="/donate/">打赏我</a>
+        </li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+		    <!--<h1>jQuery源码解析</h1>-->
+		    <!--<p>Post on Jun 05, 2016 by <a href="/about">Helene</a></p>-->
+		    <h1 class="margin-top-45">Better me</h1>
+    
+      <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+          <source src="/styles/music/I-will-love-you.mp3">
+      </audio>
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
+          <!--<span style="color: beige" id="clickMe">Click!</span>-->
+      </div>
+  </div>
+</div>
+
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/greens/#-ref"></a>	/
+    	<a href="/rice/#jQuery-ref">jQuery</a>
+    
+  </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+  <div class="col-md-3">
+    <div class="sidebar hidden-print" role="complementary">
+      <!-- 供内页使用 -->
+<div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav btn-primary">
+  </ul>
+</div>
+
+
+
+
+    </div>
+  </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">jQuery源码解析</h1>
+                <span class="post-meta">Date：Jun 5, 2016</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#一节点遍历" id="markdown-toc-一节点遍历">一、节点遍历</a>    <ul>
+      <li><a href="#1遍历祖先" id="markdown-toc-1遍历祖先">1.遍历祖先</a></li>
+      <li><a href="#2遍历同胞" id="markdown-toc-2遍历同胞">2、遍历同胞</a></li>
+      <li><a href="#3遍历后代" id="markdown-toc-3遍历后代">3、遍历后代</a></li>
+      <li><a href="#4jquery的遍历结构设计" id="markdown-toc-4jquery的遍历结构设计">4、jQuery的遍历结构设计</a></li>
+    </ul>
+  </li>
+</ul>
+<p>使用jQuery快一年了，各种方法已经很熟练，打算研究一下2.1.4这个版本的源码，正好看见有人抛出了对应的JavaScript代码，那我就自己看看研究一下，还能加深了对JavaScript运用。疑难解析部分纯属个人所写，转载请注明出处<code class="highlighter-rouge">life.thisisme1228.com</code>，Baby go!
+<!-- more --></p>
+
+<hr />
+
+<h3 id="一节点遍历">一、节点遍历</h3>
+
+<h4 id="1遍历祖先">1.遍历祖先</h4>
+
+<p><strong>代码</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>jQuery遍历祖先<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>模拟遍历祖先<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-i"</span><span class="nt">&gt;</span>I<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-ii"</span><span class="nt">&gt;</span>II
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-a"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-b"</span><span class="nt">&gt;</span>B
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-3"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-c"</span><span class="nt">&gt;</span>C<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-iii"</span><span class="nt">&gt;</span>III<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+
+    <span class="kd">function</span> <span class="nx">parent</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nx">parent</span> <span class="o">&amp;&amp;</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">11</span> <span class="p">?</span> <span class="nx">parent</span> <span class="p">:</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">function</span> <span class="nx">parents</span><span class="p">(</span><span class="nx">elem</span><span class="p">){</span>
+        <span class="kd">var</span> <span class="nx">matched</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">while</span> <span class="p">(</span> <span class="p">(</span><span class="nx">elem</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">[</span> <span class="s1">'parentNode'</span> <span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">9</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="nx">matched</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span> <span class="nx">elem</span> <span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">matched</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">function</span> <span class="nx">parentsUntil</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">filter</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">matched</span> <span class="o">=</span> <span class="p">[],</span>
+            <span class="nx">until</span><span class="p">,</span>
+            <span class="nx">truncate</span> <span class="o">=</span> <span class="nx">filter</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">((</span><span class="nx">elem</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">[</span><span class="s1">'parentNode'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">truncate</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">nodeName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">==</span><span class="nx">filter</span><span class="p">){</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="nx">matched</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">elem</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">matched</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test1"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.item-1'</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">parent</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">item</span><span class="p">.</span><span class="nx">parents</span><span class="p">().</span><span class="nx">length</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">item</span><span class="p">.</span><span class="nx">parentsUntil</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span>
+    <span class="p">})</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test2"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.item-1'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">parent</span><span class="p">(</span><span class="nx">item</span><span class="p">))</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">parents</span><span class="p">(</span><span class="nx">item</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">parentsUntil</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="s1">'body'</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span>
+    <span class="p">})</span>
+
+
+
+
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p><strong>疑难点分析</strong></p>
+
+<p>（1）nodeType</p>
+
+<p>定义和用法：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> nodeType 属性返回以数字值返回指定节点的节点类型。
+ 
+ 如果节点是元素节点，则 nodeType 属性将返回 1。
+ 
+ 如果节点是属性节点，则 nodeType 属性将返回 2。
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Node Types
+
+文档、元素、属性以及 HTML 或 XML 文档的其他方面拥有不同的节点类型。
+
+存在 12 种不同的节点类型，其中可能会有不同节点类型的子节点：
+</code></pre></div></div>
+
+<p>本段代码中使用到的<code class="highlighter-rouge">nodeType === 1</code> 和 <code class="highlighter-rouge">nodeType === 9</code>，其中1是代表元素–<code class="highlighter-rouge">Element</code>，9代表整个文档（DOM 树的根节点）–<code class="highlighter-rouge">Document</code></p>
+
+<p>（2）elem[‘parentNode’]</p>
+
+<p>某个元素elem.parentNode，elem[‘parentNode’]两种表示方式一样</p>
+
+<p>例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Parent node: "</span> <span class="o">+</span> <span class="nx">x</span><span class="p">[</span><span class="s1">'parentNode'</span><span class="p">].</span><span class="nx">nodeName</span><span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Parent node: "</span> <span class="o">+</span> <span class="nx">x</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">nodeName</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>以上两种方式一样，当然，由此可以这么写，都是一样的</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Parent node: "</span> <span class="o">+</span> <span class="nx">x</span><span class="p">[</span><span class="s1">'parentNode'</span><span class="p">][</span><span class="s1">'nodeName'</span><span class="p">]);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Parent node: "</span> <span class="o">+</span> <span class="nx">x</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">nodeName</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="2遍历同胞">2、遍历同胞</h4>
+
+<p><strong>代码</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>jQuery遍历同胞<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>模拟遍历同胞<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-i"</span><span class="nt">&gt;</span>I<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-ii"</span><span class="nt">&gt;</span>II
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-a"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-b"</span><span class="nt">&gt;</span>B
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-c"</span><span class="nt">&gt;</span>C<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-iii"</span><span class="nt">&gt;</span>III<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+
+<span class="kd">function</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">dir</span><span class="p">,</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">matched</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="nx">truncate</span> <span class="o">=</span> <span class="nx">until</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">((</span><span class="nx">elem</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">[</span><span class="nx">dir</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">truncate</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">nodeName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">==</span> <span class="nx">until</span> <span class="o">||</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">className</span> <span class="o">==</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="nx">matched</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">elem</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">matched</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">nextAll</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"nextSibling"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">prevAll</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"previousSibling"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">nextUntil</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"nextSibling"</span><span class="p">,</span> <span class="nx">until</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">prevUntil</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"previousSibling"</span><span class="p">,</span> <span class="nx">until</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#test1"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'li.item-ii'</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">nextAll</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">prevAll</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">nextUntil</span><span class="p">(</span><span class="s1">'.end'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">prevUntil</span><span class="p">(</span><span class="s1">'.first'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#test2"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'li.item-ii'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nextAll</span><span class="p">(</span><span class="nx">item</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prevAll</span><span class="p">(</span><span class="nx">item</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nextUntil</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="s1">'.end'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prevUntil</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="s1">'.first'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">)</span>
+<span class="p">})</span>
+
+
+<span class="nt">&lt;/script&gt;</span> 
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>模拟遍历上一个节点<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>模拟遍历下一个节点<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 1<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"third-item"</span><span class="nt">&gt;</span>list item 3<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 4<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 5<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+
+<span class="kd">function</span> <span class="nx">sibling</span><span class="p">(</span><span class="nx">cur</span><span class="p">,</span> <span class="nx">dir</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">while</span> <span class="p">((</span><span class="nx">cur</span> <span class="o">=</span> <span class="nx">cur</span><span class="p">[</span><span class="nx">dir</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="k">return</span> <span class="nx">cur</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">next</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">sibling</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"nextSibling"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">prev</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">sibling</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"previousSibling"</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kd">var</span> <span class="nx">thirdItem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.third-item'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#test1"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">thirdItem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.third-item'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prev</span><span class="p">(</span><span class="nx">thirdItem</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">)</span>
+<span class="p">})</span>
+
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#test2"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">thirdItem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.third-item'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">next</span><span class="p">(</span><span class="nx">thirdItem</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nt">&lt;/script&gt;</span> 
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p><strong>疑难点分析</strong></p>
+
+<p>（1）DOM nextSibling 属性</p>
+
+<p>定义和用法</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nextSibling 属性返回指定节点之后紧跟的节点，在相同的树层级中。
+
+被返回的节点以 Node 对象返回。
+
+注释：如果没有 nextSibling 节点，则返回值为 null。
+</code></pre></div></div>
+
+<p>（2）DOM previousSibling 属性</p>
+
+<p>定义和用法</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>previousSibling 属性返回同一树层级中指定节点的前一个节点。
+
+被返回的节点以 Node 对象的形式返回。
+
+注释：如果没有 previousSibling 节点，则返回值是 null。
+</code></pre></div></div>
+
+<p>（3）while ((cur = cur[dir]) &amp;&amp; cur.nodeType !== 1) {}</p>
+
+<p><code class="highlighter-rouge">为什么必须要写"cur.nodeType !== 1"这句话，不写这句话或者改成别的,cur返回的值都是“text”</code></p>
+
+<p>啊，折磨我好几个小时终于能解释了，豁然开朗，好开心，哈哈哈哈，写个小例子说明一下：</p>
+
+<p>1.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 1<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"third-item"</span><span class="nt">&gt;</span>list item 3<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 4<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>list item 5<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+<p>2.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>list item 1<span class="nt">&lt;/li&gt;&lt;li&gt;</span>list item 2<span class="nt">&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"third-item"</span><span class="nt">&gt;</span>list item 3<span class="nt">&lt;/li&gt;&lt;li&gt;</span>list item 4<span class="nt">&lt;/li&gt;&lt;li&gt;</span>list item 5<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<p>看到了吗？看到了吗？为啥返回的TEXT，因为html的空格的节点类型时3，标签的是1，你整那么多空格完了就直接赋值，完了那个值就成了空格并不是你想要的那个，听懂了吧。然后“cur.nodeType !== 1”是当值等于1就结束循环，因为这个时候的cur已经是元素了并不是垃圾空格，哼，骗了我好几个小时，你化成灰我都认识你了!</p>
+
+<h4 id="3遍历后代">3、遍历后代</h4>
+
+<p><strong>代码</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>jQuery children方法<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>模拟children方法<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-i"</span><span class="nt">&gt;</span>I<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-ii"</span><span class="nt">&gt;</span>II
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-a"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-b"</span><span class="nt">&gt;</span>B
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-3"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-c"</span><span class="nt">&gt;</span>C<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-iii"</span><span class="nt">&gt;</span>III<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test1"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'.level-2'</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">ele</span><span class="p">){</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'div'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;li&gt;jQuery.children方法,子元素的className为:'</span><span class="o">+</span> <span class="nx">ele</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">)</span>
+        <span class="p">})</span>
+    <span class="p">})</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test2"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">sibling</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">matched</span> <span class="o">=</span> <span class="p">[];</span>
+            <span class="k">for</span> <span class="p">(;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">n</span><span class="p">.</span><span class="nx">nextSibling</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//如果存在下一个兄弟节点</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">n</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">n</span> <span class="o">!==</span> <span class="nx">elem</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//是元素节点，且不是当前选择器元素</span>
+                    <span class="nx">matched</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="nx">matched</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kd">var</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.level-2'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+
+        <span class="c1">//遍历所有元素</span>
+        <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">sibling</span><span class="p">(</span><span class="nx">ul</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">ele</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'div'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;li&gt;模拟children方法,子元素的className为:'</span> <span class="o">+</span> <span class="nx">ele</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">)</span>
+        <span class="p">})</span>
+    <span class="p">})</span>
+
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p><strong>疑难点分析</strong></p>
+
+<p><code class="highlighter-rouge">null</code></p>
+
+<h4 id="4jquery的遍历结构设计">4、jQuery的遍历结构设计</h4>
+
+<p><strong>代码</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>jQuery遍历祖先<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>模拟遍历祖先<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-i"</span><span class="nt">&gt;</span>I<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-ii"</span><span class="nt">&gt;</span>II
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-a"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-b"</span><span class="nt">&gt;</span>B
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"level-3"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-c"</span><span class="nt">&gt;</span>C<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item-iii"</span><span class="nt">&gt;</span>III<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+    <span class="kd">var</span> <span class="nx">ajQuery</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="kd">function</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">dir</span><span class="p">,</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">matched</span> <span class="o">=</span> <span class="p">[],</span>
+            <span class="nx">truncate</span> <span class="o">=</span> <span class="nx">until</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">((</span><span class="nx">elem</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">[</span><span class="nx">dir</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">truncate</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">nodeName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">==</span> <span class="nx">until</span> <span class="o">||</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">className</span> <span class="o">==</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="nx">matched</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">elem</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">matched</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">jQuery</span><span class="p">.</span><span class="nx">each</span><span class="p">({</span>
+        <span class="na">parent</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">;</span>
+            <span class="k">return</span> <span class="nx">parent</span> <span class="o">&amp;&amp;</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">11</span> <span class="p">?</span> <span class="nx">parent</span> <span class="p">:</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="na">parents</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"parentNode"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="na">parentsUntil</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">until</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">dir</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="s2">"parentNode"</span><span class="p">,</span> <span class="nx">until</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">ajQuery</span><span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">until</span><span class="p">,</span> <span class="nx">selector</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span>  <span class="nx">fn</span><span class="p">(</span><span class="nx">until</span><span class="p">,</span> <span class="nx">selector</span><span class="p">);</span>
+        <span class="p">};</span>
+    <span class="p">});</span>
+
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test1"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.item-1'</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">parent</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">parents</span><span class="p">().</span><span class="nx">length</span><span class="p">)</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">parentsUntil</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span>
+    <span class="p">})</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test2"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.item-1'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">ajQuery</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="nx">item</span><span class="p">))</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">ajQuery</span><span class="p">.</span><span class="nx">parents</span><span class="p">(</span><span class="nx">item</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">ajQuery</span><span class="p">.</span><span class="nx">parentsUntil</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="s1">'body'</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span>
+    <span class="p">})</span>
+
+
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p><strong>疑难点分析</strong></p>
+
+
+            </article>
+        </div>
+        <hr/>
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span>
+				我的网站展示：
+			</span>
+			<span>
+				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+			</span>
+			<span>&nbsp;|&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+	</div>
+	<ul id="backToTop" class="back-to-top">
+		<li>
+			<span>TOP</span>
+		</li>
+	</ul>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>

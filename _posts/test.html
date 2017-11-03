@@ -1,35 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <title></title>
-    <script type="text/javascript">
-        //面试经典问题:
+</head>
+<body>
 
-        function onMyLoad(){
-            var arr = document.getElementsByTagName("p");
 
-            /*
-解决思路:
-    将下标作为对象属性(name:"i",value:i的值)添加到每个数组项(p对象)中
-*/
-            for(var i = 0;i<arr.length;i++){
-                //为当前数组项即当前 p 对象添加一个名为 i 的属性,值为循环体的 i 变量的值,
-                //此时当前 p 对象的 i 属性并不是对循环体的 i 变量的引用,而是一个独立p 对象的属性,属性值在声明的时候就确定了
-                //(基本类型的值都是存在栈中的,当有一个基本类型变量声明其等于另一个基本变量时,此时并不是两个基本类型变量都指向一个值,而是各自有各自的值,但值是相等的)
-                arr[i].i = i;
-                arr[i].onclick = function () {
-                    alert(this.i);
+<button id="test1">jQuery遍历祖先</button>
+<button id="test2">模拟遍历祖先</button>
+
+<ul class="level-1">
+    <li class="item-i">I</li>
+    <li class="item-ii">II
+        <ul class="level-2">
+            <li class="item-a">A</li>
+            <li class="item-b">B
+                <ul class="level-3">
+                    <li class="item-1">1</li>
+                    <li class="item-2">2</li>
+                    <li class="item-3">3</li>
+                </ul>
+            </li>
+            <li class="item-c">C</li>
+        </ul>
+    </li>
+    <li class="item-iii">III</li>
+</ul>
+
+
+<script type="text/javascript">
+
+    var ajQuery = {};
+
+    function dir(elem, dir, until) {
+        var matched = [],
+            truncate = until !== undefined;
+        while ((elem = elem[dir]) && elem.nodeType !== 9) {
+            if (elem.nodeType === 1) {
+                if (truncate) {
+                    if (elem.nodeName.toLowerCase() == until || elem.className == until) {
+                        break;
+                    }
                 }
+                matched.push(elem);
             }
         }
-    </script>
-</head>
-<body onload="onMyLoad()">
-<p>产品一</p>
-<p>产品二</p>
-<p>产品三</p>
-<p>产品四</p>
-<p>产品五</p>
+        return matched;
+    }
+
+    jQuery.each({
+        parent: function(elem) {
+            var parent = elem.parentNode;
+            return parent && parent.nodeType !== 11 ? parent : null;
+        },
+        parents: function(elem) {
+            return dir(elem, "parentNode");
+        },
+        parentsUntil: function(elem, until) {
+            return dir(elem, "parentNode", until);
+        }
+    }, function(name, fn) {
+        ajQuery[name] = function(until, selector) {
+            return  fn(until, selector);
+        };
+    });
+
+
+    $("#test1").click(function() {
+        var item = $('.item-1');
+        alert(item.parent()[0])
+        alert(item.parents().length)
+        alert(item.parentsUntil('body').length)
+    })
+
+    $("#test2").click(function() {
+        var item = document.querySelectorAll('.item-1')[0]
+        alert(ajQuery.parent(item))
+        alert(ajQuery.parents(item).length)
+        alert(ajQuery.parentsUntil(item, 'body').length)
+    })
+
+
+</script>
+
 </body>
 </html>
