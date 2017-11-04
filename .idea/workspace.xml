@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-6-10-preload.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-6-5-jquery- code-parsing1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-7-5-webstorm.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-4-2-module.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/js/plug-in/preload.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2016-6-10-lazy-load.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2016/06/10/lazy-load/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-6-5-jquery- code-parsing.md" afterPath="$PROJECT_DIR$/_posts/2016-6-5-jquery- code-parsing.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" afterPath="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/test.html" afterPath="$PROJECT_DIR$/_posts/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/05/jquery-code-parsing/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/05/jquery-code-parsing/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/06/interesting/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/06/interesting/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="$PROJECT_DIR$/_site/rice/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +25,21 @@
     <favorites_list name="life.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="2016-7-6-interesting.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2016-7-6-interesting.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="1623">
+                <caret line="259" column="13" lean-forward="false" selection-start-line="259" selection-start-column="13" selection-end-line="259" selection-end-column="48" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -129,7 +131,6 @@
         <option value="$PROJECT_DIR$/_posts/2016-6-5-jquery.md" />
         <option value="$PROJECT_DIR$/_posts/2016-6-6-jquery.md" />
         <option value="$PROJECT_DIR$/_posts/2016-6-5-jquery- code-parsing.md" />
-        <option value="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
         <option value="$PROJECT_DIR$/_posts/2017-4-2-module.md" />
         <option value="$PROJECT_DIR$/_posts/2016-6-5-jquery- code-parsing1.md" />
         <option value="$PROJECT_DIR$/_posts/2016-6-10-lazy-load.md" />
@@ -138,6 +139,7 @@
         <option value="$PROJECT_DIR$/_posts/2016-6-10-preload.md" />
         <option value="$PROJECT_DIR$/styles/js/plug-in/preload.js" />
         <option value="$PROJECT_DIR$/_posts/test.html" />
+        <option value="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
       </list>
     </option>
   </component>
@@ -154,10 +156,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="883" />
-    <option name="y" value="12" />
-    <option name="width" value="1085" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-242" />
+    <option name="y" value="32" />
+    <option name="width" value="1566" />
     <option name="height" value="962" />
   </component>
   <component name="ProjectView">
@@ -183,6 +185,11 @@
             <path>
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -277,12 +284,12 @@
       <workItem from="1509692877541" duration="72000" />
       <workItem from="1509695977232" duration="33232000" />
       <workItem from="1509770166732" duration="6391000" />
-      <workItem from="1509782328284" duration="23420000" />
+      <workItem from="1509782328284" duration="31260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318486000" />
+    <option name="totallyTimeSpent" value="326326000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,9 +301,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-242" y="32" width="1566" height="962" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43343052" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43319196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -765,17 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-7-6-interesting.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="513">
-            <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-7-10-scope.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -997,6 +993,17 @@
         <state relative-caret-position="433">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-7-6-interesting.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1623">
+            <caret line="259" column="13" lean-forward="false" selection-start-line="259" selection-start-column="13" selection-end-line="259" selection-end-column="48" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
