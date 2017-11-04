@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WebStorm使用方法之简单整理</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2016/07/05/webstorm/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<meta name="keywords" content="WebStorm使用方法之简单整理, Helene's blog, 厚积薄发">
+	<meta name="description" content="厚积薄发">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          <img src="./../styles/images/logo.png" class="logo">
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="/greens/">生活</a>
+        </li>
+        <li>
+          <a href="/rice">工作</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">外域链接</a>
+        </li>
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <li>
+          <a href="/donate/">打赏我</a>
+        </li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+		    <!--<h1>WebStorm使用方法之简单整理</h1>-->
+		    <!--<p>Post on Jul 05, 2016 by <a href="/about">Helene</a></p>-->
+		    <h1 class="margin-top-45">Better me</h1>
+    
+      <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+          <source src="/styles/music/I-will-love-you.mp3">
+      </audio>
+      <div class="audio-img" id="radio">
+          <img  src="/styles/images/header/radio.png">
+          <!--<span style="color: beige" id="clickMe">Click!</span>-->
+      </div>
+  </div>
+</div>
+
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/greens/#-ref"></a>	/
+    	<a href="/rice/#WebStorm-ref">WebStorm</a>
+    
+  </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+  <div class="col-md-3">
+    <div class="sidebar hidden-print" role="complementary">
+      <!-- 供内页使用 -->
+<div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav btn-primary">
+  </ul>
+</div>
+
+
+
+
+    </div>
+  </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">WebStorm使用方法之简单整理</h1>
+                <span class="post-meta">Date：Jul 5, 2016</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#一快捷键" id="markdown-toc-一快捷键">一、快捷键</a>    <ul>
+      <li><a href="#1快速生成html5页面" id="markdown-toc-1快速生成html5页面">1.快速生成html5页面：</a></li>
+    </ul>
+  </li>
+  <li><a href="#2快速生成标签" id="markdown-toc-2快速生成标签">2.快速生成标签</a></li>
+  <li><a href="#3快速生成带class或id的div" id="markdown-toc-3快速生成带class或id的div">3.快速生成带class或id的div</a></li>
+  <li><a href="#4快速生成带class或id的选定标签" id="markdown-toc-4快速生成带class或id的选定标签">4.快速生成带class或id的选定标签</a></li>
+</ul>
+<p>工欲善其事必先利其器，工作以来，也使用过其它编辑器，什么sublime、IntelliJ IDEA然后为了配合后台PHP使用过PHPStorm，配合Java使用过eclipse，不过我还是喜欢使用WebStorm啊，反正官网对它的介绍很多，我也不多说了，让我们一起提高我们工作效率，接下来我将把我整理的小方法写下来作为参考
+<!-- more --></p>
+
+<h3 id="一快捷键">一、快捷键</h3>
+
+<h4 id="1快速生成html5页面">1.快速生成html5页面：</h4>
+
+<p>如果新建的是空白的页面，那么</p>
+
+<blockquote>
+  <p>在页面上写：<code class="highlighter-rouge">html:5 </code>  然后：<code class="highlighter-rouge">按tab键</code></p>
+</blockquote>
+
+<p>只需两步，编辑器即可帮我们生成html基本格式</p>
+
+<h3 id="2快速生成标签">2.快速生成标签</h3>
+
+<p>比如想生成“li”那么直接写“<code class="highlighter-rouge">li</code>”，然后“<code class="highlighter-rouge">tab</code>”即可快速生成</p>
+
+<h3 id="3快速生成带class或id的div">3.快速生成带class或id的div</h3>
+
+<p><code class="highlighter-rouge">.class-name</code>  然后 <code class="highlighter-rouge">tab键</code></p>
+
+<p><code class="highlighter-rouge">#idName</code>  然后 <code class="highlighter-rouge">tab键</code></p>
+
+<h3 id="4快速生成带class或id的选定标签">4.快速生成带class或id的选定标签</h3>
+
+<p>此处拿“p”标签举例</p>
+
+<p><code class="highlighter-rouge">p.class-name</code>  然后 <code class="highlighter-rouge">tab键</code></p>
+
+<p><code class="highlighter-rouge">p#idName</code>  然后 <code class="highlighter-rouge">tab键</code></p>
+
+            </article>
+        </div>
+        <hr/>
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span>
+				我的网站展示：
+			</span>
+			<span>
+				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+			</span>
+			<span>&nbsp;|&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
+		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+	</div>
+	<ul id="backToTop" class="back-to-top">
+		<li>
+			<span>TOP</span>
+		</li>
+	</ul>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>
