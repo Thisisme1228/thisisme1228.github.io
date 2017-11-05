@@ -41,6 +41,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://bulma.io/" target="_blank"><abbr title="A modern CSS framework based on Flexbox">Bulma</abbr></a></li>
 <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a></li>
 <li><a href="http://cssicon.space/#/" target="_blank">CSS ICON</a></li>
+<li><a href="http://www.bootcss.com/" target="_blank">Bootstrap官网</a></li>
 <li><a href="http://bootswatch.com/" target="_blank">基于 Bootstrap 的免费主题包</a></li>
 <li><a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html" target="_blank">Bootstrap 的免费主题包</a></li>
 </ol>
@@ -90,6 +91,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="https://git-scm.com/docs" target="_blank">Git Reference</a></li>
 <li><a href="http://www.runoob.com/git/git-install-setup.html" target="_blank">Git 安装配置</a></li>
 <li><a href="http://www.runoob.com/w3cnote/git-guide.html" target="_blank">Git 简明教程</a></li>
+<li><a href="http://www.bootcss.com/p/git-guide/" target="_blank">git - 简易指南</a></li>
 </ol>
 <hr><h4 class="btn btn-warning btn-lg">字体/图片 资源网站</h4><hr>
 <ol class="rectangle-list">
