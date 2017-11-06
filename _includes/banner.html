@@ -1,4 +1,3 @@
-
 <div class="banner">
   <div class="container">
   	{% if page.categories != null %}
@@ -8,5 +7,10 @@
         <br>
     	{{ site.banner }}
     {% endif %}
+      <div id="search-container" class="pull-right">
+          <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
+          <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
+          <ul id="results-container"></ul>
+      </div>
   </div>
 </div>

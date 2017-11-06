@@ -27,17 +27,15 @@ header: Posts By Tag
     <div class="col-md-9" role="main">
       <div class="panel docs-content">
         <div class="wrapper">
-          <div class="home">
-
-          	{% for tag in site.tags %}
-			  <h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>
-			  <ul>
-			    {% assign pages_list = tag[1] %}  
-			    {% include LessOrMore/pages_list %}
-			  </ul>
-			{% endfor %}
-
-          </div>
+			<div class="home">
+				{% for tag in site.tags %}
+				<h2 class="title-border" id="{{ tag[0] }}-ref">{{ tag[0] }}</h2><hr>
+				<div>
+					{% assign pages_list = tag[1] %}
+					{% include LessOrMore/pages_list %}
+				</div>
+				{% endfor %}
+			</div>
         </div>
       </div>
     </div>

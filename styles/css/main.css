@@ -1,9 +1,13 @@
 * {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
+/*  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;*/
 }
 
 /*  margin/padding start */
 
+.margin-top-10 {
+  margin-top: 10px;
+}
 .margin-top-20 {
   margin-top: 20px;
 }
@@ -12,6 +16,9 @@
 }
 .margin-top-45 {
   margin-top: 45px;
+}
+.margin-top--28 {
+  margin-top: -28px;
 }
 .margin-bottom-20 {
   margin-bottom: 20px;
@@ -58,14 +65,25 @@
 
 /* color start */
 
-
+.font-color-white {
+  color: white;
+}
 .font-color-red {
   color: red;
 }
 .font-color-999 {
   color: #999;
 }
-
+.font-color-violet {
+  color: #8e5880;
+}
+.background-color-sienna {
+  background-color: sienna;
+}
+.background-color-sienna:hover {
+  opacity: .7;
+  color: white;
+}
 /* color end */
 
 
@@ -86,6 +104,15 @@
 
 /* font-size end */
 
+/* banner start */
+
+#mycanvas{
+  position:absolute;
+  left:0;
+  top: 0;z-index:999
+}
+
+/* banner end */
 
 /* 外域链接start */
 
@@ -98,14 +125,14 @@
   display: inline-block;
   padding-left: 2rem;
   padding-right: 1rem;
-  background-color: #a59392;
+  background-color: #ddd;
   margin-bottom: 2rem;
   margin-right: 6rem;
   height: 3rem;
   line-height: 3rem;
 }
 .rectangle-list li a,.rounded-list li a {
-  color: bisque;
+  color: #333;
 }
 .rectangle-list li:before, .rounded-list li:before {
   position: absolute;
@@ -144,9 +171,10 @@ h1.h1-35 {
 .audio-img {
   display: inline-block;
   position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer
+  right: 5%;
+  bottom: 10%;
+  cursor: pointer;
+  z-index:10000;
 }
 .audio-img img {
   display: block;
@@ -204,6 +232,26 @@ h1.h1-35 {
   transition: all .4s ease;
   -webkit-transition: all .4s ease;
 }
+.back-to-top:hover li{
+  color:#fff;
+  background-color:#000B43
+}
+.back-to-top span,.circle{
+  display:block
+}
+.back-to-top:hover span{
+  animation:moveFromBottom .4s ease
+}
+@keyframes moveFromBottom{
+  from{
+    transform:translateY(-100%) scale(.6);
+    opacity:0
+  }
+  to{
+    transform:translateY(0) scale(1);
+    opacity:1
+  }
+}
 
 /* footer end */
 
@@ -225,6 +273,90 @@ h1.h1-35 {
 }
 
 /* inner-page code end */
+
+
+/* search start */
+
+#search-container{
+  position:relative;
+  margin-right:-15px;
+  width:196px
+}
+@media (max-width:480px){
+  #search-container{
+    float:none!important;
+    width:95%
+  }
+}
+#search-input{
+  width:100%;
+  background-color:#fafafa;
+  display:block;
+  padding:6px 6px 6px 2px;
+  border:none;
+  border-bottom:1px solid #a09090;
+  font-size:12px;
+  outline:0;
+  line-height:1;
+  box-sizing:border-box
+}
+#search-input,input[type=search]{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box
+}
+.searchIcon,.zoomify,button.close{
+  cursor:pointer
+}
+.searchIcon{
+  display:block;
+  position:absolute;
+  right:2%;
+  top:30%
+}
+#results-container a,
+.color-title:hover,
+.tooltip-inner,a{
+  text-decoration:none
+}
+#results-container,#search-input{
+  width:100%;
+  background-color:#fafafa
+}
+#results-container{
+  position:absolute;
+  left:0;
+  top:28px;
+  list-style:none;
+  margin:0;
+  z-index:998;
+  border-radius:0 0 5px 5px;
+  box-shadow:0 0 1px #404040 inset;
+  counter-reset:li
+}
+#results-container li{
+  padding: 0 6px 0 16px;
+  text-align: left;
+  line-height: 26px;
+  position: relative;
+  color: #777;
+  font-size: 13px;
+}
+#results-container li:before{
+  content:counter(li);
+  counter-increment:li;
+  position:absolute;
+  left:10px;
+  top:0
+}
+#results-container a,.color-title{
+  color:inherit;
+  transition:all .3s
+}
+#results-container li:hover{
+  color: #0789c7;
+}
+
+/* search end */
 
 
 /* 云标签start */
@@ -347,14 +479,14 @@ h1.h1-35 {
   background-color: transparent;
   list-style: none;
 }
-.right-list-style li h3 a {
+.right-list-style li h4 a {
   position: relative;
   color: #8e5880;
-  margin-left: 20px;
+  margin-left: 0;
   text-decoration: none;
   transition:all .5s
 }
-.right-list-style li h3 a:before {
+/*.right-list-style li h3 a:before {
   position: absolute;
   top: 0;
   left: -16px;
@@ -363,9 +495,9 @@ h1.h1-35 {
   height:100%;
   background-color: #dbd782;
   opacity: .8;
-}
+}*/
 .right-list-style li h3 a:hover {
-  color: #888;
+  opacity: .7;
   transition:all .5s
 }
 .tags-title {
@@ -377,14 +509,16 @@ h1.h1-35 {
   text-decoration: none !important;
 }
 .tags-title:hover {
-  color: #5cb85c;
+  color: #999;
 }
 .excerpt-content {
   margin-bottom: 25px;
 }
-/*.excerpt-content * {
+.excerpt-content * {
   font-size: 14px;
-}*/
+  color: #333;
+  line-height: 26px;
+}
 
 /* index page right document end */
 

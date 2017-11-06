@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JSON必识</title>
-
 	<link rel="shortcut icon" href="/styles/images/favicon.png">
 	<link rel="icon" href="/styles/images/favicon.png">
 
@@ -16,8 +15,8 @@
 	<link rel="canonical" href="/2016/04/21/json/">
 	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
 	
-	<meta name="keywords" content="JSON必识, Helene's blog, 厚积薄发">
-	<meta name="description" content="厚积薄发">
+	<!--<meta name="keywords" content="JSON必识, Helene's blog, 厚积薄发">-->
+	<!--<meta name="description" content="厚积薄发">-->
 
 	<script src="/styles/js/jquery.min.js"></script>
 	<!--[if lt IE 9]>
@@ -49,7 +48,7 @@
       </button>
       <a href="/" class="navbar-brand">
         <span>
-          <img src="./../styles/images/logo.png" class="logo">
+          <img src="/../styles/images/logo.png" class="logo">
         </span>
       </a>
     </div>
@@ -96,30 +95,33 @@
   </div>
 </header>
     <div class="docs-header" id="content">
-  <div class="container">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container">
   	
-		    <!--<h1>JSON必识</h1>-->
-		    <!--<p>Post on Apr 21, 2016 by <a href="/about">Helene</a></p>-->
-		    <h1 class="margin-top-45">Better me</h1>
+      <h1 class="margin-top-45">Better me</h1>
     
-      <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
-          <source src="/styles/music/I-will-love-you.mp3">
-      </audio>
-      <div class="audio-img" id="radio">
-          <img  src="/styles/images/header/radio.png">
-          <!--<span style="color: beige" id="clickMe">Click!</span>-->
-      </div>
   </div>
+    <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+        <source src="/styles/music/I-will-love-you.mp3">
+    </audio>
+    <div class="audio-img" id="radio">
+        <img  src="/styles/images/header/radio.png">
+        <!--<span style="color: beige" id="clickMe">Click!</span>-->
+    </div>
 </div>
 
     
-      
-<div class="banner">
+      <div class="banner">
   <div class="container">
   	
     	<a href="/greens/#-ref"></a>	/
     	<a href="/rice/#JSON-ref">JSON</a>
     
+      <div id="search-container" class="pull-right">
+          <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
+          <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
+          <ul id="results-container"></ul>
+      </div>
   </div>
 </div>
 
@@ -132,7 +134,7 @@
       <!-- 供内页使用 -->
 <div id="navigation">
   <h1>目录</h1>
-  <ul class="nav sidenav btn-primary">
+  <ul class="nav sidenav">
   </ul>
 </div>
 
@@ -302,6 +304,7 @@
 <script src="/styles/js/lessismore.js"></script>
 <script src="/styles/js/application.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/function.min.js"></script>
 <script src="/styles/js/main.js"></script>
 
 

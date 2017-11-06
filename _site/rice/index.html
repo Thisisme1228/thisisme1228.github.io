@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>工作</title>
-
 	<link rel="shortcut icon" href="/styles/images/favicon.png">
 	<link rel="icon" href="/styles/images/favicon.png">
 
@@ -16,8 +15,8 @@
 	<link rel="canonical" href="/rice/">
 	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
 	
-	<meta name="keywords" content="工作, Helene's blog, 厚积薄发">
-	<meta name="description" content="厚积薄发">
+	<!--<meta name="keywords" content="工作, Helene's blog, 厚积薄发">-->
+	<!--<meta name="description" content="厚积薄发">-->
 
 	<script src="/styles/js/jquery.min.js"></script>
 	<!--[if lt IE 9]>
@@ -49,7 +48,7 @@
       </button>
       <a href="/" class="navbar-brand">
         <span>
-          <img src="./../styles/images/logo.png" class="logo">
+          <img src="/../styles/images/logo.png" class="logo">
         </span>
       </a>
     </div>
@@ -96,30 +95,33 @@
   </div>
 </header>
     <div class="docs-header" id="content">
-  <div class="container">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container">
   	
-		    <!--<h1>工作</h1>-->
-		    <!--<p>Post on  by <a href="/about">Helene</a></p>-->
-		    <h1 class="margin-top-45">Better me</h1>
+      <h1 class="margin-top-45">Better me</h1>
     
-      <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
-          <source src="/styles/music/I-will-love-you.mp3">
-      </audio>
-      <div class="audio-img" id="radio">
-          <img  src="/styles/images/header/radio.png">
-          <!--<span style="color: beige" id="clickMe">Click!</span>-->
-      </div>
   </div>
+    <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+        <source src="/styles/music/I-will-love-you.mp3">
+    </audio>
+    <div class="audio-img" id="radio">
+        <img  src="/styles/images/header/radio.png">
+        <!--<span style="color: beige" id="clickMe">Click!</span>-->
+    </div>
 </div>
 
     
-      
-<div class="banner">
+      <div class="banner">
   <div class="container">
   	
         <br>
     	唐僧开场白：“贫僧唐三藏，从东土大唐而来，去往西天取经”《初心易得，始终难守》
     
+      <div id="search-container" class="pull-right">
+          <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
+          <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
+          <ul id="results-container"></ul>
+      </div>
   </div>
 </div>
 
@@ -159,19 +161,18 @@
     <div class="col-md-9" role="main">
       <div class="panel docs-content">
         <div class="wrapper">
-          <div class="home">
-
-          	
-			  <h3 id="JavaScript-ref">JavaScript</h3>
-			  <ul>
-			      
-			    
+			<div class="home">
+				
+				<h2 class="title-border" id="JavaScript-ref">JavaScript</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/08/03/js/">12个常用的JavaScript简写技巧</a></li>
-    		<li style="float:right;"><span>2017-08-03</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-08-03</span></li>
     	</ol>
     	
     
@@ -182,7 +183,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/06/17/modules/">JavaScript模块化 --- Commonjs、AMD、CMD、ES6 modules</a></li>
-    		<li style="float:right;"><span>2017-06-17</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-06-17</span></li>
     	</ol>
     	
     
@@ -193,7 +194,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/06/15/closure/">JavaScript高级程序设计——闭包</a></li>
-    		<li style="float:right;"><span>2017-06-15</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-06-15</span></li>
     	</ol>
     	
     
@@ -204,7 +205,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/04/14/scope/">图解Javascript上下文与作用域</a></li>
-    		<li style="float:right;"><span>2017-04-14</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-04-14</span></li>
     	</ol>
     	
     
@@ -215,7 +216,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/03/02/closure/">8种办法解决 JS 闭包经典面试题之 for 循环取 i</a></li>
-    		<li style="float:right;"><span>2017-03-02</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-03-02</span></li>
     	</ol>
     	
     
@@ -226,7 +227,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/02/20/this/">使用this对象</a></li>
-    		<li style="float:right;"><span>2017-02-20</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-02-20</span></li>
     	</ol>
     	
     
@@ -237,7 +238,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/02/04/modules/">AMD模块化开发</a></li>
-    		<li style="float:right;"><span>2017-02-04</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-02-04</span></li>
     	</ol>
     	
     
@@ -248,7 +249,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/02/03/closure/">闭包</a></li>
-    		<li style="float:right;"><span>2017-02-03</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-02-03</span></li>
     	</ol>
     	
     
@@ -259,7 +260,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/07/18/js-area/">五句话搞定JavaScript作用域</a></li>
-    		<li style="float:right;"><span>2016-07-18</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-07-18</span></li>
     	</ol>
     	
     
@@ -270,7 +271,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/07/10/scope/">你想知道的关于JavaScript作用域的一切</a></li>
-    		<li style="float:right;"><span>2016-07-10</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-07-10</span></li>
     	</ol>
     	
     
@@ -281,7 +282,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/07/04/why-use-href-javascript-void0/">为什么要使用href=”javascript:void(0);”？</a></li>
-    		<li style="float:right;"><span>2016-07-04</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-07-04</span></li>
     	</ol>
     	
     
@@ -292,7 +293,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/07/04/javascript/">JavaScript深入理解</a></li>
-    		<li style="float:right;"><span>2016-07-04</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-07-04</span></li>
     	</ol>
     	
     
@@ -303,7 +304,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/07/04/data-type/">js中typeof和instanceof用法之详细区分</a></li>
-    		<li style="float:right;"><span>2016-07-04</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-07-04</span></li>
     	</ol>
     	
     
@@ -314,7 +315,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/06/20/variable-lift/">详解JavaScript变量提升</a></li>
-    		<li style="float:right;"><span>2016-06-20</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-06-20</span></li>
     	</ol>
     	
     
@@ -325,7 +326,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/04/28/onload/">页面加载的顺序和window.onload的作用</a></li>
-    		<li style="float:right;"><span>2016-04-28</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-04-28</span></li>
     	</ol>
     	
     
@@ -336,7 +337,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/04/27/js/">windows.onload()与$(document).ready()的区别</a></li>
-    		<li style="float:right;"><span>2016-04-27</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-04-27</span></li>
     	</ol>
     	
     
@@ -347,7 +348,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/03/24/closure/">分分钟学会 javascript 闭包</a></li>
-    		<li style="float:right;"><span>2016-03-24</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-03-24</span></li>
     	</ol>
     	
     
@@ -358,7 +359,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/03/20/function/">函数、匿名函数、自执行函数、闭包</a></li>
-    		<li style="float:right;"><span>2016-03-20</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-03-20</span></li>
     	</ol>
     	
     
@@ -369,7 +370,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/02/06/use-strict-one/">使用严格模式下的js代码规范一</a></li>
-    		<li style="float:right;"><span>2016-02-06</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-02-06</span></li>
     	</ol>
     	
     
@@ -377,18 +378,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="JSON-ref">JSON</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="JSON-ref">JSON</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/04/21/json/">JSON必识</a></li>
-    		<li style="float:right;"><span>2016-04-21</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-04-21</span></li>
     	</ol>
     	
     
@@ -396,18 +397,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="性能-ref">性能</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="性能-ref">性能</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/05/05/capabilities/">http缓存、应用缓存、Service Worker</a></li>
-    		<li style="float:right;"><span>2016-05-05</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-05-05</span></li>
     	</ol>
     	
     
@@ -418,7 +419,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/05/03/capabilities/">js的性能优化</a></li>
-    		<li style="float:right;"><span>2016-05-03</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-05-03</span></li>
     	</ol>
     	
     
@@ -426,18 +427,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="jQuery-ref">jQuery</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="jQuery-ref">jQuery</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/06/06/jquery/">详谈jQuery.each() 和 .each()</a></li>
-    		<li style="float:right;"><span>2016-06-06</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-06-06</span></li>
     	</ol>
     	
     
@@ -448,7 +449,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/06/05/jquery/">parent()、parents()、closest()的区别</a></li>
-    		<li style="float:right;"><span>2016-06-05</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-06-05</span></li>
     	</ol>
     	
     
@@ -459,7 +460,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/06/05/jquery-code-parsing1/">jQuery源码解析（架构与依赖模块）</a></li>
-    		<li style="float:right;"><span>2016-06-05</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-06-05</span></li>
     	</ol>
     	
     
@@ -470,7 +471,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/06/05/jquery-code-parsing/">jQuery源码解析（DOM与核心模块）</a></li>
-    		<li style="float:right;"><span>2016-06-05</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-06-05</span></li>
     	</ol>
     	
     
@@ -478,18 +479,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="CSS-ref">CSS</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="CSS-ref">CSS</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/08/24/ol-sort/">使用ol进行对列表的升序 || 降序样式显示</a></li>
-    		<li style="float:right;"><span>2016-08-24</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-08-24</span></li>
     	</ol>
     	
     
@@ -500,7 +501,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/06/10/preload/">图片预加载</a></li>
-    		<li style="float:right;"><span>2016-06-10</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-06-10</span></li>
     	</ol>
     	
     
@@ -508,18 +509,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="WebStorm-ref">WebStorm</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="WebStorm-ref">WebStorm</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/07/05/webstorm/">WebStorm使用方法之简单整理</a></li>
-    		<li style="float:right;"><span>2016-07-05</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-07-05</span></li>
     	</ol>
     	
     
@@ -527,18 +528,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="移动端-ref">移动端</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="移动端-ref">移动端</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/10/30/mobile-end/">从网易与淘宝的font-size思考前端设计稿与工作流</a></li>
-    		<li style="float:right;"><span>2016-10-30</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-10-30</span></li>
     	</ol>
     	
     
@@ -549,7 +550,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/09/11/flexible/">flexible.js</a></li>
-    		<li style="float:right;"><span>2016-09-11</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-09-11</span></li>
     	</ol>
     	
     
@@ -560,7 +561,7 @@
     	
     	<ol class="breadcrumb">
     		<li><a href="/2016/08/02/mobile-end/">移动web适配利器-rem</a></li>
-    		<li style="float:right;"><span>2016-08-02</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2016-08-02</span></li>
     	</ol>
     	
     
@@ -568,18 +569,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="前端维护-ref">前端维护</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="前端维护-ref">前端维护</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/01/15/code-standards/">前端代码规范</a></li>
-    		<li style="float:right;"><span>2017-01-15</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-01-15</span></li>
     	</ol>
     	
     
@@ -587,18 +588,18 @@
 
 
 
-			  </ul>
-			
-			  <h3 id="服务器-ref">服务器</h3>
-			  <ul>
-			      
-			    
+				</div>
+				
+				<h2 class="title-border" id="服务器-ref">服务器</h2><hr>
+				<div>
+					
+					
   
     
     	
     	<ol class="breadcrumb">
     		<li><a href="/2017/05/06/server/">服务器搭建</a></li>
-    		<li style="float:right;"><span>2017-05-06</span></li>
+    		<li class="text-right margin-top-10" style="display:block"><span>2017-05-06</span></li>
     	</ol>
     	
     
@@ -606,10 +607,9 @@
 
 
 
-			  </ul>
-			
-
-          </div>
+				</div>
+				
+			</div>
         </div>
       </div>
     </div>
@@ -645,6 +645,7 @@
 <script src="/styles/js/lessismore.js"></script>
 <script src="/styles/js/application.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/function.min.js"></script>
 <script src="/styles/js/main.js"></script>
 
 
