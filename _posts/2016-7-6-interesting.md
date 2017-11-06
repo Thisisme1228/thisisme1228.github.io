@@ -267,7 +267,7 @@ categories: 杂学
 <hr>
 
 
-> 事无大小，每一件都要做好，加油亲爱的
+> My dream is to become a writer
 
 
 
