@@ -6809,6 +6809,10 @@ td.visible-sm {
   .docs-nav .container .navbar-brand img {
     margin-left: 1rem;
   }
+  .rectangle-list li, .rounded-list li {
+    display: block !important;
+    background-color: transparent !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
