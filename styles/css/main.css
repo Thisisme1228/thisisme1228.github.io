@@ -648,5 +648,16 @@ p {
   font-style: normal;
   color: #1c1c1c;
 }
-
+.fix-menu .sidenav {
+  margin-top: 150px;
+}
+.fix-menu li .nav {
+  margin-top: 0;
+}
+.fix-menu>ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
 /* 固定菜单end */

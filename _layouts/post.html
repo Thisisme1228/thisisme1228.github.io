@@ -4,7 +4,12 @@ layout: default
 <!-- 内页-->
 <div class="container docs-container">
   <div class="row">
-    <div class="col-md-8 col-md-push-2" role="main">
+    <div class="col-md-3 fix-menu hidden-sm hidden-xs">
+          <ul>
+              {% include lefttree.html %}
+          </ul>
+    </div>
+    <div class="col-md-8 col-md-push-3" role="main">
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
