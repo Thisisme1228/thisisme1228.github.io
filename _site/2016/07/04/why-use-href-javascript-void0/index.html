@@ -48,35 +48,35 @@
       </button>
       <a href="/" class="navbar-brand">
         <span>
-          <img src="/../styles/images/logo.png" class="logo">
+          HELENE
         </span>
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">    
-        <li>
+      <ul class="nav navbar-nav">
+        <!--<li>
           <a href="/">首页</a>
-        </li>
-        <li>
-          <a href="/greens/">生活</a>
-        </li>
-        <li>
-          <a href="/rice">工作</a>
-        </li>
+        </li>-->
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right"  style="margin-top: 1rem">
+        <li>
+          <a href="/greens/">life</a>
+        </li>
+        <li>
+          <a href="/rice">work</a>
+        </li>
         <!--<li>
             <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
         </li>-->
         <li>
-          <a href="/reference">外域链接</a>
+          <a href="/reference">References</a>
         </li>
-        <li>
+        <!--<li>
           <a href="/donate/">打赏我</a>
-        </li>
-        <li>
+        </li>-->
+        <!--<li>
           <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
-        </li>
+        </li>-->
         <!--<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -94,7 +94,7 @@
     </nav>
   </div>
 </header>
-    <div class="docs-header" id="content">
+    <div class="docs-header hidden" id="content">
     <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
     <div class="container">
   	
@@ -111,7 +111,7 @@
 </div>
 
     
-      <div class="banner">
+      <!--<div class="banner">
   <div class="container">
   	
     	<a href="/greens/#-ref"></a>	/
@@ -124,26 +124,12 @@
       </div>
   </div>
 </div>
-
+-->
     
     <!-- 内页-->
 <div class="container docs-container">
   <div class="row">
-  <div class="col-md-3">
-    <div class="sidebar hidden-print" role="complementary">
-      <!-- 供内页使用 -->
-<div id="navigation">
-  <h1>目录</h1>
-  <ul class="nav sidenav">
-  </ul>
-</div>
-
-
-
-
-    </div>
-  </div>
-    <div class="col-md-9" role="main">
+    <div class="col-md-8 col-md-push-2" role="main">
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
@@ -165,39 +151,63 @@
 
             </article>
         </div>
-        <hr/>
+        <!--<hr/>-->
         <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
-        <div class="text-center donate-btn">
+        <!--<div class="text-center donate-btn">
           <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
 </div>
 
+<style>
+  .docs-content {
+    margin-top:80px;
+  }
+  h1, h2, h3 {
+    margin: 3rem 0;
+    font-size: 24px;
+  }
+  #navigation h1 {
+    margin: 1rem 0;
+  }
+  #navigation .sidenav {
+    background-color: transparent;
+  }
+  .docs-content {
+    margin-bottom: 100px;
+  }
+</style>
+
     <footer class="footer" role="contentinfo">
 	<div class="container">
 		<div class="footer-links">
-			<span>
-				我的网站展示：
+			<span class="copyright">
+				My Site:
 			</span>
 			<span>
-				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+				<a  href="http://www.thisisme1228.com/" class="font-color-sienna">百家书(请在电脑上浏览)</a>
 			</span>
-			<span>&nbsp;|&nbsp;</span>
+			<span>&nbsp;&nbsp;</span>
 			<span>
-				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+				<a href="http://music.thisisme1228.com/index.html#/recommend" class="font-color-sienna">音乐网(请在手机上浏览)</a>
 			</span>
 		</div>
-		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
-		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+		<div class="copyright-dis">Copyright © 2017 <a href="http://life.thisisme1228.com" class="">Helene</a> . All rights reserved.</div>
+		<p class="copyright">辽ICP备17012545号-1</p>
 	</div>
-	<ul id="backToTop" class="back-to-top">
-		<li>
-			<span>TOP</span>
-		</li>
-	</ul>
 </footer>
+<ul id="backToTop" class="back-to-top">
+	<li>
+		<span>TOP</span>
+	</li>
+</ul>
+<ul id="lastPage" class="last-page">
+	<li onClick="javascript :history.back(-1);"">
+		<span>BACK</span>
+	</li>
+</ul>
 
 <script src="/styles/js/jquery.min.js"></script>
 <script src="/styles/js/bootstrap.min.js"></script>

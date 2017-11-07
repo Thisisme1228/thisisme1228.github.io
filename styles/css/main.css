@@ -1,12 +1,12 @@
 * {
   font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-/*  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;*/
+  /*font-family: Monaco, Menlo, Consolas, "Courier New", monospace;*/
 }
 
 /*  margin/padding start */
 
 .margin-top-10 {
-  margin-top: 10px;
+  margin-top: 10px;.navbar-brand
 }
 .margin-top-20 {
   margin-top: 20px;
@@ -74,8 +74,14 @@
 .font-color-999 {
   color: #999;
 }
+.font-color-light-grey {
+  color: rgba(31,31,31,.5);
+}
 .font-color-violet {
   color: #8e5880;
+}
+.font-color-sienna {
+  color: sienna;
 }
 .background-color-sienna {
   background-color: sienna;
@@ -117,15 +123,20 @@
 /* 外域链接start */
 
 .rectangle-list,.rounded-list {
-  counter-reset: section;                /* 为每个ol元素创建新的计数器实例 */
+  counter-reset: section; /* 为每个ol元素创建新的计数器实例 */
   list-style-type: none;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #f9f9f9;
 }
 .rectangle-list li,.rounded-list li {
   position: relative;
   display: inline-block;
-  padding-left: 2rem;
+  padding-left: 1rem;
   padding-right: 1rem;
-  background-color: #ddd;
+/*  background-color: #ddd;*/
   margin-bottom: 2rem;
   margin-right: 6rem;
   height: 3rem;
@@ -143,8 +154,8 @@
   height: 3rem;
   line-height: 3rem;
   text-align: center;
-  background-color: #e3476d;
-  color: white;
+/*  background-color: #e3476d;*/
+/*  color: white;*/
   border: .4rem solid white;
   box-sizing: content-box;
   counter-increment: section;            /* 只增加计数器的当前实例 */
@@ -208,11 +219,12 @@ h1.h1-35 {
 /* footer start */
 
 .copyright-dis {
-  margin-bottom: 12px
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* 返回顶部按钮 */
-.back-to-top {
+.back-to-top  {
   position: fixed;
   cursor: pointer;
   text-align: center;
@@ -227,8 +239,8 @@ h1.h1-35 {
   height: 40px;
   line-height: 40px;
   border-radius: 8px;
-  color: #ccc;
-  background-color: #929292;
+  color: white;
+  background-color: #515252;
   transition: all .4s ease;
   -webkit-transition: all .4s ease;
 }
@@ -252,6 +264,53 @@ h1.h1-35 {
     opacity:1
   }
 }
+
+/* 返回上一页start */
+
+.last-page {
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+  left: 1.6%;
+  bottom: 2%;
+  z-index: 1001;
+  list-style: none;
+  display: block;
+}
+.last-page li {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 8px;
+/*  background-color: #515252;*/
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  text-align: center;
+  text-decoration: underline;
+}
+.last-page:hover li{
+  color:#888;
+/*  background-color:#000B43*/
+}
+.last-page span{
+  display:block;
+  letter-spacing: 2px;
+}
+.last-page:hover span{
+/*  animation:backToLastPage .4s ease*/
+}
+@keyframes backToLastPage{
+  from{
+    transform:translateY(-100%) scale(.6);
+    opacity:0
+  }
+  to{
+   /* transform:translateY(0) scale(1);*/
+    opacity:1
+  }
+}
+
+/* 返回上一页end */
 
 /* footer end */
 
@@ -512,12 +571,34 @@ h1.h1-35 {
   color: #999;
 }
 .excerpt-content {
-  margin-bottom: 25px;
+  margin-top: 36px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 .excerpt-content * {
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   line-height: 26px;
+}
+p {
+  margin: 0 0 10px;
+}
+.blog-list-item {
+  margin-bottom: 128px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #f9f9f9;
+}
+.home>div:nth-last-of-type(1) .blog-list-item:nth-last-of-type(1) {
+  margin-bottom: 60px;
+}
+.entry-title {
+  font-family: "futura-pt";
+  font-size: 32px;
+  line-height: 1.2em;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* index page right document end */

@@ -6,7 +6,7 @@ header: Posts By Tag
 
 <div class="container docs-container">
   <div class="row">
-    <div class="col-md-3">
+    <!--<div class="col-md-3">
       <div class="sidebar hidden-print" role="complementary">
         <div id="navigation">
         	<h2>==rice目录==</h2>
@@ -23,14 +23,14 @@ header: Posts By Tag
           	</ul>
         </div>
       </div>
-    </div>
-    <div class="col-md-9" role="main">
+    </div>-->
+    <div class="col-md-8 col-md-push-2" role="main">
       <div class="panel docs-content">
         <div class="wrapper">
 			<div class="home">
 				{% for tag in site.tags %}
-				<h2 class="title-border" id="{{ tag[0] }}-ref">{{ tag[0] }}</h2><hr>
 				<div>
+                    <!--<div class="title-border" id="{{ tag[0] }}-ref">{{ tag[0] }}</div>-->
 					{% assign pages_list = tag[1] %}
 					{% include LessOrMore/pages_list %}
 				</div>
@@ -41,3 +41,9 @@ header: Posts By Tag
     </div>
   </div>
 </div>
+
+<style>
+    .footer {
+        display: block;
+    }
+</style>

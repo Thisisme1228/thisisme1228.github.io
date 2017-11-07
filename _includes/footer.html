@@ -1,26 +1,31 @@
 <footer class="footer" role="contentinfo">
 	<div class="container">
 		<div class="footer-links">
-			<span>
-				我的网站展示：
+			<span class="copyright">
+				My Site:
 			</span>
 			<span>
-				<a href="http://www.thisisme1228.com/">百家书（电脑上看）</a>
+				<a  href="http://www.thisisme1228.com/" class="font-color-sienna">百家书(请在电脑上浏览)</a>
 			</span>
-			<span>&nbsp;|&nbsp;</span>
+			<span>&nbsp;&nbsp;</span>
 			<span>
-				<a href="http://music.thisisme1228.com/index.html#/recommend">音乐网(手机上看)</a>
+				<a href="http://music.thisisme1228.com/index.html#/recommend" class="font-color-sienna">音乐网(请在手机上浏览)</a>
 			</span>
 		</div>
-		<div class="copyright-dis">Copyright © 2017 <a href="JavaScript:;">Helene</a> . All rights reserved.</div>
-		<p class="copyright">备案证书号：辽ICP备17012545号-1</p>
+		<div class="copyright-dis">Copyright © 2017 <a href="http://life.thisisme1228.com" class="">Helene</a> . All rights reserved.</div>
+		<p class="copyright">辽ICP备17012545号-1</p>
 	</div>
-	<ul id="backToTop" class="back-to-top">
-		<li>
-			<span>TOP</span>
-		</li>
-	</ul>
 </footer>
+<ul id="backToTop" class="back-to-top">
+	<li>
+		<span>TOP</span>
+	</li>
+</ul>
+<ul id="lastPage" class="last-page">
+	<li onClick="javascript :history.back(-1);"">
+		<span>BACK</span>
+	</li>
+</ul>
 
 <script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/styles/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>

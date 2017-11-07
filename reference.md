@@ -5,9 +5,9 @@ permalink: /reference/
 date:   2016-12-2 00:00:00 +0800
 ---
 
-<hr>
-<h4 class="btn btn-warning btn-lg">各大公司的前端站点</h4>
-<hr>
+
+<h4 class="text-center">各大公司的前端站点</h4>
+
 <ol class="rectangle-list">
 <li><a href="http://fex.baidu.com/" target="_blank">百度 FEX</a></li>
 <li><a href="http://taobaofed.org/" target="_blank">淘宝 FED</a></li>
@@ -17,9 +17,9 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://tgideas.qq.com/" target="_blank">腾讯T GIdeas</a></li>
 <li><a href="https://jdc.jd.com/" target="_blank">京东设计中心 JDC</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">CDN</h4>
-<hr>
+
+<h4 class="text-center">CDN</h4>
+
 <ol class="rounded-list">
 <!--国外-->
 <li><a href="https://cdnjs.com/" target="_blank">cdnjs</a></li>
@@ -28,9 +28,9 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://www.bootcdn.cn/" target="_blank">BootCDN</a></li>
 <li><a href="http://cdn.code.baidu.com/" target="_blank">百度静态资源公共库</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">HTML/CSS相关</h4>
-<hr>
+
+<h4 class="text-center">HTML/CSS相关</h4>
+
 <ol class="rectangle-list">
 <!-- HTML/CSS API -->
 <li><a href="https://www.w3.org/TR/tr-technology-stds" target="_blank">W3C标准协议</a></li>
@@ -50,9 +50,9 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://bootswatch.com/" target="_blank">基于 Bootstrap 的免费主题包</a></li>
 <li><a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html" target="_blank">Bootstrap 的免费主题包</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">JavaScript相关</h4>
-<hr>
+
+<h4 class="text-center">JavaScript相关</h4>
+
 <ol class="rounded-list">
 <li><a href="http://www.jstips.co/" target="_blank"><abbr title="每天提供一个JavaScript小tip">JS TIPS</abbr></a></li>
 <li><a href="http://javascript-puzzlers.herokuapp.com/" target="_blank"><abbr title="也许你并不太懂JavaScript">JavaScript Puzzlers!</abbr></a></li>
@@ -70,51 +70,51 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://www.typescriptlang.org/index.html" target="_blank">TypeScript</a></li>
 <li><a href="https://babeljs.io/" target="_blank">Babel</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">Vue</h4>
-<hr>
+
+<h4 class="text-center">Vue</h4>
+
 <ol class="rectangle-list">
 <li><a href="https://cn.vuejs.org/" target="_blank">Vue.js</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">SASS</h4>
-<hr>
+
+<h4 class="text-center">SASS</h4>
+
 <ol class="rounded-list">
 <li><a href="https://www.sass.hk/" target="_blank">SASS</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">Node相关</h4>
-<hr>
+
+<h4 class="text-center">Node相关</h4>
+
 <ol class="rectangle-list">
 <li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank">runoob-nodejs</a></li>
 <li><a href="https://nodeschool.io/" target="_blank">NODESCHOOL</a></li>
 <li><a href="http://expressjs.com/" target="_blank">Express</a></li>
 <li><a href="https://github.com/senchalabs/connect" target="_blank">Connect</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">webpack</h4>
-<hr>
+
+<h4 class="text-center">webpack</h4>
+
 <ol class="rounded-list">
 <li><a href="https://doc.webpack-china.org/guides/getting-started/" target="_blank">webpack</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">gulp</h4>
-<hr>
+
+<h4 class="text-center">gulp</h4>
+
 <ol class="rectangle-list">
 <li><a href="http://www.gulpjs.com.cn/" target="_blank">gulp</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">Git</h4>
-<hr>
+
+<h4 class="text-center">Git</h4>
+
 <ol class="rounded-list">
 <li><a href="https://git-scm.com/docs" target="_blank">Git Reference</a></li>
 <li><a href="http://www.runoob.com/git/git-install-setup.html" target="_blank">Git 安装配置</a></li>
 <li><a href="http://www.runoob.com/w3cnote/git-guide.html" target="_blank">Git 简明教程</a></li>
 <li><a href="http://www.bootcss.com/p/git-guide/" target="_blank">git - 简易指南</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">字体/图片 资源网站</h4>
-<hr>
+
+<h4 class="text-center">字体/图片 资源网站</h4>
+
 <ol class="rectangle-list">
 <!--图库-->
 <li><a href="http://zhitu.isux.us/" target="_blank"><abbr title="高效优质的图片优化平台">智图</abbr></a></li>
@@ -128,9 +128,9 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="https://dummyimage.com/" target="_blank"><abbr title="提供多类型占位符图片的网站">Dummy Image Generator</abbr></a></li>
 <li><a href="https://loading.io" target="_blank"><abbr title="">GIF</abbr></a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">前端插件</h4>
-<hr>
+
+<h4 class="text-center">前端插件</h4>
+
 <ol class="rounded-list">
 <li><a href="http://www.treejs.cn" target="_blank">z-tree</a></li>
 <li><a href="http://www.swiper.com.cn/" target="_blank">swiper</a></li>
@@ -140,18 +140,18 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://g2.alipay.com/" target="_blank">G2图表</a></li>
 <li><a href="https://www.iviewui.com/" target="_blank">基于 Vue.js 的高质量 UI 组件库</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">个人网站</h4>
-<hr>
+
+<h4 class="text-center">个人网站</h4>
+
 <ol class="rectangle-list">
 <li><a href="http://life.thisisme1228.com" target="_blank">H的博客</a></li>
 <li><a href="http://xiaokedada.com/" target="_blank">小可嗒嗒的博客</a></li>
 <li><a href="http://ghmagical.com/" target="_blank">TG的博客</a></li>
 <li><a href="http://www.liaoxuefeng.com/">廖雪峰的官方网站</a></li>
 <li><a href="http://www.zhangxinxu.com/wordpress/">张鑫旭</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>\
-<li><a href="http://blog.csdn.net/xixiruyiruyi">xixiruyiruyi的博客</a></li>\
-<li><a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzAwNjI5MTYyMw==&amp;hid=10&amp;sn=6b9dc2fb9720f6bbe2a587c31be041ee&amp;scene=18&amp;uin=&amp;key=&amp;devicetype=Windows+10&amp;version=62060028&amp;lang=zh_CN&amp;ascene=7&amp;winzoom=1">前端干货</a></li>\
+<li><a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>
+<li><a href="http://blog.csdn.net/xixiruyiruyi">xixiruyiruyi的博客</a></li>
+<li><a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzAwNjI5MTYyMw==&amp;hid=10&amp;sn=6b9dc2fb9720f6bbe2a587c31be041ee&amp;scene=18&amp;uin=&amp;key=&amp;devicetype=Windows+10&amp;version=62060028&amp;lang=zh_CN&amp;ascene=7&amp;winzoom=1">前端干货</a></li>
 <li><a href="http://yunkus.com/front-end-web-develop-plugins-cellection/">WEB 前端开发插件整理</a></li>
 <li><a href="https://github.com/snailTJ/Blog/issues/4">前端大神总结资源大全</a></li>
 <li><a href="https://github.com/RedrockTeam/article/issues/3">前端大神总结资源大全</a></li>
@@ -160,9 +160,9 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="https://github.com/poetries/mywiki/issues/23">前端大神总结资源大全</a></li>
 <li><a href="https://mr-zx.github.io/">前端大神总结资源大全</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-danger btn-lg">综合站点</h4>
-<hr>
+
+<h4 class="text-center">综合站点</h4>
+
 <ol class="rounded-list">
 <li><a href="https://restlet.com/http-status-map/" target="_blank">HTTP Status Map</a></li>
 <li><a href="https://developers.google.com/speed/pagespeed/insights/?hl=zh-CN" target="_blank">PageSpeed Insights</a></li>
@@ -170,10 +170,22 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN Web 文档</a></li>
 <li><a href="http://www.imooc.com/" target="_blank">慕课网</a></li>
 </ol>
-<hr>
-<h4 class="btn btn-warning btn-lg">编码规范</h4>
-<hr>
+
+<h4 class="text-center">编码规范</h4>
+
 <ol class="rectangle-list">
 <li><a href="http://codeguide.bootcss.com/" target="_blank">编码规范</a></li>
 <li><a href="http://www.runoob.com/js/js-conventions.html" target="_blank">编码规范</a></li>
 </ol>
+
+<style>
+.post-header {
+    display:none;
+}
+.docs-content {
+    margin-top:80px;
+}
+h4 {
+    font-size:24px;
+}
+</style>
