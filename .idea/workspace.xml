@@ -2,79 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index-content-two.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/LessOrMore/pages_list" afterPath="$PROJECT_DIR$/_includes/LessOrMore/pages_list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/docs_header.html" afterPath="$PROJECT_DIR$/_includes/docs_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/left-none.html" afterPath="$PROJECT_DIR$/_layouts/left-none.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/nothing.html" afterPath="$PROJECT_DIR$/_layouts/nothing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" afterPath="$PROJECT_DIR$/_posts/2016-7-6-interesting.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/use-strict-one/index.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/use-strict-one/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/03/20/function/index.html" afterPath="$PROJECT_DIR$/_site/2016/03/20/function/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/03/24/closure/index.html" afterPath="$PROJECT_DIR$/_site/2016/03/24/closure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/21/json/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/21/json/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/27/js/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/27/js/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/28/onload/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/28/onload/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/03/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/05/Capabilities/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/05/jquery-code-parsing/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/05/jquery-code-parsing/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/05/jquery-code-parsing1/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/05/jquery-code-parsing1/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/05/jquery/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/05/jquery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/06/jquery/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/06/jquery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/10/preload/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/10/preload/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/20/variable-lift/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/20/variable-lift/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/03/ES6/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/03/ES6/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/04/data-type/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/04/data-type/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/04/javascript/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/04/javascript/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/04/why-use-href-javascript-void0/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/04/why-use-href-javascript-void0/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/05/webstorm/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/05/webstorm/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/06/interesting/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/06/interesting/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/10/scope/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/10/scope/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/18/js-area/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/18/js-area/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/08/02/mobile-end/index.html" afterPath="$PROJECT_DIR$/_site/2016/08/02/mobile-end/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/08/24/ol-sort/index.html" afterPath="$PROJECT_DIR$/_site/2016/08/24/ol-sort/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/10/net-knowledge/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/10/net-knowledge/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/10/sass/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/10/sass/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/11/flexible/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/11/flexible/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/10/30/mobile-end/index.html" afterPath="$PROJECT_DIR$/_site/2016/10/30/mobile-end/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/01/15/code-standards/index.html" afterPath="$PROJECT_DIR$/_site/2017/01/15/code-standards/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/02/03/closure/index.html" afterPath="$PROJECT_DIR$/_site/2017/02/03/closure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/02/04/modules/index.html" afterPath="$PROJECT_DIR$/_site/2017/02/04/modules/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/02/20/this/index.html" afterPath="$PROJECT_DIR$/_site/2017/02/20/this/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/03/02/closure/index.html" afterPath="$PROJECT_DIR$/_site/2017/03/02/closure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/03/17/browser/index.html" afterPath="$PROJECT_DIR$/_site/2017/03/17/browser/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/04/03/network-security/index.html" afterPath="$PROJECT_DIR$/_site/2017/04/03/network-security/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/04/14/scope/index.html" afterPath="$PROJECT_DIR$/_site/2017/04/14/scope/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" afterPath="$PROJECT_DIR$/_site/2017/05/06/server/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/05/19/vue/index.html" afterPath="$PROJECT_DIR$/_site/2017/05/19/vue/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/02/node/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/02/node/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/02/webpack/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/02/webpack/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/10/npm-plugins-posted/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/10/npm-plugins-posted/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/15/closure/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/15/closure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/17/modules/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/17/modules/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/20/webpack-multiple-page-packaging/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/20/webpack-multiple-page-packaging/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/06/20/webpack-single-page-packaging/index.html" afterPath="$PROJECT_DIR$/_site/2017/06/20/webpack-single-page-packaging/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/07/15/mongodb/index.html" afterPath="$PROJECT_DIR$/_site/2017/07/15/mongodb/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/08/03/js/index.html" afterPath="$PROJECT_DIR$/_site/2017/08/03/js/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/donate/index.html" afterPath="$PROJECT_DIR$/_site/donate/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/greens/index.html" afterPath="$PROJECT_DIR$/_site/greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index-content/index.html" afterPath="$PROJECT_DIR$/_site/index-content/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/reference/index.html" afterPath="$PROJECT_DIR$/_site/reference/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rice/index.html" afterPath="$PROJECT_DIR$/_site/rice/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/index.css" afterPath="$PROJECT_DIR$/_site/styles/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/styles/css/main.css" afterPath="$PROJECT_DIR$/_site/styles/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/greens/index.html" afterPath="$PROJECT_DIR$/greens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference.md" afterPath="$PROJECT_DIR$/reference.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rice/index.html" afterPath="$PROJECT_DIR$/rice/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/index.css" afterPath="$PROJECT_DIR$/styles/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/main.css" afterPath="$PROJECT_DIR$/styles/css/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -92,12 +22,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="3975" column="17" lean-forward="false" selection-start-line="3975" selection-start-column="17" selection-end-line="3975" selection-end-column="17" />
+            <state relative-caret-position="391">
+              <caret line="3973" column="34" lean-forward="false" selection-start-line="3973" selection-start-column="34" selection-end-line="3973" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <folding>
+                <element signature="e#272#278#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,9 +142,9 @@
         <option value="$PROJECT_DIR$/_layouts/left-none.html" />
         <option value="$PROJECT_DIR$/_layouts/nothing.html" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
-        <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles/css/index.css" />
+        <option value="$PROJECT_DIR$/_includes/footer.html" />
       </list>
     </option>
   </component>
@@ -253,22 +195,6 @@
               <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="life.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="life.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -361,12 +287,12 @@
       <workItem from="1510002930106" duration="1031000" />
       <workItem from="1510005474413" duration="686000" />
       <workItem from="1510018983246" duration="2964000" />
-      <workItem from="1510027558081" duration="31753000" />
+      <workItem from="1510027558081" duration="32225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420113000" />
+    <option name="totallyTimeSpent" value="420585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -856,16 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="e#272#278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -902,9 +818,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="3975" column="17" lean-forward="false" selection-start-line="3975" selection-start-column="17" selection-end-line="3975" selection-end-column="17" />
+        <state relative-caret-position="391">
+          <caret line="3973" column="34" lean-forward="false" selection-start-line="3973" selection-start-column="34" selection-end-line="3973" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="e#272#278#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
