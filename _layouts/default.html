@@ -4,8 +4,8 @@
   <body class="index">
     {% include header.html %}
     {% include docs_header.html %}
-    {% if page.title %}
-      <!--{% include banner.html %}-->
+    {% if page.title == '工作' %}
+     {% include banner.html %}
     {% endif %}
     {{ content }}
     {% include footer.html %}

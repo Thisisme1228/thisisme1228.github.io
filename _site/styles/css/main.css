@@ -353,11 +353,12 @@ h1.h1-35 {
   display:block;
   padding:6px 6px 6px 2px;
   border:none;
-  border-bottom:1px solid #a09090;
-  font-size:12px;
+  border-bottom:.5px solid #1c1c1c;
   outline:0;
   line-height:1;
-  box-sizing:border-box
+  box-sizing:border-box;
+  font-weight:300;
+  font-size: 14px;
 }
 #search-input,input[type=search]{
   -webkit-box-sizing:border-box;
@@ -379,7 +380,7 @@ h1.h1-35 {
 }
 #results-container,#search-input{
   width:100%;
-  background-color:#fafafa
+  background-color:white
 }
 #results-container{
   position:absolute;
@@ -395,17 +396,29 @@ h1.h1-35 {
 #results-container li{
   padding: 0 6px 0 16px;
   text-align: left;
-  line-height: 26px;
   position: relative;
-  color: #777;
   font-size: 13px;
+  font-family: "futura-pt";
+  line-height: 26px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  color: #1c1c1c;
+  cursor: pointer;
 }
 #results-container li:before{
   content:counter(li);
   counter-increment:li;
   position:absolute;
   left:10px;
-  top:0
+  top:0;
+  font-family: "futura-pt";
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  color: #1c1c1c;
 }
 #results-container a,.color-title{
   color:inherit;
@@ -603,3 +616,37 @@ p {
 
 /* index page right document end */
 
+/* 固定菜单start */
+
+.fix-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #f9f9f9;
+}
+.fix-menu .nav {
+  margin-top: 240px;
+}
+.fix-menu li {
+  display: inline-block;
+}
+.fix-menu li a {
+  padding: 3px 8px;
+  font-size: 14px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 5px;
+
+  font-family: "futura-pt";
+  line-height: 1.2em;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  color: #1c1c1c;
+}
+
+/* 固定菜单end */
