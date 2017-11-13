@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Nov 2017 18:53:25 +0800</pubDate>
-    <lastBuildDate>Mon, 13 Nov 2017 18:53:25 +0800</lastBuildDate>
+    <pubDate>Mon, 13 Nov 2017 19:56:14 +0800</pubDate>
+    <lastBuildDate>Mon, 13 Nov 2017 19:56:14 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -48,7 +48,7 @@
     
       <item>
         <title>jQuery Mobile</title>
-        <description>&lt;p&gt;jQuery已经很熟练了，时间关系一直没来得及看jQuery mobile，它是一个基于jQuery的创建移动 web 应用程序的框架。在这里我只整理一些个人觉得重点且难点的方面，所谓师傅领进门修行在个人，其他可参见&lt;a href=&quot;http://www.w3school.com.cn/jquerymobile/index.asp&quot;&gt;w3school&lt;/a&gt;
+        <description>&lt;p&gt;jQuery还算熟练，时间关系一直没来得及看jQuery mobile，它是一个基于jQuery的创建移动 web 应用程序的框架。在这里我只整理一些个人觉得必要且难点的方面，所谓师傅领进门修行在个人，其他可参见&lt;a href=&quot;http://www.w3school.com.cn/jquerymobile/index.asp&quot;&gt;w3school&lt;/a&gt;
 &lt;!-- more --&gt;&lt;/p&gt;
 
 </description>
