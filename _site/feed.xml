@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Nov 2017 19:56:14 +0800</pubDate>
-    <lastBuildDate>Mon, 13 Nov 2017 19:56:14 +0800</lastBuildDate>
+    <pubDate>Mon, 13 Nov 2017 22:44:53 +0800</pubDate>
+    <lastBuildDate>Mon, 13 Nov 2017 22:44:53 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -48,8 +48,50 @@
     
       <item>
         <title>jQuery Mobile</title>
-        <description>&lt;p&gt;jQuery还算熟练，时间关系一直没来得及看jQuery mobile，它是一个基于jQuery的创建移动 web 应用程序的框架。在这里我只整理一些个人觉得必要且难点的方面，所谓师傅领进门修行在个人，其他可参见&lt;a href=&quot;http://www.w3school.com.cn/jquerymobile/index.asp&quot;&gt;w3school&lt;/a&gt;
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#jquery-mobile页面&quot; id=&quot;markdown-toc-jquery-mobile页面&quot;&gt;jQuery Mobile页面&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#在-jquery-mobile-中添加页面&quot; id=&quot;markdown-toc-在-jquery-mobile-中添加页面&quot;&gt;在 jQuery Mobile 中添加页面&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;jQuery还算熟练，时间关系一直没来得及看jQuery mobile，它是一个基于jQuery的创建移动 web 应用程序的框架。在这里我只整理一些个人觉得必要且难点的方面，所谓师傅领进门修行在个人，其他可参见&lt;a href=&quot;http://www.w3school.com.cn/jquerymobile/index.asp&quot;&gt;w3school&lt;/a&gt;
 &lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;jquery-mobile页面&quot;&gt;jQuery Mobile页面&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;data-role=”page” 是显示在浏览器中的页面&lt;/li&gt;
+  &lt;li&gt;data-role=”header” 创建页面上方的工具栏（常用于标题和搜索按钮）&lt;/li&gt;
+  &lt;li&gt;data-role=”content” 定义页面的内容，比如文本、图像、表单和按钮，等等&lt;/li&gt;
+  &lt;li&gt;data-role=”footer” 创建页面底部的工具栏&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;例：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;page&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;欢迎访问我的主页&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;我是一名移动开发者！&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;页脚文本&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;在-jquery-mobile-中添加页面&quot;&gt;在 jQuery Mobile 中添加页面&lt;/h4&gt;
+
+&lt;p&gt;在 jQuery Mobile，您可以在单一 HTML 文件中创建多个页面。&lt;/p&gt;
+
+&lt;p&gt;请通过唯一的 id 来分隔每张页面，并使用 href 属性来连接彼此：&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Nov 2017 00:00:00 +0800</pubDate>

@@ -139,8 +139,50 @@
               <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
             </header>
             <article class="post-content">
-              <p>jQuery还算熟练，时间关系一直没来得及看jQuery mobile，它是一个基于jQuery的创建移动 web 应用程序的框架。在这里我只整理一些个人觉得必要且难点的方面，所谓师傅领进门修行在个人，其他可参见<a href="http://www.w3school.com.cn/jquerymobile/index.asp">w3school</a>
+              <ul id="markdown-toc">
+  <li><a href="#jquery-mobile页面" id="markdown-toc-jquery-mobile页面">jQuery Mobile页面</a>    <ul>
+      <li><a href="#在-jquery-mobile-中添加页面" id="markdown-toc-在-jquery-mobile-中添加页面">在 jQuery Mobile 中添加页面</a></li>
+    </ul>
+  </li>
+</ul>
+<p>jQuery还算熟练，时间关系一直没来得及看jQuery mobile，它是一个基于jQuery的创建移动 web 应用程序的框架。在这里我只整理一些个人觉得必要且难点的方面，所谓师傅领进门修行在个人，其他可参见<a href="http://www.w3school.com.cn/jquerymobile/index.asp">w3school</a>
 <!-- more --></p>
+
+<h3 id="jquery-mobile页面">jQuery Mobile页面</h3>
+
+<ul>
+  <li>data-role=”page” 是显示在浏览器中的页面</li>
+  <li>data-role=”header” 创建页面上方的工具栏（常用于标题和搜索按钮）</li>
+  <li>data-role=”content” 定义页面的内容，比如文本、图像、表单和按钮，等等</li>
+  <li>data-role=”footer” 创建页面底部的工具栏</li>
+</ul>
+
+<p>例：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>欢迎访问我的主页<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>我是一名移动开发者！<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>页脚文本<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<h4 id="在-jquery-mobile-中添加页面">在 jQuery Mobile 中添加页面</h4>
+
+<p>在 jQuery Mobile，您可以在单一 HTML 文件中创建多个页面。</p>
+
+<p>请通过唯一的 id 来分隔每张页面，并使用 href 属性来连接彼此：</p>
 
 
             </article>

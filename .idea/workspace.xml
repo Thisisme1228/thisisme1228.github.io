@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aeaef50-127c-4182-a2bd-48e83e216f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inde1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-11-13-jquery-mobile.md" afterPath="$PROJECT_DIR$/_posts/2017-11-13-jquery-mobile.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/11/13/jquery-mobile/index.html" afterPath="$PROJECT_DIR$/_site/2017/11/13/jquery-mobile/index.html" />
@@ -32,9 +31,15 @@
         <entry file="file://$PROJECT_DIR$/_posts/2017-11-13-jquery-mobile.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="243">
-                <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-                <folding />
+              <first_editor relative-caret-position="169">
+                <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+                <folding>
+                  <marker date="1510584086010" expanded="true" signature="481:694" ph="..." />
+                  <marker date="1510584086010" expanded="true" signature="504:686" ph="..." />
+                  <marker date="1510584086010" expanded="true" signature="532:563" ph="..." />
+                  <marker date="1510584086010" expanded="true" signature="592:623" ph="..." />
+                  <marker date="1510584086010" expanded="true" signature="651:678" ph="..." />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -56,8 +61,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="545">
+              <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -180,10 +185,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1015" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="753" />
     <option name="y" value="10" />
-    <option name="width" value="893" />
+    <option name="width" value="1155" />
     <option name="height" value="1001" />
   </component>
   <component name="ProjectView">
@@ -307,12 +312,12 @@
       <workItem from="1510130645602" duration="599000" />
       <workItem from="1510467499194" duration="2087000" />
       <workItem from="1510492817736" duration="719000" />
-      <workItem from="1510556658690" duration="12021000" />
+      <workItem from="1510556658690" duration="12917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="448404000" />
+    <option name="totallyTimeSpent" value="449300000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -324,7 +329,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1015" y="10" width="893" height="1001" extended-state="1" />
+    <frame x="753" y="10" width="1155" height="1001" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -750,9 +755,15 @@
     <entry file="file://$PROJECT_DIR$/_posts/2017-11-13-jquery-mobile.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="243">
-            <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            <folding />
+          <first_editor relative-caret-position="169">
+            <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+            <folding>
+              <marker date="1510584086010" expanded="true" signature="481:694" ph="..." />
+              <marker date="1510584086010" expanded="true" signature="504:686" ph="..." />
+              <marker date="1510584086010" expanded="true" signature="532:563" ph="..." />
+              <marker date="1510584086010" expanded="true" signature="592:623" ph="..." />
+              <marker date="1510584086010" expanded="true" signature="651:678" ph="..." />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -770,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="545">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
         </state>
       </provider>
