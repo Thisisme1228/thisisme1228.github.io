@@ -1224,6 +1224,151 @@ var result = buffer.toString();
 ```
 
 
+#### ECMAScript 修改对象
+
+通过使用 ECMAScript，不仅可以创建对象，还可以修改已有对象的行为。
+
+prototype 属性不仅可以定义构造函数的属性和方法，还可以为本地对象添加属性和方法。
+
+创建新方法
+
+通过已有的方法创建新方法
+
+
+可以用 prototype 属性为任何已有的类定义新方法，就像处理自己的类一样。例如，还记得 Number 类的 toString() 方法吗？如果给它传递参数 16，它将输出十六进制的字符串。如果这个方法的参数是 2，那么它将输出二进制的字符串。我们可以创建一个方法，可以把数字对象直接转换为十六进制字符串。创建这个方法非常简单：
+
+
+```js
+Number.prototype.toHexString = function() {
+  return this.toString(16);
+};
+```
+
+在此环境中，关键字 this 指向 Number 的实例，因此可完全访问 Number 的所有方法。有了这段代码，可实现下面的操作：
+
+```js
+var iNum = 15;
+alert(iNum.toHexString());		//输出 "F"
+```
+
+由于数字 15 等于十六进制中的 F，因此警告将显示 "F"。
+
+
+重命名已有方法
+
+我们还可以为已有的方法命名更易懂的名称。例如，可以给 Array 类添加两个方法 enqueue() 和 dequeue()，只让它们反复调用已有的 push() 和 shift() 方法即可：
+
+```js
+Array.prototype.enqueue = function(vItem) {
+  this.push(vItem);
+};
+
+Array.prototype.dequeue = function() {
+  return this.shift();
+};
+```
+
+添加与已有方法无关的方法
+
+当然，还可以添加与已有方法无关的方法。例如，假设要判断某个项在数组中的位置，没有本地方法可以做这种事情。我们可以轻松地创建下面的方法：
+
+```js
+Array.prototype.indexOf = function (vItem) {
+  for (var i=0; i<this.length; i++) {
+    if (vItem == this[i]) {
+	  return i;
+	}
+  }
+
+  return -1;
+}
+```
+
+该方法 indexOf() 与 String 类的同名方法保持一致，在数组中检索每个项，直到发现与传进来的项相同的项目为止。如果找到相同的项，则返回该项的位置，否则，返回 -1。有了这种定义，我们可以编写下面的代码：
+
+```js
+var aColors = new Array("red","green","blue");
+alert(aColors.indexOf("green"));//输出 "1"
+ ```
+
+为本地对象添加新方法
+
+最后，如果想给 ECMAScript 中每个本地对象添加新方法，必须在 Object 对象的 prototype 属性上定义它。前面的章节我们讲过，所有本地对象都继承了 Object 对象，所以对 Object 对象做任何改变，都会反应在所有本地对象上。例如，如果想添加一个用警告输出对象的当前值的方法，可以采用下面的代码：
+
+
+```js
+Object.prototype.showValue = function () {
+  alert(this.valueOf());
+};
+
+var str = "hello";
+var iNum = 25;
+str.showValue();		//输出 "hello"
+iNum.showValue();		//输出 "25"
+```
+
+这里，String 和 Number 对象都从 Object 对象继承了 showValue() 方法，分别在它们的对象上调用该方法，将显示 "hello" 和 "25"。
+
+
+重定义已有方法
+
+就像能给已有的类定义新方法一样，也可重定义已有的方法。如前面的章节所述，函数名只是指向函数的指针，因此可以轻松地指向其他函数。如果修改了本地方法，如 toString()，会出现什么情况呢？
+
+
+```js
+Function.prototype.toString = function() {
+  return "Function code hidden";
+}
+```
+
+前面的代码完全合法，运行结果完全符合预期：
+
+```js
+function sayHi() {
+  alert("hi");
+}
+
+alert(sayHi.toString());	//输出 "Function code hidden"
+```
+
+也许你还记得，Function 对象这一章中介绍过 Function 的 toString() 方法通常输出的是函数的源代码。覆盖该方法，可以返回另一个字符串（在这个例子中，可以返回 "Function code hidden"）。不过，toString() 指向的原始函数怎么了呢？它将被无用存储单元回收程序回收，因为它被完全废弃了。没有能够恢复原始函数的方法，所以在覆盖原始方法前，比较安全的做法是存储它的指针，以便以后的使用。有时你甚至可能在新方法中调用原始方法：
+
+```js
+Function.prototype.originalToString = Function.prototype.toString;
+
+Function.prototype.toString = function() {
+  if (this.originalToString().length > 100) {
+    return "Function too long to display.";
+  } else {
+    return this.originalToString();
+  }
+};
+```
+
+在这段代码中，第一行代码把对当前 toString() 方法的引用保存在属性 originalToString 中。然后用定制的方法覆盖了 toString() 方法。新方法将检查该函数源代码的长度是否大于 100。如果是，就返回错误信息，说明该函数代码太长，否则调用 originalToString() 方法，返回函数的源代码。
+
+极晚绑定（Very Late Binding）
+
+从技术上讲，根本不存在极晚绑定。本书采用该术语描述 ECMAScript 中的一种现象，即能够在对象实例化后再定义它的方法。例如：
+
+
+```js
+var o = new Object();
+
+Object.prototype.sayHi = function () {
+  alert("hi");
+};
+
+o.sayHi();
+```
+
+在大多数程序设计语言中，必须在实例化对象之前定义对象的方法。这里，方法 sayHi() 是在创建 Object 类的一个实例之后来添加进来的。在传统语言中不仅没听说过这种操作，也没听说过该方法还会自动赋予 Object 对象的实例并能立即使用（接下来的一行）。
+
+`注意`：不建议使用极晚绑定方法，因为很难对其跟踪和记录。不过，还是应该了解这种可能。
+
+
+
+
 
 
 
