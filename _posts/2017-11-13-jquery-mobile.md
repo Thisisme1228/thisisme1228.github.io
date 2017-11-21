@@ -694,3 +694,10 @@ jQuery Mobile 会自动为第二个链接添加蓝色箭头图标的样式，链
 
 ### 11、jQuery Mobile 表单
 
+当您与 jQuery Mobile 表单打交道时，应该了解以下信息：
+
+
+
+
+
+

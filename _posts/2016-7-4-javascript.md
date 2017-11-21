@@ -698,6 +698,550 @@ function addNum(iNum1, iNum2) {
 
 #### ECMAScript 面向对象技术
 
+对象
+
+ECMA-262 把对象（object）定义为“属性的无序集合，每个属性存放一个原始值、对象或函数”。严格来说，这意味着对象是无特定顺序的值的数组。
+
+尽管 ECMAScript 如此定义对象，但它更通用的定义是基于代码的名词（人、地点或事物）的表示。
+
+类
+
+每个对象都由类定义，可以把类看做对象的配方。类不仅要定义对象的接口（interface）（开发者访问的属性和方法），还要定义对象的内部工作（使属性和方法发挥作用的代码）。编译器和解释程序都根据类的说明构建对象。
+
+实例
+
+程序使用类创建对象时，生成的对象叫作类的实例（instance）。对类生成的对象的个数的唯一限制来自于运行代码的机器的物理内存。每个实例的行为相同，但实例处理一组独立的数据。由类创建对象实例的过程叫做实例化（instantiation）。
+
+在前面的章节我们提到过，ECMAScript 并没有正式的类。相反，ECMA-262 把对象定义描述为对象的配方。这是 ECMAScript 逻辑上的一种折中方案，因为对象定义实际上是对象自身。即使类并不真正存在，我们也把对象定义叫做类，因为大多数开发者对此术语更熟悉，而且从功能上说，两者是等价的。
+
+
+面向对象语言的要求
+
+一种面向对象语言需要向开发者提供四种基本能力：
+
+```html
+封装 - 把相关的信息（无论数据或方法）存储在对象中的能力
+
+聚集 - 把一个对象存储在另一个对象内的能力
+
+继承 - 由另一个类（或多个类）得来类的属性和方法的能力
+
+多态 - 编写能以多种方法运行的函数或方法的能力
+```
+
+对象的构成
+
+在 ECMAScript 中，对象由特性（attribute）构成，特性可以是原始值，也可以是引用值。如果特性存放的是函数，它将被看作对象的方法（method），否则该特性被看作对象的属性（property）。
+
+#### ECMAScript 对象应用
+
+> 对象的创建和销毁都在 JavaScript 执行过程中发生，理解这种范式的含义对理解整个语言至关重要。
+
+声明和实例化
+
+对象的创建方式是用关键字 new 后面跟上实例化的类的名字：
+
+```js
+var oObject = new Object();
+var oStringObject = new String();
+```
+
+第一行代码创建了 Object 类的一个实例，并把它存储到变量 oObject 中。第二行代码创建了 String 类的一个实例，把它存储在变量 oStringObject 中。如果构造函数无参数，括号则不是必需的。因此可以采用下面的形式重写上面的两行代码：
+
+```js
+var oObject = new Object;
+var oStringObject = new String;
+```
+
+对象引用
+
+在前面的章节中，我们介绍了引用类型的概念。在 ECMAScript 中，不能访问对象的物理表示，只能访问对象的引用。每次创建对象，存储在变量中的都是该对象的引用，而不是对象本身。
+
+对象废除
+
+ECMAScript 拥有无用存储单元收集程序（garbage collection routine），意味着不必专门销毁对象来释放内存。当再没有对对象的引用时，称该对象被废除（dereference）了。运行无用存储单元收集程序时，所有废除的对象都被销毁。每当函数执行完它的代码，无用存储单元收集程序都会运行，释放所有的局部变量，还有在一些其他不可预知的情况下，无用存储单元收集程序也会运行。
+
+把对象的所有引用都设置为 null，可以强制性地废除对象。例如：
+
+```js
+var oObject = new Object;
+// do something with the object here
+oObject = null;
+```
+
+当变量 oObject 设置为 null 后，对第一个创建的对象的引用就不存在了。这意味着下次运行无用存储单元收集程序时，该对象将被销毁。
+
+每用完一个对象后，就将其废除，来释放内存，这是个好习惯。这样还确保不再使用已经不能访问的对象，从而防止程序设计错误的出现。此外，旧的浏览器（如 IE/MAC）没有全面的无用存储单元收集程序，所以在卸载页面时，对象可能不能被正确销毁。废除对象和它的所有特性是确保内存使用正确的最好方法。
+
+`注意`：废除对象的所有引用时要当心。如果一个对象有两个或更多引用，则要正确废除该对象，必须将其所有引用都设置为 null。
+
+早绑定和晚绑定
+
+所谓绑定（binding），即把对象的接口与对象实例结合在一起的方法。
+
+早绑定（early binding）是指在实例化对象之前定义它的属性和方法，这样编译器或解释程序就能够提前转换机器代码。在 Java 和 Visual Basic 这样的语言中，有了早绑定，就可以在开发环境中使用 IntelliSense（即给开发者提供对象中属性和方法列表的功能）。ECMAScript 不是强类型语言，所以不支持早绑定。
+
+另一方面，晚绑定（late binding）指的是编译器或解释程序在运行前，不知道对象的类型。使用晚绑定，无需检查对象的类型，只需检查对象是否支持属性和方法即可。ECMAScript 中的所有变量都采用晚绑定方法。这样就允许执行大量的对象操作，而无任何惩罚。
+
+#### ECMAScript 对象类型
+
+> 在 ECMAScript 中，所有对象并非同等创建的。
+
+> 一般来说，可以创建并使用的对象有三种：本地对象、内置对象和宿主对象。
+
+本地对象
+
+ECMA-262 把本地对象（native object）定义为“独立于宿主环境的 ECMAScript 实现提供的对象”。简单来说，本地对象就是 ECMA-262 定义的类（引用类型）。它们包括：
+
+Object
+Function
+Array
+String
+Boolean
+Number
+Date
+RegExp
+Error
+EvalError
+RangeError
+ReferenceError
+SyntaxError
+TypeError
+URIError
+
+内置对象
+
+ECMA-262 把内置对象（built-in object）定义为“由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现”。这意味着开发者不必明确实例化内置对象，它已被实例化了。ECMA-262 只定义了两个内置对象，即 Global 和 Math （它们也是本地对象，根据定义，每个内置对象都是本地对象）。
+
+
+宿主对象
+
+所有非本地对象都是宿主对象（host object），即由 ECMAScript 实现的宿主环境提供的对象。
+
+所有 BOM 和 DOM 对象都是宿主对象。
+
+#### ECMAScript 对象作用域
+
+作用域指的是变量的适用范围。
+
+公用、私有和受保护作用域
+
+概念
+
+在传统的面向对象程序设计中，主要关注于公用和私有作用域。公用作用域中的对象属性可以从对象外部访问，即开发者创建对象的实例后，就可使用它的公用属性。而私有作用域中的属性只能在对象内部访问，即对于外部世界来说，这些属性并不存在。这意味着如果类定义了私有属性和方法，则它的子类也不能访问这些属性和方法。
+
+受保护作用域也是用于定义私有的属性和方法，只是这些属性和方法还能被其子类访问。
+
+ECMAScript 只有公用作用域
+
+对 ECMAScript 讨论上面这些作用域几乎毫无意义，因为 ECMAScript 中只存在一种作用域 - 公用作用域。ECMAScript 中的所有对象的所有属性和方法都是公用的。因此，定义自己的类和对象时，必须格外小心。记住，所有属性和方法默认都是公用的！
+
+建议性的解决方法
+
+许多开发者都在网上提出了有效的属性作用域模式，解决了 ECMAScript 的这种问题。
+
+由于缺少私有作用域，开发者确定了一个规约，说明哪些属性和方法应该被看做私有的。这种规约规定在属性前后加下划线：
+
+```js
+obj._color_ = "blue";
+```
+
+这段代码中，属性 color 是私有的。注意，下划线并不改变属性是公用属性的事实，它只是告诉其他开发者，应该把该属性看作私有的。
+
+有些开发者还喜欢用单下划线说明私有成员，例如：obj._color。
+
+静态作用域
+
+静态作用域定义的属性和方法任何时候都能从同一位置访问。在 Java 中，类可具有属性和方法，无需实例化该类的对象，即可访问这些属性和方法，例如 java.net.URLEncoder 类，它的函数 encode() 就是静态方法。
+
+ECMAScript 没有静态作用域
+
+严格来说，ECMAScript 并没有静态作用域。不过，它可以给构造函数提供属性和方法。还记得吗，构造函数只是函数。函数是对象，对象可以有属性和方法。例如：
+
+```js
+function sayHello() {
+  alert("hello");
+}
+
+sayHello.alternate = function() {
+  alert("hi");
+}
+
+sayHello();		//输出 "hello"
+sayHello.alternate();	//输出 "hi"
+```
+
+这里，方法 alternate() 实际上是函数 sayHello 的方法。可以像调用常规函数一样调用 sayHello() 输出 "hello"，也可以调用 sayHello.alternate() 输出 "hi"。即使如此，alternate() 也是 sayHello() 公用作用域中的方法，而不是静态方法。
+
+关键字 this
+
+this 的功能
+
+在 ECMAScript 中，要掌握的最重要的概念之一是关键字 this 的用法，它用在对象的方法中。关键字 this 总是指向调用该方法的对象，例如：
+
+```js
+var oCar = new Object;
+oCar.color = "red";
+oCar.showColor = function() {
+  alert(this.color);
+};
+
+oCar.showColor();		//输出 "red"
+```
+
+在上面的代码中，关键字 this 用在对象的 showColor() 方法中。在此环境中，this 等于 oCar。下面的代码与上面的代码的功能相同：
+
+```js
+var oCar = new Object;
+oCar.color = "red";
+oCar.showColor = function() {
+  alert(oCar.color);
+};
+
+oCar.showColor();		//输出 "red"
+```
+
+使用 this 的原因
+
+为什么使用 this 呢？因为在实例化对象时，总是不能确定开发者会使用什么样的变量名。使用 this，即可在任何多个地方重用同一个函数。请思考下面的例子：
+
+```js
+function showColor() {
+  alert(this.color);
+};
+
+var oCar1 = new Object;
+oCar1.color = "red";
+oCar1.showColor = showColor;
+
+var oCar2 = new Object;
+oCar2.color = "blue";
+oCar2.showColor = showColor;
+
+oCar1.showColor();		//输出 "red"
+oCar2.showColor();		//输出 "blue"
+```
+
+在上面的代码中，首先用 this 定义函数 showColor()，然后创建两个对象（oCar1 和 oCar2），一个对象的 color 属性被设置为 "red"，另一个对象的 color 属性被设置为 "blue"。两个对象都被赋予了属性 showColor，指向原始的 showColor () 函数（注意这里不存在命名问题，因为一个是全局函数，而另一个是对象的属性）。调用每个对象的 showColor()，oCar1 输出是 "red"，而 oCar2 的输出是 "blue"。这是因为调用 oCar1.showColor() 时，函数中的 this 关键字等于 oCar1。调用 oCar2.showColor() 时，函数中的 this 关键字等于 oCar2。
+
+注意，引用对象的属性时，必须使用 this 关键字。例如，如果采用下面的代码，showColor() 方法不能运行：
+
+```js
+function showColor() {
+  alert(color);
+};
+```
+
+如果不用对象或 this 关键字引用变量，ECMAScript 就会把它看作局部变量或全局变量。然后该函数将查找名为 color 的局部或全局变量，但是不会找到。结果如何呢？该函数将在警告中显示 "null"。
+
+#### ECMAScript 定义类或对象
+
+使用预定义对象只是面向对象语言的能力的一部分，它真正强大之处在于能够创建自己专用的类和对象。
+
+ECMAScript 拥有很多创建对象或类的方法。
+
+工厂方式
+
+原始的方式
+
+因为对象的属性可以在对象创建后动态定义，所有许多开发者都在 JavaScript 最初引入时编写类似下面的代码：
+
+```js
+var oCar = new Object;
+oCar.color = "blue";
+oCar.doors = 4;
+oCar.mpg = 25;
+oCar.showColor = function() {
+  alert(this.color);
+};
+```
+
+
+在上面的代码中，创建对象 car。然后给它设置几个属性：它的颜色是蓝色，有四个门，每加仑油可以跑 25 英里。最后一个属性实际上是指向函数的指针，意味着该属性是个方法。执行这段代码后，就可以使用对象 car。
+
+不过这里有一个问题，就是可能需要创建多个 car 的实例。
+
+解决方案：工厂方式
+
+要解决该问题，开发者创造了能创建并返回特定类型的对象的工厂函数（factory function）。
+
+例如，函数 createCar() 可用于封装前面列出的创建 car 对象的操作：
+
+```js
+function createCar() {
+  var oTempCar = new Object;
+  oTempCar.color = "blue";
+  oTempCar.doors = 4;
+  oTempCar.mpg = 25;
+  oTempCar.showColor = function() {
+    alert(this.color);
+  };
+  return oTempCar;
+}
+
+var oCar1 = createCar();
+var oCar2 = createCar();
+```
+
+在这里，第一个例子中的所有代码都包含在 createCar() 函数中。此外，还有一行额外的代码，返回 car 对象（oTempCar）作为函数值。调用此函数，将创建新对象，并赋予它所有必要的属性，复制出一个我们在前面说明过的 car 对象。因此，通过这种方法，我们可以很容易地创建 car 对象的两个版本（oCar1 和 oCar2），它们的属性完全一样。
+
+为函数传递参数
+
+我们还可以修改 createCar() 函数，给它传递各个属性的默认值，而不是简单地赋予属性默认值：
+
+```js
+function createCar(sColor,iDoors,iMpg) {
+  var oTempCar = new Object;
+  oTempCar.color = sColor;
+  oTempCar.doors = iDoors;
+  oTempCar.mpg = iMpg;
+  oTempCar.showColor = function() {
+    alert(this.color);
+  };
+  return oTempCar;
+}
+
+var oCar1 = createCar("red",4,23);
+var oCar2 = createCar("blue",3,25);
+
+oCar1.showColor();		//输出 "red"
+oCar2.showColor();		//输出 "blue"
+```
+
+给 createCar() 函数加上参数，即可为要创建的 car 对象的 color、doors 和 mpg 属性赋值。这使两个对象具有相同的属性，却有不同的属性值。
+
+在工厂函数外定义对象的方法
+
+虽然 ECMAScript 越来越正式化，但创建对象的方法却被置之不理，且其规范化至今还遭人反对。一部分是语义上的原因（它看起来不像使用带有构造函数 new 运算符那么正规），一部分是功能上的原因。功能原因在于用这种方式必须创建对象的方法。前面的例子中，每次调用函数 createCar()，都要创建新函数 showColor()，意味着每个对象都有自己的 showColor() 版本。而事实上，每个对象都共享同一个函数。
+
+有些开发者在工厂函数外定义对象的方法，然后通过属性指向该方法，从而避免这个问题：
+
+```js
+function showColor() {
+  alert(this.color);
+}
+
+function createCar(sColor,iDoors,iMpg) {
+  var oTempCar = new Object;
+  oTempCar.color = sColor;
+  oTempCar.doors = iDoors;
+  oTempCar.mpg = iMpg;
+  oTempCar.showColor = showColor;
+  return oTempCar;
+}
+
+var oCar1 = createCar("red",4,23);
+var oCar2 = createCar("blue",3,25);
+
+oCar1.showColor();		//输出 "red"
+oCar2.showColor();		//输出 "blue"
+```
+
+在上面这段重写的代码中，在函数 createCar() 之前定义了函数 showColor()。在 createCar() 内部，赋予对象一个指向已经存在的 showColor() 函数的指针。从功能上讲，这样解决了重复创建函数对象的问题；但是从语义上讲，该函数不太像是对象的方法。
+
+所有这些问题都引发了开发者定义的构造函数的出现。
+
+构造函数方式
+
+创建构造函数就像创建工厂函数一样容易。第一步选择类名，即构造函数的名字。根据惯例，这个名字的首字母大写，以使它与首字母通常是小写的变量名分开。除了这点不同，构造函数看起来很像工厂函数。请考虑下面的例子：
+
+
+```js
+function Car(sColor,iDoors,iMpg) {
+  this.color = sColor;
+  this.doors = iDoors;
+  this.mpg = iMpg;
+  this.showColor = function() {
+    alert(this.color);
+  };
+}
+
+var oCar1 = new Car("red",4,23);
+var oCar2 = new Car("blue",3,25);
+```
+
+下面为您解释上面的代码与工厂方式的差别。首先在构造函数内没有创建对象，而是使用 this 关键字。使用 new 运算符构造函数时，在执行第一行代码前先创建一个对象，只有用 this 才能访问该对象。然后可以直接赋予 this 属性，默认情况下是构造函数的返回值（不必明确使用 return 运算符）。
+
+现在，用 new 运算符和类名 Car 创建对象，就更像 ECMAScript 中一般对象的创建方式了。
+
+你也许会问，这种方式在管理函数方面是否存在于前一种方式相同的问题呢？是的。
+
+就像工厂函数，构造函数会重复生成函数，为每个对象都创建独立的函数版本。不过，与工厂函数相似，也可以用外部函数重写构造函数，同样地，这么做语义上无任何意义。这正是下面要讲的原型方式的优势所在。
+
+原型方式
+
+该方式利用了对象的 prototype 属性，可以把它看成创建新对象所依赖的原型。
+
+这里，首先用空构造函数来设置类名。然后所有的属性和方法都被直接赋予 prototype 属性。我们重写了前面的例子，代码如下：
+
+这里，首先用空构造函数来设置类名。然后所有的属性和方法都被直接赋予 prototype 属性。我们重写了前面的例子，代码如下：
+
+```js
+function Car() {
+}
+
+Car.prototype.color = "blue";
+Car.prototype.doors = 4;
+Car.prototype.mpg = 25;
+Car.prototype.showColor = function() {
+  alert(this.color);
+};
+
+var oCar1 = new Car();
+var oCar2 = new Car();
+```
+
+在这段代码中，首先定义构造函数（Car），其中无任何代码。接下来的几行代码，通过给 Car 的 prototype 属性添加属性去定义 Car 对象的属性。调用 new Car() 时，原型的所有属性都被立即赋予要创建的对象，意味着所有 Car 实例存放的都是指向 showColor() 函数的指针。从语义上讲，所有属性看起来都属于一个对象，因此解决了前面两种方式存在的问题。
+
+此外，使用这种方式，还能用 instanceof 运算符检查给定变量指向的对象的类型。因此，下面的代码将输出 TRUE：
+
+```js
+alert(oCar1 instanceof Car);	//输出 "true"
+```
+
+原型方式的问题
+
+原型方式看起来是个不错的解决方案。遗憾的是，它并不尽如人意。
+
+首先，这个构造函数没有参数。使用原型方式，不能通过给构造函数传递参数来初始化属性的值，因为 Car1 和 Car2 的 color 属性都等于 "blue"，doors 属性都等于 4，mpg 属性都等于 25。这意味着必须在对象创建后才能改变属性的默认值，这点很令人讨厌，但还没完。真正的问题出现在属性指向的是对象，而不是函数时。函数共享不会造成问题，但对象却很少被多个实例共享。请思考下面的例子：
+
+```js
+function Car() {
+}
+
+Car.prototype.color = "blue";
+Car.prototype.doors = 4;
+Car.prototype.mpg = 25;
+Car.prototype.drivers = new Array("Mike","John");
+Car.prototype.showColor = function() {
+  alert(this.color);
+};
+
+var oCar1 = new Car();
+var oCar2 = new Car();
+
+oCar1.drivers.push("Bill");
+
+alert(oCar1.drivers);	//输出 "Mike,John,Bill"
+alert(oCar2.drivers);	//输出 "Mike,John,Bill"
+```
+
+上面的代码中，属性 drivers 是指向 Array 对象的指针，该数组中包含两个名字 "Mike" 和 "John"。由于 drivers 是引用值，Car 的两个实例都指向同一个数组。这意味着给 oCar1.drivers 添加值 "Bill"，在 oCar2.drivers 中也能看到。输出这两个指针中的任何一个，结果都是显示字符串 "Mike,John,Bill"。
+
+
+由于创建对象时有这么多问题，你一定会想，是否有种合理的创建对象的方法呢？答案是有，需要联合使用构造函数和原型方式。
+
+#### 混合的构造函数/原型方式
+
+联合使用构造函数和原型方式，就可像用其他程序设计语言一样创建对象。这种概念非常简单，即用构造函数定义对象的所有非函数属性，用原型方式定义对象的函数属性（方法）。结果是，所有函数都只创建一次，而每个对象都具有自己的对象属性实例。
+
+我们重写了前面的例子，代码如下：
+
+```js
+function Car(sColor,iDoors,iMpg) {
+  this.color = sColor;
+  this.doors = iDoors;
+  this.mpg = iMpg;
+  this.drivers = new Array("Mike","John");
+}
+
+Car.prototype.showColor = function() {
+  alert(this.color);
+};
+
+var oCar1 = new Car("red",4,23);
+var oCar2 = new Car("blue",3,25);
+
+oCar1.drivers.push("Bill");
+
+alert(oCar1.drivers);	//输出 "Mike,John,Bill"
+alert(oCar2.drivers);	//输出 "Mike,John"
+```
+
+现在就更像创建一般对象了。所有的非函数属性都在构造函数中创建，意味着又能够用构造函数的参数赋予属性默认值了。因为只创建 showColor() 函数的一个实例，所以没有内存浪费。此外，给 oCar1 的 drivers 数组添加 "Bill" 值，不会影响到 oCar2 的数组，所以输出这些数组的值时，oCar1.drivers 显示的是 "Mike,John,Bill"，而 oCar2.drivers 显示的是 "Mike,John"。因为使用了原型方式，所以仍然能利用 instanceof 运算符来判断对象的类型。
+
+这种方式是 ECMAScript 采用的主要方式，它具有其他方式的特性，却没有他们的副作用。不过，有些开发者仍觉得这种方法不够完美。(目前使用最广泛的方式)
+
+实例
+
+对象令人感兴趣的一点是用它们解决问题的方式。ECMAScript 中最常见的一个问题是字符串连接的性能。与其他语言类似，ECMAScript 的字符串是不可变的，即它们的值不能改变。请考虑下面的代码：
+
+```js
+var str = "hello ";
+str += "world";
+```
+
+实际上，这段代码在幕后执行的步骤如下：
+
+```
+创建存储 "hello " 的字符串。
+创建存储 "world" 的字符串。
+创建存储连接结果的字符串。
+把 str 的当前内容复制到结果中。
+把 "world" 复制到结果中。
+更新 str，使它指向结果。
+```
+
+每次完成字符串连接都会执行步骤 2 到 6，使得这种操作非常消耗资源。如果重复这一过程几百次，甚至几千次，就会造成性能问题。解决方法是用 Array 对象存储字符串，然后用 join() 方法（参数是空字符串）创建最后的字符串。想象用下面的代码代替前面的代码：
+
+```
+var arr = new Array();
+arr[0] = "hello ";
+arr[1] = "world";
+var str = arr.join("");
+```
+
+这样，无论数组中引入多少字符串都不成问题，因为只在调用 join() 方法时才会发生连接操作。此时，执行的步骤如下：
+
+```
+创建存储结果的字符串
+把每个字符串复制到结果中的合适位置
+```
+
+虽然这种解决方案很好，但还有更好的方法。问题是，这段代码不能确切反映出它的意图。要使它更容易理解，可以用 StringBuffer 类打包该功能：
+
+```js
+function StringBuffer () {
+  this._strings_ = new Array();
+}
+
+StringBuffer.prototype.append = function(str) {
+  this._strings_.push(str);
+};
+
+StringBuffer.prototype.toString = function() {
+  return this._strings_.join("");
+};
+```
+
+这段代码首先要注意的是 strings 属性，本意是私有属性。它只有两个方法，即 append() 和 toString() 方法。append() 方法有一个参数，它把该参数附加到字符串数组中，toString() 方法调用数组的 join 方法，返回真正连接成的字符串。要用 StringBuffer 对象连接一组字符串，可以用下面的代码：
+
+```
+var buffer = new StringBuffer ();
+buffer.append("hello ");
+buffer.append("world");
+var result = buffer.toString();
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

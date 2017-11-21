@@ -98,6 +98,13 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="https://doc.webpack-china.org/guides/getting-started/" target="_blank">webpack</a></li>
 </ol>
 
+<h4 class="text-center">CORDOVA</h4>
+
+<ol class="rounded-list">
+<li><a href="http://cordova.apache.org/docs/en/latest/guide/overview/index.html" target="_blank">跨平台框架CORDOVA API</a></li>
+</ol>
+
+
 <h4 class="text-center">gulp</h4>
 
 <ol class="rectangle-list">
