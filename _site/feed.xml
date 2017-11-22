@@ -5,9 +5,67 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Nov 2017 13:15:58 +0800</pubDate>
-    <lastBuildDate>Wed, 22 Nov 2017 13:15:58 +0800</lastBuildDate>
+    <pubDate>Wed, 22 Nov 2017 13:29:04 +0800</pubDate>
+    <lastBuildDate>Wed, 22 Nov 2017 13:29:04 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>论语</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#绪论&quot; id=&quot;markdown-toc-绪论&quot;&gt;绪论&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;绪论&quot;&gt;绪论&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》中的“论”的声调应该读阳平，是编纂的意思。其中的“语”是“言语”的意思，偏重于回答别人的问话，或是与人谈论一件事情
+
+从训古学角度来讲，“论语”两字合在一起，书名的含义就是把这些言语编纂成册的意思
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》的“论”为什么要读阳平lun(二声)？
+
+北宋学者徐铉等人的音读，即“论，卢坤初”（见《说文解字》）
+
+“论”字可以用“卢坤初”来注音，因为“卢”的声母是“L”，“昆”的韵母是un，把L和un拼读出来，就是“论”的读音是L+un=lun（二声）
+
+“论”之所以读阳平声调，是因为“卢”的声调是阳平
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》全书120篇，每篇由若干章组成。每篇取第一章开头一句话里的某两个字作为篇名，如第一篇开头的话是：“子曰：学而时习之，不亦说乎？”，于是取“学而时习之”中的“学而”两字为篇名。
+
+篇是由若干章来组成的。章是依据文章内容所划分的自成起讫的段落。
+
+现今通行的《论语》20篇，包括标点符号共有21113字，不含标点符号仅有15837字。
+
+不同的《论语》版本分章不尽相同。每章的字数也不等。有的只有一句话，仅6个字，如：“子曰：‘有教无类。’“章。篇幅最长的是”子路、曾皙、冉有、公西华侍坐“章，字数也只有315个。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;从《论语》内部的语境现象可以推定：对孔子的言论，的确为“当时弟子各有所记”，不可能由某一个人来编纂而成。因此，多数学者主张《论语》是在孔子去世后，有孔子弟子及其再传门人在不同时期编纂而成的。
+
+在《论语》的首篇《学而》出现3次对有若称“有子”却不成字，对曾参也有2次称“曾子”而不称字。
+
+所以，程颐推论《论语》是有若和曾参的门人所记的。这的确有一定道理。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;如何品绎《论语》的教育智慧？
+
+所谓智慧，是涉及感知、记忆、理解、联想、分析、判断、综合诸多层面的一种综合思维和实践能力。它包括情感与理解、道德与美感、智力与非智力等众多因素。
+
+教育的真谛在于启迪智慧。教育在实践过程中生成圆融的智慧品行，只有智慧的教育才能塑造智慧的人。
+
+《论语》蕴藏取之不尽、用之不竭的教育智慧
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/22/lunyu/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/22/lunyu/</guid>
+        
+        
+        <category>杂学</category>
+        
+      </item>
     
       <item>
         <title>混合的构造函数/原型方式</title>
@@ -1549,213 +1607,6 @@ console.log( typeof arguments[i] ); // 返回 string, number, object, object, bo
         <pubDate>Tue, 20 Jun 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/06/20/webpack-multiple-page-packaging/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/06/20/webpack-multiple-page-packaging/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>JavaScript模块化 --- Commonjs、AMD、CMD、ES6 modules</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#第一阶段无模块化&quot; id=&quot;markdown-toc-第一阶段无模块化&quot;&gt;第一阶段：无模块化&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#第二阶段-commonjs规范&quot; id=&quot;markdown-toc-第二阶段-commonjs规范&quot;&gt;第二阶段： CommonJS规范&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#第三阶段-amd规范&quot; id=&quot;markdown-toc-第三阶段-amd规范&quot;&gt;第三阶段： AMD规范&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#第四阶段cmd规范&quot; id=&quot;markdown-toc-第四阶段cmd规范&quot;&gt;第四阶段：CMD规范&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#第五阶段-es6模块化&quot; id=&quot;markdown-toc-第五阶段-es6模块化&quot;&gt;第五阶段： ES6模块化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;随着前端js代码复杂度的提高，&lt;code class=&quot;highlighter-rouge&quot;&gt;JavaScript模块化&lt;/code&gt;这个概念便被提出来，前端社区也不断地实现前端模块化，直到es6对其进行了规范，下面就介绍&lt;code class=&quot;highlighter-rouge&quot;&gt;JavaScript模块化&lt;/code&gt;。
-&lt;br /&gt;
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;第一阶段无模块化&quot;&gt;第一阶段：无模块化&lt;/h3&gt;
-
-&lt;p&gt;JavaScript最初的作用仅仅是验证表单，后来会添加一些动画，但是这些js代码很多在一个文件中就可以完成了，所以，我们只需要在html文件中添加一个script标签&lt;/p&gt;
-
-&lt;p&gt;后来，随着前端复杂度提高，为了能够提高项目代码的可读性、可扩展性等，我们的js文件逐渐多了起来，不再是一个js文件就可以解决的了，而是把每一个js文件当做一个模块。那么，这时的js引入方式是怎样的呢？大概是下面这样：&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jquery.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; 　　
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jquery_scroller.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; 　　
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; 　　
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;other1.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; 　　
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;other2.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; 　　
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;other3.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;即简单的将所有的js文件统统放在一起。但是这些文件的顺序还不能出错，比如jquery需要先引入，才能引入jquery插件，才能在其他的文件中使用jquery。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;相比于使用一个js文件，这种多个js文件实现最简单的模块化的思想是进步的。　&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;污染全局作用域&lt;/strong&gt;。 因为每一个模块都是暴露在全局的，简单的使用，会导致全局变量命名冲突，当然，我们也可以使用命名空间的方式来解决。&lt;/p&gt;
-
-&lt;p&gt;对于大型项目，各种js很多，开发人员必须手动解决模块和代码库的依赖关系，后期维护成本较高。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;依赖关系不明显，不利于维护&lt;/strong&gt;。 比如main.js需要使用jquery，但是，从上面的文件中，我们是看不出来的，如果jquery忘记了，那么就会报错。&lt;/p&gt;
-
-&lt;h3 id=&quot;第二阶段-commonjs规范&quot;&gt;第二阶段： CommonJS规范&lt;/h3&gt;
-
-&lt;p&gt;CommonJS就是一个JavaScript模块化的规范，该规范最初是用在服务器端的node的，前端的webpack也是对CommonJS原生支持的。&lt;/p&gt;
-
-&lt;p&gt;根据这个规范，每一个文件就是一个模块，其内部定义的变量是属于这个模块的，不会对外暴露，也就是说不会污染全局变量。&lt;/p&gt;
-
-&lt;p&gt;CommonJS的核心思想就是通过 require 方法来同步加载所要依赖的其他模块，然后通过 exports 或者 module.exports 来导出需要暴露的接口。如下所示：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// a.js &lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;addX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;addX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这里的a.js就是一个CommonJS规范的模块了。 这里的module就代表了这个模块，module的exports属性就是对外暴露的接口，可以对外导出外部可以访问的变量，比如这里的x和addX。&lt;/p&gt;
-
-&lt;p&gt;exports 是对 module.exports 的引用。比如我们可以认为在一个模块的顶部有这句代码：&lt;/p&gt;
-
-&lt;p&gt;exports = module.exports&lt;/p&gt;
-
-&lt;p&gt;所以，我们不能直接给exports赋值，比如number、function等。&lt;/p&gt;
-
-&lt;p&gt;然后我们就可以在其他模块中引入这个模块使用了&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;vara&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 5&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 6&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这里的require就会获取到a.js所暴露的module.exports变量，然后就可以使用其暴露的x和addX了。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;CommonJS规范在服务器端率先完成了JavaScript的模块化，解决了依赖、全局变量污染的问题，这也是js运行在服务器端的必要条件。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;此文主要是浏览器端js的模块化， 由于 CommonJS 是&lt;code class=&quot;highlighter-rouge&quot;&gt;同步加载模块&lt;/code&gt;的，在服务器端，文件都是保存在硬盘上，所以同步加载没有问题，但是对于浏览器端，需要将文件从服务器端请求过来，那么同步加载就不适用了，所以，CommonJS是不适用于浏览器端的。&lt;/p&gt;
-
-&lt;h3 id=&quot;第三阶段-amd规范&quot;&gt;第三阶段： AMD规范&lt;/h3&gt;
-
-&lt;p&gt;之前提到: CommonJS规范加载模块是&lt;code class=&quot;highlighter-rouge&quot;&gt;同步&lt;/code&gt;的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是&lt;code class=&quot;highlighter-rouge&quot;&gt;非同步&lt;/code&gt;加载模块，允许指定&lt;code class=&quot;highlighter-rouge&quot;&gt;回调函数&lt;/code&gt;。由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，所以CommonJS规范比较适用。但是，如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范。而AMD规范的实现，就是大名鼎鼎的&lt;code class=&quot;highlighter-rouge&quot;&gt;require.js&lt;/code&gt;了。&lt;/p&gt;
-
-&lt;p&gt;AMD标准中，定义了下面两个API：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(id, [depends], callback)
-
-require([module], callback) 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;即通过&lt;code class=&quot;highlighter-rouge&quot;&gt;define&lt;/code&gt;来定义一个模块，然后使用&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;来加载一个模块。 并且，require还支持CommonJS的模块导出方式。&lt;/p&gt;
-
-&lt;p&gt;定义alert模块：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alertName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-        &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;I am &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alertAge&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;I am &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; years old&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;alertName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alertName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-         &lt;span class=&quot;na&quot;&gt;alertAge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alertAge&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;引入模块：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'alert'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;alertName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'JohnZhu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;alertAge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;但是，在使用require.js的时候，我们必须要提前加载所有的依赖，然后才可以使用，而不是需要使用时再加载。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;适合在浏览器环境中异步加载模块。可以并行加载多个模块。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;提高了开发成本，并且不能按需加载，而是必须提前加载所有的依赖。&lt;/p&gt;
-
-&lt;h3 id=&quot;第四阶段cmd规范&quot;&gt;第四阶段：CMD规范&lt;/h3&gt;
-
-&lt;p&gt;CMD规范是阿里的玉伯提出来的，实现js库为&lt;code class=&quot;highlighter-rouge&quot;&gt;sea.js&lt;/code&gt;。 它和requirejs非常类似，即一个js文件就是一个模块，但是CMD的加载方式更加优秀，是通过&lt;code class=&quot;highlighter-rouge&quot;&gt;按需加载&lt;/code&gt;的方式，而不是必须在模块开始就加载所有的依赖。如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jquery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Spinning&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./spinning'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;同样实现了浏览器端的模块化加载。&lt;/p&gt;
-
-&lt;p&gt;可以按需加载，依赖就近。&lt;/p&gt;
-
-&lt;p&gt;AMD和CMD的区别，CMD性能好，因为只有用户需要的时候才执行。AMD用户体验好，因为没有延迟，依赖模块提前执行了&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;依赖SPM打包，模块的加载逻辑偏重。&lt;/p&gt;
-
-&lt;p&gt;其实，这时我们就可以看出AMD和CMD的区别了，前者是对于依赖的模块提前执行，而后者是延迟执行。 前者推崇依赖前置，而后者推崇依赖就近，即只在需要用到某个模块的时候再require。 如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// AMD &lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-    &lt;span class=&quot;c1&quot;&gt;// 依赖必须一开始就写好 &lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
-    &lt;span class=&quot;c1&quot;&gt;// 此处略去 100 行&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; 
-
-&lt;span class=&quot;c1&quot;&gt;// CMD &lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 此处略去 100 行 &lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 依赖可以就近书写 &lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ... &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;第五阶段-es6模块化&quot;&gt;第五阶段： ES6模块化&lt;/h3&gt;
-
-&lt;p&gt;之前的几种模块化方案都是前端社区自己实现的，只是得到了大家的认可和广泛使用，而ES6的模块化方案是真正的规范。 在ES6中，我们可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; 关键字&lt;code class=&quot;highlighter-rouge&quot;&gt;引入&lt;/code&gt;模块，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;export&lt;/code&gt; 关键字&lt;code class=&quot;highlighter-rouge&quot;&gt;导出&lt;/code&gt;模块，功能较之于前几个方案更为强大，也是我们所推崇的，但是由于ES6目前无法在浏览器中执行，所以，我们只能通过&lt;code class=&quot;highlighter-rouge&quot;&gt;babel&lt;/code&gt;将不被支持的import编译为当前受到广泛支持的 require。&lt;/p&gt;
-
-&lt;p&gt;虽然目前import和require的区别不大，但是还是推荐使用使用es6，因为未来es6必定是主流，对于代码的迁移成本还是非常容易的。 如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import store from '../store/index' 
-import {mapState, mapMutations, mapActions} from 'vuex' 
-import axios from '../assets/js/request' 
-import util from '../utils/js/util.js' 
-
-export default {
-    created () {
-        this.getClassify();
-        
-        this.RESET_VALUE();
-        console.log('created' ,new Date().getTime());
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Sat, 17 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/06/17/modules/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/17/modules/</guid>
-        
-        <category>JavaScript</category>
         
         
       </item>
