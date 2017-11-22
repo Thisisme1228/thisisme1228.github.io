@@ -9,6 +9,14 @@
 } ,
 
 {
+"title"    : "继承----混合方式",
+"category" : "",
+"tags"     : "JavaScript",
+"url"      : "/2017/11/22/inherit/",
+"date"     : "2017-11-22 00:00:00 +0800"
+} ,
+
+{
 "title"    : "混合的构造函数/原型方式",
 "category" : "",
 "tags"     : "JavaScript",
@@ -442,20 +450,20 @@
 
 {
 
-"title"    : "工作",
+"title"    : "生活",
 "category" : "",
 "tags"     : "",
-"url"      : "/rice/",
+"url"      : "/greens/",
 "date"     : ""
 
 } ,
 
 {
 
-"title"    : "生活",
+"title"    : "工作",
 "category" : "",
 "tags"     : "",
-"url"      : "/greens/",
+"url"      : "/rice/",
 "date"     : ""
 
 } ,

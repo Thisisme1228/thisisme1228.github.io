@@ -5,14 +5,15 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Nov 2017 13:29:04 +0800</pubDate>
-    <lastBuildDate>Wed, 22 Nov 2017 13:29:04 +0800</lastBuildDate>
+    <pubDate>Wed, 22 Nov 2017 21:34:32 +0800</pubDate>
+    <lastBuildDate>Wed, 22 Nov 2017 21:34:32 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>论语</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#绪论&quot; id=&quot;markdown-toc-绪论&quot;&gt;绪论&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#为师之道&quot; id=&quot;markdown-toc-为师之道&quot;&gt;为师之道&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- more --&gt;
 
@@ -57,6 +58,78 @@
 《论语》蕴藏取之不尽、用之不竭的教育智慧
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h3 id=&quot;为师之道&quot;&gt;为师之道&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;孔子简介
+
+孔子（公元前551-前479年），名丘，字仲尼，春秋时期鲁国陬邑人。
+
+-----------------------------------------------------------------
+
+1、《史记.孔子世家》记载：“孔子为儿嘻戏，常陈俎豆，设礼容。“
+
+2、自称“吾十有五而志于学”。及长，出仕“委吏”（管理仓库料量升斗）、“乘田”（管理牛羊放牧蓄息）一类的小官。
+
+3、三十岁左右开创私学化的平民教育，授徒设教
+
+4、三十五岁时因鲁国内乱，孔子至齐求仕，但不为景公所用。随后返鲁，退而修诗、书、礼、乐，历时十五年，期间学问益进，弟子滋众。
+
+5、五十五岁开始周游列国，凡十四年。
+
+6、六十八岁回到鲁国，开始晚年时期的教育生活和古典文化的整理研究工作。
+
+7、孔子坚守理想，不知老之将近，享年七十有三。
+
+-----------------------------------------------------------------
+
+孔子是儒家学派的创始人。后人尊之为“至圣先师”。
+
+“至圣”意指孔子是儒家理想人生的最高标准，“先师”意指孔子是中国历史上君子之学的最先倡导者和实践者。
+
+汉武帝采用“独尊儒术，罢黜百家”的文教政策，为后世确立孔子至圣先师的地位奠定了基调。
+
+
+唐太宗贞观二年（628年），下诏以孔子为先圣，把孔子的塑像供奉在国学。贞观四年（630年），又诏令各州县学建立孔子庙。
+
+明嘉靖九年（1530年），诏令称孔子为“至圣先师”。
+
+清顺治年初，定称孔子为“大成至圣文宜先师孔子”。顺治十四年，改成“至圣先师”。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;有教无类：
+
+出处：“有教无类”见于《论语·卫灵公》
+
+基本含义：人人都可以接受教育，不分贫富、不分贵贱等方面的类别。
+
+“有教无类”中的“有”作为名词词头。没有实在意义，仅有音节的衬字作用。
+
+东汉马融说：“言人所在见教，无有种类。”
+
+------------{马融的理解要意：不论哪一类人，都可以给他以教育}
+
+宋代朱熹说：“人性皆善，而其类有善恶之殊者，气习之染也。故君子有教，则人皆可以复于善，而不当复论其类之恶矣。”
+
+------------{马融的理解要意：人都可以接受教育而从善去恶}
+
+马融和朱熹对“有教无类”所给出各自的解释均有一定的道理。
+
+因为他们二人的解释符合教育的历史发展，也符合孔子授徒教学的实际状况。
+
+-----------------------------------------------------------------
+
+时代背景
+
+学术文化完全被官府所垄断，能够受教育的都是王公贵族弟子，平民与王官之学毫无关联。这就是私人不议礼，民间不兴学的文化教育制度，即“学在官府”。
+
+-----------------------------------------------------------------
+
+南郭惠子曾问子贡：“夫子之门，何其杂也？”
+
+子贡曰：“欲来者不拒，欲去者不止。且夫良医之门多病人，隐括之侧多枉木，是以杂也。”（《荀子·法行》）
+
+子曰：“自行束修以上，吾未尝无悔言。”（《论语·述而》）---------孔子说：“只要是主动地给我一点拜师薄礼，我从来没有不教诲的。”
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/11/22/lunyu/</link>
@@ -64,6 +137,48 @@
         
         
         <category>杂学</category>
+        
+      </item>
+    
+      <item>
+        <title>继承----混合方式</title>
+        <description>&lt;p&gt;和其他功能一样，ECMAScript 实现继承的方式不止一种。这是因为 JavaScript 中的继承机制并不是明确规定的，而是通过模仿实现的。这意味着所有的继承细节并非完全由解释程序处理。作为开发者，你有权决定最适用的继承方式。
+但是这里，我仅仅讲解混合方式
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;混合方式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这种继承方式使用构造函数定义类，并非使用任何原型。对象冒充的主要问题是必须使用构造函数方式，这不是最好的选择。不过如果使用原型链，就无法使用带参数的构造函数了。开发者如何选择呢？答案很简单，两者都用。&lt;/p&gt;
+
+&lt;p&gt;创建类的最好方式是用构造函数定义属性，用原型定义方法。这种方式同样适用于继承机制，用对象冒充继承构造函数的属性，用原型链继承 prototype 对象的方法。&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sayColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sayName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/22/inherit/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/22/inherit/</guid>
+        
+        <category>JavaScript</category>
+        
         
       </item>
     
@@ -1595,18 +1710,6 @@ console.log( typeof arguments[i] ); // 返回 string, number, object, object, bo
         <pubDate>Tue, 20 Jun 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/06/20/webpack-single-page-packaging/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/06/20/webpack-single-page-packaging/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>webpack打包多页面</title>
-        <description>
-&lt;p&gt;Webpack&lt;/p&gt;
-</description>
-        <pubDate>Tue, 20 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/06/20/webpack-multiple-page-packaging/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/20/webpack-multiple-page-packaging/</guid>
         
         
       </item>
