@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "标签语句",
+"category" : "",
+"tags"     : "JavaScript",
+"url"      : "/2017/11/24/label-statement/",
+"date"     : "2017-11-24 00:00:00 +0800"
+} ,
+
+{
 "title"    : "论语",
 "category" : "",
 "tags"     : "",
@@ -206,6 +214,14 @@
 "tags"     : "前端维护",
 "url"      : "/2017/01/15/code-standards/",
 "date"     : "2017-01-15 00:00:00 +0800"
+} ,
+
+{
+"title"    : "Web 技术文档 JavaScript",
+"category" : "",
+"tags"     : "JavaScript",
+"url"      : "/2017/01/02/mdn-javascript/",
+"date"     : "2017-01-02 00:00:00 +0800"
 } ,
 
 {
