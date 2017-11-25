@@ -281,3 +281,112 @@ outside()(10); // returns 20 instead of 10
 命名冲突发生在return x上，inside的参数x和outside变量x发生了冲突。这里的作用链域是{inside, outside, 全局对象}。因此inside的x具有最高优先权，返回了20（inside的x）而不是10（outside的x）。
 
 
+**使用 arguments 对象**
+
+函数的实际参数会被保存在一个类似数组的arguments对象中。在函数内，你可以按如下方式找出传入的引数：
+
+arguments[i]
+
+```js
+function myConcat(separator) {
+   var result = "", // initialize list
+       i;
+   // iterate through arguments
+   for (i = 1; i < arguments.length; i++) {
+      result += arguments[i] + separator;
+   }
+   return result;
+}
+
+
+// returns "red, orange, blue, "
+myConcat(", ", "red", "orange", "blue");
+
+// returns "elephant; giraffe; lion; cheetah; "
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+
+// returns "sage. basil. oregano. pepper. parsley. "
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+```
+
+> 提示：arguments变量只是 ”类数组对象“，并不是一个数组。称其为类数组对象是说它有一个索引编号和length属性。尽管如此，它并不拥有全部的Array对象的操作方法。
+
+**箭头函数**
+
+箭头函数表达式（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 this。箭头函数总是匿名的。另见 hacks.mozilla.org 的博文：“深度了解ES6：箭头函数”。
+
+有两个因素会影响引入箭头函数：更简洁的函数和 this。
+
+（一）更简洁的函数
+   
+有一些函数模式，更简洁的函数很受欢迎。对比一下：
+
+```js
+var a = [
+  "Hydrogen",
+  "Helium",
+  "Lithium",
+  "Beryllium"
+];
+
+var a2 = a.map(function(s){ return s.length });
+
+console.log(a2); // logs [ 8, 6, 7, 9 ]
+
+var a3 = a.map( s => s.length );
+
+console.log(a3); // logs [ 8, 6, 7, 9 ]
+```
+
+(二)this 的词法
+   
+在箭头函数出现之前，每一个新函数都重新定义了自己的 this 值（在严格模式下，一个新的对象在构造函数里是未定义的，以“对象方法”的方式调用的函数是上下文对象等）。以面向对象的编程风格，这样着实有点恼人。
+
+```js
+function Person() {
+  // The Person() constructor defines `this` as itself.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // In nonstrict mode, the growUp() function defines `this` 
+    // as the global object, which is different from the `this`
+    // defined by the Person() constructor.
+    this.age++;//this是window
+  }, 1000);
+}
+
+var p = new Person();
+```
+
+在ECMAScript 3/5里，通过把this的值赋值给一个变量可以修复这个问题。
+
+```js
+function Person() {
+  var self = this; // Some choose `that` instead of `self`. 
+                   // Choose one and be consistent.
+  self.age = 0;
+
+  setInterval(function growUp() {
+    // The callback refers to the `self` variable of which
+    // the value is the expected object.
+    self.age++;//this是window，self指向上级函数中的this
+  }, 1000);
+}
+```
+
+另外，创建一个约束函数可以使得 this值被正确传递给 growUp() 函数。
+
+箭头功能捕捉闭包上下文的this值，所以下面的代码工作正常。
+
+```js
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| properly refers to the person object
+  }, 1000);
+}
+
+var p = new Person();
+```
+
