@@ -185,6 +185,13 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://www.runoob.com/js/js-conventions.html" target="_blank">编码规范</a></li>
 </ol>
 
+<h4 class="text-center">算法网站</h4>
+
+<ol class="rectangle-list">
+<li><a href="https://www.codewars.com/" target="_blank">Code Kata</a></li>
+</ol>
+
+
 <style>
 .post-header {
     display:none;
