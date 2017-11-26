@@ -402,6 +402,112 @@
 
 <p>命名冲突发生在return x上，inside的参数x和outside变量x发生了冲突。这里的作用链域是{inside, outside, 全局对象}。因此inside的x具有最高优先权，返回了20（inside的x）而不是10（outside的x）。</p>
 
+<p><strong>使用 arguments 对象</strong></p>
+
+<p>函数的实际参数会被保存在一个类似数组的arguments对象中。在函数内，你可以按如下方式找出传入的引数：</p>
+
+<p>arguments[i]</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myConcat</span><span class="p">(</span><span class="nx">separator</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="c1">// initialize list</span>
+       <span class="nx">i</span><span class="p">;</span>
+   <span class="c1">// iterate through arguments</span>
+   <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="kr">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">result</span> <span class="o">+=</span> <span class="kr">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">separator</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// returns "red, orange, blue, "</span>
+<span class="nx">myConcat</span><span class="p">(</span><span class="s2">", "</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">);</span>
+
+<span class="c1">// returns "elephant; giraffe; lion; cheetah; "</span>
+<span class="nx">myConcat</span><span class="p">(</span><span class="s2">"; "</span><span class="p">,</span> <span class="s2">"elephant"</span><span class="p">,</span> <span class="s2">"giraffe"</span><span class="p">,</span> <span class="s2">"lion"</span><span class="p">,</span> <span class="s2">"cheetah"</span><span class="p">);</span>
+
+<span class="c1">// returns "sage. basil. oregano. pepper. parsley. "</span>
+<span class="nx">myConcat</span><span class="p">(</span><span class="s2">". "</span><span class="p">,</span> <span class="s2">"sage"</span><span class="p">,</span> <span class="s2">"basil"</span><span class="p">,</span> <span class="s2">"oregano"</span><span class="p">,</span> <span class="s2">"pepper"</span><span class="p">,</span> <span class="s2">"parsley"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>提示：arguments变量只是 ”类数组对象“，并不是一个数组。称其为类数组对象是说它有一个索引编号和length属性。尽管如此，它并不拥有全部的Array对象的操作方法。</p>
+</blockquote>
+
+<p><strong>箭头函数</strong></p>
+
+<p>箭头函数表达式（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 this。箭头函数总是匿名的。另见 hacks.mozilla.org 的博文：“深度了解ES6：箭头函数”。</p>
+
+<p>有两个因素会影响引入箭头函数：更简洁的函数和 this。</p>
+
+<p>（一）更简洁的函数</p>
+
+<p>有一些函数模式，更简洁的函数很受欢迎。对比一下：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s2">"Hydrogen"</span><span class="p">,</span>
+  <span class="s2">"Helium"</span><span class="p">,</span>
+  <span class="s2">"Lithium"</span><span class="p">,</span>
+  <span class="s2">"Beryllium"</span>
+<span class="p">];</span>
+
+<span class="kd">var</span> <span class="nx">a2</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">){</span> <span class="k">return</span> <span class="nx">s</span><span class="p">.</span><span class="nx">length</span> <span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a2</span><span class="p">);</span> <span class="c1">// logs [ 8, 6, 7, 9 ]</span>
+
+<span class="kd">var</span> <span class="nx">a3</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="nx">s</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">length</span> <span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a3</span><span class="p">);</span> <span class="c1">// logs [ 8, 6, 7, 9 ]</span>
+</code></pre></div></div>
+
+<p>(二)this 的词法</p>
+
+<p>在箭头函数出现之前，每一个新函数都重新定义了自己的 this 值（在严格模式下，一个新的对象在构造函数里是未定义的，以“对象方法”的方式调用的函数是上下文对象等）。以面向对象的编程风格，这样着实有点恼人。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// The Person() constructor defines `this` as itself.</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="nx">growUp</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// In nonstrict mode, the growUp() function defines `this` </span>
+    <span class="c1">// as the global object, which is different from the `this`</span>
+    <span class="c1">// defined by the Person() constructor.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="o">++</span><span class="p">;</span><span class="c1">//this是window</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>在ECMAScript 3/5里，通过把this的值赋值给一个变量可以修复这个问题。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span> <span class="c1">// Some choose `that` instead of `self`. </span>
+                   <span class="c1">// Choose one and be consistent.</span>
+  <span class="nb">self</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="nx">growUp</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// The callback refers to the `self` variable of which</span>
+    <span class="c1">// the value is the expected object.</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nx">age</span><span class="o">++</span><span class="p">;</span><span class="c1">//this是window，self指向上级函数中的this</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>另外，创建一个约束函数可以使得 this值被正确传递给 growUp() 函数。</p>
+
+<p>箭头功能捕捉闭包上下文的this值，所以下面的代码工作正常。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(){</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="nx">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="o">++</span><span class="p">;</span> <span class="c1">// |this| properly refers to the person object</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+</code></pre></div></div>
+
 
             </article>
         </div>
