@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Map对象和set对象</title>
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2017/11/27/map-set/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<!--<meta name="keywords" content="Map对象和set对象, Helene's blog, 厚积薄发">-->
+	<!--<meta name="description" content="厚积薄发">-->
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          HELENE
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <!--<li>
+          <a href="/">首页</a>
+        </li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right"  style="margin-top: 1rem">
+        <li>
+          <a href="/greens/">life</a>
+        </li>
+        <li>
+          <a href="/rice">work</a>
+        </li>
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">References</a>
+        </li>
+        <!--<li>
+          <a href="/donate/">打赏我</a>
+        </li>-->
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header hidden" id="content">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container">
+  	
+      <h1 class="margin-top-45">Better me</h1>
+    
+  </div>
+    <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+        <source src="/styles/music/I-will-love-you.mp3">
+    </audio>
+    <div class="audio-img" id="radio">
+        <img  src="/styles/images/header/radio.png">
+        <!--<span style="color: beige" id="clickMe">Click!</span>-->
+    </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">Map对象和set对象</h1>
+                <span class="post-meta">Date：Nov 27, 2017</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <p>Map 对象保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。
+<!-- more --></p>
+
+<p><strong>语法</strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nb">Map</span><span class="p">([</span><span class="nx">iterable</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>参数
+
+iterable
+
+Iterable 可以是一个数组或者其他 iterable 对象，其元素或为键值对，或为两个元素的数组。 每个键值对都会添加到新的 Map。null 会被当做 undefined。
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>描述
+
+一个Map对象以插入顺序迭代其元素 — 一个  for...of 循环为每次迭代返回一个[key，value]数组。
+</code></pre></div></div>
+
+<p><strong>Objects 和 maps 的比较</strong></p>
+
+<p>Object 和 Map类似的一点是,它们都允许你按键存取一个值,都可以删除键,还可以检测一个键是否绑定了值.因此,一直以来,我们都把对象当成Map来使用,不过,现在有了Map,下面的区别解释了为什么使用Map更好点.</p>
+
+<p>(1)一个对象通常都有自己的原型,所以一个对象总有一个”prototype”键。不过，从 ES5 开始可以使用 map = Object.create(null)来创建一个没有原型的对象。</p>
+
+<p>(2)一个对象的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值。</p>
+
+<p>(3)你可以通过size属性很容易地得到一个Map的键值对个数，而对象的键值对个数只能手动确认。</p>
+
+<p>但是这并不意味着你可以随意使用 Map，对象仍旧是最常用的。Map 实例只适合用于集合(collections)，你应当考虑修改你原来的代码——先前使用对象来处理集合的地方。对象应该用其字段和方法来作为记录的。</p>
+
+<p>如果你不确定要使用哪个，请思考下面的问题：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在运行之前 key 是否是未知的，是否需要动态地查询 key 呢？
+
+是否所有的值都是统一类型，这些值可以互换么？
+
+是否需要不是字符串类型的 key ？
+
+键值对经常增加或者删除么？
+
+是否有任意个且非常容易改变的键值对?
+
+这个集合可以遍历么(Is the collection iterated)?
+</code></pre></div></div>
+
+<p>假如以上全是“是”的话，那么你需要用 Map 来保存这个集。 相反，你有固定数目的键值对，独立操作它们，区分它们的用法，那么你需要的是对象。</p>
+
+<p><strong>属性</strong></p>
+
+<p>Map.length  属性 length 的值为 0 。</p>
+
+<p>get Map[@@species]  本构造函数用于创建派生对象。</p>
+
+<p>Map.prototype  表示 Map 构造器的原型。 允许添加属性从而应用于所有的 Map 对象。</p>
+
+<p><strong>Map 实例</strong></p>
+
+<p>所有的 Map 对象实例都会继承 Map.prototype。</p>
+
+<p>示例</p>
+
+<p>使用映射对象</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+ 
+<span class="kd">var</span> <span class="nx">keyObj</span> <span class="o">=</span> <span class="p">{},</span>
+    <span class="nx">keyFunc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">keyString</span> <span class="o">=</span> <span class="s2">"a string"</span><span class="p">;</span>
+ 
+<span class="c1">// 添加键</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">keyString</span><span class="p">,</span> <span class="s2">"和键'a string'关联的值"</span><span class="p">);</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">keyObj</span><span class="p">,</span> <span class="s2">"和键keyObj关联的值"</span><span class="p">);</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">keyFunc</span><span class="p">,</span> <span class="s2">"和键keyFunc关联的值"</span><span class="p">);</span>
+ 
+<span class="nx">myMap</span><span class="p">.</span><span class="nx">size</span><span class="p">;</span> <span class="c1">// 3</span>
+ 
+<span class="c1">// 读取值</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">keyString</span><span class="p">);</span>    <span class="c1">// "和键'a string'关联的值"</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">keyObj</span><span class="p">);</span>       <span class="c1">// "和键keyObj关联的值"</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">keyFunc</span><span class="p">);</span>      <span class="c1">// "和键keyFunc关联的值"</span>
+ 
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">);</span>   <span class="c1">// "和键'a string'关联的值"</span>
+                         <span class="c1">// 因为keyString === 'a string'</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">({});</span>           <span class="c1">// undefined, 因为keyObj !== {}</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{})</span> <span class="c1">// undefined, 因为keyFunc !== function () {}</span>
+</code></pre></div></div>
+
+<p>将NaN作为映射的键</p>
+
+<p>NaN 也可以作为Map对象的键. 虽然 NaN 和任何值甚至和自己都不相等(NaN !== NaN 返回true), 但下面的例子表明, 两个NaN作为Map的键来说是没有区别的:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="kc">NaN</span><span class="p">,</span> <span class="s2">"not a number"</span><span class="p">);</span>
+
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="kc">NaN</span><span class="p">);</span> <span class="c1">// "not a number"</span>
+
+<span class="kd">var</span> <span class="nx">otherNaN</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="s2">"foo"</span><span class="p">);</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">otherNaN</span><span class="p">);</span> <span class="c1">// "not a number"</span>
+</code></pre></div></div>
+
+<p>使用for..of方法迭代映射</p>
+
+<p>映射也可以使用for..of循环来实现迭代：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"zero"</span><span class="p">);</span>
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"one"</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">]</span> <span class="k">of</span> <span class="nx">myMap</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span> <span class="o">+</span> <span class="s2">" = "</span> <span class="o">+</span> <span class="nx">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 将会显示两个log。一个是"0 = zero"另一个是"1 = one"</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">of</span> <span class="nx">myMap</span><span class="p">.</span><span class="nx">keys</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 将会显示两个log。 一个是 "0" 另一个是 "1"</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">value</span> <span class="k">of</span> <span class="nx">myMap</span><span class="p">.</span><span class="nx">values</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 将会显示两个log。 一个是 "zero" 另一个是 "one"</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">]</span> <span class="k">of</span> <span class="nx">myMap</span><span class="p">.</span><span class="nx">entries</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span> <span class="o">+</span> <span class="s2">" = "</span> <span class="o">+</span> <span class="nx">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 将会显示两个log。 一个是 "0 = zero" 另一个是 "1 = one"</span>
+</code></pre></div></div>
+
+<p>使用forEach()方法迭代映射</p>
+
+<p>映射也可以通过forEach()方法迭代：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myMap</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span> <span class="o">+</span> <span class="s2">" = "</span> <span class="o">+</span> <span class="nx">value</span><span class="p">);</span>
+<span class="p">},</span> <span class="nx">myMap</span><span class="p">)</span>
+<span class="c1">// 将会显示两个logs。 一个是 "0 = zero" 另一个是 "1 = one"</span>
+</code></pre></div></div>
+
+<p>映射与数组对象的关系</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">kvArray</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">"key1"</span><span class="p">,</span> <span class="s2">"value1"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"key2"</span><span class="p">,</span> <span class="s2">"value2"</span><span class="p">]];</span>
+
+<span class="c1">// 使用映射对象常规的构造函数将一个二维键值对数组对象转换成一个映射关系</span>
+<span class="kd">var</span> <span class="nx">myMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">(</span><span class="nx">kvArray</span><span class="p">);</span>
+
+<span class="nx">myMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"key1"</span><span class="p">);</span> <span class="c1">// 返回值为 "value1"</span>
+
+<span class="c1">// 使用展开运算符将一个映射关系转换成一个二维键值对数组对象</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">uneval</span><span class="p">([...</span><span class="nx">myMap</span><span class="p">]));</span> <span class="c1">// 将会向您显示和kvArray相同的数组</span>
+
+<span class="c1">// 或者使用展开运算符作用在键或者值的迭代器上，进而得到只含有键或者值得数组</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">uneval</span><span class="p">([...</span><span class="nx">myMap</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]));</span> <span class="c1">// 输出 ["key1", "key2"]</span>
+</code></pre></div></div>
+
+<p><em><strong>set对象</strong></em></p>
+
+<p>Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用，set对象是集的集合，其实和map差不多。详情查<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set">API文档</a></p>
+
+<p><strong>Array和Set的对比</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>一般情况下，在JavaScript中使用数组来存储一组元素，而新的集合对象有这些优势：
+
+数组中用于判断元素是否存在的indexOf 函数效率低下。
+
+Set对象允许根据值删除元素，而数组中必须使用基于下标的 splice 方法。
+
+数组的indexOf方法无法找到NaN值。
+
+Set对象存储不重复的值，所以不需要手动处理包含重复值的情况。
+</code></pre></div></div>
+
+            </article>
+        </div>
+        <!--<hr/>-->
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <!--<div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span class="copyright">
+				My Site:
+			</span>
+			<span>
+				<a  href="http://www.thisisme1228.com/" class="font-color-sienna">百家书(请在电脑上浏览)</a>
+			</span>
+			<span>&nbsp;&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend" class="font-color-sienna">音乐网(请在手机上浏览)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="http://life.thisisme1228.com" class="">Helene</a> . All rights reserved.</div>
+		<p class="copyright">辽ICP备17012545号-1</p>
+	</div>
+</footer>
+<ul id="backToTop" class="back-to-top">
+	<li>
+		<span>TOP</span>
+	</li>
+</ul>
+<!--<ul id="lastPage" class="last-page">
+	<li onClick="javascript :history.back(-1);"">
+		<span>BACK</span>
+	</li>
+</ul>-->
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/function.min.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>
