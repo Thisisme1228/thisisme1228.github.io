@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "好的JavaScript",
+"category" : "",
+"tags"     : "JavaScript",
+"url"      : "/2017/11/28/better-js/",
+"date"     : "2017-11-28 00:00:00 +0800"
+} ,
+
+{
 "title"    : "Map对象和set对象",
 "category" : "",
 "tags"     : "JavaScript",
@@ -222,14 +230,6 @@
 "tags"     : "前端维护",
 "url"      : "/2017/01/15/code-standards/",
 "date"     : "2017-01-15 00:00:00 +0800"
-} ,
-
-{
-"title"    : "Web 技术文档 JavaScript",
-"category" : "",
-"tags"     : "JavaScript",
-"url"      : "/2017/01/02/mdn-javascript/",
-"date"     : "2017-01-02 00:00:00 +0800"
 } ,
 
 {
