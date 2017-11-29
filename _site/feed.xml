@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Nov 2017 15:14:41 +0800</pubDate>
-    <lastBuildDate>Wed, 29 Nov 2017 15:14:41 +0800</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2017 15:23:27 +0800</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 15:23:27 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -79,8 +79,8 @@ h3 + p&gt;a {
 
 </description>
         <pubDate>Tue, 28 Nov 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/11/28/better-javascript/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/11/28/better-javascript/</guid>
+        <link>http://localhost:4000/2017/11/28/better-js/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/28/better-js/</guid>
         
         <category>JavaScript</category>
         
