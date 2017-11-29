@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>对象实例----字符串连接</title>
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2017/11/21/StringBuffer/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<!--<meta name="keywords" content="对象实例----字符串连接, Helene's blog, 厚积薄发">-->
+	<!--<meta name="description" content="厚积薄发">-->
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          HELENE
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <!--<li>
+          <a href="/">首页</a>
+        </li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right"  style="margin-top: 1rem">
+        <li>
+          <a href="/greens/">life</a>
+        </li>
+        <li>
+          <a href="/rice">work</a>
+        </li>
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">References</a>
+        </li>
+        <!--<li>
+          <a href="/donate/">打赏我</a>
+        </li>-->
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header hidden" id="content">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container">
+  	
+      <h1 class="margin-top-45">Better me</h1>
+    
+  </div>
+    <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+        <source src="/styles/music/I-will-love-you.mp3">
+    </audio>
+    <div class="audio-img" id="radio">
+        <img  src="/styles/images/header/radio.png">
+        <!--<span style="color: beige" id="clickMe">Click!</span>-->
+    </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">对象实例----字符串连接</h1>
+                <span class="post-meta">Date：Nov 21, 2017</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <p>对象令人感兴趣的一点是用它们解决问题的方式。ECMAScript 中最常见的一个问题是字符串连接的性能。与其他语言类似，ECMAScript 的字符串是不可变的，即它们的值不能改变。
+<!-- more --></p>
+
+<p><code class="highlighter-rouge">请考虑下面的代码：</code></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">"hello "</span><span class="p">;</span>
+<span class="nx">str</span> <span class="o">+=</span> <span class="s2">"world"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>实际上，这段代码在幕后执行的步骤如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>创建存储 "hello " 的字符串。
+创建存储 "world" 的字符串。
+创建存储连接结果的字符串。
+把 str 的当前内容复制到结果中。
+把 "world" 复制到结果中。
+更新 str，使它指向结果。
+</code></pre></div></div>
+
+<p>每次完成字符串连接都会执行步骤 2 到 6，使得这种操作非常消耗资源。如果重复这一过程几百次，甚至几千次，就会造成性能问题。解决方法是用 Array 对象存储字符串，然后用 join() 方法（参数是空字符串）创建最后的字符串。想象用下面的代码代替前面的代码：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"hello "</span><span class="p">;</span>
+<span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"world"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>这样，无论数组中引入多少字符串都不成问题，因为只在调用 join() 方法时才会发生连接操作。此时，执行的步骤如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>创建存储结果的字符串
+把每个字符串复制到结果中的合适位置
+</code></pre></div></div>
+
+<p>然这种解决方案很好，但还有更好的方法。问题是，这段代码不能确切反映出它的意图。要使它更容易理解，可以用 StringBuffer 类打包该功能：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">StringBuffer</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">_strings_</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">StringBuffer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">append</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">_strings_</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">StringBuffer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_strings_</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>这段代码首先要注意的是 strings 属性，本意是私有属性。它只有两个方法，即 append() 和 toString() 方法。append() 方法有一个参数，它把该参数附加到字符串数组中，toString() 方法调用数组的 join 方法，返回真正连接成的字符串。要用 StringBuffer 对象连接一组字符串，可以用下面的代码：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StringBuffer</span> <span class="p">();</span>
+<span class="nx">buffer</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"hello "</span><span class="p">);</span>
+<span class="nx">buffer</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"world"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>可用下面的代码测试 StringBuffer 对象和传统的字符串连接方法的性能：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">d1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">str</span> <span class="o">+=</span> <span class="s2">"text"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Concatenation with plus: "</span>
+ <span class="o">+</span> <span class="p">(</span><span class="nx">d2</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">d1</span><span class="p">.</span><span class="nx">getTime</span><span class="p">())</span> <span class="o">+</span> <span class="s2">" milliseconds"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StringBuffer</span><span class="p">();</span>
+<span class="nx">d1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">buffer</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"text"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"&lt;br /&gt;Concatenation with StringBuffer: "</span>
+ <span class="o">+</span> <span class="p">(</span><span class="nx">d2</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">d1</span><span class="p">.</span><span class="nx">getTime</span><span class="p">())</span> <span class="o">+</span> <span class="s2">" milliseconds"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这段代码对字符串连接进行两个测试，第一个使用加号，第二个使用 StringBuffer 类。每个操作都连接 10000 个字符串。日期值 d1 和 d2 用于判断完成操作需要的时间。请注意，创建 Date 对象时，如果没有参数，赋予对象的是当前的日期和时间。要计算连接操作历经多少时间，把日期的毫秒表示（用 getTime() 方法的返回值）相减即可。这是衡量 JavaScript 性能的常见方法。该测试的结果可以帮助您比较使用 StringBuffer 类与使用加号的效率差异。
+</code></pre></div></div>
+
+<blockquote>
+  <p>结果显示使用加好运算符运行时间更短 O:)</p>
+</blockquote>
+
+
+            </article>
+        </div>
+        <!--<hr/>-->
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <!--<div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span class="copyright">
+				My Site:
+			</span>
+			<span>
+				<a  href="http://www.thisisme1228.com/" class="font-color-sienna">百家书(请在电脑上浏览)</a>
+			</span>
+			<span>&nbsp;&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend" class="font-color-sienna">音乐网(请在手机上浏览)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="http://life.thisisme1228.com" class="">Helene</a> . All rights reserved.</div>
+		<p class="copyright">辽ICP备17012545号-1</p>
+	</div>
+</footer>
+<ul id="backToTop" class="back-to-top">
+	<li>
+		<span>TOP</span>
+	</li>
+</ul>
+<!--<ul id="lastPage" class="last-page">
+	<li onClick="javascript :history.back(-1);"">
+		<span>BACK</span>
+	</li>
+</ul>-->
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/function.min.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>

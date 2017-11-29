@@ -1,0 +1,20 @@
+<div class="docs-header hidden" id="content">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container">
+  	{% if page.title == "Helene's Blog" %}
+		    <!--<h1>{{ page.title }}</h1>-->
+		    <!--<p>Post on {{ page.date | date: "%b %d, %Y" }} by <a href="/about">{{ site.author }}</a></p>-->
+      <h1 class="h1-35">{{ site.better_me }}</h1>
+      <p>{{ site.description }}</p>
+    {% else %}
+      <h1 class="margin-top-45">{{ site.motto }}</h1>
+    {% endif %}
+  </div>
+    <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+        <source src="/styles/music/I-will-love-you.mp3">
+    </audio>
+    <div class="audio-img" id="radio">
+        <img  src="/styles/images/header/radio.png">
+        <!--<span style="color: beige" id="clickMe">Click!</span>-->
+    </div>
+</div>

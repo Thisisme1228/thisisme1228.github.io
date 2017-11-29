@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>纵然疾风起，人生不言弃</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 29 Nov 2017 22:11:23 +0800</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 22:11:23 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>被偷走的那五年</title>
+        <description>&lt;!-- more --&gt;
+
+&lt;p&gt;不知道从何说起，昨天你女朋友加我微信，说有些话要和我说，我加她了，我知道她既然加我肯定我有什么事情威胁到她了，是啊，上周我给李嘉伟发了条短信，说把我的好朋友都从他的微信里面删了吧，短信应该忘记删了，让他女朋友看到了。&lt;/p&gt;
+
+&lt;p&gt;她说有话要和我说，她说你知道那种看前女友很不舒服的感觉吧，我说知道啊，我让她自信些，多爱自己一些，对他好一些，他有什么都不说但是对他的好都记得呢，别小家子气，可以撒娇，因为李嘉伟就是吃软不吃硬的那种，最怕的就是两个人都硬碰硬了，她说他们实习，李嘉伟还要像以前一样玩游戏赚钱，要不她的钱不够花，说李嘉伟的腰也老疼，其实我想告诉她他要本来腰就不好，他爸就有腰脱，他和我说过腰脱可能会遗传，我也不知道这逻辑对不对，当然这些我都没说，我只说你给他买个靠垫吧，或者别让他一直玩游戏，拽着他出去玩，不行就撒娇，我让她对他好些。
+其实这近一年的时候我就不止一次想如果我会和他女朋友说话我一定会告诉她他很好，让她好好珍惜，对他好些。她说上沈阳要找我玩，说微信可以不删吗，我当然不会，说这些话也已经让我花了很多勇气，打过草稿的话，昨天终于说了出来，删掉微信之后，写了很久的字心情都还不能平静，之前心情不好练字之后心情都会变得很平静了，或许有些事情即使忘了，再以另一种方式打开还是会久久不能忘怀吧&lt;/p&gt;
+
+&lt;p&gt;五年的时间说多不多，但好像也不能说少，毕竟那也是我人生最年轻最漂亮最快乐的时候了，昨天之前我正在为工作的事情烦恼，现在只是新的烦恼叠加到了旧的烦恼之上，又或许是我只是要大姨妈情绪起伏不太稳定，可能明天就好了，不过时间过得好快啊，分开的时间半年多了，现在我只是以工作为重，也还没赚多少钱，我只能乐观一点的想，因为本命年比较倒霉，来年就好了吧。&lt;/p&gt;
+
+&lt;p&gt;《写这个再配上刘若英的我们没有在一起，我在单位，其实我心情还是不能平静，就是很不爽。算了，这种儿女情长的事情还是不去想了，好麻烦，也没有意义，还是努力工作吧，好好工作多赚钱，赚钱买房子》&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/29/kong/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/29/kong/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>好的JavaScript</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#一apply&quot; id=&quot;markdown-toc-一apply&quot;&gt;一、apply()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#二call&quot; id=&quot;markdown-toc-二call&quot;&gt;二、call()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#三objectcreate&quot; id=&quot;markdown-toc-三objectcreate&quot;&gt;三、Object.create()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#四对象模型的细节&quot; id=&quot;markdown-toc-四对象模型的细节&quot;&gt;四、对象模型的细节&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#五闭包&quot; id=&quot;markdown-toc-五闭包&quot;&gt;五、闭包&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#六继承与原型链&quot; id=&quot;markdown-toc-六继承与原型链&quot;&gt;六、继承与原型链&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JavaScript有很多知识经常见到但是不是很深入了解，有的也是看过一两次但没什么实际经验也就忘了，作为个人用途，将会整理一些好用的JavaScript知识。
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;一apply&quot;&gt;一、apply()&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply&quot;&gt;Function.prototype.apply()&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二call&quot;&gt;二、call()&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call&quot;&gt;Function.prototype.call()&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;三objectcreate&quot;&gt;三、Object.create()&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create&quot;&gt;Object.create()&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;四对象模型的细节&quot;&gt;四、对象模型的细节&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model&quot;&gt;对象模型的细节&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;五闭包&quot;&gt;五、闭包&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures&quot;&gt;闭包&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;六继承与原型链&quot;&gt;六、继承与原型链&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain&quot;&gt;继承与原型链&lt;/a&gt;&lt;/p&gt;
+
+&lt;style&gt;
+h3 + p {
+    padding: 2rem 1rem;
+    border-radius: 5px;
+}
+
+h3 + p&gt;a {
+    text-decoration: underline;
+}
+&lt;/style&gt;
+
+</description>
+        <pubDate>Tue, 28 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/28/better-js/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/28/better-js/</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Map对象和set对象</title>
+        <description>&lt;p&gt;Map 对象保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iterable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;参数
+
+iterable
+
+Iterable 可以是一个数组或者其他 iterable 对象，其元素或为键值对，或为两个元素的数组。 每个键值对都会添加到新的 Map。null 会被当做 undefined。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;描述
+
+一个Map对象以插入顺序迭代其元素 — 一个  for...of 循环为每次迭代返回一个[key，value]数组。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Objects 和 maps 的比较&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Object 和 Map类似的一点是,它们都允许你按键存取一个值,都可以删除键,还可以检测一个键是否绑定了值.因此,一直以来,我们都把对象当成Map来使用,不过,现在有了Map,下面的区别解释了为什么使用Map更好点.&lt;/p&gt;
+
+&lt;p&gt;(1)一个对象通常都有自己的原型,所以一个对象总有一个”prototype”键。不过，从 ES5 开始可以使用 map = Object.create(null)来创建一个没有原型的对象。&lt;/p&gt;
+
+&lt;p&gt;(2)一个对象的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值。&lt;/p&gt;
+
+&lt;p&gt;(3)你可以通过size属性很容易地得到一个Map的键值对个数，而对象的键值对个数只能手动确认。&lt;/p&gt;
+
+&lt;p&gt;但是这并不意味着你可以随意使用 Map，对象仍旧是最常用的。Map 实例只适合用于集合(collections)，你应当考虑修改你原来的代码——先前使用对象来处理集合的地方。对象应该用其字段和方法来作为记录的。&lt;/p&gt;
+
+&lt;p&gt;如果你不确定要使用哪个，请思考下面的问题：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;在运行之前 key 是否是未知的，是否需要动态地查询 key 呢？
+
+是否所有的值都是统一类型，这些值可以互换么？
+
+是否需要不是字符串类型的 key ？
+
+键值对经常增加或者删除么？
+
+是否有任意个且非常容易改变的键值对?
+
+这个集合可以遍历么(Is the collection iterated)?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;假如以上全是“是”的话，那么你需要用 Map 来保存这个集。 相反，你有固定数目的键值对，独立操作它们，区分它们的用法，那么你需要的是对象。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Map.length  属性 length 的值为 0 。&lt;/p&gt;
+
+&lt;p&gt;get Map[@@species]  本构造函数用于创建派生对象。&lt;/p&gt;
+
+&lt;p&gt;Map.prototype  表示 Map 构造器的原型。 允许添加属性从而应用于所有的 Map 对象。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Map 实例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;所有的 Map 对象实例都会继承 Map.prototype。&lt;/p&gt;
+
+&lt;p&gt;示例&lt;/p&gt;
+
+&lt;p&gt;使用映射对象&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+ 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keyObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;keyFunc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;keyString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;// 添加键&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;和键'a string'关联的值&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;和键keyObj关联的值&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;和键keyFunc关联的值&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ 
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;// 读取值&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// &quot;和键'a string'关联的值&quot;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// &quot;和键keyObj关联的值&quot;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// &quot;和键keyFunc关联的值&quot;&lt;/span&gt;
+ 
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// &quot;和键'a string'关联的值&quot;&lt;/span&gt;
+                         &lt;span class=&quot;c1&quot;&gt;// 因为keyString === 'a string'&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({});&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;// undefined, 因为keyObj !== {}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// undefined, 因为keyFunc !== function () {}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;将NaN作为映射的键&lt;/p&gt;
+
+&lt;p&gt;NaN 也可以作为Map对象的键. 虽然 NaN 和任何值甚至和自己都不相等(NaN !== NaN 返回true), 但下面的例子表明, 两个NaN作为Map的键来说是没有区别的:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NaN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;not a number&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NaN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &quot;not a number&quot;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;otherNaN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;otherNaN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &quot;not a number&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用for..of方法迭代映射&lt;/p&gt;
+
+&lt;p&gt;映射也可以使用for..of循环来实现迭代：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;zero&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 将会显示两个log。一个是&quot;0 = zero&quot;另一个是&quot;1 = one&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 将会显示两个log。 一个是 &quot;0&quot; 另一个是 &quot;1&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 将会显示两个log。 一个是 &quot;zero&quot; 另一个是 &quot;one&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;entries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 将会显示两个log。 一个是 &quot;0 = zero&quot; 另一个是 &quot;1 = one&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用forEach()方法迭代映射&lt;/p&gt;
+
+&lt;p&gt;映射也可以通过forEach()方法迭代：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 将会显示两个logs。 一个是 &quot;0 = zero&quot; 另一个是 &quot;1 = one&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;映射与数组对象的关系&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;kvArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;key1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;value1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;key2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;value2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 使用映射对象常规的构造函数将一个二维键值对数组对象转换成一个映射关系&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;kvArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;key1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 返回值为 &quot;value1&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 使用展开运算符将一个映射关系转换成一个二维键值对数组对象&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uneval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 将会向您显示和kvArray相同的数组&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 或者使用展开运算符作用在键或者值的迭代器上，进而得到只含有键或者值得数组&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uneval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 输出 [&quot;key1&quot;, &quot;key2&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;set对象&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用，set对象是集的集合，其实和map差不多。详情查&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set&quot;&gt;API文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Array和Set的对比&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;一般情况下，在JavaScript中使用数组来存储一组元素，而新的集合对象有这些优势：
+
+数组中用于判断元素是否存在的indexOf 函数效率低下。
+
+Set对象允许根据值删除元素，而数组中必须使用基于下标的 splice 方法。
+
+数组的indexOf方法无法找到NaN值。
+
+Set对象存储不重复的值，所以不需要手动处理包含重复值的情况。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 27 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/27/map-set/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/27/map-set/</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>标签语句</title>
+        <description>&lt;p&gt;标签语句提供一种使你同一程序的在另一处找到它的标识。例如，你可以用一个标签来识别一个循环，并用break或continue语句来说明一个程序是否要中断这个循环或是继续执行。
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;label 语句的语法看起来像这样：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;statement&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;label 的值可以是任何的非保留字的 JavaScript 标识符， statement 可以是任意你想要标识的语句（块）。&lt;/p&gt;
+
+&lt;p&gt;例如&lt;/p&gt;
+
+&lt;p&gt;在这个示例中，markLoop这个标签定义了一个while循环。&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;markLoop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theMark&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;标签语句使用场景：给一个语句加标签，这样在程序的任何地方都可以使用这个名字来引用它，可以标记任何语句，但是被标记的语句通常是那些循环语句，即while、do/while、for和for/in语句，通常给循环命名，就可以使用break语句和continue语句来退出循环或者循环的某一次迭代。&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;outerloop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+      &lt;span class=&quot;nl&quot;&gt;innerloop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;   
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;innerloop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;outerloop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+            &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;i=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; j=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;值为：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;break; 语法形式用于终止在循环体或者switch的封闭内部；&lt;/p&gt;
+
+&lt;p&gt;break label;语法形式用于在特定的封闭标签语句。&lt;/p&gt;
+
+&lt;p&gt;continue 语句&lt;/p&gt;
+
+&lt;p&gt;这个 continue 语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 while， do-while， for， 或者 label 语句。&lt;/p&gt;
+
+&lt;p&gt;当你使用不带 label 的 continue 时， 它终止当前 while，do-while，或者 for 语句到结尾的这次的循环并且继续执行下一次循环。&lt;/p&gt;
+
+&lt;p&gt;当你使用带 label 的 continue 时， 它会应用被 label 标识的循环语句。&lt;/p&gt;
+
+&lt;p&gt;连续语句的语法如下：&lt;/p&gt;
+
+&lt;p&gt;continue&lt;/p&gt;
+
+&lt;p&gt;continue label&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 24 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/24/label-statement/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/24/label-statement/</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>论语</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#绪论&quot; id=&quot;markdown-toc-绪论&quot;&gt;绪论&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#为师之道---有教无类&quot; id=&quot;markdown-toc-为师之道---有教无类&quot;&gt;为师之道 - 有教无类&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#为师之道---学而不厌&quot; id=&quot;markdown-toc-为师之道---学而不厌&quot;&gt;为师之道 - 学而不厌&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#为师之道-诲人不倦&quot; id=&quot;markdown-toc-为师之道-诲人不倦&quot;&gt;为师之道-诲人不倦&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#为师之道-一视同仁&quot; id=&quot;markdown-toc-为师之道-一视同仁&quot;&gt;为师之道-一视同仁&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;绪论&quot;&gt;绪论&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》中的“论”的声调应该读阳平，是编纂的意思。其中的“语”是“言语”的意思，偏重于回答别人的问话，或是与人谈论一件事情
+
+从训古学角度来讲，“论语”两字合在一起，书名的含义就是把这些言语编纂成册的意思
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》的“论”为什么要读阳平lun(二声)？
+
+北宋学者徐铉等人的音读，即“论，卢坤初”（见《说文解字》）
+
+“论”字可以用“卢坤初”来注音，因为“卢”的声母是“L”，“昆”的韵母是un，把L和un拼读出来，就是“论”的读音是L+un=lun（二声）
+
+“论”之所以读阳平声调，是因为“卢”的声调是阳平
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》全书120篇，每篇由若干章组成。每篇取第一章开头一句话里的某两个字作为篇名，如第一篇开头的话是：“子曰：学而时习之，不亦说乎？”，于是取“学而时习之”中的“学而”两字为篇名。
+
+篇是由若干章来组成的。章是依据文章内容所划分的自成起讫的段落。
+
+现今通行的《论语》20篇，包括标点符号共有21113字，不含标点符号仅有15837字。
+
+不同的《论语》版本分章不尽相同。每章的字数也不等。有的只有一句话，仅6个字，如：“子曰：‘有教无类。’“章。篇幅最长的是”子路、曾皙、冉有、公西华侍坐“章，字数也只有315个。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;从《论语》内部的语境现象可以推定：对孔子的言论，的确为“当时弟子各有所记”，不可能由某一个人来编纂而成。因此，多数学者主张《论语》是在孔子去世后，有孔子弟子及其再传门人在不同时期编纂而成的。
+
+在《论语》的首篇《学而》出现3次对有若称“有子”却不成字，对曾参也有2次称“曾子”而不称字。
+
+所以，程颐推论《论语》是有若和曾参的门人所记的。这的确有一定道理。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;如何品绎《论语》的教育智慧？
+
+所谓智慧，是涉及感知、记忆、理解、联想、分析、判断、综合诸多层面的一种综合思维和实践能力。它包括情感与理解、道德与美感、智力与非智力等众多因素。
+
+教育的真谛在于启迪智慧。教育在实践过程中生成圆融的智慧品行，只有智慧的教育才能塑造智慧的人。
+
+《论语》蕴藏取之不尽、用之不竭的教育智慧
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;为师之道---有教无类&quot;&gt;为师之道 - 有教无类&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;孔子简介
+
+孔子（公元前551-前479年），名丘，字仲尼，春秋时期鲁国陬邑人。
+
+-----------------------------------------------------------------
+
+1、《史记.孔子世家》记载：“孔子为儿嘻戏，常陈俎豆，设礼容。“
+
+2、自称“吾十有五而志于学”。及长，出仕“委吏”（管理仓库料量升斗）、“乘田”（管理牛羊放牧蓄息）一类的小官。
+
+3、三十岁左右开创私学化的平民教育，授徒设教
+
+4、三十五岁时因鲁国内乱，孔子至齐求仕，但不为景公所用。随后返鲁，退而修诗、书、礼、乐，历时十五年，期间学问益进，弟子滋众。
+
+5、五十五岁开始周游列国，凡十四年。
+
+6、六十八岁回到鲁国，开始晚年时期的教育生活和古典文化的整理研究工作。
+
+7、孔子坚守理想，不知老之将近，享年七十有三。
+
+-----------------------------------------------------------------
+
+孔子是儒家学派的创始人。后人尊之为“至圣先师”。
+
+“至圣”意指孔子是儒家理想人生的最高标准，“先师”意指孔子是中国历史上君子之学的最先倡导者和实践者。
+
+汉武帝采用“独尊儒术，罢黜百家”的文教政策，为后世确立孔子至圣先师的地位奠定了基调。
+
+
+唐太宗贞观二年（628年），下诏以孔子为先圣，把孔子的塑像供奉在国学。贞观四年（630年），又诏令各州县学建立孔子庙。
+
+明嘉靖九年（1530年），诏令称孔子为“至圣先师”。
+
+清顺治年初，定称孔子为“大成至圣文宜先师孔子”。顺治十四年，改成“至圣先师”。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;有教无类：
+
+出处：“有教无类”见于《论语·卫灵公》
+
+基本含义：人人都可以接受教育，不分贫富、不分贵贱等方面的类别。
+
+“有教无类”中的“有”作为名词词头。没有实在意义，仅有音节的衬字作用。
+
+东汉马融说：“言人所在见教，无有种类。”
+
+------------{马融的理解要意：不论哪一类人，都可以给他以教育}
+
+宋代朱熹说：“人性皆善，而其类有善恶之殊者，气习之染也。故君子有教，则人皆可以复于善，而不当复论其类之恶矣。”
+
+------------{马融的理解要意：人都可以接受教育而从善去恶}
+
+马融和朱熹对“有教无类”所给出各自的解释均有一定的道理。
+
+因为他们二人的解释符合教育的历史发展，也符合孔子授徒教学的实际状况。
+
+-----------------------------------------------------------------
+
+时代背景
+
+学术文化完全被官府所垄断，能够受教育的都是王公贵族弟子，平民与王官之学毫无关联。这就是私人不议礼，民间不兴学的文化教育制度，即“学在官府”。
+
+-----------------------------------------------------------------
+
+南郭惠子曾问子贡：“夫子之门，何其杂也？”
+
+子贡曰：“欲来者不拒，欲去者不止。且夫良医之门多病人，隐括之侧多枉木，是以杂也。”（《荀子·法行》）
+
+子曰：“自行束修以上，吾未尝无悔言。”（《论语·述而》）---------孔子说：“只要是主动地给我一点拜师薄礼，我从来没有不教诲的。”
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;为师之道---学而不厌&quot;&gt;为师之道 - 学而不厌&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“学而不厌”中的“而”不能读“er(三声)”；“不”不能读作“bu(三声)”或者“bu(四声)”。
+
+其正确读音是“xue er bu yan(二声 二声 二声 四声)”
+
+具体地说，“学而不厌”涉及以学为乐，不耻下问，学无常师，学师贯通四个方面的教育意蕴。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;学而不厌出处？
+
+&quot;默而识知，学而不厌，诲人不倦。何有于我哉&quot; ------ （《论语·述而》7.2）
+
+-----------------------------------------------------------------
+
+子曰：”学如不及，犹恐失之。“------（《论语·泰伯》8.17）
+
+先秦儒家集大成者荀子在《荀子》一书的《大略篇》描写了孔子和子贡师生俩关于“学而不厌”话题的对话。
+
+-----------------------------------------------------------------
+
+“默而识知”、“学而不倦”、“诲人不倦”三者相辅相成，缺一不可，是孔子之所以良师的核心品质所在。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;以学为乐&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;基本含义：乐于学习，视学习为快乐。在快乐中学习，在学习中快乐。
+
+“十室之邑，必有忠信如丘岩，不如丘之好学者。”----（《论语·公冶长》5.28）
+
+“学”彰显人的主体性，“习”立足人的实践性。“学”和“习”两者通过“时”的联合，在适当的时机将所“学”的种种知识和人生哲理恰如其分地致用于所“习”的社会现实。
+
+为己之学与经世之学有机融合可进入自由之境，好比鸟之自由翱翔，鱼之自在游弋，快乐其中。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;不耻下问&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“不耻下问”的含义，即善于向学问或地位比自己低的人学习，向年龄比自己小的人请教而不觉得不好意思。
+
+“不耻下问”一词源于（《论语·公冶长》5.15）
+
+子贡问曰：“孔文子何以谓之‘文’也？“子曰：”敏而好学，不耻下问，是以谓之‘文’也。“--------（《论语·公冶长》5.15）
+
+“谥号”是帝王、诸侯、文臣武将死后，朝廷根据其生前事迹给予评价和定论的称号。
+
+“子入太庙，每事问。或曰：’孰谓鄹人之子知礼乎？入太庙，每事问。‘子闻之，曰：‘是礼也。’”------（《论语·八佾》3.15）
+
+在《论语》中“礼”字出现的频率高达75次，仅仅次于“仁”字的频率。
+
+孔子不论在何时、何地、何人，都强调养成一种“每事问”的学习态度。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;学无常师&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“学无常师”的基本含义是求学没有固定的老师。
+
+“学无常师”源自于（《论语-子张》19.22）
+
+卫公孙朝问于子贡曰：“仲尼焉学？”子贡曰：“文武之道，未坠于地，在人。贤者识其大者，不闲者识其笑小者。莫不有文武之道焉。夫子焉不学？而亦何常师之有？”（《论语·子张》19-22）
+
+孔子“学无常师”的智慧行为，是他与本人首倡的“三人行，必有我师”的学习作风密不可分的。
+
+子曰：“三人行，必有我师焉，择其善者而从之，其不善者而改之。”-------《论语·述而》（7.22）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;学思贯通&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;关于学思贯通的教育智慧孔子有句名言：“学而不思则罔，思而不学则殆。”------《论语，为政》（2.15）
+
+子曰：“吾尝终日不食，终日不寝，以死，无益，不如学也。”-----《论语·卫灵公》（15.31）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;为师之道-诲人不倦&quot;&gt;为师之道-诲人不倦&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“诲人不倦”首见于《论语·述而》（7.2）
+
+子曰：“若圣与仁，则吾岂敢！抑为之不厌，诲人不倦，则可谓云尔已矣!”《论语·述而》（7.34）
+
+（一）“诲人不倦”的教育对象：“人”
+
+（二）“诲人不倦”的教学要义：“有言之教”与“无言之教”
+
+（三）“诲人不倦”的意志品质：“贵在不倦”
+
+子曰：“可与言而不予直言，失人；不可与言而与之言，失言。知者不失人，亦不失言。”（《论语·卫灵公》15.8）
+
+孔子说：“可以同他谈，却不同他谈，这是错过人才；不可以同他谈，却同他谈，这是浪费言语。聪明人既不错过人才，也不浪费言语 。”
+
+良师既不错过人才，也不要浪费言语。
+
+子曰：“予欲无言。”子贡曰：“子如不言，则小子何述焉？”子曰：“天何言哉？四时何焉，百物生焉，天何言哉？”（《论语·阳货》17.19）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;为师之道-一视同仁&quot;&gt;为师之道-一视同仁&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“一视同仁”的基本含义是对人同样看待，不分薄厚。
+
+“一视同仁”的词源出自韩愈所言：“是故圣人一视同仁，笃近而举远。”------（《韩愈全集·原人》）
+
+韩愈远绍孔孟之道，所谓“一视同仁”、“笃近举远”深得孔子“仁者爱人”的仁学精髓。
+
+孔子立身处事，无论关系亲疏，对待学生始终都抱有一视同仁的情怀。也正因为如此，孔门的师生关系才那么融洽和谐。
+
+“一视同仁”中的“一”意指同样、同等；“视”的意思是看待；而“同仁”则是同施仁爱的意味。
+
+随着时代的发展，&quot;同仁&quot;又产生出“同行仁德者”、“同事或同行”以及“和自己相同处境的人”等等之意思。
+
+樊迟问仁。子曰：“爱人。”
+
+樊迟问什么是仁德。孔子说：“仁德就是关爱别人。”-------（《论语·颜渊》12.22）
+
+孔子满腔热忱，对学生寄予厚望，“后生可畏，焉知来者之不如今也？”-------（《论语·子罕》9.23）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/22/lunyu/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/22/lunyu/</guid>
+        
+        
+        <category>杂学</category>
+        
+      </item>
+    
+      <item>
+        <title>继承----混合方式</title>
+        <description>&lt;p&gt;和其他功能一样，ECMAScript 实现继承的方式不止一种。这是因为 JavaScript 中的继承机制并不是明确规定的，而是通过模仿实现的。这意味着所有的继承细节并非完全由解释程序处理。作为开发者，你有权决定最适用的继承方式。
+但是这里，我仅仅讲解混合方式
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;混合方式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这种继承方式使用构造函数定义类，并非使用任何原型。对象冒充的主要问题是必须使用构造函数方式，这不是最好的选择。不过如果使用原型链，就无法使用带参数的构造函数了。开发者如何选择呢？答案很简单，两者都用。&lt;/p&gt;
+
+&lt;p&gt;创建类的最好方式是用构造函数定义属性，用原型定义方法。这种方式同样适用于继承机制，用对象冒充继承构造函数的属性，用原型链继承 prototype 对象的方法。&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sayColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sayName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/22/inherit/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/22/inherit/</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>混合的构造函数/原型方式</title>
+        <description>&lt;p&gt;联合使用构造函数和原型方式，就可像用其他程序设计语言一样创建对象。这种概念非常简单，即用构造函数定义对象的所有非函数属性，用原型方式定义对象的函数属性（方法）。结果是，所有函数都只创建一次，而每个对象都具有自己的对象属性实例。
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;例：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iDoors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iMpg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iDoors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mpg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iMpg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drivers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Mike&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;John&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;showColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oCar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;red&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oCar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;oCar1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drivers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bill&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oCar1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drivers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//输出 &quot;Mike,John,Bill&quot;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oCar2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drivers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//输出 &quot;Mike,John&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;现在就更像创建一般对象了。所有的非函数属性都在构造函数中创建，意味着又能够用构造函数的参数赋予属性默认值了。因为只创建 showColor() 函数的一个实例，所以没有内存浪费。此外，给 oCar1 的 drivers 数组添加 “Bill” 值，不会影响到 oCar2 的数组，所以输出这些数组的值时，oCar1.drivers 显示的是 “Mike,John,Bill”，而 oCar2.drivers 显示的是 “Mike,John”。因为使用了原型方式，所以仍然能利用 instanceof 运算符来判断对象的类型。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 21 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/21/object/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/21/object/</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>对象实例----字符串连接</title>
+        <description>&lt;p&gt;对象令人感兴趣的一点是用它们解决问题的方式。ECMAScript 中最常见的一个问题是字符串连接的性能。与其他语言类似，ECMAScript 的字符串是不可变的，即它们的值不能改变。
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;请考虑下面的代码：&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;实际上，这段代码在幕后执行的步骤如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;创建存储 &quot;hello &quot; 的字符串。
+创建存储 &quot;world&quot; 的字符串。
+创建存储连接结果的字符串。
+把 str 的当前内容复制到结果中。
+把 &quot;world&quot; 复制到结果中。
+更新 str，使它指向结果。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;每次完成字符串连接都会执行步骤 2 到 6，使得这种操作非常消耗资源。如果重复这一过程几百次，甚至几千次，就会造成性能问题。解决方法是用 Array 对象存储字符串，然后用 join() 方法（参数是空字符串）创建最后的字符串。想象用下面的代码代替前面的代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这样，无论数组中引入多少字符串都不成问题，因为只在调用 join() 方法时才会发生连接操作。此时，执行的步骤如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;创建存储结果的字符串
+把每个字符串复制到结果中的合适位置
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然这种解决方案很好，但还有更好的方法。问题是，这段代码不能确切反映出它的意图。要使它更容易理解，可以用 StringBuffer 类打包该功能：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_strings_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;StringBuffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_strings_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;StringBuffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_strings_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这段代码首先要注意的是 strings 属性，本意是私有属性。它只有两个方法，即 append() 和 toString() 方法。append() 方法有一个参数，它把该参数附加到字符串数组中，toString() 方法调用数组的 join 方法，返回真正连接成的字符串。要用 StringBuffer 对象连接一组字符串，可以用下面的代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hello &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可用下面的代码测试 StringBuffer 对象和传统的字符串连接方法的性能：&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Concatenation with plus: &quot;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; milliseconds&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StringBuffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;br /&amp;gt;Concatenation with StringBuffer: &quot;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; milliseconds&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这段代码对字符串连接进行两个测试，第一个使用加号，第二个使用 StringBuffer 类。每个操作都连接 10000 个字符串。日期值 d1 和 d2 用于判断完成操作需要的时间。请注意，创建 Date 对象时，如果没有参数，赋予对象的是当前的日期和时间。要计算连接操作历经多少时间，把日期的毫秒表示（用 getTime() 方法的返回值）相减即可。这是衡量 JavaScript 性能的常见方法。该测试的结果可以帮助您比较使用 StringBuffer 类与使用加号的效率差异。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;结果显示使用加好运算符运行时间更短 O:)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Tue, 21 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/21/StringBuffer/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/21/StringBuffer/</guid>
+        
+        <category>JavaScript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>CORDOVA 介绍</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#一介绍&quot; id=&quot;markdown-toc-一介绍&quot;&gt;一、介绍&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#概述&quot; id=&quot;markdown-toc-概述&quot;&gt;概述&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#架构&quot; id=&quot;markdown-toc-架构&quot;&gt;架构&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#插件&quot; id=&quot;markdown-toc-插件&quot;&gt;插件&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#开发工作流&quot; id=&quot;markdown-toc-开发工作流&quot;&gt;开发工作流&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#安装cordova&quot; id=&quot;markdown-toc-安装cordova&quot;&gt;安装Cordova&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#二创建app&quot; id=&quot;markdown-toc-二创建app&quot;&gt;二、创建APP&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#创建你的第一个app&quot; id=&quot;markdown-toc-创建你的第一个app&quot;&gt;创建你的第一个App&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#安装cordova-cli&quot; id=&quot;markdown-toc-安装cordova-cli&quot;&gt;安装Cordova CLI&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#创建app&quot; id=&quot;markdown-toc-创建app&quot;&gt;创建App&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#添加平台&quot; id=&quot;markdown-toc-添加平台&quot;&gt;添加平台&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#安装构建先决条件&quot; id=&quot;markdown-toc-安装构建先决条件&quot;&gt;安装构建先决条件&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#构建app&quot; id=&quot;markdown-toc-构建app&quot;&gt;构建App&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#测试app&quot; id=&quot;markdown-toc-测试app&quot;&gt;测试App&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#添加插件&quot; id=&quot;markdown-toc-添加插件&quot;&gt;添加插件&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#使用-merges自定义每个平台&quot; id=&quot;markdown-toc-使用-merges自定义每个平台&quot;&gt;使用 merges自定义每个平台&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#更新cordova和你的项目&quot; id=&quot;markdown-toc-更新cordova和你的项目&quot;&gt;更新Cordova和你的项目&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#平台支持&quot; id=&quot;markdown-toc-平台支持&quot;&gt;平台支持&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;公司做手机APP项目使用到CORDOVA，之前没了解过，今天看了文档之后进行整理以便日后之需
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;一介绍&quot;&gt;一、介绍&lt;/h3&gt;
+
+&lt;h4 id=&quot;概述&quot;&gt;概述&lt;/h4&gt;
+
+&lt;p&gt;Apache Cordova是一个开源的移动开发框架。允许你用标准的web技术-HTML5,CSS3和JavaScript做跨平台开发。 应用在每个平台的具体执行被封装了起来，并依靠符合标准的API绑定去访问每个设备的功能，比如说：传感器、数据、网络状态等。&lt;/p&gt;
+
+&lt;p&gt;使用Apache Cordova的人群:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;移动应用开发者，想扩展一个应用的使用平台，而不通过每个平台的语言和工具集重新实现。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;web开发者，想包装部署自己的web App将其分发到各个应用商店门户。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;移动应用开发者，有兴趣混合原生应用组建和一个WebView(一个特别的浏览器窗口) 可以接触设备A级PI，或者你想开发一个原生和WebView组件之间的插件接口。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;架构&quot;&gt;架构&lt;/h4&gt;
+
+&lt;p&gt;这是cordova应用程序的几个组成部分。下面这幅图是cordova应用架构的高级视图。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/styles/images/cordova/01.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;WebView&lt;/p&gt;
+
+&lt;p&gt;Cordova启用的WebView可以给应用提供完整用户访问界面。在一些平台中，他也可以作为一个组件给大的、混合应用，这些应用混合和Webview和原生的应用组件。&lt;/p&gt;
+
+&lt;p&gt;Web App&lt;/p&gt;
+
+&lt;p&gt;这是你应用程序代码存在的地方。应用的实现是通过web页面，默认的本地文件名称是是index.html，这个本地文件应用CSS,JavaScript,图片，媒体文件和其他运行需要的资源。应用执行在原生应用包装的WebView中，这个原生应用是你分发到app stores中的。&lt;/p&gt;
+
+&lt;p&gt;这个容器中包含一个非常重要文件- &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/config_ref/index.html&quot;&gt;config.xml&lt;/a&gt; 文件他提供App的重要的信息和特定的参数用来影响App的工作，比如说是否响应方向的变动。&lt;/p&gt;
+
+&lt;h4 id=&quot;插件&quot;&gt;插件&lt;/h4&gt;
+
+&lt;p&gt;插件是Cordova生态系统的重要组成部分。他提供了Cordova和原生组件相互通信的接口并绑定到了标准的设备API上。这使你能够通过JavaScript调用原生代码.&lt;/p&gt;
+
+&lt;p&gt;Apache Cordova项目维护着一组插件叫做&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/support/index.html#core-plugin-apis&quot;&gt;核心插件&lt;/a&gt;。这些核心插件可以让你的应用程序访问设备功能，比如：电源，相机，联系人等。&lt;/p&gt;
+
+&lt;p&gt;除了核心插件，这里还有一些第三方插件他们提供了一些附加功能，但这些功能不一定在每个平台都能用。你可以搜索Cordova插件使用&lt;a href=&quot;http://cordova.axuer.com/plugins/&quot;&gt;插件搜索&lt;/a&gt;或者&lt;a href=&quot;https://www.npmjs.com/search?q=ecosystem%3Acordova&quot;&gt;npm&lt;/a&gt;。你也可以开发自己的插件，像 &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/hybrid/plugins/index.html&quot;&gt;插件开发指南&lt;/a&gt;描述的那样。插件是必要的，例如Cordova和自定义原生组件之间通信。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;注意&lt;/code&gt;:当你创建一个Cordova项目它不存在任何插件。这是新的默认行为。任何你需要的组件，哪怕是核心组件，你也必须明确添加。&lt;/p&gt;
+
+&lt;p&gt;Cordova不提供任何UI部件和MV框架。Cordova只提供运行环境。如果你想使用UI部件或者MV框架，你需要选择他们并包含在你的应用程序中。&lt;/p&gt;
+
+&lt;h4 id=&quot;开发工作流&quot;&gt;开发工作流&lt;/h4&gt;
+
+&lt;p&gt;Cordova提供两个基本的工作流用来创建移动App。虽然你经常使用两种不同工作流完成同样的任务，但是他们之间是有各自优势的：&lt;/p&gt;
+
+&lt;p&gt;(1)跨平台(CLI)的工作流:如果你想你的App运行在尽可能多的移动操作系统，那么就使用这个工作流，你只需要很少的特定平台开发。 这个工作流围绕这’cordova’CLI(命令行)。CLI是一个高级别的工具，他允许一次构建多个平台的项目，抽象了很多功能性的低级别shell脚本。CLI把公用的web资源复制到每个移动平台的子目录，根据每个平台做必要的配置变化，运行构建脚本生成2进制文件。CLI统一也提供通用接口，将插件应用在app中。如果要入门可以按照 &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/cli/index.html&quot;&gt;创建你的第一个App&lt;/a&gt;指南中的步骤来 。除非你有一个以平台为中心的工作流，否则建议你使用跨平台工作流。&lt;/p&gt;
+
+&lt;p&gt;(2)平台为中心的工作流:如果你专注于构建单独平台的App或者需要需要在底层修改它那么就使用这个工作流吧。你需要使用这种方法，如果你需要你的App混合原生组件和基于Web的Cordova组件, 正如 &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/hybrid/webviews/index.html&quot;&gt;嵌入WebView&lt;/a&gt;讨论的。作为一个经验法则，如果你需要修改SDK中的项目那么使用这个工作流。 这个工作流依靠一组低级别的shell脚本，他们是给每个支持平台量身定做的，还有一个单独的Plugman工具允许你添加插件。 虽然你可以使用这个工作流构建跨平台应用，但通常这是非常困难的，因为缺乏高基本的工具，意思就是是单独的构建生命周期并且插件修改需要对每一个平台进行。&lt;/p&gt;
+
+&lt;p&gt;当你第一次开始，跨平台工作流创建App可能是最容易的，像&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/cli/index.html&quot;&gt;创建你的第一个App&lt;/a&gt;中描述的那样。然后，你可以切换到以平台为中心的工作流，如果你需要更好的控制SDK提供的功能。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意: 一但你从以CLI为中心的工作流切换到一个围绕特定平台SDK和shell工具的工作流中，你就不可能返回了。 CLI维护着一套通用的跨平台源代码，每个特定平台构建都需要使用他而不是特定平台的源码。为了保护你对特定平台资产的修改，你需要切换到以平台为中心的脚本工具，他忽略跨平台的源码，转而依靠特定平台的源码。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;安装cordova&quot;&gt;安装Cordova&lt;/h4&gt;
+
+&lt;p&gt;安装Cordova会因你依靠的工作流不同而不同:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;跨平台工作流: 查看 &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/cli/index.html&quot;&gt;创建你的第一个App&lt;/a&gt; 指南.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;以平台为中的工作流&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在安装完Cordova之后,建议你查看&lt;code class=&quot;highlighter-rouge&quot;&gt;平台开发&lt;/code&gt;部分来进行移动平台开发。 同时建议你查看&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/appdev/privacy/index.html&quot;&gt;隐私指南&lt;/a&gt; 和 &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/appdev/security/index.html&quot;&gt;安全指南&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;二创建app&quot;&gt;二、创建APP&lt;/h3&gt;
+
+&lt;h4 id=&quot;创建你的第一个app&quot;&gt;创建你的第一个App&lt;/h4&gt;
+
+&lt;p&gt;这个指南像你展示如何创建JS/HTMLCordova应用并发布他们到不同的原生移动平台通过使用cordova命令行接口(CLI)。Cordova命令行详细参考查看[CLI参考]。&lt;/p&gt;
+
+&lt;h4 id=&quot;安装cordova-cli&quot;&gt;安装Cordova CLI&lt;/h4&gt;
+
+&lt;p&gt;Cordova命令行工具作为npm包分发。&lt;/p&gt;
+
+&lt;p&gt;安装cordova命令行工具，通过下面这些步骤:&lt;/p&gt;
+
+&lt;p&gt;1、下载和安装Node.js。安装完成后你可以在命令行中使用node 和 npm 。&lt;/p&gt;
+
+&lt;p&gt;2、(可选)下载和安装&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;git client&lt;/a&gt;, 如果你没有。安装成功后，你可以在命令行中使用git。 这个命令行使用下载git仓库中的资源。&lt;/p&gt;
+
+&lt;p&gt;3、安装cordova 模块使用Nodejs的npm工具。cordova模块会被npm工具自动下载。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在OS X和Linux上:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   $ sudo npm install -g cordova
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;在OS X和Linux上, npm命令加上前缀sudo因为cordova可能需要安装在其他的受限制目录比如 /usr/local/share。如果你使用可选工具nvm/nave或者具有安装目录的写权限，那么你可以省略sudo前缀。这里有&lt;a href=&quot;http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears&quot;&gt;更多提示&lt;/a&gt; 可用在使用 npm 没有 sudo前缀时，如果你想那么做。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在Windows上:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   C:\&amp;gt;npm install -g cordova
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;-g标志是告诉 npm 我们全局安装 cordova。否则我们将会安装在当前工作目录的 node_modules子目录。&lt;/p&gt;
+
+&lt;p&gt;安装完成后，你应该能够在命令行中运行cordova命令，在没有任何参数的时候会打印一些帮助信息。&lt;/p&gt;
+
+&lt;h4 id=&quot;创建app&quot;&gt;创建App&lt;/h4&gt;
+
+&lt;p&gt;跳转到你维护源代码的目录中，并创建你的cordova项目：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova create hello com.example.hello HelloWorld
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这将会为你的cordova应用创造必须的目录。默认情况下，cordova create命令生成基于web的应用程序的骨骼，项目的主页是 www/index.html 文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;参看&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#cordova-create-command&quot;&gt;Cordova create 命令参考文档&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#directory-structure&quot;&gt;Cordova项目目录结构&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;添加平台&quot;&gt;添加平台&lt;/h4&gt;
+
+&lt;p&gt;所有后续命令都需要在项目目录或者项目目录的任何子目录运行:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd hello
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;给你的App添加目标平台。我们将会添加’ios’和’android’平台，并确保他们保存在了config.xml中:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova platform add ios --save
+$ cordova platform add android --save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;检查你当前平台设置状况:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova platform ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;运行add或者remove平台的命令将会影响项目 platforms的内容，在这个目录中每个指定平台都有一个子目录。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意:在你使用CLI创建应用的时候， 不要 修改/platforms/目录中的任何文件。当准备构建应用或者重新安装插件时这个目录通常会被重写。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;参见&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#cordova-platform-command&quot;&gt;Cordova平台命令参考文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;安装构建先决条件&quot;&gt;安装构建先决条件&lt;/h4&gt;
+
+&lt;p&gt;要构建和运行App，你需要安装每个你需要平台的SDK。另外，当你使用浏览器开发你可以添加 browser平台，它不需要任何平台SDK。&lt;/p&gt;
+
+&lt;p&gt;检测你是否满足构建平台的要求:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova requirements
+Requirements check results for android:
+Java JDK: installed .
+Android SDK: installed
+Android target: installed android-19,android-21,android-22,android-23,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:23
+Gradle: installed
+
+Requirements check results for ios:
+Apple OS X: not installed
+Cordova tooling for iOS requires Apple OS X
+Error: Some of requirements check failed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;参见&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/platforms/android/index.html#requirements-and-support&quot;&gt;Android平台的要求&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/platforms/ios/index.html#requirements-and-support&quot;&gt;iOS平台的要求&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/platforms/win8/index.html#requirements-and-support&quot;&gt;Windows平台的要求&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;构建app&quot;&gt;构建App&lt;/h4&gt;
+
+&lt;p&gt;默认情况下, &lt;code class=&quot;highlighter-rouge&quot;&gt;cordova create&lt;/code&gt;生产基于web应用程序的骨架，项目开始页面位于&lt;code class=&quot;highlighter-rouge&quot;&gt;www/index.html&lt;/code&gt; 文件。任何初始化任务应该在&lt;code class=&quot;highlighter-rouge&quot;&gt;www/js/index.js&lt;/code&gt;文件中的&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/cordova/events/events.html#deviceready&quot;&gt;deviceready&lt;/a&gt;事件的事件处理函数中。&lt;/p&gt;
+
+&lt;p&gt;运行下面命令为所有添加的平台构建:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;你可以在每次构建中选择限制平台范围 - 这个例子中是’ios’:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;你可以在每次构建中选择限制平台范围 - 这个例子中是'ios':
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;参见&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#cordova-build-command&quot;&gt;Cordova build 命令参考文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;测试app&quot;&gt;测试App&lt;/h4&gt;
+
+&lt;p&gt;移动平台的SDK通常会绑定模拟器，它是一个可执行的设备镜像，这样你就可以在主屏幕启动你的App，看看它在多个平台是如何交互的。 在命令行运行下面的命令，会重新构建App并可以在特定平台的模拟器上查看:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova emulate android
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;或者，你可以将你的手机插入电脑，在手机上直接测试App:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova run android
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在运行命令之前，你需要设置用于测试的设备，以下是每个平台的流程。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;参见&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/platforms/android/index.html#setting-up-an-emulator&quot;&gt;设置Android模拟器&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#cordova-run-command&quot;&gt;Cordova run 命令参考文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#cordova-emulate-command&quot;&gt;Cordova emulate 命令参考文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;添加插件&quot;&gt;添加插件&lt;/h4&gt;
+
+&lt;p&gt;你可以修改默认生成的App通过标准的web技术，但是App要接触设备级别的特性，就需要你添加插件了。&lt;/p&gt;
+
+&lt;p&gt;一个插件 通过JavascriptAPI暴露原生SDK功能。插件通常由npm分发，你可以搜索他们在 &lt;a href=&quot;http://cordova.axuer.com/plugins/&quot;&gt;插件搜索页&lt;/a&gt;。一些关键的API由Apache Cordova开源项目提供并且这些插件是作为[核心插件API]的。你也可以使用CLI启动搜索页:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova plugin search camera
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;plugin要添加camera插件，我们需要指定camera的npm包名:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova plugin add cordova-plugin-camera
+Fetching plugin &quot;cordova-plugin-camera@~2.1.0&quot; via npm
+Installing &quot;cordova-plugin-camera&quot; for android
+Installing &quot;cordova-plugin-camera&quot; for ios
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;插件也可以通过目录或者git仓库添加。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意:CLI增加了适合各个平台的插件代码。如果你想伴随着低级别壳工具和平台SDK开发你可以看&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/overview/index.html&quot;&gt;概述&lt;/a&gt;中讨论的, 你需要运行Plugman工具去给每个平台单独添加。 (要知道更多信息, 请看 &lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/plugin_ref/plugman.html&quot;&gt;使用Plugman管理插件&lt;/a&gt;.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;使用 plugin ls (或者 plugin list, 或者 plugin自己)查看当前安装的插件。每个插件现实它的标识:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cordova&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ls&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cordova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Camera&quot;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cordova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;whitelist&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Whitelist&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;参见&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/reference/cordova-cli/index.html#cordova-plugin-command&quot;&gt;Cordova plugin 命令参考文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/plugins/&quot;&gt;Cordova plugin 搜索页&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[核心插件API]&lt;/p&gt;
+
+&lt;h4 id=&quot;使用-merges自定义每个平台&quot;&gt;使用 merges自定义每个平台&lt;/h4&gt;
+
+&lt;p&gt;虽然Cordova允许你轻松的部署App在各个平台，但是有时我们需要在某些平台做一些自定义。在这种情况下， 你不要想去修改顶级platforms目录下的www目录，因为，通常会被顶级 www目录的跨平台源码替换。&lt;/p&gt;
+
+&lt;p&gt;取而代之，顶级merges目录提供了特定平台部署特定资源的地方。每个特定平台在merges中的子目录反映了www 源代码树中的结构， 允许你重写和添加文件。例如，这是如何使用merges来提供Android设备中的默认字体大小。:&lt;/p&gt;
+
+&lt;p&gt;(1)编辑www/index.html文件,添加link标签来添加额外的css文件, overrides.css在这种情况下:
+1&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;css/overrides.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(2)（可选）创建一个空的www/css/overrides.css文件，适合所有非Android构建，来防止文件找不到的错误。&lt;/p&gt;
+
+&lt;p&gt;(3)在merges/android里面创建一个css子目录,然后添加对应的overrides.css文件。特定的CSS重写www/css/index.css文件中的12px的默认大小，例子:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;body { font-size:14px; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;当你重写构建项目，Android具有自定义的字体大小，而其他平台的不变。&lt;/p&gt;
+
+&lt;p&gt;你也可以在merges目录中添加www目录中不存在的文件。例如，一个应用程序在iOS界面中要包含一个 后退按钮,存储在 merges/ios/img/back_button.png,而Android版本则可以捕获&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/cordova/events/events.html#backbutton&quot;&gt;后退按钮&lt;/a&gt;事件通过对应的硬件按钮。&lt;/p&gt;
+
+&lt;h4 id=&quot;更新cordova和你的项目&quot;&gt;更新Cordova和你的项目&lt;/h4&gt;
+
+&lt;p&gt;在安装cordova工具之后，你可以运行下面命令更新到最新版本:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;在安装cordova工具之后，你可以运行下面命令更新到最新版本:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;用下面语法安装指定版本:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo npm install -g cordova@3.1.0-0.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;运行cordova -v查看当前版本。要查找最新的cordova版本，可以运行:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm info cordova version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;更新完cordova后，更新目标项目的平台:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cordova platform update android --save
+$ cordova platform update ios --save
+...etc.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;平台支持&quot;&gt;平台支持&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.axuer.com/docs/zh-cn/6.x/guide/support/index.html&quot;&gt;平台支持&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 16 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/16/cordova-introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/16/cordova-introduction/</guid>
+        
+        <category>CORDOVA</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>新公司有感</title>
+        <description>&lt;p&gt;无恃其不来，恃吾有以待也；无恃其不攻，恃吾有所不可攻也
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;有的时候想说很多话，但是不知道说给谁听，不是我不想说，而是我说了你也不会懂，那我说了有什么用；而有的时候不是你不懂，而是我说了你并不会真的为我开心，而是心里进行比较，那我怎么敢说给你听？&lt;/p&gt;
+
+&lt;p&gt;司马迁因“李陵之祸”被贬入狱，有三种选择，其一“处死”其二“罚款50万”其三“处以宫刑”，再说千古第一书信《报任少卿书》，任安入狱，写书信给司马迁求救。有一点，我司马迁当年
+入狱时你任安正是被武帝重用之时，你害怕被牵连，不曾为我谏言也不曾借我50万，所有人都避而远之，而我，因为“史记”还没完成，不得不选择被人以为贪生怕死接受当时世间最严重的屈辱，而后活着就像丢失了灵魂。
+今天你任安入狱，想让我推贤进士，如今的我身份更不如以前，且说如果我向皇帝进言，你怎么不看看那么多大臣都还不曾说一句，我这小小的今非昔比的太史令说了岂不是只是受人耻笑，还有可能因此丢了性命。
+不是我怕死，人固有一死，死有重于泰山，或轻于鸿毛。《史记》还没完成，如果我今天因为此事而死，岂不是如同被踩死的一只蚂蚁死的毫无价值。但如果我没有史记我就会救你，你可能不相信我说的话，但我又不得不说
+，因为你就要死了，这些话只有等我死去的那天你才真的理解。以上也许有些话被我形容的有些小家子气，我知识层次还很浅薄，望谅解。&lt;/p&gt;
+
+&lt;p&gt;人的智慧无穷，智慧高的人能够懂得智慧低的人，智慧低的人永远不能懂智慧高的人。世间事情不要说得太绝对，今天你不理解的人，只是你还没有见到，见到你也不懂，那是你的不幸。&lt;/p&gt;
+
+&lt;p&gt;新工作确定下来了，不知道是不是有意安排，新公司让我知道的惊喜一个接着一个，一个楼都是他们的，没计较我要的工资，基本保障都有，双休，还有补助。正如题目而言，
+我已经准备了很久，把所有该准备的能计算到的事情都已经准备的不能在准备了，已尽人事，接下来听天命。是的，我确实得到了我想要的，比我想的还要好一些，不是薪资，而是是公司文化。
+我爱钱，但取之有道，所有凭努力得来的都是值得的，也是应有的回报。我不贪，够就好，因此很开心。&lt;/p&gt;
+
+&lt;p&gt;有些人在逆境之下潜力无穷，但成功之时方寸全乱，而有些人得意之时处事平稳，失意之时没有斗志。我经历太少，失败成功也都不值得过分提及，但活在当下永远都不要被眼前的困境与幻境所压倒或迷惑是我目前应该做到的。&lt;/p&gt;
+
+&lt;p&gt;这些话还不足以表明我的心意，会让自己一直都提升的，愿心地善良的人一直都有好运气。
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/13/life/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/13/life/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

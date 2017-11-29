@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript高级程序设计——闭包</title>
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
+	<link rel="canonical" href="/2017/06/15/closure/">
+	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
+	
+	<!--<meta name="keywords" content="JavaScript高级程序设计——闭包, Helene's blog, 厚积薄发">-->
+	<!--<meta name="description" content="厚积薄发">-->
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <span>
+          HELENE
+        </span>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <!--<li>
+          <a href="/">首页</a>
+        </li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right"  style="margin-top: 1rem">
+        <li>
+          <a href="/greens/">life</a>
+        </li>
+        <li>
+          <a href="/rice">work</a>
+        </li>
+        <!--<li>
+            <a><span id="busuanzi_container_site_pv">客流量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>-->
+        <li>
+          <a href="/reference">References</a>
+        </li>
+        <!--<li>
+          <a href="/donate/">打赏我</a>
+        </li>-->
+        <!--<li>
+          <a href="http://resume.thisisme1228.com/index.html">我的简历</a>
+        </li>-->
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/Thisisme1228">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header hidden" id="content">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container">
+  	
+      <h1 class="margin-top-45">Better me</h1>
+    
+  </div>
+    <audio  class="hidden" controls  loop="loop"  id="h5audio_media"  preload="auto" height="0" width="0" src="/styles/music/I-will-love-you.mp3">
+        <source src="/styles/music/I-will-love-you.mp3">
+    </audio>
+    <div class="audio-img" id="radio">
+        <img  src="/styles/images/header/radio.png">
+        <!--<span style="color: beige" id="clickMe">Click!</span>-->
+    </div>
+</div>
+
+    
+    <!-- 内页-->
+<div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3 fix-menu hidden-sm hidden-xs">
+          <ul>
+              <!-- 供内页使用 -->
+<div id="navigation">
+<!--  <h1>目录</h1>-->
+  <ul class="nav sidenav">
+  </ul>
+</div>
+
+
+
+
+          </ul>
+    </div>
+    <div class="col-md-8 col-md-push-3" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">JavaScript高级程序设计——闭包</h1>
+                <span class="post-meta">Date：Jun 15, 2017</span>
+                <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#前言" id="markdown-toc-前言">前言</a></li>
+  <li><a href="#闭包" id="markdown-toc-闭包">闭包</a>    <ul>
+      <li><a href="#1概念" id="markdown-toc-1概念">1.概念</a></li>
+      <li><a href="#2条件" id="markdown-toc-2条件">2.条件</a></li>
+    </ul>
+  </li>
+  <li><a href="#闭包与变量" id="markdown-toc-闭包与变量">闭包与变量</a>    <ul>
+      <li><a href="#1概念-1" id="markdown-toc-1概念-1">1.概念</a></li>
+    </ul>
+  </li>
+  <li><a href="#函数按值传递" id="markdown-toc-函数按值传递">函数按值传递</a></li>
+  <li><a href="#闭包中使用this对象" id="markdown-toc-闭包中使用this对象">闭包中使用this对象</a>    <ul>
+      <li><a href="#1概念-2" id="markdown-toc-1概念-2">1、概念</a></li>
+    </ul>
+  </li>
+  <li><a href="#变量声明提前" id="markdown-toc-变量声明提前">变量声明提前</a></li>
+  <li><a href="#没有块级作用域" id="markdown-toc-没有块级作用域">没有块级作用域</a></li>
+</ul>
+<h3 id="前言">前言</h3>
+<p>有很多人搞不清匿名函数和闭包这两个概念，经常混用。闭包是指有权访问另一个函数作用域中的变量的函数。匿名函数就是没有实际名字的函数。</p>
+<hr />
+
+<h3 id="闭包">闭包</h3>
+<h4 id="1概念">1.概念</h4>
+<p>闭包，其实是一种语言特性，它是指的是程序设计语言中，允许将函数看作对象，然后能像在对象中的操作搬在函数中定义实例（局部）变量，而这些变量能在函数中保存到函数的实例对象销毁为止，其它代码块能通过某种方式获取这些实例（局部）变量的值并进行应用扩展。</p>
+<h4 id="2条件">2.条件</h4>
+<p>闭包是允许函数访问局部作用域之外的数据。即使外部函数已经退出，外部函数的变量仍可以被内部函数访问到。
+<br />
+因此闭包的实现需要三个条件：</p>
+<ul>
+  <li>内部函数实用了外部函数的变量</li>
+  <li>外部函数已经退出</li>
+  <li>内部函数可以访问
+<!-- more --></li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+                <span class="c1">// return x;</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">();</span>
+<span class="nx">b</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//1</span>
+<span class="nx">b</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//2</span>
+</code></pre></div></div>
+
+<p>上述代码在执行的时候，b得到的是闭包对象的引用，虽然a执行完毕后，但是a的活动对象由于闭包的存在并没有被销毁，在执行b(1)的时候，仍然访问到了x变量，并将其加1，若再执行b(1)，则x是2，因为闭包的引用b并没有消除。（后面会解释，闭包返回了函数，函数可以创建独立的作用域）</p>
+
+<blockquote>
+  <p>闭包，其实就是指程序语言中能让代码调用已运行的函数中所定义的局部变量。</p>
+</blockquote>
+
+<p>但是你只需要知道应用的两种情况即可——函数作为返回值，函数作为参数传递。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">fn</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="k">return</span> <span class="kd">function</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">};</span>
+        <span class="p">}</span>
+<span class="kd">var</span> <span class="nx">f1</span> <span class="o">=</span> <span class="nx">fn</span><span class="p">();</span>
+<span class="nx">f1</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>如上代码，bar函数作为返回值，赋值给f1变量。执行f1(15)时，用到了fn作用域下的max变量的值。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+<span class="nx">fn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  <span class="c1">//15</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="nx">f</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<span class="p">})(</span><span class="nx">fn</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>如上代码中，fn函数作为一个参数被传递进入另一个函数，赋值给f参数。执行f(15)时，max变量的取值是10，而不是100。</p>
+
+<p>要去创建这个函数的作用域取值，而不是“父作用域”。理解了这一点，以上两端代码中，自由变量如何取值应该比较简单.</p>
+
+<p>另外，讲到闭包，除了结合着作用域之外，还需要结合着执行上下文栈来说一下。</p>
+
+<p>在前面讲执行上下文栈时，我们提到当一个函数被调用完成之后，其执行上下文环境将被销毁，其中的变量也会被同时销毁。</p>
+
+<blockquote>
+  <p>有些情况下，函数调用完成之后，其执行上下文环境不会接着被销毁。这就是需要理解闭包的核心内容。</p>
+</blockquote>
+
+<p>可以拿本文的之前代码（只做注释修改）来分析一下。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//全局作用域</span>
+<span class="kd">function</span> <span class="nx">fn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="c1">// fn作用域</span>
+   <span class="k">return</span> <span class="kd">function</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+       <span class="p">}</span>
+   <span class="p">};</span> <span class="c1">//bar作用域</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">f1</span> <span class="o">=</span> <span class="nx">fn</span><span class="p">();</span>
+<span class="nx">f1</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>全局作用域为：代码1-12行；fn作用域为：代码2-10行；bar作用域为：代码5-9行。</p>
+
+<p>举例</p>
+
+<p>第一步，代码执行前生成全局上下文环境，并在执行时对其中的变量进行赋值。此时全局上下文环境是活动状态。</p>
+
+<p><img src="/styles/images/closure/04.png" alt="" width="50%" /></p>
+
+<p>第二步，执行第17行代码时，调用fn()，产生fn()执行上下文环境，压栈，并设置为活动状态。</p>
+
+<p><img src="/styles/images/closure/05.png" alt="" width="50%" /></p>
+
+<p>第三步，执行完第17行，fn()调用完成。按理说应该销毁掉fn()的执行上下文环境，但是这里不能这么做。注意，重点来了：</p>
+
+<p><img src="/styles/images/closure/06.png" alt="" width="50%" /></p>
+
+<blockquote>
+  <p>因为执行fn()时，返回的是一个函数。函数的特别之处在于可以创建一个独立的作用域。而正巧合的是，返回的这个函数体中，还有一个自由变量max要引用fn作用域下的fn()上下文环境中的max。因此，这个max不能被销毁，销毁了之后bar函数中的max就找不到值了。</p>
+</blockquote>
+
+<p>因此，这里的fn()上下文环境不能被销毁，还依然存在与执行上下文栈中。</p>
+
+<p>——即，执行到第18行时，全局上下文环境将变为活动状态，但是fn()上下文环境依然会在执行上下文栈中。另外，执行完第18行，全局上下文环境中的max被赋值为100。如下图：</p>
+
+<p><img src="/styles/images/closure/07.png" alt="" width="50%" /></p>
+
+<p>第四步，执行到第20行，执行f1(15)，即执行bar(15)，创建bar(15)上下文环境，并将其设置为活动状态。</p>
+
+<p><img src="/styles/images/closure/08.png" alt="" width="50%" /></p>
+
+<p>执行bar(15)时，max是自由变量，需要向创建bar函数的作用域中查找，找到了max的值为10。这个过程在作用域链一节已经讲过。</p>
+
+<p>这里的重点就在于，创建bar函数是在执行fn()时创建的。fn()早就执行结束了，但是fn()执行上下文环境还存在与栈中，因此bar(15)时，max可以查找到。如果fn()上下文环境销毁了，那么max就找不到了。</p>
+
+<blockquote>
+  <p>总结：使用闭包会增加内容开销</p>
+</blockquote>
+
+<p>第五步，执行完20行就是上下文环境的销毁过程，这里就不再赘述了。</p>
+
+<h3 id="闭包与变量">闭包与变量</h3>
+
+<h4 id="1概念-1">1.概念</h4>
+
+<blockquote>
+  <p>闭包只能取得包含函数中任何变量的最后一个值,闭包所保存的是整个变量对象，而不是某个特殊变量。</p>
+</blockquote>
+
+<p>例子</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createFunctions</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="p">};</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">funcs</span> <span class="o">=</span> <span class="nx">createFunctions</span><span class="p">();</span>
+<span class="c1">//每个函数都输出10</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">funcs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">funcs</span><span class="p">[</span><span class="nx">i</span><span class="p">]()</span> <span class="o">+</span> <span class="s2">"&lt;br /&gt;"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>总结：每个函数的作用域链中都保存着createFunctions()函数的活动对象，所以它们引用的都是同一个变量i。当createFunctions()函数返回后，变量i的值为10。</p>
+</blockquote>
+
+<p>我们可以通过创建另一个匿名函数强制让闭包的行为符合预期。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createFunctions</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">}(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">funcs</span> <span class="o">=</span> <span class="nx">createFunctions</span><span class="p">();</span>
+<span class="c1">//循环输出0-10</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">funcs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">funcs</span><span class="p">[</span><span class="nx">i</span><span class="p">]()</span> <span class="o">+</span> <span class="s2">"&lt;br /&gt;"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>总结：没有直接把闭包赋值给数组，而是定义了一个匿名函数，并通过立即执行该匿名函数的结果赋值给数组，并带了for循环的参数i进去，让x能找到传入的参数值为0-10，这就解释了函数参数是按值传递的，所以会将变量i的当前值复制给参数x。而这个匿名函数内部又创建并返回了一个访问x的闭包。这样以来result数组中的每个函数都有自己x变量的一个副本，所以会符合我们的预期输出不同的值。</p>
+</blockquote>
+
+<h3 id="函数按值传递">函数按值传递</h3>
+
+<p>函数传参就两个类型，基本类型和引用类型，大家纠结的都是引用类型的传递。</p>
+
+<p>引用类型作为参数传入函数，传的是个地址值，或者指针值，不是那个引用类型本身，它还好好的呆在堆内存呢。赋值给argument的同样是地址值或者指针。所以说是value值传递一点没错，传的是个地址值。通过两个例子看懂就行了。</p>
+
+<p>例子1：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setName</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'aaa'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> <span class="c1">// 如果是按引用传递的,此处传参进来obj应该被重新引用新的内存单元</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'ccc'</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">obj</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'bbb'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">newPerson</span> <span class="o">=</span> <span class="nx">setName</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">' | '</span> <span class="o">+</span> <span class="nx">newPerson</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// aaa | ccc</span>
+</code></pre></div></div>
+
+<p>从结果看，并没有显示两个’ccc’。这里是函数内部重写了obj，重写的obj是一个局部对象。当函数执行完后，立即被销毁。</p>
+
+<blockquote>
+  <p>引用值：对象变量它里面的值是这个对象在堆内存中的内存地址。因此如果按引用传递，它传递的值也就是这个内存地址。那么var obj = new Object();会重新给obj分配一个地址，比如是0x321了，那么它就不在指向有name = ‘aaa’;属性的内存单元了。相当于把实参obj和形参obj的地址都改了，那么最终就是输出两个ccc了。</p>
+</blockquote>
+
+<p>例子2</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">num</span><span class="p">:</span><span class="s1">'1'</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">num</span><span class="p">:</span><span class="s1">'2'</span>
+<span class="p">};</span>
+<span class="kd">function</span> <span class="nx">change</span><span class="p">(</span><span class="nx">obj</span><span class="p">){</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">num</span> <span class="o">=</span> <span class="s1">'3'</span><span class="p">;</span>
+    <span class="nx">obj</span> <span class="o">=</span> <span class="nx">b</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">num</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">change</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span> <span class="o">+</span> <span class="s1">' | '</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// 2 | 3</span>
+</code></pre></div></div>
+
+<p>首先把a的值传到change函数内，obj.num = ‘3’;后a.name被修改为3;</p>
+
+<p>a的地址被换成b的地址;</p>
+
+<p>返回此时的a中a.num。</p>
+
+<h3 id="闭包中使用this对象">闭包中使用this对象</h3>
+
+<h4 id="1概念-2">1、概念</h4>
+
+<p>this对象是在运行时基于函数的执行环境绑定的：全局函数中，this等于window;当函数被作用某个对象的方法调用时，this等于那个对象。</p>
+
+<p>但在匿名函数中，由于匿名函数的执行环境具有全局性，因此this对象通常指向window(在通过call或apply函数改变函数执行环境的情况下，会指向其他对象)。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"The Window"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">name</span> <span class="p">:</span> <span class="s2">"My Object"</span><span class="p">,</span>
+        <span class="na">getNameFunc</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
+                <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">};</span>     
+<span class="nx">alert</span><span class="p">(</span><span class="nx">object</span><span class="p">.</span><span class="nx">getNameFunc</span><span class="p">()());</span>  <span class="c1">//"The Window"</span>
+</code></pre></div></div>
+
+<p>通过修改把作用域中的this对象保存在一个闭包能够访问到的变量里，就可以让闭包访问该对象了。如下代码：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"The Window"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span> <span class="p">:</span> <span class="s2">"My Object"</span><span class="p">,</span>
+    <span class="na">getNameFunc</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="nx">that</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">object</span><span class="p">.</span><span class="nx">getNameFunc</span><span class="p">()());</span>  <span class="c1">//"MyObject"</span>
+</code></pre></div></div>
+
+<h3 id="变量声明提前">变量声明提前</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">scope</span><span class="o">=</span><span class="s2">"global"</span><span class="p">;</span>  
+<span class="kd">function</span> <span class="nx">scopeTest</span><span class="p">()</span> <span class="p">{</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scope</span><span class="p">);</span>  
+    <span class="kd">var</span> <span class="nx">scope</span><span class="o">=</span><span class="s2">"local"</span><span class="p">;</span>  
+<span class="p">}</span>  
+<span class="nx">scopeTest</span><span class="p">();</span> <span class="c1">//undefined</span>
+</code></pre></div></div>
+
+<p>此处的输出是undefined，并没有报错，这是因为在前面我们提到的函数内的声明在函数体内始终可见，上面的函数等效于：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">scope</span><span class="o">=</span><span class="s2">"global"</span><span class="p">;</span>  
+<span class="kd">function</span> <span class="nx">scopeTest</span><span class="p">()</span> <span class="p">{</span>  
+    <span class="kd">var</span> <span class="nx">scope</span><span class="p">;</span>  
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scope</span><span class="p">);</span>  
+    <span class="nx">scope</span><span class="o">=</span><span class="s2">"local"</span><span class="p">;</span>  
+<span class="p">}</span>  
+<span class="nx">scopeTest</span><span class="p">();</span> <span class="c1">//undefined</span>
+</code></pre></div></div>
+
+<p>注意，如果忘记var，那么变量就被声明为全局变量了。结果就是global</p>
+
+<h3 id="没有块级作用域">没有块级作用域</h3>
+
+<p>和其他我们常用的语言不同，在Javascript中没有块级作用域：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">scopeTest</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">scope</span> <span class="o">=</span> <span class="p">{};</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">scope</span> <span class="k">instanceof</span> <span class="nb">Object</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="c1">//输出0-9</span>
+       <span class="p">}</span>
+       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="c1">//输出10 </span>
+   <span class="p">}</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span> <span class="c1">//输出1 </span>
+<span class="p">}</span>
+<span class="nx">scopeTest</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>在javascript中变量的作用范围是函数级的，即在函数中所有的变量在整个函数中都有定义，这也带来了一些我们稍不注意就会碰到的“潜规则”：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">scope</span> <span class="o">=</span> <span class="s2">"hello"</span><span class="p">;</span> 
+<span class="kd">function</span> <span class="nx">scopeTest</span><span class="p">()</span> <span class="p">{</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scope</span><span class="p">);</span><span class="c1">//① </span>
+    <span class="kd">var</span> <span class="nx">scope</span> <span class="o">=</span> <span class="s2">"no"</span><span class="p">;</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scope</span><span class="p">);</span><span class="c1">//② </span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>在①处输出的值竟然是undefined，简直丧心病狂啊，我们已经定义了全局变量的值啊，这地方不应该为hello吗？其实，上面的代码等效于：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">scope</span> <span class="o">=</span> <span class="s2">"hello"</span><span class="p">;</span> 
+<span class="kd">function</span> <span class="nx">scopeTest</span><span class="p">()</span> <span class="p">{</span> 
+    <span class="kd">var</span> <span class="nx">scope</span><span class="p">;</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scope</span><span class="p">);</span><span class="c1">//① </span>
+    <span class="nx">scope</span> <span class="o">=</span> <span class="s2">"no"</span><span class="p">;</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scope</span><span class="p">);</span><span class="c1">//② </span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>声明提前、全局变量优先级低于局部变量，根据这两条规则就不难理解为什么输出undefined了。
+<br />
+<br />
+<br /></p>
+
+
+            </article>
+        </div>
+        <!--<hr/>-->
+        <!--<blockquote style="margin-top: 20px"><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>-->
+        <!--<div class="text-center donate-btn">
+          <a href="/donate/"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .docs-content {
+    margin-top:80px;
+  }
+  h1, h2, h3 {
+    margin: 3rem 0;
+    font-size: 24px;
+  }
+  #navigation h1 {
+    margin: 1rem 0;
+  }
+  #navigation .sidenav {
+    background-color: transparent;
+  }
+  .docs-content {
+    margin-bottom: 100px;
+  }
+</style>
+
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<div class="footer-links">
+			<span class="copyright">
+				My Site:
+			</span>
+			<span>
+				<a  href="http://www.thisisme1228.com/" class="font-color-sienna">百家书(请在电脑上浏览)</a>
+			</span>
+			<span>&nbsp;&nbsp;</span>
+			<span>
+				<a href="http://music.thisisme1228.com/index.html#/recommend" class="font-color-sienna">音乐网(请在手机上浏览)</a>
+			</span>
+		</div>
+		<div class="copyright-dis">Copyright © 2017 <a href="http://life.thisisme1228.com" class="">Helene</a> . All rights reserved.</div>
+		<p class="copyright">辽ICP备17012545号-1</p>
+	</div>
+</footer>
+<ul id="backToTop" class="back-to-top">
+	<li>
+		<span>TOP</span>
+	</li>
+</ul>
+<!--<ul id="lastPage" class="last-page">
+	<li onClick="javascript :history.back(-1);"">
+		<span>BACK</span>
+	</li>
+</ul>-->
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/styles/js/function.min.js"></script>
+<script src="/styles/js/main.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+---
+layout: default
+title: 工作
+header: Posts By Tag
+---
+
+<div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3 fix-menu hidden-sm hidden-xs">
+		<ul class="nav">
+			{% if site.tags.first[0] == null %}
+			{% for tag in site.tags %}
+			<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span >({{ site.tags[tag].size }})</span></a></li>
+			{% endfor %}
+			{% else %}
+			{% for tag in site.tags %}
+			<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span style="color: #999999;" >({{ tag[1].size }})</span></a></li>
+			{% endfor %}
+			{% endif %}
+		</ul>
+    </div>
+    <div class="col-md-8 col-md-push-3" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+			<div class="home">
+				{% for tag in site.tags %}
+				<div>
+                    <!--<div class="title-border" id="{{ tag[0] }}-ref">{{ tag[0] }}</div>-->
+					{% assign pages_list = tag[1] %}
+					{% include LessOrMore/pages_list %}
+				</div>
+				{% endfor %}
+			</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    .footer {
+        display: block;
+    }
+	.banner {
+		display: block;
+		visibility: visible;
+	}
+</style>
