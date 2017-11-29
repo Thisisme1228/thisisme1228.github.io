@@ -385,14 +385,6 @@
 } ,
 
 {
-"title"    : "jQuery源码解析（架构与依赖模块）",
-"category" : "",
-"tags"     : "jQuery",
-"url"      : "/2016/06/05/jquery-code-parsing1/",
-"date"     : "2016-06-05 00:00:00 +0800"
-} ,
-
-{
 "title"    : "jQuery源码解析（DOM与核心模块）",
 "category" : "",
 "tags"     : "jQuery",
