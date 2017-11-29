@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Nov 2017 15:30:48 +0800</pubDate>
-    <lastBuildDate>Wed, 29 Nov 2017 15:30:48 +0800</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2017 15:38:28 +0800</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 15:38:28 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -26,8 +26,6 @@
         <link>http://localhost:4000/2017/11/29/kong/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/11/29/kong/</guid>
         
-        
-        <category>杂学</category>
         
       </item>
     
@@ -655,253 +653,6 @@ Set对象存储不重复的值，所以不需要手动处理包含重复值的�
       </item>
     
       <item>
-        <title>论语444</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#绪论&quot; id=&quot;markdown-toc-绪论&quot;&gt;绪论&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#为师之道---有教无类&quot; id=&quot;markdown-toc-为师之道---有教无类&quot;&gt;为师之道 - 有教无类&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#为师之道---学而不厌&quot; id=&quot;markdown-toc-为师之道---学而不厌&quot;&gt;为师之道 - 学而不厌&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#为师之道-诲人不倦&quot; id=&quot;markdown-toc-为师之道-诲人不倦&quot;&gt;为师之道-诲人不倦&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#为师之道-一视同仁&quot; id=&quot;markdown-toc-为师之道-一视同仁&quot;&gt;为师之道-一视同仁&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;绪论&quot;&gt;绪论&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》中的“论”的声调应该读阳平，是编纂的意思。其中的“语”是“言语”的意思，偏重于回答别人的问话，或是与人谈论一件事情
-
-从训古学角度来讲，“论语”两字合在一起，书名的含义就是把这些言语编纂成册的意思
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》的“论”为什么要读阳平lun(二声)？
-
-北宋学者徐铉等人的音读，即“论，卢坤初”（见《说文解字》）
-
-“论”字可以用“卢坤初”来注音，因为“卢”的声母是“L”，“昆”的韵母是un，把L和un拼读出来，就是“论”的读音是L+un=lun（二声）
-
-“论”之所以读阳平声调，是因为“卢”的声调是阳平
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《论语》全书120篇，每篇由若干章组成。每篇取第一章开头一句话里的某两个字作为篇名，如第一篇开头的话是：“子曰：学而时习之，不亦说乎？”，于是取“学而时习之”中的“学而”两字为篇名。
-
-篇是由若干章来组成的。章是依据文章内容所划分的自成起讫的段落。
-
-现今通行的《论语》20篇，包括标点符号共有21113字，不含标点符号仅有15837字。
-
-不同的《论语》版本分章不尽相同。每章的字数也不等。有的只有一句话，仅6个字，如：“子曰：‘有教无类。’“章。篇幅最长的是”子路、曾皙、冉有、公西华侍坐“章，字数也只有315个。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;从《论语》内部的语境现象可以推定：对孔子的言论，的确为“当时弟子各有所记”，不可能由某一个人来编纂而成。因此，多数学者主张《论语》是在孔子去世后，有孔子弟子及其再传门人在不同时期编纂而成的。
-
-在《论语》的首篇《学而》出现3次对有若称“有子”却不成字，对曾参也有2次称“曾子”而不称字。
-
-所以，程颐推论《论语》是有若和曾参的门人所记的。这的确有一定道理。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;如何品绎《论语》的教育智慧？
-
-所谓智慧，是涉及感知、记忆、理解、联想、分析、判断、综合诸多层面的一种综合思维和实践能力。它包括情感与理解、道德与美感、智力与非智力等众多因素。
-
-教育的真谛在于启迪智慧。教育在实践过程中生成圆融的智慧品行，只有智慧的教育才能塑造智慧的人。
-
-《论语》蕴藏取之不尽、用之不竭的教育智慧
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;为师之道---有教无类&quot;&gt;为师之道 - 有教无类&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;孔子简介
-
-孔子（公元前551-前479年），名丘，字仲尼，春秋时期鲁国陬邑人。
-
------------------------------------------------------------------
-
-1、《史记.孔子世家》记载：“孔子为儿嘻戏，常陈俎豆，设礼容。“
-
-2、自称“吾十有五而志于学”。及长，出仕“委吏”（管理仓库料量升斗）、“乘田”（管理牛羊放牧蓄息）一类的小官。
-
-3、三十岁左右开创私学化的平民教育，授徒设教
-
-4、三十五岁时因鲁国内乱，孔子至齐求仕，但不为景公所用。随后返鲁，退而修诗、书、礼、乐，历时十五年，期间学问益进，弟子滋众。
-
-5、五十五岁开始周游列国，凡十四年。
-
-6、六十八岁回到鲁国，开始晚年时期的教育生活和古典文化的整理研究工作。
-
-7、孔子坚守理想，不知老之将近，享年七十有三。
-
------------------------------------------------------------------
-
-孔子是儒家学派的创始人。后人尊之为“至圣先师”。
-
-“至圣”意指孔子是儒家理想人生的最高标准，“先师”意指孔子是中国历史上君子之学的最先倡导者和实践者。
-
-汉武帝采用“独尊儒术，罢黜百家”的文教政策，为后世确立孔子至圣先师的地位奠定了基调。
-
-
-唐太宗贞观二年（628年），下诏以孔子为先圣，把孔子的塑像供奉在国学。贞观四年（630年），又诏令各州县学建立孔子庙。
-
-明嘉靖九年（1530年），诏令称孔子为“至圣先师”。
-
-清顺治年初，定称孔子为“大成至圣文宜先师孔子”。顺治十四年，改成“至圣先师”。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;有教无类：
-
-出处：“有教无类”见于《论语·卫灵公》
-
-基本含义：人人都可以接受教育，不分贫富、不分贵贱等方面的类别。
-
-“有教无类”中的“有”作为名词词头。没有实在意义，仅有音节的衬字作用。
-
-东汉马融说：“言人所在见教，无有种类。”
-
-------------{马融的理解要意：不论哪一类人，都可以给他以教育}
-
-宋代朱熹说：“人性皆善，而其类有善恶之殊者，气习之染也。故君子有教，则人皆可以复于善，而不当复论其类之恶矣。”
-
-------------{马融的理解要意：人都可以接受教育而从善去恶}
-
-马融和朱熹对“有教无类”所给出各自的解释均有一定的道理。
-
-因为他们二人的解释符合教育的历史发展，也符合孔子授徒教学的实际状况。
-
------------------------------------------------------------------
-
-时代背景
-
-学术文化完全被官府所垄断，能够受教育的都是王公贵族弟子，平民与王官之学毫无关联。这就是私人不议礼，民间不兴学的文化教育制度，即“学在官府”。
-
------------------------------------------------------------------
-
-南郭惠子曾问子贡：“夫子之门，何其杂也？”
-
-子贡曰：“欲来者不拒，欲去者不止。且夫良医之门多病人，隐括之侧多枉木，是以杂也。”（《荀子·法行》）
-
-子曰：“自行束修以上，吾未尝无悔言。”（《论语·述而》）---------孔子说：“只要是主动地给我一点拜师薄礼，我从来没有不教诲的。”
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;为师之道---学而不厌&quot;&gt;为师之道 - 学而不厌&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“学而不厌”中的“而”不能读“er(三声)”；“不”不能读作“bu(三声)”或者“bu(四声)”。
-
-其正确读音是“xue er bu yan(二声 二声 二声 四声)”
-
-具体地说，“学而不厌”涉及以学为乐，不耻下问，学无常师，学师贯通四个方面的教育意蕴。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;学而不厌出处？
-
-&quot;默而识知，学而不厌，诲人不倦。何有于我哉&quot; ------ （《论语·述而》7.2）
-
------------------------------------------------------------------
-
-子曰：”学如不及，犹恐失之。“------（《论语·泰伯》8.17）
-
-先秦儒家集大成者荀子在《荀子》一书的《大略篇》描写了孔子和子贡师生俩关于“学而不厌”话题的对话。
-
------------------------------------------------------------------
-
-“默而识知”、“学而不倦”、“诲人不倦”三者相辅相成，缺一不可，是孔子之所以良师的核心品质所在。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;以学为乐&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;基本含义：乐于学习，视学习为快乐。在快乐中学习，在学习中快乐。
-
-“十室之邑，必有忠信如丘岩，不如丘之好学者。”----（《论语·公冶长》5.28）
-
-“学”彰显人的主体性，“习”立足人的实践性。“学”和“习”两者通过“时”的联合，在适当的时机将所“学”的种种知识和人生哲理恰如其分地致用于所“习”的社会现实。
-
-为己之学与经世之学有机融合可进入自由之境，好比鸟之自由翱翔，鱼之自在游弋，快乐其中。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;不耻下问&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“不耻下问”的含义，即善于向学问或地位比自己低的人学习，向年龄比自己小的人请教而不觉得不好意思。
-
-“不耻下问”一词源于（《论语·公冶长》5.15）
-
-子贡问曰：“孔文子何以谓之‘文’也？“子曰：”敏而好学，不耻下问，是以谓之‘文’也。“--------（《论语·公冶长》5.15）
-
-“谥号”是帝王、诸侯、文臣武将死后，朝廷根据其生前事迹给予评价和定论的称号。
-
-“子入太庙，每事问。或曰：’孰谓鄹人之子知礼乎？入太庙，每事问。‘子闻之，曰：‘是礼也。’”------（《论语·八佾》3.15）
-
-在《论语》中“礼”字出现的频率高达75次，仅仅次于“仁”字的频率。
-
-孔子不论在何时、何地、何人，都强调养成一种“每事问”的学习态度。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;学无常师&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“学无常师”的基本含义是求学没有固定的老师。
-
-“学无常师”源自于（《论语-子张》19.22）
-
-卫公孙朝问于子贡曰：“仲尼焉学？”子贡曰：“文武之道，未坠于地，在人。贤者识其大者，不闲者识其笑小者。莫不有文武之道焉。夫子焉不学？而亦何常师之有？”（《论语·子张》19-22）
-
-孔子“学无常师”的智慧行为，是他与本人首倡的“三人行，必有我师”的学习作风密不可分的。
-
-子曰：“三人行，必有我师焉，择其善者而从之，其不善者而改之。”-------《论语·述而》（7.22）
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;学思贯通&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;关于学思贯通的教育智慧孔子有句名言：“学而不思则罔，思而不学则殆。”------《论语，为政》（2.15）
-
-子曰：“吾尝终日不食，终日不寝，以死，无益，不如学也。”-----《论语·卫灵公》（15.31）
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;为师之道-诲人不倦&quot;&gt;为师之道-诲人不倦&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“诲人不倦”首见于《论语·述而》（7.2）
-
-子曰：“若圣与仁，则吾岂敢！抑为之不厌，诲人不倦，则可谓云尔已矣!”《论语·述而》（7.34）
-
-（一）“诲人不倦”的教育对象：“人”
-
-（二）“诲人不倦”的教学要义：“有言之教”与“无言之教”
-
-（三）“诲人不倦”的意志品质：“贵在不倦”
-
-子曰：“可与言而不予直言，失人；不可与言而与之言，失言。知者不失人，亦不失言。”（《论语·卫灵公》15.8）
-
-孔子说：“可以同他谈，却不同他谈，这是错过人才；不可以同他谈，却同他谈，这是浪费言语。聪明人既不错过人才，也不浪费言语 。”
-
-良师既不错过人才，也不要浪费言语。
-
-子曰：“予欲无言。”子贡曰：“子如不言，则小子何述焉？”子曰：“天何言哉？四时何焉，百物生焉，天何言哉？”（《论语·阳货》17.19）
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;为师之道-一视同仁&quot;&gt;为师之道-一视同仁&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“一视同仁”的基本含义是对人同样看待，不分薄厚。
-
-“一视同仁”的词源出自韩愈所言：“是故圣人一视同仁，笃近而举远。”------（《韩愈全集·原人》）
-
-韩愈远绍孔孟之道，所谓“一视同仁”、“笃近举远”深得孔子“仁者爱人”的仁学精髓。
-
-孔子立身处事，无论关系亲疏，对待学生始终都抱有一视同仁的情怀。也正因为如此，孔门的师生关系才那么融洽和谐。
-
-“一视同仁”中的“一”意指同样、同等；“视”的意思是看待；而“同仁”则是同施仁爱的意味。
-
-随着时代的发展，&quot;同仁&quot;又产生出“同行仁德者”、“同事或同行”以及“和自己相同处境的人”等等之意思。
-
-樊迟问仁。子曰：“爱人。”
-
-樊迟问什么是仁德。孔子说：“仁德就是关爱别人。”-------（《论语·颜渊》12.22）
-
-孔子满腔热忱，对学生寄予厚望，“后生可畏，焉知来者之不如今也？”-------（《论语·子罕》9.23）
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Tue, 21 Nov 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/11/21/luny222222u/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/11/21/luny222222u/</guid>
-        
-        
-        <category>杂学</category>
-        
-      </item>
-    
-      <item>
         <title>混合的构造函数/原型方式</title>
         <description>&lt;p&gt;联合使用构造函数和原型方式，就可像用其他程序设计语言一样创建对象。这种概念非常简单，即用构造函数定义对象的所有非函数属性，用原型方式定义对象的函数属性（方法）。结果是，所有函数都只创建一次，而每个对象都具有自己的对象属性实例。
 &lt;!-- more --&gt;&lt;/p&gt;
@@ -1390,6 +1141,41 @@ $ cordova platform update ios --save
         <guid isPermaLink="true">http://localhost:4000/2017/11/16/cordova-introduction/</guid>
         
         <category>CORDOVA</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>新公司有感</title>
+        <description>&lt;p&gt;无恃其不来，恃吾有以待也；无恃其不攻，恃吾有所不可攻也
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;有的时候想说很多话，但是不知道说给谁听，不是我不想说，而是我说了你也不会懂，那我说了有什么用；而有的时候不是你不懂，而是我说了你并不会真的为我开心，而是心里进行比较，那我怎么敢说给你听？&lt;/p&gt;
+
+&lt;p&gt;司马迁因“李陵之祸”被贬入狱，有三种选择，其一“处死”其二“罚款50万”其三“处以宫刑”，再说千古第一书信《报任少卿书》，任安入狱，写书信给司马迁求救。有一点，我司马迁当年
+入狱时你任安正是被武帝重用之时，你害怕被牵连，不曾为我谏言也不曾借我50万，所有人都避而远之，而我，因为“史记”还没完成，不得不选择被人以为贪生怕死接受当时世间最严重的屈辱，而后活着就像丢失了灵魂。
+今天你任安入狱，想让我推贤进士，如今的我身份更不如以前，且说如果我向皇帝进言，你怎么不看看那么多大臣都还不曾说一句，我这小小的今非昔比的太史令说了岂不是只是受人耻笑，还有可能因此丢了性命。
+不是我怕死，人固有一死，死有重于泰山，或轻于鸿毛。《史记》还没完成，如果我今天因为此事而死，岂不是如同被踩死的一只蚂蚁死的毫无价值。但如果我没有史记我就会救你，你可能不相信我说的话，但我又不得不说
+，因为你就要死了，这些话只有等我死去的那天你才真的理解。以上也许有些话被我形容的有些小家子气，我知识层次还很浅薄，望谅解。&lt;/p&gt;
+
+&lt;p&gt;人的智慧无穷，智慧高的人能够懂得智慧低的人，智慧低的人永远不能懂智慧高的人。世间事情不要说得太绝对，今天你不理解的人，只是你还没有见到，见到你也不懂，那是你的不幸。&lt;/p&gt;
+
+&lt;p&gt;新工作确定下来了，不知道是不是有意安排，新公司让我知道的惊喜一个接着一个，一个楼都是他们的，没计较我要的工资，基本保障都有，双休，还有补助。正如题目而言，
+我已经准备了很久，把所有该准备的能计算到的事情都已经准备的不能在准备了，已尽人事，接下来听天命。是的，我确实得到了我想要的，比我想的还要好一些，不是薪资，而是是公司文化。
+我爱钱，但取之有道，所有凭努力得来的都是值得的，也是应有的回报。我不贪，够就好，因此很开心。&lt;/p&gt;
+
+&lt;p&gt;有些人在逆境之下潜力无穷，但成功之时方寸全乱，而有些人得意之时处事平稳，失意之时没有斗志。我经历太少，失败成功也都不值得过分提及，但活在当下永远都不要被眼前的困境与幻境所压倒或迷惑是我目前应该做到的。&lt;/p&gt;
+
+&lt;p&gt;这些话还不足以表明我的心意，会让自己一直都提升的，愿心地善良的人一直都有好运气。
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/13/life/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/13/life/</guid>
         
         
       </item>
