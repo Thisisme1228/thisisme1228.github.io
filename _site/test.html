@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+    var mult = (function () {
+        var cache = {};
+
+        var calculate = function () {
+            var a = 1;
+            for(var i = 0, l = arguments.length; i < l; i++){
+                a = a * arguments[i];
+            }
+            return a;
+        }
+
+        return function () {
+            var args = Array.prototype.join.call(arguments,',');
+            console.log(args);
+            console.log(cache[args]);
+            if(cache[args]){
+                return cache[args];
+            }
+
+            return cache[args] = calculate.apply(null,arguments);
+        }
+    })();
+
+    mult(1,2)
+    mult(3,4)
+    mult(5,6)
+    mult(1,2)
+    mult(3,4)
+    mult(5,6)
+</script>
+</body>
+</html>
