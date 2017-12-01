@@ -1,6 +1,6 @@
 ---
 layout: left-none
-title:  值得玩味
+title:  我见青山多妩媚，料青山、见我应如是
 date:   2017-11-30 00:00:00 +0800
 tag: JavaScript
 ---
@@ -65,3 +65,4 @@ undefined
 
 难点三var args = Array.prototype.join.call(arguments,',');为什么在return function定义
 ```
+
