@@ -6,25 +6,30 @@
     var mult = (function () {
         var cache = {};
 
-        var calculate = function () {
-            console.log(arguments)
+        var test = function (aaaa) {
+            console.log(aaaa)
+        }
+
+        var calculate = function (aaaa){
+            console.log(aaaa)
+            test(aaaa)
             var a = 1;
-            for(var i = 0, l = arguments.length; i < l; i++){
-                a = a * arguments[i];
+            for(var i = 0, l = aaaa.length; i < l; i++){
+                a = a * aaaa[i];
             }
             return a;
         }
 
-        return function () {
-
+        return function (){
+           /* console.log(arguments)*/
             var args = Array.prototype.join.call(arguments,',');
-            console.log(args);
-            console.log(cache[args]);
+           /* console.log(arguments);
+            console.log(cache[args]);*/
             if(cache[args]){
                 return cache[args];
             }
 
-            return cache[args] = calculate(arguments);
+            return cache[args] = calculate('123');
         }
     })();
 

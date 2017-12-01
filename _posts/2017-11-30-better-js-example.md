@@ -8,8 +8,9 @@ tag: JavaScript
 {:toc}
 `看代码好，多看代码，看好代码`
 <br/>
-<br/>
 `实践好，多实践，总结经验`
+<br/>
+`X墨守成规X，循序渐进，闻一知十，这是一场思想上的战争`
 <!-- more -->
 
 ### 1.闭包之外的问题
@@ -58,7 +59,7 @@ undefined
 
 `解答：`
 
-**难点一Array.prototype.join.call作用**
+**难点一Array.prototype.join.call对于arguments的作用**
 
 函数的参数列表arguments是一个类数组的对象，虽然有下标，但它并非真正的数组，不能向数组一样，进行排序或者往集合里面添加一个新的元素。我们常借用Array.prototype对象上的方法。这里借用使用这个方法操作arguments是它的元素以逗号为分割点返回一个字符串，进而缓存成对象的键名。
 
@@ -68,11 +69,13 @@ apply接受两个参数，第一个参数指定了函数体内this对象的指�
 
 这里如果不使用.apply(null,arguments)的形式，而直接使用calculate(arguments)的话，可以有以下两种方法：
 
+```
 1.给calculate设置个形参，这个形参就是arguments对象
 
 2.calculate方法里面arguments写成arguments[0]进行遍历
+```
 
-运行得知，return function里面的argument和calculate方法里面arguments参数是不一样的，return function里面arguments是下面这种：
+运行得知，return function里面的argument和calculate方法里面arguments是不一样的，return function里面arguments是下面这种：
 
 <img src="{{ '/styles/images/javascript/03.jpg' | prepend: site.baseurl }}" alt="" width="300" />
 
@@ -80,7 +83,19 @@ calculate方法里面arguments是下面这种
 
 <img src="{{ '/styles/images/javascript/04.jpg' | prepend: site.baseurl }}" alt="" width="300" />
 
-那么这里使用.apply(null,arguments)的形式就是想要把当前作用域的arguments传递给calculate方法
+<div style='text-decoration: line-through;'>那么这里使用.apply(null,arguments)的形式就是想要把当前作用域的arguments传递给calculate方法</div>
+
+**此时可以想到，为什么使用以上方式2时，要arguments[0]这么写，return cache[args] = calculate(arguments);这种形式传递的参数究竟为什么又比之前多包了一层？**
+
+好吧，纠结了两个小时的小问题，刚才转念一想，参数为什么会多报了一层，其实这个如果不去深究原理，只是看表面上还是 很容易理解的，调用mult函数的时候，里面的参数不也是多包了一层么，也就是调用一次就多包一层，然后刚才试验，发现确实是这样的。可是还是想知道到底为什么？？
+
+```
+1.当给一个没有形参的函数传递实参调用，所得到的arguments为什么多加了一层？
+
+2.当给一个有形参的函数传递实参调用，所得的arguments为什么就是所传递的实参？
+
+3.当时用.apply(null,arguments)调用函数，所得的arguments为什么就是所传递的实参？
+```
 
 **难点三var args = Array.prototype.join.call(arguments,',');为什么在return function定义，而不在上级作用域定义？**
 
