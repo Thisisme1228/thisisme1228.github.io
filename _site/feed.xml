@@ -5,8 +5,8 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Dec 2017 16:15:23 +0800</pubDate>
-    <lastBuildDate>Fri, 01 Dec 2017 16:15:23 +0800</lastBuildDate>
+    <pubDate>Tue, 05 Dec 2017 17:45:21 +0800</pubDate>
+    <lastBuildDate>Tue, 05 Dec 2017 17:45:21 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -17,8 +17,6 @@
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;看代码好，多看代码，看好代码&lt;/code&gt;
 &lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;实践好，多实践，总结经验&lt;/code&gt;
-&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;X墨守成规X，循序渐进，闻一知十，这是一场思想上的战争&lt;/code&gt;
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;1闭包之外的问题&quot;&gt;1.闭包之外的问题&lt;/h3&gt;
@@ -71,16 +69,16 @@
 
 &lt;p&gt;&lt;strong&gt;难点二.apply(null,arguments)作用，不使用apply，直接调用会怎么样&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;apply接受两个参数，第一个参数指定了函数体内this对象的指向，第二个参为一个带下标的集合，这个集合可以为数组，也可以为类数组，apply方法把这个集合中的元素作为参数传递给比调用的函数。如果传入的第一个参数是null，函数体内的this会指向默认的数组对象，在浏览器中则是window。&lt;/p&gt;
+&lt;p&gt;apply接受两个参数，第一个参数指定了函数体内this对象的指向，第二个参为一个带下标的集合，这个集合可以为数组，也可以为类数组，apply方法把这个集合中的元素作为参数传递给调用的函数。如果传入的第一个参数是null，函数体内的this会指向默认的数组对象，在浏览器中则是window。&lt;/p&gt;
 
 &lt;p&gt;这里如果不使用.apply(null,arguments)的形式，而直接使用calculate(arguments)的话，可以有以下两种方法：&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.给calculate设置个形参，这个形参就是arguments对象
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.给calculate设置个形参，使用设置的形参
 
 2.calculate方法里面arguments写成arguments[0]进行遍历
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;运行得知，return function里面的argument和calculate方法里面arguments是不一样的，return function里面arguments是下面这种：&lt;/p&gt;
+&lt;p&gt;运行得知，如果不使用apply,return function里面的argument和calculate方法里面arguments是不一样的，return function里面arguments是下面这种：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/javascript/03.jpg&quot; alt=&quot;&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 
@@ -88,21 +86,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/styles/images/javascript/04.jpg&quot; alt=&quot;&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;div style=&quot;text-decoration: line-through;&quot;&gt;那么这里使用.apply(null,arguments)的形式就是想要把当前作用域的arguments传递给calculate方法&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;此时可以想到，为什么使用以上方式2时，要arguments[0]这么写，return cache[args] = calculate(arguments);这种形式传递的参数究竟为什么又比之前多包了一层？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;好吧，纠结了两个小时的小问题，刚才转念一想，参数为什么会多报了一层，其实这个如果不去深究原理，只是看表面上还是 很容易理解的，调用mult函数的时候，里面的参数不也是多包了一层么，也就是调用一次就多包一层，然后刚才试验，发现确实是这样的。可是还是想知道到底为什么？？&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.当给一个没有形参的函数传递实参调用，所得到的arguments为什么多加了一层？
-
-2.当给一个有形参的函数传递实参调用，所得的arguments为什么就是所传递的实参？
-
-3.当时用.apply(null,arguments)调用函数，所得的arguments为什么就是所传递的实参？
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;为什么这里的方式2要这么解决，因为arguments就是一个类数组的对象，因此每次获取都会多包涵一对大括号，而apply是给calculate重新指向参数。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;难点三var args = Array.prototype.join.call(arguments,’,’);为什么在return function定义，而不在上级作用域定义？&lt;/strong&gt;&lt;/p&gt;
 
+&lt;p&gt;函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量，这就是原因。&lt;/p&gt;
 </description>
         <pubDate>Thu, 30 Nov 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/11/30/better-js-example/</link>
