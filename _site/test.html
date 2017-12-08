@@ -1,39 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <meta charset="UTF-8">
+</head>
 <body>
+<form action="" id="registerForm" method="post">
+    请输入用户名：<input type="text" name="userName">
+    请输入密码：<input type="password" name="password">
+    请输入手机号码：<input type="text" name="phoneNumber">
+    <input type="submit">提交</input>
+</form>
 <script>
-    var mult = (function () {
-        var cache = {};
+var registerForm = document.getElementById('registerForm');
 
-        var calculate = function () {
-            console.log(arguments)
-            var a = 1;
-            for(var i = 0, l = arguments.length; i < l; i++){
-                a = a * arguments[i];
-            }
-            return a;
-        }
-
-        return function () {
-            console.log(arguments)
-            var args = Array.prototype.join.call(arguments,',');//1
-            console.log(args);
-            console.log(cache[args]);
-            if(cache[args]){
-                return cache[args];
-            }
-
-            return cache[args] = calculate(arguments);//2
-        }//3
-    })();
-
-    mult(2,3);
-    mult(66,77);
-    mult(11,22);
-    mult(2,3);
-    mult(66,77);
-    mult(11,22);
+registerForm.onsubmit = function () {
+    alert(1);
+}
 </script>
 </body>
 </html>
