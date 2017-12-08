@@ -1,6 +1,6 @@
 ---
 layout: left-none
-title:  我见青山多妩媚，料青山、见我应如是
+title:  深究JavaScript
 date:   2017-11-30 00:00:00 +0800
 tag: JavaScript
 ---

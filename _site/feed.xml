@@ -5,13 +5,26 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Dec 2017 10:56:28 +0800</pubDate>
-    <lastBuildDate>Fri, 08 Dec 2017 10:56:28 +0800</lastBuildDate>
+    <pubDate>Fri, 08 Dec 2017 15:17:52 +0800</pubDate>
+    <lastBuildDate>Fri, 08 Dec 2017 15:17:52 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>表单提交button、submit的使用方式以及区别</title>
-        <description>&lt;!-- more --&gt;
+        <title>表单提交button、submit的区别</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#inputtypesubmit&quot; id=&quot;markdown-toc-inputtypesubmit&quot;&gt;input[type=submit]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- more --&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.建议使用button[type=submit]来提交表单，而不是input;
+
+2.只有单行文本控件时，回车会引发表单提交;
+
+3.通过onsubmit事件可阻止表单提交。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;inputtypesubmit&quot;&gt;input[type=submit]&lt;/h3&gt;
+
 </description>
         <pubDate>Fri, 08 Dec 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/12/08/form-submit/</link>
@@ -23,7 +36,7 @@
       </item>
     
       <item>
-        <title>我见青山多妩媚，料青山、见我应如是</title>
+        <title>深究JavaScript</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1闭包之外的问题&quot; id=&quot;markdown-toc-1闭包之外的问题&quot;&gt;1.闭包之外的问题&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

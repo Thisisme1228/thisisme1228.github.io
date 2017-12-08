@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>表单提交button、submit的使用方式以及区别</title>
+	<title>表单提交button、submit的区别</title>
 	<link rel="shortcut icon" href="/styles/images/favicon.png">
 	<link rel="icon" href="/styles/images/favicon.png">
 
@@ -15,7 +15,7 @@
 	<link rel="canonical" href="/2017/12/08/form-submit/">
 	<link rel="alternate" type="application/rss+xml" title="Helene's blog" href="/feed.xml">
 	
-	<!--<meta name="keywords" content="表单提交button、submit的使用方式以及区别, Helene's blog, 厚积薄发">-->
+	<!--<meta name="keywords" content="表单提交button、submit的区别, Helene's blog, 厚积薄发">-->
 	<!--<meta name="description" content="厚积薄发">-->
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -118,14 +118,27 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">表单提交button、submit的使用方式以及区别</h1>
+              <h1 class="post-title">表单提交button、submit的区别</h1>
                 <span class="post-meta">Date：Dec 8, 2017</span>
                 <span class="meta">Author：<a target="_blank" href="http://localhost:4000">Helene</a></span>
               <br />
               <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://life.thisisme1228.com/">Helene的博客</a></p></blockquote>
             </header>
             <article class="post-content">
-              <!-- more -->
+              <ul id="markdown-toc">
+  <li><a href="#inputtypesubmit" id="markdown-toc-inputtypesubmit">input[type=submit]</a></li>
+</ul>
+<!-- more -->
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.建议使用button[type=submit]来提交表单，而不是input;
+
+2.只有单行文本控件时，回车会引发表单提交;
+
+3.通过onsubmit事件可阻止表单提交。
+</code></pre></div></div>
+
+<h3 id="inputtypesubmit">input[type=submit]</h3>
+
 
             </article>
         </div>
