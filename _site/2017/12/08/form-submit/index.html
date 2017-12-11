@@ -127,17 +127,125 @@
             <article class="post-content">
               <ul id="markdown-toc">
   <li><a href="#inputtypesubmit" id="markdown-toc-inputtypesubmit">input[type=submit]</a></li>
+  <li><a href="#buttontypesubmit" id="markdown-toc-buttontypesubmit">button[type=submit]</a></li>
+  <li><a href="#enter-键提交表单" id="markdown-toc-enter-键提交表单">Enter 键提交表单</a></li>
+  <li><a href="#阻止表单提交" id="markdown-toc-阻止表单提交">阻止表单提交</a></li>
 </ul>
 <!-- more -->
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.建议使用button[type=submit]来提交表单，而不是input;
 
-2.只有单行文本控件时，回车会引发表单提交;
+2.只有单行文本控件时没有多行文本控件时，回车会引发表单提交;
 
 3.通过onsubmit事件可阻止表单提交。
 </code></pre></div></div>
 
 <h3 id="inputtypesubmit">input[type=submit]</h3>
+
+<p><img src="/styles/images/javascript/05.png" alt="" width="100%" /></p>
+
+<p>图中可以看到点击提交按钮后的URL是<code class="highlighter-rouge">?userName=test&amp;password=1&amp;phoneNumber=135</code>。代码如下：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">id=</span><span class="s">"registerForm"</span> <span class="na">method=</span><span class="s">"get"</span><span class="nt">&gt;</span>
+    请输入用户名：<span class="nt">&lt;input</span>  <span class="na">name=</span><span class="s">"userName"</span><span class="nt">&gt;</span>
+    请输入密码：<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span><span class="nt">&gt;</span>
+    请输入手机号码：<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"phoneNumber"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"ok"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>其中有些值得注意的细节：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1、设置type=submit后，输入控件会变成一个按钮，显示的文字为其value值，默认值是“提交”。
+
+2、form[method]默认值为GET，所以提交后会使用GET方式进行页面跳转。
+
+3、input[type]默认值为text，所以第一个input显示为文本框。
+</code></pre></div></div>
+
+<p>input其实是一个由输入控件改装过来的按钮，这源于Web早期的简陋设计。我们给它设置name便可以验证这一点：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"ok"</span> <span class="na">name=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>提交后的结果为：</p>
+
+<p><img src="/styles/images/javascript/06.jpg" alt="" width="100%" /></p>
+
+<p>注意其中的URL为<code class="highlighter-rouge">?userName=test&amp;password=1&amp;phoneNumber=135&amp;btn=ok</code>。作为按钮的input控件同时被当做一个表单输入提交给了服务器。它到底是交互控件还是数据空间呢？定位有些不清晰。再加上它的样式难以定制、不可作其它标签的容器，所以建议不要用input作为表单提交按钮。</p>
+
+<blockquote>
+  <p>input的type属性还可以是button，这时它只是一个按钮，不会引发表单提交。</p>
+</blockquote>
+
+<h3 id="buttontypesubmit">button[type=submit]</h3>
+
+<p>button的语义很明确，就是一个按钮不含数据，作用就是用户交互。但它也有type和value属性。 type的默认值是submit，所以点击一个button会引起表单提交：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form&gt;</span>
+    请输入用户名：<span class="nt">&lt;input</span>  <span class="na">name=</span><span class="s">"userName"</span><span class="nt">&gt;</span>
+    请输入密码：<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span><span class="nt">&gt;</span>
+    请输入手机号码：<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"phoneNumber"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button&gt;</span>确定<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>注意！如果你在做IE10以下浏览器的兼容，请记住button[type]在IE中的默认值是button，这意味着它只是一个按钮而不会引发表单提交。</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>button元素比&lt;input&gt;元素更易样式化。你可以添加内联HTML内容（如&lt;em&gt;，&lt;strong&gt; 甚至&lt;img&gt;），并使用:after和:before伪元素实现复杂的渲染，而&lt;input&gt;只有文本值属性。
+
+IE7有一个bug，当使用&lt;button type="submit" name="myButton" value="foo"&gt;Click me&lt;/button&gt;提交表单时，POST数据发送为myButton=Click me而不是myButton=foo。
+IE6有一个更糟糕的bug，当使用一个button提交表单时，所有button会出现IE7中的bug。
+这个bug在IE8中已修复。
+</code></pre></div></div>
+
+<blockquote>
+  <p>建议用button作为交互用的按钮，来提交表单。同时请注意设置type=submit来兼容IE。</p>
+</blockquote>
+
+<h3 id="enter-键提交表单">Enter 键提交表单</h3>
+
+<p>Enter键是可以提交表单的！但是你可能已经注意到了，并非所有的表单都可以用Enter键来提交。</p>
+
+<blockquote>
+  <p>当表单中只有一个单行的文本输入控件时，用户代理应当接受回车键来提交表单。</p>
+</blockquote>
+
+<p>“单行”指的是type为text而非textarea，显然在textarea中回车提交表单是怎样的难以接受！ 其实在实践中，有多个单行的input也可以用Enter提交，比如登录页面（太典型了，不仅是这样开发的，而且是这样使用的）。 要知道HTML2.0标准制定于1995，可以说这一句不起眼的条文影响着我的每次网站登录。W3C的这批人是有怎样的远见和智慧！</p>
+
+<h3 id="阻止表单提交">阻止表单提交</h3>
+
+<p>阻止表单提交也是一个常见的话题，通常用于客户端的表单验证。通用的办法是设置onsubmit:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">onsubmit=</span><span class="s">"return false;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">'key'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">'ok'</span> <span class="na">type=</span><span class="s">'submit'</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>只需要在onsubmit的一系列语句最后返回false，便可以阻止它提交。 如果你希望调用一个方法来决定是否阻止提交，记得在此处返回方法的返回值：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">onsubmit=</span><span class="s">"return doValidation();"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">'key'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">'ok'</span> <span class="na">type=</span><span class="s">'submit'</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>上述代码只是为了示例，你可能更希望通过jQuery来绑定事件处理函数。</p>
+</blockquote>
+
+<p><strong>本文参考:</strong></p>
+
+<blockquote>
+  <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button</a></p>
+</blockquote>
+
+<blockquote>
+  <p><a href="http://harttle.land/2015/08/03/form-submit.html">http://harttle.land/2015/08/03/form-submit.html</a></p>
+</blockquote>
 
 
             </article>

@@ -5,25 +5,133 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Dec 2017 15:17:52 +0800</pubDate>
-    <lastBuildDate>Fri, 08 Dec 2017 15:17:52 +0800</lastBuildDate>
+    <pubDate>Mon, 11 Dec 2017 10:52:22 +0800</pubDate>
+    <lastBuildDate>Mon, 11 Dec 2017 10:52:22 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>表单提交button、submit的区别</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#inputtypesubmit&quot; id=&quot;markdown-toc-inputtypesubmit&quot;&gt;input[type=submit]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#buttontypesubmit&quot; id=&quot;markdown-toc-buttontypesubmit&quot;&gt;button[type=submit]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#enter-键提交表单&quot; id=&quot;markdown-toc-enter-键提交表单&quot;&gt;Enter 键提交表单&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#阻止表单提交&quot; id=&quot;markdown-toc-阻止表单提交&quot;&gt;阻止表单提交&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- more --&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.建议使用button[type=submit]来提交表单，而不是input;
 
-2.只有单行文本控件时，回车会引发表单提交;
+2.只有单行文本控件时没有多行文本控件时，回车会引发表单提交;
 
 3.通过onsubmit事件可阻止表单提交。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;inputtypesubmit&quot;&gt;input[type=submit]&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/styles/images/javascript/05.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;图中可以看到点击提交按钮后的URL是&lt;code class=&quot;highlighter-rouge&quot;&gt;?userName=test&amp;amp;password=1&amp;amp;phoneNumber=135&lt;/code&gt;。代码如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerForm&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;get&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    请输入用户名：&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    请输入密码：&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    请输入手机号码：&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;phoneNumber&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ok&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;其中有些值得注意的细节：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1、设置type=submit后，输入控件会变成一个按钮，显示的文字为其value值，默认值是“提交”。
+
+2、form[method]默认值为GET，所以提交后会使用GET方式进行页面跳转。
+
+3、input[type]默认值为text，所以第一个input显示为文本框。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;input其实是一个由输入控件改装过来的按钮，这源于Web早期的简陋设计。我们给它设置name便可以验证这一点：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ok&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;提交后的结果为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/styles/images/javascript/06.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;注意其中的URL为&lt;code class=&quot;highlighter-rouge&quot;&gt;?userName=test&amp;amp;password=1&amp;amp;phoneNumber=135&amp;amp;btn=ok&lt;/code&gt;。作为按钮的input控件同时被当做一个表单输入提交给了服务器。它到底是交互控件还是数据空间呢？定位有些不清晰。再加上它的样式难以定制、不可作其它标签的容器，所以建议不要用input作为表单提交按钮。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;input的type属性还可以是button，这时它只是一个按钮，不会引发表单提交。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;buttontypesubmit&quot;&gt;button[type=submit]&lt;/h3&gt;
+
+&lt;p&gt;button的语义很明确，就是一个按钮不含数据，作用就是用户交互。但它也有type和value属性。 type的默认值是submit，所以点击一个button会引起表单提交：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
+    请输入用户名：&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    请输入密码：&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    请输入手机号码：&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;phoneNumber&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&amp;gt;&lt;/span&gt;确定&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意！如果你在做IE10以下浏览器的兼容，请记住button[type]在IE中的默认值是button，这意味着它只是一个按钮而不会引发表单提交。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;button元素比&amp;lt;input&amp;gt;元素更易样式化。你可以添加内联HTML内容（如&amp;lt;em&amp;gt;，&amp;lt;strong&amp;gt; 甚至&amp;lt;img&amp;gt;），并使用:after和:before伪元素实现复杂的渲染，而&amp;lt;input&amp;gt;只有文本值属性。
+
+IE7有一个bug，当使用&amp;lt;button type=&quot;submit&quot; name=&quot;myButton&quot; value=&quot;foo&quot;&amp;gt;Click me&amp;lt;/button&amp;gt;提交表单时，POST数据发送为myButton=Click me而不是myButton=foo。
+IE6有一个更糟糕的bug，当使用一个button提交表单时，所有button会出现IE7中的bug。
+这个bug在IE8中已修复。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;建议用button作为交互用的按钮，来提交表单。同时请注意设置type=submit来兼容IE。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;enter-键提交表单&quot;&gt;Enter 键提交表单&lt;/h3&gt;
+
+&lt;p&gt;Enter键是可以提交表单的！但是你可能已经注意到了，并非所有的表单都可以用Enter键来提交。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当表单中只有一个单行的文本输入控件时，用户代理应当接受回车键来提交表单。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“单行”指的是type为text而非textarea，显然在textarea中回车提交表单是怎样的难以接受！ 其实在实践中，有多个单行的input也可以用Enter提交，比如登录页面（太典型了，不仅是这样开发的，而且是这样使用的）。 要知道HTML2.0标准制定于1995，可以说这一句不起眼的条文影响着我的每次网站登录。W3C的这批人是有怎样的远见和智慧！&lt;/p&gt;
+
+&lt;h3 id=&quot;阻止表单提交&quot;&gt;阻止表单提交&lt;/h3&gt;
+
+&lt;p&gt;阻止表单提交也是一个常见的话题，通常用于客户端的表单验证。通用的办法是设置onsubmit:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onsubmit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;return false;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'key'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ok'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'submit'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;只需要在onsubmit的一系列语句最后返回false，便可以阻止它提交。 如果你希望调用一个方法来决定是否阻止提交，记得在此处返回方法的返回值：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onsubmit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;return doValidation();&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'key'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ok'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'submit'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;上述代码只是为了示例，你可能更希望通过jQuery来绑定事件处理函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;本文参考:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button&quot;&gt;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://harttle.land/2015/08/03/form-submit.html&quot;&gt;http://harttle.land/2015/08/03/form-submit.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Fri, 08 Dec 2017 00:00:00 +0800</pubDate>
