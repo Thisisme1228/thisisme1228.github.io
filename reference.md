@@ -45,8 +45,6 @@ date:   2016-12-2 00:00:00 +0800
 <!--CSS库/资源-->
 <li><a href="http://bulma.io/" target="_blank"><abbr title="A modern CSS framework based on Flexbox">Bulma</abbr></a></li>
 <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a></li>
-<li><a href="http://cssicon.space/#/" target="_blank">CSS ICON</a></li>
-<li><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></li>
 <li><a href="http://www.bootcss.com/" target="_blank">Bootstrap官网</a></li>
 <li><a href="http://bootswatch.com/" target="_blank">基于 Bootstrap 的免费主题包</a></li>
 <li><a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html" target="_blank">Bootstrap 的免费主题包</a></li>
@@ -128,6 +126,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://zhitu.isux.us/" target="_blank"><abbr title="高效优质的图片优化平台">智图</abbr></a></li>
 <li><a href="http://www.iconfont.cn/" target="_blank">阿里巴巴矢量图库</a></li>
 <li><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></li>
+<li><a href="http://cssicon.space/#/" target="_blank">CSS ICON</a></li>
 <li><a href="https://www.123rf.com/" target="_blank">123rf</a></li>
 <li><a href="http://huaban.com/" target="_blank">花瓣网</a></li>
 <li><a href="https://unsplash.it/" target="_blank"><abbr title="利用unsplash免费照片来提供placehoder的网站">Unsplash It</abbr></a></li>
