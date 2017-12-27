@@ -46,6 +46,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="http://bulma.io/" target="_blank"><abbr title="A modern CSS framework based on Flexbox">Bulma</abbr></a></li>
 <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a></li>
 <li><a href="http://cssicon.space/#/" target="_blank">CSS ICON</a></li>
+<li><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></li>
 <li><a href="http://www.bootcss.com/" target="_blank">Bootstrap官网</a></li>
 <li><a href="http://bootswatch.com/" target="_blank">基于 Bootstrap 的免费主题包</a></li>
 <li><a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html" target="_blank">Bootstrap 的免费主题包</a></li>
