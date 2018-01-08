@@ -5,9 +5,29 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Dec 2017 10:31:29 +0800</pubDate>
-    <lastBuildDate>Thu, 28 Dec 2017 10:31:29 +0800</lastBuildDate>
+    <pubDate>Mon, 08 Jan 2018 10:56:11 +0800</pubDate>
+    <lastBuildDate>Mon, 08 Jan 2018 10:56:11 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>如何在项目中使用Sass</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#httpswwwsasshkskillsass89html&quot; id=&quot;markdown-toc-httpswwwsasshkskillsass89html&quot;&gt;https://www.sass.hk/skill/sass89.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;httpswwwsasshkskillsass89html&quot;&gt;&lt;a href=&quot;https://www.sass.hk/skill/sass89.html&quot;&gt;https://www.sass.hk/skill/sass89.html&lt;/a&gt;&lt;/h3&gt;
+
+</description>
+        <pubDate>Mon, 08 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/01/08/sass/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/01/08/sass/</guid>
+        
+        <category>SASS</category>
+        
+        
+      </item>
     
       <item>
         <title>IE兼容性</title>
@@ -16,7 +36,7 @@
   &lt;li&gt;&lt;a href=&quot;#判断ie版本&quot; id=&quot;markdown-toc-判断ie版本&quot;&gt;判断IE版本&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#bootstrap-3兼容ie8浏览器&quot; id=&quot;markdown-toc-bootstrap-3兼容ie8浏览器&quot;&gt;Bootstrap 3兼容IE8浏览器&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#x-ua-compatible-contentie9-ie8-ie7-ieedge&quot; id=&quot;markdown-toc-x-ua-compatible-contentie9-ie8-ie7-ieedge&quot;&gt;“X-UA-Compatible” content=“IE=9; IE=8; IE=7; IE=EDGE”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;markdown-toc-&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#完美解决ie兼容模式问题&quot; id=&quot;markdown-toc-完美解决ie兼容模式问题&quot;&gt;完美解决IE兼容模式问题&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -29,7 +49,8 @@
 
 &lt;h3 id=&quot;x-ua-compatible-contentie9-ie8-ie7-ieedge&quot;&gt;&lt;a href=&quot;https://stackoverflow.com/questions/14611264/x-ua-compatible-content-ie-9-ie-8-ie-7-ie-edge?answertab=active#tab-top&quot;&gt;“X-UA-Compatible” content=“IE=9; IE=8; IE=7; IE=EDGE”&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;完美解决ie兼容模式问题&quot;&gt;&lt;a href=&quot;http://blog.csdn.net/bbirdsky/article/details/9186729&quot;&gt;完美解决IE兼容模式问题&lt;/a&gt;&lt;/h3&gt;
+
 </description>
         <pubDate>Thu, 28 Dec 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/12/28/ie8/</link>
@@ -1038,48 +1059,6 @@ Set对象存储不重复的值，所以不需要手动处理包含重复值的�
         
         
         <category>杂学</category>
-        
-      </item>
-    
-      <item>
-        <title>继承----混合方式</title>
-        <description>&lt;p&gt;和其他功能一样，ECMAScript 实现继承的方式不止一种。这是因为 JavaScript 中的继承机制并不是明确规定的，而是通过模仿实现的。这意味着所有的继承细节并非完全由解释程序处理。作为开发者，你有权决定最适用的继承方式。
-但是这里，我仅仅讲解混合方式
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;混合方式&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;这种继承方式使用构造函数定义类，并非使用任何原型。对象冒充的主要问题是必须使用构造函数方式，这不是最好的选择。不过如果使用原型链，就无法使用带参数的构造函数了。开发者如何选择呢？答案很简单，两者都用。&lt;/p&gt;
-
-&lt;p&gt;创建类的最好方式是用构造函数定义属性，用原型定义方法。这种方式同样适用于继承机制，用对象冒充继承构造函数的属性，用原型链继承 prototype 对象的方法。&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sayColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClassA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;ClassB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sayName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/11/22/inherit/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/11/22/inherit/</guid>
-        
-        <category>JavaScript</category>
-        
         
       </item>
     
