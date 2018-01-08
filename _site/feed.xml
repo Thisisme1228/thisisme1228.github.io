@@ -5,19 +5,21 @@
     <description>纵然疾风起，人生不言弃</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Jan 2018 10:56:11 +0800</pubDate>
-    <lastBuildDate>Mon, 08 Jan 2018 10:56:11 +0800</lastBuildDate>
+    <pubDate>Mon, 08 Jan 2018 11:02:10 +0800</pubDate>
+    <lastBuildDate>Mon, 08 Jan 2018 11:02:10 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>如何在项目中使用Sass</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#httpswwwsasshkskillsass89html&quot; id=&quot;markdown-toc-httpswwwsasshkskillsass89html&quot;&gt;https://www.sass.hk/skill/sass89.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#如何在项目中使用sass&quot; id=&quot;markdown-toc-如何在项目中使用sass&quot;&gt;如何在项目中使用Sass&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sass语法&quot; id=&quot;markdown-toc-sass语法&quot;&gt;sass语法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;httpswwwsasshkskillsass89html&quot;&gt;&lt;a href=&quot;https://www.sass.hk/skill/sass89.html&quot;&gt;https://www.sass.hk/skill/sass89.html&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;如何在项目中使用sass&quot;&gt;&lt;a href=&quot;https://www.sass.hk/skill/sass89.html&quot;&gt;如何在项目中使用Sass&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;sass语法&quot;&gt;&lt;a href=&quot;https://www.w3cplus.com/sassguide/syntax.html&quot;&gt;sass语法&lt;/a&gt;&lt;/h3&gt;
 
 </description>
         <pubDate>Mon, 08 Jan 2018 00:00:00 +0800</pubDate>
