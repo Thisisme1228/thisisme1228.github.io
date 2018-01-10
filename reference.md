@@ -66,6 +66,7 @@ date:   2016-12-2 00:00:00 +0800
 <!--js库-->
 <li><a href="https://threejs.org/" target="_blank">three.js</a></li>
 <li><a href="http://www.jq22.com/" target="_blank">jQuery 插件库</a></li>
+<li><a href="http://www.dowebok.com/" target="_blank">插件库</a></li>
 <li><a href="http://www.typescriptlang.org/index.html" target="_blank">TypeScript</a></li>
 <li><a href="https://babeljs.io/" target="_blank">Babel</a></li>
 </ol>
