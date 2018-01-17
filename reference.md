@@ -153,6 +153,7 @@ date:   2016-12-2 00:00:00 +0800
 
 <ol class="rectangle-list">
 <li><a href="http://life.thisisme1228.com" target="_blank">H的博客</a></li>
+<li><a href="http://www.cnblogs.com/kenkofox/" target="_blank">拂晓风起-H5单页面</a></li>
 <li><a href="http://xiaokedada.com/" target="_blank">小可嗒嗒的博客</a></li>
 <li><a href="http://ghmagical.com/" target="_blank">TG的博客</a></li>
 <li><a href="http://www.liaoxuefeng.com/">廖雪峰的官方网站</a></li>
