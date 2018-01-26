@@ -153,6 +153,7 @@ date:   2016-12-2 00:00:00 +0800
 
 <ol class="rectangle-list">
 <li><a href="http://life.thisisme1228.com" target="_blank">H的博客</a></li>
+<li><a href="http://blog.csdn.net/joymod/article/details/55511109?locationNum=1&fps=1" target="_blank">Vue整合AdminLTE模板</a></li>
 <li><a href="http://www.cnblogs.com/kenkofox/" target="_blank">拂晓风起-H5单页面</a></li>
 <li><a href="http://www.wuweierwei.com/" target="_blank">Vue群里面大神</a></li>
 <li><a href="http://xiaokedada.com/" target="_blank">小可嗒嗒的博客</a></li>
