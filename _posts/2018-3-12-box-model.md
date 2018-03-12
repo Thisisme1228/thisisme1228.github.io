@@ -8,7 +8,7 @@ tag: CSS
 {:toc}
 <hr>
 
-#CSS盒模型
+# CSS盒模型
 
 > 基本概念：标准模型+IE模型
 
@@ -51,5 +51,5 @@ dom.getBoundingClientRect().width/height(方法返回元素的大小及其对应
 https://www.w3cplus.com/css/understanding-css-layout-block-formatting-context.html
 ```
 
->    IE8及更早IE版本不支持设置填充的宽度和边框的宽度属性。解决IE8及更早版本不兼容问题可以在HTML页面声明<!DOCTYPE html>即可
+>  IE8及更早IE版本不支持设置填充的宽度和边框的宽度属性。解决IE8及更早版本不兼容问题可以在HTML页面声明<!DOCTYPE html>即可
 
