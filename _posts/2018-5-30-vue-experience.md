@@ -55,3 +55,12 @@ src/config/index.js
 productionSourceMap:false
 ```
 
+### 三、通过vue-cli创建的项目，如何通过本地ip来访问到
+
+```
+配置 config ==> index.js
+
+host: 本地ip
+port: 不和其他端口号冲突就行
+```
+
