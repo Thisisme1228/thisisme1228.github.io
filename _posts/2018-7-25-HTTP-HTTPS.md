@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HTTP
+title: HTTP HTTPS
 date:   2018-7-25 00:00:00 +0800
 tag: http
 ---
@@ -12,4 +12,5 @@ tag: http
 
 + [HTTP1.0 HTTP 1.1 HTTP 2.0主要区别](https://blog.csdn.net/linsongbin1/article/details/54980801)
 
++ [Https协议详解](https://www.cnblogs.com/zxj015/p/6530766.html)
 
