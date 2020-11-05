@@ -884,8 +884,8 @@ event loop是什么？
 
 JavaScript中有两种异步任务：
 
-1、宏任务：setTimeout/setInterval
-2、微任务：Promise
+1、宏任务：setTimeout/setInterval，nodejs的setImmediate
+2、微任务：Promise、nodejs的process
 ```
 
 #### 39、setTimeout、Promise、Async、Await的区别
