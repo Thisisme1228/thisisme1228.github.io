@@ -2,7 +2,7 @@
 layout: post
 title: nodeDeploy
 date: 2024-06-29 00:00:00 +0800
-tag: 2024/node
+tag: node
 ---
 * content
 {:toc}
