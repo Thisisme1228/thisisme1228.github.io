@@ -1,7 +1,7 @@
 ---
 layout: nothing
 title: Let me be your spring 
-permalink: /reference/
+permalink: //
 date:   2016-12-2 00:00:00 +0800
 ---
 
