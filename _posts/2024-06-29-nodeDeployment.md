@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nodeDeploy
+title: nodeDeployment
 date: 2024-06-29 00:00:00 +0800
 tag: node
 ---
