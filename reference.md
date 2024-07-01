@@ -6,7 +6,7 @@ date:   2016-12-2 00:00:00 +0800
 ---
 
 
-<h4 class="text-center">Front-end development of related websites</h4>
+<h4 class="text-center">reference websites for front-end development</h4>
 
 <ol class="rectangle-list">
 <li><a href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript Tutorial</a></li>
