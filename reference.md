@@ -14,6 +14,7 @@ date:   2016-12-2 00:00:00 +0800
 <li><a href="https://jsonplaceholder.typicode.com/" target="_blank">Jsonplaceholder-fakeData</a></li>
 <li><a href="https://webpack.js.org/" target="_blank">Webpack</a></li>
 <li><a href="https://babeljs.io/" target="_blank">Babel</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank">typescript</a></li>
 </ol>
 
 <style>
